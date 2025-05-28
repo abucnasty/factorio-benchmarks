@@ -20,7 +20,7 @@ Why was this chosen as the candidate?
 
 Preview of furnace stack (specifically the wake list only variation):
 
-![base](./images/furnace_stack_preview.png)
+![furnace_stack_preview](./images/furnace_stack_preview.png)
 
 
 
@@ -30,7 +30,7 @@ Preview of furnace stack (specifically the wake list only variation):
 
 Enable / disable inserter based on clock
 
-![](./images/clock_example_1.png)
+![clock_example_1](./images/clock_example_1.png)
 
 ### Filter Clocked
 
@@ -42,66 +42,70 @@ Directly connected circuit network to furnace or assembly machine with "read con
 
 Sets the inserter enable / disable based on *threshold* values.
 
-![](./images/threshold_example.png)
+![threshold_example](./images/threshold_example.png)
+
+### Lead / Follower
+First furnace is monitored by a decider combinator. When it drops below a threshold, it sends an activation signal to enable all downstream inserters to insert at the same time. Similiar to threshold, but it introduces the concept of a "lead" furnace. 
+
+![lead_follow_example](./images/lead_follow_example.png)
+
+> Note: This assumes that within a single assembly module (like the furnace stack used here) all machines (furnaces, assemblers, etc.) have the same demand for inputs and outputs and highly is dependent on having backpressure on the input material (e.g. ore is oversupplied in the example test case).
 
 
 ### Threshold Guarded
 
 Same as `Threshold` but uses decider combinators to intercept the signal. This is to test the theory that an inserter should be "guarded" from upstream changes to the circuit network and only send a single pulse value when it should be enabled or disabled.
-![](./images/threshold_guarded_example.png)
+![threshold_guarded_example](./images/threshold_guarded_example.png)
 
 ## Results
 
+Here's the full analysis for your **new Factorio benchmark results**, following the same structure as before:
+
 ### 🔍 **Overview of Metrics**
 
-| Metric            | Description                                          |
-| ----------------- | ---------------------------------------------------- |
-| **Mean UPS**      | Updates per second – higher is better                |
-| **Mean Avg (ms)** | Average frame time in milliseconds – lower is better |
-| **Mean Min (ms)** | Minimum frame time – lower is better                 |
-| **Mean Max (ms)** | Maximum frame time – lower is better                 |
+| Metric            | Description                           |
+| ----------------- | ------------------------------------- |
+| **Mean UPS**      | Updates per second – higher is better |
+| **Mean Avg (ms)** | Average frame time – lower is better  |
+| **Mean Min (ms)** | Minimum frame time – lower is better  |
+| **Mean Max (ms)** | Maximum frame time – lower is better  |
 
-### 📈 **Summary of Results**
+### 📈 **Results**
 
-| Control Strategy          | Mean UPS | Mean Avg (ms) | Mean Min (ms) | Mean Max (ms) |
-| ------------------------- | -------- | ------------- | ------------- | ------------- |
-| threshold             | **1500** | **0.6668**    | 0.5106        | 2.7910        |
-| enable clocked            | 1483     | 0.6744        | 0.4030        | 2.7044        |
-| enable clocked split side | 1474     | 0.6786        | **0.3898**    | **2.2896**    |
-| filter clocked            | 1450     | 0.6900        | 0.4334        | 2.4576        |
-| filter clocked split side | 1446     | 0.6928        | 0.4218        | 3.2238        |
-| threshold guarded         | 1402     | 0.7138        | 0.5036        | 3.0740        |
-| wake list only            | **1366** | **0.7322**    | 0.5100        | 2.4302        |
+| Control Strategy  | Mean UPS | Mean Avg (ms) | Mean Min (ms) | Mean Max (ms) |
+| ----------------- | -------- | ------------- | ------------- | ------------- |
+| **lead follower** | **1745** | **0.5734**    | 0.3420        | **2.0326**    |
+| enable clocked    | 1697     | 0.5900        | **0.3388**    | 2.2434        |
+| filter clocked    | 1644     | 0.6086        | 0.3604        | 2.1598        |
+| threshold         | 1632     | 0.6136        | 0.4852        | 2.0892        |
+| wake list only    | 1520     | 0.6584        | 0.4662        | 2.3418        |
 
-![screenshots](./images/benchmark_result_bar_graph.png)
+Bold highlighted items indicate best in that category
 
-### 🧠 **Analysis**
+![benchmark_result_bar_graph_ups](./images/benchmark_result_bar_graph_ups.png)
+![benchmark_result_bar_graph_ups_percent_diff](./images/benchmark_result_bar_graph_ups_percent_diff.png)
 
-#### ✅ **Best Overall Performance**
+### 🧠 **Analysis & Conculsions**
 
-* **Threshold Control**
+#### ✅ **Best Overall Performance** - **Lead follower**
 
-  * **Highest Average UPS** (1500)
-  * **Lowest average frame time** (0.6668 ms)
-  * Good across all metrics
-  * This suggests it's the most efficient and consistent strategy.
+- **Highest UPS** (1745)
+- **Lowest average (0.5734 ms)** and **max frame time (2.0326 ms)**
+- Great balance of throughput and latency
+- Clearly the most performant strategy in this batc
 
-#### 💡 **Best Responsiveness (Lowest Min & Max)**
+#### ⚠️ **Least Efficient** - **Wake list only**
+- **Lowest UPS (1520)** and **highest average frame time (0.6584 ms)**
+- Peak latency also the highest
+- Consistently underperforms compared to others
 
-* **Enable clocked split side**:
+#### 🧐 **Threshold vs Others**
 
-  * **Lowest min (0.3898 ms)** and **max (2.2896 ms)** frame times
-  * Suggests smoother and more predictable performance
-  * But slightly lower UPS compared to `threshold` control, but by only 17 UPS with a 1.14% difference
+- **Threshold** lags in min latency (0.4852 ms – worst in group) despite decent max latency
+- Its **UPS is ~6.5% below** lead follower, suggesting overhead or inefficiency under this logic
 
-#### ⚠️ **Least Efficient**
+### 📌 **Recommendations**
 
-* **Wake list only**:
-
-  * **Lowest UPS (1366)** and **highest average frame time (0.7322 ms)**
-
-#### 🧐 **Threshold vs Threshold Guarded**
-
-* Adding "guarded" appears to **reduce UPS by ~6.5%** and **increase latency slightly**
-
-  * Indicates that the overhead of guarding might not be worth it in this case
+- **Use lead follower** for optimal throughput and stability
+- **Enable clocked** is a close second 
+- Avoid **wake list only**, as it underperforms in every category
