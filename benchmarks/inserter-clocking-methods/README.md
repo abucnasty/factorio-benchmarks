@@ -2,7 +2,7 @@
 
 ## Test Scenario
 
-- steal smelter making 240 steel per second
+- steel smelter making 240 steel per second
   - fully beaconed
   - 16 legendary furnaces (8 smelting iron, 8 smelting steel)
   - 24 legendary stack inserters per module
@@ -91,13 +91,9 @@ Bold highlighted items indicate best in that category
 
 - **Highest UPS** (1745)
 - **Lowest average (0.5734 ms)** and **max frame time (2.0326 ms)**
-- Great balance of throughput and latency
-- Clearly the most performant strategy in this batc
 
 #### ⚠️ **Least Efficient** - **Wake list only**
 - **Lowest UPS (1520)** and **highest average frame time (0.6584 ms)**
-- Peak latency also the highest
-- Consistently underperforms compared to others
 
 #### 🧐 **Threshold vs Others**
 
