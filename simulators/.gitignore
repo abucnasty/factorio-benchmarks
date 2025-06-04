@@ -38,3 +38,6 @@ typings/
 lib/*.js
 test/*.js
 *.map
+
+# Build files
+dist
