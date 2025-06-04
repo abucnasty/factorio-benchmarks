@@ -132,7 +132,7 @@ export const miningProdSim = async (props: MiningProdSimProps) => {
                 { id: "rate_Q5", title: "rate_Q1"},
                 { id: "rate_voided", title: "rate_voided"},
             ],
-            rows: results,
+            rows: orderBy(results, result => result.mining_prod_level, "asc"),
             writeMode: writeMode
         }
     )
