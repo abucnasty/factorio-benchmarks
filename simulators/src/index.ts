@@ -8,7 +8,7 @@ const main = async () => {
 
     const normalOreResults: MiningProdSimResult[][] = []
 
-    for (let numberOfMiners = 1; numberOfMiners <= 2; numberOfMiners++) {
+    for (let numberOfMiners = 1; numberOfMiners <= 4; numberOfMiners++) {
         for (const targetRate of targetQ2Rates) {
             normalOreResults.push(await miningProdSim({
                 minMiningProdLevel: 0,
@@ -28,7 +28,7 @@ const main = async () => {
     const tungstenOreResults: MiningProdSimResult[][] = []
 
     // tungsten
-    for (let numberOfMiners = 1; numberOfMiners <= 2; numberOfMiners++) {
+    for (let numberOfMiners = 1; numberOfMiners <= 4; numberOfMiners++) {
         for (const targetRate of targetQ2Rates) {
             tungstenOreResults.push(await miningProdSim({
                 minMiningProdLevel: 0,
