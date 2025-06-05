@@ -21,10 +21,15 @@ Simulation details are as follows
 
 ## Data Files
 
-The csv files include up to three beacons effecting a set of either 1 or 2 miners. It lists the total voided rate compared to the Q2 ore that is produced. 
+The csv files include up to three beacons effecting a set of either 1 or 2 miners. It lists the total voided rate compared to the Q2 ore that is produced with the target being a constant at 240 uncommon ore per second.
 
 - normal ore: [q2-miner-sim.csv](./q2-miner-sim.csv)
 - tungsten ore: [q2-tungsten-miner-sim.csv](./q2-tungsten-miner-sim.csv)
+
+I have included verbose lists at target intervals of 60, 120, and 240 uncommon ore per second if you want to get started even sooner:
+
+- normal ore verbose list: [q2-miner-sim-verbose.csv](./q2-miner-sim-verbose.csv)
+- tungsten ore: [q2-tungsten-miner-sim-verbose.csv](./q2-tungsten-miner-sim-verbose.csv)
 
 ## Normal Ore
 ![normal-ore](./images/normal-ore.png)

@@ -9,7 +9,7 @@ import { QualityLevel } from "../models/quality"
 import { QualityModuleRegistry } from "../models/quality-module"
 import { SpeedModuleRegistry } from "../models/speed-module"
 import { powerset } from "../utils"
-import { CsvWriteMode, writeCsvFile } from "../utils/csv"
+import { CsvWriteMode, CsvWriteOptions, writeCsvFile } from "../utils/csv"
 
 export interface MiningProdSimProps {
     minMiningProdLevel: number
@@ -17,12 +17,24 @@ export interface MiningProdSimProps {
     numberOfMiners: number
     maxVoidedPerSecond: number
     targetQ2Rate: number
-    saveFileName: string
-    writeMode: CsvWriteMode
     baseRate?: number
 }
 
-export const miningProdSim = async (props: MiningProdSimProps) => {
+export interface MiningProdSimResult {
+    number_of_miners: number
+    mining_prod_level: number
+    beacon_1: string
+    beacon_2: string
+    beacon_3: string
+    rate_Q1: number
+    rate_Q2: number
+    rate_Q3: number
+    rate_Q4: number
+    rate_Q5: number
+    rate_voided: number
+}
+
+export const miningProdSim = async (props: MiningProdSimProps): Promise<MiningProdSimResult[]> => {
 
     const {
         minMiningProdLevel,
@@ -30,8 +42,6 @@ export const miningProdSim = async (props: MiningProdSimProps) => {
         numberOfMiners,
         maxVoidedPerSecond,
         targetQ2Rate,
-        saveFileName,
-        writeMode,
         baseRate = 2.5
     } = props;
 
@@ -73,7 +83,7 @@ export const miningProdSim = async (props: MiningProdSimProps) => {
         return sortedEffects[0]
     })
 
-    const results = []
+    const results: MiningProdSimResult[] = []
 
     for(const beaconEffect of beaconEffects) {
         
@@ -120,8 +130,12 @@ export const miningProdSim = async (props: MiningProdSimProps) => {
 
     console.log(`Found ${results.length} matching results`)
 
+    return results
+}
+
+export const writeMiningProdResultsToFile = async (path: string, results: MiningProdSimResult[], writeMode: CsvWriteMode) => {
     await writeCsvFile({
-            path: saveFileName,
+            path: path,
             header: [
                 { id: "number_of_miners", title: "number_of_miners" },
                 { id: "mining_prod_level", title: "mining_prod_level" },
