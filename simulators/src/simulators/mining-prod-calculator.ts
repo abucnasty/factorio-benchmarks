@@ -1,4 +1,4 @@
-import { groupBy, orderBy, sumBy } from "lodash"
+import { groupBy, orderBy, round, sumBy } from "lodash"
 import { createBeacon, createBeaconEffect } from "../models/beacon"
 import { ProductivityEffect } from "../models/effects"
 import { createEfficiencyModule } from "../models/efficiency-module"
@@ -49,6 +49,9 @@ export const miningProdSim = async (props: MiningProdSimProps) => {
         efficiencyModule, // efficiency module will act as "empty case"
     ]
 
+    /**
+     * beacons can only take 2 module slots, so limit the max to 2 combinations
+     */
     const combinationsOfModules = [...powerset(modules, 2)]
 
 
@@ -56,7 +59,7 @@ export const miningProdSim = async (props: MiningProdSimProps) => {
         ...combinationsOfModules.map(moduleCombo => createBeacon(QualityLevel.LEGENDARY, moduleCombo)),
         createBeacon(QualityLevel.LEGENDARY, [efficiencyModule, efficiencyModule]) // adding one more beacon as stub
     ]
-    const beaconEffectPowerSet = [...powerset(beacons, 3)].map(combination => createBeaconEffect(combination))
+    const beaconEffectPowerSet = powerset(beacons, 3).map(combination => createBeaconEffect(combination))
     const groupedBeaconEffects = groupBy(beaconEffectPowerSet, effect => [effect.speed, effect.quality])
     
     const beaconEffects = Object.values(groupedBeaconEffects).flatMap(duplicateBeaconEffects => {
@@ -106,7 +109,7 @@ export const miningProdSim = async (props: MiningProdSimProps) => {
                         rate_Q3: bigMiningDrill.productionRate.Q3,
                         rate_Q4: bigMiningDrill.productionRate.Q4,
                         rate_Q5: bigMiningDrill.productionRate.Q5,
-                        rate_voided: productionRate.Q1 + productionRate.Q3 + productionRate.Q4 + productionRate.Q5,
+                        rate_voided: round(productionRate.Q1 + productionRate.Q3 + productionRate.Q4 + productionRate.Q5, 2),
                     }
                 )
                 break;
@@ -115,22 +118,22 @@ export const miningProdSim = async (props: MiningProdSimProps) => {
 
     }
 
-    console.log(`Found ${results.length} matching`)
+    console.log(`Found ${results.length} matching results`)
 
     await writeCsvFile({
             path: saveFileName,
             header: [
-                { id: "number_of_miners", title: "number_of_miners"},
-                { id: "mining_prod_level", title: "mining_prod_level"},
-                { id: "beacon_1", title: "beacon_1"},
-                { id: "beacon_2", title: "beacon_2"},
-                { id: "beacon_3", title: "beacon_3"},
-                { id: "rate_Q2", title: "rate_Q2"},
-                { id: "rate_Q1", title: "rate_Q1"},
-                { id: "rate_Q3", title: "rate_Q1"},
-                { id: "rate_Q4", title: "rate_Q1"},
-                { id: "rate_Q5", title: "rate_Q1"},
-                { id: "rate_voided", title: "rate_voided"},
+                { id: "number_of_miners", title: "number_of_miners" },
+                { id: "mining_prod_level", title: "mining_prod_level" },
+                { id: "beacon_1", title: "beacon_1" },
+                { id: "beacon_2", title: "beacon_2" },
+                { id: "beacon_3", title: "beacon_3" },
+                { id: "rate_Q2", title: "rate_Q2" },
+                { id: "rate_Q1", title: "rate_Q1" },
+                { id: "rate_Q3", title: "rate_Q1" },
+                { id: "rate_Q4", title: "rate_Q1" },
+                { id: "rate_Q5", title: "rate_Q1" },
+                { id: "rate_voided", title: "rate_voided" },
             ],
             rows: orderBy(results, result => result.mining_prod_level, "asc"),
             writeMode: writeMode
