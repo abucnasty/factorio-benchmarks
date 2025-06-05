@@ -1,4 +1,4 @@
-number_of_miners,mining_prod_level,beacon_1,beacon_2,beacon_3,rate_Q2,rate_Q1,rate_Q1,rate_Q1,rate_Q1,rate_voided
+number_of_miners,mining_prod_level,beacon_1,beacon_2,beacon_3,rate_Q2,rate_Q1,rate_Q3,rate_Q4,rate_Q5,rate_voided
 1,1271,speed-3-Q5|efficiency-3-Q5,speed-3-Q5|efficiency-3-Q5,,240.08,1400.45,24.01,2.4,0.27,1427.13
 1,1281,speed-1-Q5|speed-3-Q5,,,240.09,1400.55,24.01,2.4,0.27,1427.23
 1,1291,speed-1-Q5|efficiency-3-Q5,speed-3-Q5|efficiency-3-Q5,speed-3-Q5|efficiency-3-Q5,240.08,1400.49,24.01,2.4,0.27,1427.17
