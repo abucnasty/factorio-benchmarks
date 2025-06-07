@@ -1,2 +1,4 @@
 # ignores temporary files used in benchmark scripts
 **/**/temp*
+
+*.log
