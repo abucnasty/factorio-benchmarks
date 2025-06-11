@@ -17,6 +17,8 @@ $argumentString = "$ticks $runs `"$filePattern`" -enableMods -benchmarkModFolder
 
 if ($verboseResult) {
     $argumentString += " -verboseResult"
+} else {
+    $argumentString += " -forceCSV"
 }
 
 Start-Process -FilePath "powershell.exe" `
