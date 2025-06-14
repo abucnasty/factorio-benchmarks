@@ -11,7 +11,7 @@
 ### Uncommon Science
 ![alt text](../icons/quality-uncommon.png)
 
-| Science                    | Version | Link                                               | Video                                   |
+| Description                | Version | Link                                               | Video                                   |
 | -------------------------- | ------- | -------------------------------------------------- | --------------------------------------- |
 | Military Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/z6tbrf) | [youtube](https://youtu.be/uKT3MZw8agg) |
 | Automation Science (240/s) | 2       | [factoriobin](https://factoriobin.com/post/2szm4a) | [youtube](https://youtu.be/dEM4GHz7N8E) |
