@@ -8,6 +8,8 @@ export const QualityLevel = {
 
 export type QualityLevel = typeof QualityLevel[keyof typeof QualityLevel];
 
-export type QualityComponent = {
+export type QualityMetadata = {
     qualityLevel: QualityLevel
 }
+
+export const AllQualityLevels: readonly QualityLevel[] = Object.values(QualityLevel)

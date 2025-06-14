@@ -1,20 +1,7 @@
-import { QualityLevel } from "./quality";
-import { SpeedEffect, QualityEffect } from "./effects";
-import { Module, ModuleType, ModuleTier } from "./module";
-import { ModuleRegistry } from "./module-registry";
-
-export interface QualityModule extends Module, SpeedEffect, QualityEffect {}
-
-export const createQualityModule = (tier: ModuleTier, qualityLevel: QualityLevel, speed: SpeedEffect, quality: QualityEffect): QualityModule => {
-    return {
-        name: `quality-${tier}-${qualityLevel}`,
-        type: ModuleType.QUALITY,
-        tier, 
-        qualityLevel, 
-        ...speed, 
-        ...quality
-    }
-}
+import { QualityLevel } from "../../quality"
+import { ModuleTier, ModuleType } from "./module"
+import { ModuleRegistry } from "./module-registry"
+import { createQualityModule, QualityModule } from "./quality-module"
 
 export const QualityModuleRegistry: ModuleRegistry<QualityModule> = {
     type: ModuleType.QUALITY,

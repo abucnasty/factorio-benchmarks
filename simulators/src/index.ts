@@ -1,8 +1,10 @@
 import { orderBy } from "lodash"
 import { miningProdSim, MiningProdSimResult, writeMiningProdResultsToFile } from "./simulators/mining-prod-calculator"
 import { CsvWriteMode } from "./utils"
+import { IronOre, TungstenOre } from "./recipes"
+import { sulfurUpcyclerSim, writeSulfurUpcyclerSimResultsToFile } from "./simulators/sulfur-upcycler-calculator"
 
-const main = async () => {
+const runMiningProdSim = async () => {
 
     const targetQ2Rates = [60, 120, 240]
 
@@ -16,7 +18,7 @@ const main = async () => {
                 numberOfMiners: numberOfMiners,
                 maxVoidedPerSecond: 120*12,
                 targetQ2Rate: targetRate, // per second
-                baseRate: 2.5
+                item: IronOre
             }))
         }
     }
@@ -36,7 +38,7 @@ const main = async () => {
                 numberOfMiners: numberOfMiners,
                 maxVoidedPerSecond: 120*12,
                 targetQ2Rate: targetRate, // per second
-                baseRate: 2.5/5
+                item: TungstenOre
             }))
         }
     }
@@ -51,4 +53,17 @@ const main = async () => {
 }
 
 
-main()
+// runMiningProdSim()
+
+
+const runSulfurUpcyclerSim = async () => {
+    const results = await sulfurUpcyclerSim({})
+    
+    await writeSulfurUpcyclerSimResultsToFile(
+        "./q2-sulfur.csv",
+        results,
+        CsvWriteMode.REPLACE
+    )
+}
+
+runSulfurUpcyclerSim()

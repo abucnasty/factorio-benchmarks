@@ -19,6 +19,7 @@
   "dependencies": {
     "@types/lodash": "^4.17.17",
     "csv-writer": "^1.6.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "uuid": "^11.1.0"
   }
 }

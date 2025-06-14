@@ -1,5 +1,6 @@
 import { createObjectCsvWriter } from 'csv-writer';
 import type { ObjectCsvWriterParams } from 'csv-writer/src/lib/csv-writer-factory';
+import { ObjectStringifierHeader } from 'csv-writer/src/lib/record';
 import * as fs from 'fs';
 
 export const CsvWriteMode = {
@@ -11,6 +12,8 @@ export type CsvWriteMode = typeof CsvWriteMode[keyof typeof CsvWriteMode];
 
 
 export type CsvWriteOptions = Partial<ObjectCsvWriterParams> & {
+    path: string;
+    header: ObjectStringifierHeader;
     rows: any[]
     writeMode: CsvWriteMode
 }

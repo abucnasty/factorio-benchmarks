@@ -1,30 +1,18 @@
-import { QualityLevel } from "./quality";
-import { SpeedEffect, QualityEffect } from "./effects";
-import { Module, ModuleType, ModuleTier } from "./module";
+import { ModuleType, ModuleTier } from "./module";
+import { QualityLevel } from "../../quality";
 import { ModuleRegistry } from "./module-registry";
+import { SpeedModule, createSpeedModule } from "./speed-module";
 
-export interface SpeedModule extends Module, SpeedEffect, QualityEffect {}
-
-export const createSpeedModule = (tier: ModuleTier, qualityLevel: QualityLevel, speed: SpeedEffect, quality: QualityEffect): SpeedModule => {
-    return {
-        name: `speed-${tier}-${qualityLevel}`,
-        type: ModuleType.SPEED, 
-        tier, 
-        qualityLevel, 
-        ...speed, 
-        ...quality
-    }
-}
 
 export const SpeedModuleRegistry: ModuleRegistry<SpeedModule> = {
     type: ModuleType.SPEED,
     get: (tier: ModuleTier, qualityLevel: QualityLevel): SpeedModule => {
-        return SPEED_MODULES[tier][qualityLevel]        
+        return SPEED_MODULES[tier][qualityLevel];
     },
     getAll: () => {
-        return new Set(Object.values(SPEED_MODULES).flatMap(it => Object.values(it)))
+        return new Set(Object.values(SPEED_MODULES).flatMap(it => Object.values(it)));
     }
-}
+};
 
 
 const SPEED_MODULES: Record<ModuleTier, Record<QualityLevel, SpeedModule>> = {
