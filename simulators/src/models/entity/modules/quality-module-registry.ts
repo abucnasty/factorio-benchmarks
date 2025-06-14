@@ -9,7 +9,7 @@ export const QualityModuleRegistry: ModuleRegistry<QualityModule> = {
         return QUALITY_MODULES[tier][qualityLevel]
     },
     getAll: () => {
-        return new Set(Object.values(QUALITY_MODULES).flatMap(it => Object.values(it)))
+        return Object.values(QUALITY_MODULES).flatMap(it => Object.values(it))
     }
 }
 

@@ -31,7 +31,6 @@ export class ProductionRateSystem {
         const matchedInputRate = receiverInputRates.find(inputRate => {
             const producerOutputRate = producerOutputRates.find(outputRate => outputRate.item.name == inputRate.item.name)
             if(!producerOutputRate) {
-                console.warn(`no producer output found in ${producer.prettyName}`)
                 return
             }
 
@@ -59,6 +58,30 @@ export class ProductionRateSystem {
         }))
     }
 
+    entitiesRequiredToConsumeInputFrom(item: Item, producer: Entity, receiver: Entity): number {
+        const producerOutputRate = this.computeOutputRate(producer).find(it => it.item.name == item.name)
+        const receiverInputRate = this.computeInputRate(receiver).find(it => it.item.name == item.name)
+
+
+        if(!producerOutputRate) {
+            throw Error(`no producer output found in ${producer.prettyName} for item ${item.name}`)
+        }
+
+        if(!receiverInputRate) {
+            throw Error(`no receiver input found in ${producer.prettyName} for item ${item.name}`)
+        }
+
+        const inputQualityLevel = receiverInputRate.qualityLevel
+
+        const outputItemRate = producerOutputRate.rateMap[inputQualityLevel]
+
+        if (outputItemRate.rate <= 0) {
+            throw Error("output item rate must be greater than 0")
+        }
+
+        return Math.min(1, Math.ceil(outputItemRate.rate / receiverInputRate.rate))
+    }
+
     
 
     computeInputRate(entity: Entity): InputRate[] {
@@ -71,82 +94,66 @@ export class ProductionRateSystem {
         }))
     }
 
-    recycleFromProducerUntil(producer: Entity, recycler: Recycler, item: Item, qualityLevel: QualityLevel, quantity: number): {
+    recycleFromProducerRecursively(producer: Entity, recycler: Recycler, item: Item, until: number): {
         outputRate: OutputRate,
         passes: number
     } {
-
-        const producerOutputRates = this.computeOutputRate(producer)
-        const producerOutputRate = producerOutputRates.find(rate => rate.item.name == item.name)
+        const producerOutputRate = this.computeOutputRate(producer).find(rate => rate.item.name == item.name)
         if (!producerOutputRate) {
             throw Error(`producer ${producer.prettyName} does not have an output for item ${item.name}`)
         }
+        return this.recycleSpecificQualityUntil(recycler, producerOutputRate, until)
+    }
 
-        const recyclerInputRate = this.computeInputRate(recycler).find(rate => rate.item.name == item.name)
-        const recyclerOutputRate = this.computeOutputRate(recycler).find(rate => rate.item.name == item.name)
+    recycleSpecificQualityUntil(recycler: Recycler, outputRate: OutputRate, until: number, passes: number = 1): { outputRate: OutputRate, passes: number } {
+        
+        const item = outputRate.item
+        const baseItemRateMap = outputRate.rateMap
 
-        if (!recyclerInputRate || !recyclerOutputRate) {
-            throw Error(`recycler ${producer.prettyName} does not have an input or output for item ${item.name}`)
+        const baseRecyclerInputRate = this.computeInputRate(recycler).find(rate => rate.item.name == item.name)
+        const baseRecyclerOutputRate = this.computeOutputRate(recycler).find(rate => rate.item.name == item.name)
+        if (!baseRecyclerInputRate || !baseRecyclerOutputRate) {
+            throw Error(`input recycler ${recycler.prettyName} does not have an input or output for item ${item.name}`)
         }
 
-        const outputItemRate = producerOutputRate.rateMap[qualityLevel]
+        const recyclerInputQualityLevel = baseRecyclerInputRate.qualityLevel
+        
+
+        const outputItemRate = baseItemRateMap[recyclerInputQualityLevel]
+        const rateMapRemainder = ItemRateMapFactory.removeQualityLevel(baseItemRateMap, recyclerInputQualityLevel)        
 
         const shadowRecycler = recycler.clone()
+
         // throttle recycler if it can go faster than the output of the producer entity
-        const throttledRate = recyclerInputRate.rate / outputItemRate.rate
-        if (recyclerInputRate.rate > outputItemRate.rate) {
+        const throttledRate = baseRecyclerInputRate.rate / outputItemRate.rate
+        if (baseRecyclerInputRate.rate > outputItemRate.rate) {
             shadowRecycler.throttleByDivisor(throttledRate)
         }
 
-        const recyclerOutputTransformer = shadowRecycler.components.getOrThrow<OutputTransformerComponent>(ComponentType.OUTPUT_TRANSFORMER)
+        const recycledOutputRate = this.computeOutputRate(shadowRecycler)[0]
 
-        const recycledPass = this.computeOutputRate(shadowRecycler)
+        const mergedRateMap = ItemRateMapFactory.add(
+            rateMapRemainder,
+            recycledOutputRate.rateMap,
+        )
 
-        return {
-            outputRate: {} as any,
-            passes: 0
+        const mergedOutputRate: OutputRate = {
+            item,
+            rateMap: mergedRateMap
         }
-    }
 
-    recycleSpecifQualityUntil(recycler: Recycler, outputRate: OutputRate, qualityLevel: QualityLevel, passes: number = 0): ItemRateMap {
-        throw Error("notimplemented")
-        // const baseItemRateMap = outputRate.rateMap
-        // const item = outputRate.item
-
-        // const outputItemRate = baseItemRateMap[qualityLevel]
-        // const rateMapRemainder = ItemRateMapFactory.removeQualityLevel(baseItemRateMap, qualityLevel)
-
-        // const baseRecyclerInputRate = this.computeInputRate(recycler).find(rate => rate.item.name == item.name)
-        // const baseRecyclerOutputRate = this.computeOutputRate(recycler).find(rate => rate.item.name == item.name)
-        // if (!baseRecyclerInputRate || !baseRecyclerOutputRate) {
-        //     throw Error(`input recycler ${recycler.prettyName} does not have an input or output for item ${item.name}`)
-        // }
-
-        // const shadowRecycler = recycler.clone()
-
-        // // throttle recycler if it can go faster than the output of the producer entity
-        // const throttledRate = baseRecyclerInputRate.rate / outputItemRate.rate
-        // if (baseRecyclerInputRate.rate > outputItemRate.rate) {
-        //     shadowRecycler.throttleByDivisor(throttledRate)
-        // }
-
-        // const recycledOutputRate = this.computeOutputRate(shadowRecycler)[0]
-
-        // const compositeRateMap = ItemRateMapFactory.add(
-        //     rateMapRemainder,
-        //     recycledOutputRate.rateMap,
-        // )
-
-        // // const newOutputRate: OutputRate = {
-        // //     item,
-        // //     rateMap
-        // // }
-
-
-        // // if (compositeRateMap[qualityLevel].rate > 1) {
-        // //     return recycleSpecifQualityUntil(
-        // //         recycler, 
-        // //     )
-        // // }
+        if (mergedRateMap[recyclerInputQualityLevel].rate <= until) {
+            return {
+                outputRate: mergedOutputRate,
+                passes
+            }
+        }
+        return this.recycleSpecificQualityUntil(
+            recycler, 
+            mergedOutputRate,
+            until,
+            passes+1
+        )
+        
     }
 }

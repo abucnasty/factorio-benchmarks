@@ -57,6 +57,10 @@ export class Recycler extends AbstractEntity {
             )
         )
     }
+
+    public multiplyOutputRateBy(multiplier: number) {
+        this.throttleByDivisor(1 / multiplier)
+    }
 }
 
 
