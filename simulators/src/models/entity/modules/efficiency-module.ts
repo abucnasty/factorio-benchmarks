@@ -1,9 +1,8 @@
-import { EfficiencyEffect } from "./effects";
-import { Module, ModuleTier, ModuleType } from "./module";
-import { QualityLevel } from "./quality";
+import { EfficiencyEffect } from "../../effects"
+import { QualityLevel } from "../../quality"
+import { ModuleMetadata, ModuleTier, ModuleType } from "./module"
 
-// TODO: ABUC
-export interface EfficiencyModule extends Module, EfficiencyEffect {}
+export interface EfficiencyModule extends ModuleMetadata, EfficiencyEffect {}
 
 export const createEfficiencyModule = (tier: ModuleTier, qualityLevel: QualityLevel): EfficiencyModule => {
     return {

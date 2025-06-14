@@ -1,5 +1,4 @@
-import { Entity } from "./entity"
-import { QualityComponent } from "./quality"
+import { QualityMetadata } from "../../quality"
 
 export const ModuleType = {
     SPEED: "SPEED",
@@ -19,7 +18,8 @@ export const ModuleTier = {
 
 export type ModuleTier = typeof ModuleTier[keyof typeof ModuleTier]
 
-export interface Module extends Entity, QualityComponent {
+export interface ModuleMetadata extends QualityMetadata {
+    name: string
     type: ModuleType
     tier: ModuleTier
 }

@@ -1,20 +1,7 @@
-import { QualityLevel } from "./quality";
-import { SpeedEffect, ProductivityEffect, QualityEffect } from "./effects";
-import { Module, ModuleType, ModuleTier } from "./module";
-import { ModuleRegistry } from "./module-registry";
-
-export interface ProductivityModule extends Module, SpeedEffect, ProductivityEffect {}
-
-export const createProductivityModule = (tier: ModuleTier, qualityLevel: QualityLevel, productivity: ProductivityEffect, speed: SpeedEffect): ProductivityModule => {
-    return {
-        name: `productivity-${tier}-${qualityLevel}`,
-        type: ModuleType.SPEED, 
-        tier, 
-        qualityLevel, 
-        ...speed, 
-        ...productivity
-    }
-}
+import { QualityLevel } from "../../quality"
+import { ModuleTier, ModuleType } from "./module"
+import { ModuleRegistry } from "./module-registry"
+import { createProductivityModule, ProductivityModule } from "./productivity-module"
 
 export const ProductivityModuleRegistry: ModuleRegistry<ProductivityModule> = {
     type: ModuleType.SPEED,
@@ -25,6 +12,7 @@ export const ProductivityModuleRegistry: ModuleRegistry<ProductivityModule> = {
         return new Set(Object.values(PRODUCTIVITY_MODULES).flatMap(it => Object.values(it)))
     }
 }
+
 
 
 const PRODUCTIVITY_MODULES: Record<ModuleTier, Record<QualityLevel, ProductivityModule>> = {
