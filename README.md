@@ -8,7 +8,7 @@ Blueprints that have been made publically available.
 [blueprints](./docs/blueprints/README.md)
 
 ## Factorio Benchmarks
-[benchmarks]("./benchmarks")
+[benchmarks]("/benchmarks")
 
 This directory contains the following:
 1. performance benchmark runs
@@ -17,6 +17,6 @@ This directory contains the following:
 4. conclusion files in markdown notation
 
 ## Simulators
-[simulators]("./simulators")
+[simulators]("/simulators")
 
 WIP simulator for calculating quality ratios for use in designs
