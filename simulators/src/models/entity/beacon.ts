@@ -49,6 +49,9 @@ const distributionEfficiencyMap: Record<QualityLevel, number> = {
 export class BeaconEffect implements SpeedEffect, QualityEffect {
 
     public static fromBeacons(beacons: Beacon[]) {
+
+        const modules = beacons.flatMap(it => it.modules)
+
         const beaconCount = beacons.length
 
         const speed = sumBy(beacons, beacon => beacon.totalSpeed / beacon.distributionEfficiency * transmissionPower(beacon, beaconCount))

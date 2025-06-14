@@ -9,7 +9,7 @@ export const ProductivityModuleRegistry: ModuleRegistry<ProductivityModule> = {
         return PRODUCTIVITY_MODULES[tier][qualityLevel]        
     },
     getAll: () => {
-        return new Set(Object.values(PRODUCTIVITY_MODULES).flatMap(it => Object.values(it)))
+        return Object.values(PRODUCTIVITY_MODULES).flatMap(it => Object.values(it))
     }
 }
 

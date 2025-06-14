@@ -10,7 +10,7 @@ export const SpeedModuleRegistry: ModuleRegistry<SpeedModule> = {
         return SPEED_MODULES[tier][qualityLevel];
     },
     getAll: () => {
-        return new Set(Object.values(SPEED_MODULES).flatMap(it => Object.values(it)));
+        return Object.values(SPEED_MODULES).flatMap(it => Object.values(it));
     }
 };
 

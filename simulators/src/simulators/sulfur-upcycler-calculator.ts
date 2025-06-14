@@ -19,20 +19,16 @@ export type SulfurUpcyclerProps = {}
 export type SulfurUpcyclerSimResult = {
     cryo_module_prod_count: number;
     cryo_module_quality_count: number;
+    recycler_count: number;
+    recycler_loops: number;
     cryo_production_speed: number;
     cryo_water_rate: number;
     cryo_petro_rate: number;
     cryo_io_ratio: number;
     cryo_quality: number;
-    cryo_beacon_1?: string;
-    cryo_beacon_2?: string;
-    cryo_beacon_3?: string;
-    cryo_beacon_4?: string;
+    cryo_beacon_modules?: string;
     cryo_beacon_count: number;
-    rec_beacon_1?: string;
-    rec_beacon_2?: string;
-    rec_beacon_3?: string;
-    rec_beacon_4?: string;
+    rec_beacon_modules?: string;
     recycler_beacon_count: number;
     recycler_modules: string;
     output_q1: number;
@@ -40,7 +36,8 @@ export type SulfurUpcyclerSimResult = {
     output_q3: number;
     output_q4: number;
     output_q5: number;
-    recycled_q1: number;
+    cryo_q1_output: number;
+    recycler_max_input_rate: number;
     recycler_quality: number;
 }
 
@@ -68,13 +65,16 @@ export const sulfurUpcyclerSim = async (props: SulfurUpcyclerProps): Promise<Sul
             QualityModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
             QualityModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY)
         ],
-        [
-            SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
-            SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
-            SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
-            SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY)
-        ],
+        // [
+        //     SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
+        //     SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
+        //     SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
+        //     SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY)
+        // ],
     ]
+
+    const simulationsToRun = beaconEffects.length * beaconEffects.length * cryogenicPlantModuleCombinations.length * recyclerModuleCombos.length
+    let simulationCount = 0;
 
     const results: SulfurUpcyclerSimResult[] = []
 
@@ -82,6 +82,9 @@ export const sulfurUpcyclerSim = async (props: SulfurUpcyclerProps): Promise<Sul
         for(const reyclerBeaconEffect of beaconEffects) {
             for (const cryoModules of cryogenicPlantModuleCombinations) {
                 for (const recyclerModules of recyclerModuleCombos) {
+
+                    simulationCount++
+                    console.log(`running simulation ${simulationCount} of ${simulationsToRun}`)
                         const cryogenicPlant = new CryogenicPlant(
                             cryoModules,
                             QualityLevel.LEGENDARY,
@@ -97,53 +100,41 @@ export const sulfurUpcyclerSim = async (props: SulfurUpcyclerProps): Promise<Sul
 
                         const cryoProductionSpeed = CompositeEffect.fromEffects(cryogenicPlant.effects).speed
 
-                        // if (cryoProductionSpeed > 8) {
-                        //     continue;
-                        // }
-
                         const cryogenicPlantOutputRate = productionRateSystem.computeOutputRate(cryogenicPlant)
                         const cryogenicPlantInputRate = productionRateSystem.computeInputRate(cryogenicPlant)
 
-                            
-
-                        const recyclerOutputRate = productionRateSystem.computeOutputRate(recycler)
-                        const recyclerInputRateRate = productionRateSystem.computeInputRate(recycler)
-
                         try {
-                            const throttledRecylcerRate = productionRateSystem.computeThrottledOutputRateForEntities(cryogenicPlant, recycler)
 
-                            const output = productionRateSystem.recycleFromProducerUntil(cryogenicPlant, recycler, Sulfur, QualityLevel.COMMON, 1)
+                            const numberOfRecyclersNeeded = productionRateSystem.entitiesRequiredToConsumeInputFrom(Sulfur, cryogenicPlant, recycler)
 
-                            const combinedOutput = ItemRateMapFactory.add(
-                                ItemRateMapFactory.removeQualityLevel(cryogenicPlantOutputRate[0].rateMap, QualityLevel.COMMON),
-                                throttledRecylcerRate[0].rateMap
-                            )
+                            if (numberOfRecyclersNeeded > 1) {
+                                recycler.multiplyOutputRateBy(1 / numberOfRecyclersNeeded)
+                            }
+
+                            const q1LoopEndCondition = 4; // 75% destruction on 4 items will yield 0-1 item which is negligible
+                            const recursiveRecycleOutput = productionRateSystem.recycleFromProducerRecursively(cryogenicPlant, recycler, Sulfur, q1LoopEndCondition)
+                            const combinedOutput = recursiveRecycleOutput.outputRate.rateMap;
+                            const recursiveRecycleOutputPasses = recursiveRecycleOutput.passes;
+
+                            const recyclerMaxInputRate = productionRateSystem.computeInputRate(recycler).find(it => it.item == Sulfur)!!
+
 
                             const recycledRate = cryogenicPlantOutputRate[0].rateMap[QualityLevel.COMMON].rate
-
 
                             const petroleumRate = cryogenicPlantInputRate.find(it => it.item == PatroleumGas)?.rate ?? 0
                             const totalRate = totalRateFromRateMap(cryogenicPlantOutputRate[0].rateMap)
 
                             const ioRate = totalRate / petroleumRate
 
-                            
-
                             results.push({
                                 cryo_module_prod_count: cryogenicPlant.modules.filter(it => it.type == ModuleType.PRODUCTIVITY).length,
                                 cryo_module_quality_count: cryogenicPlant.modules.filter(it => it.type == ModuleType.QUALITY).length,
-                                cryo_beacon_1: cryoBeaconEffect.beacons[0]?.modules.map(it => it.name).join("|"),
-                                cryo_beacon_2: cryoBeaconEffect.beacons[1]?.modules.map(it => it.name).join("|"),
-                                cryo_beacon_3: cryoBeaconEffect.beacons[2]?.modules.map(it => it.name).join("|"),
-                                cryo_beacon_4: cryoBeaconEffect.beacons[3]?.modules.map(it => it.name).join("|"),
+                                cryo_beacon_modules: modulesToString(cryoBeaconEffect.beacons.flatMap(it => it.modules)),
                                 cryo_petro_rate: cryogenicPlantInputRate.find(it => it.item == PatroleumGas)?.rate ?? 0,
                                 cryo_water_rate: cryogenicPlantInputRate.find(it => it.item == Water)?.rate ?? 0,
                                 cryo_beacon_count: cryoBeaconEffect.beacons.length,
                                 cryo_io_ratio: ioRate,
-                                rec_beacon_1: reyclerBeaconEffect.beacons[0]?.modules.map(it => it.name).join("|"),
-                                rec_beacon_2: reyclerBeaconEffect.beacons[1]?.modules.map(it => it.name).join("|"),
-                                rec_beacon_3: reyclerBeaconEffect.beacons[2]?.modules.map(it => it.name).join("|"),
-                                rec_beacon_4: reyclerBeaconEffect.beacons[3]?.modules.map(it => it.name).join("|"),
+                                rec_beacon_modules: modulesToString(reyclerBeaconEffect.beacons.flatMap(beacon => beacon.modules)),
                                 recycler_beacon_count: reyclerBeaconEffect.beacons.length,
                                 recycler_modules: recyclerModules[0].type,
                                 output_q1: combinedOutput.Q1.rate,
@@ -151,10 +142,13 @@ export const sulfurUpcyclerSim = async (props: SulfurUpcyclerProps): Promise<Sul
                                 output_q3: combinedOutput.Q3.rate,
                                 output_q4: combinedOutput.Q4.rate,
                                 output_q5: combinedOutput.Q5.rate,
-                                recycled_q1: cryogenicPlantOutputRate[0].rateMap[QualityLevel.COMMON].rate,
+                                cryo_q1_output: recycledRate,
+                                recycler_max_input_rate: recyclerMaxInputRate.rate,
                                 cryo_production_speed: cryoProductionSpeed,
-                                cryo_quality: CompositeEffect.fromEffects(cryogenicPlant.effects).quality,
-                                recycler_quality: CompositeEffect.fromEffects(recycler.effects).quality
+                                cryo_quality: CompositeEffect.fromEffects(cryogenicPlant.effects).quality * 100, // percent
+                                recycler_quality: CompositeEffect.fromEffects(recycler.effects).quality * 100, // percent
+                                recycler_count: numberOfRecyclersNeeded,
+                                recycler_loops: recursiveRecycleOutputPasses
                             })
                         } catch(e) {
                             // console.error(e)
@@ -170,10 +164,15 @@ export const sulfurUpcyclerSim = async (props: SulfurUpcyclerProps): Promise<Sul
     const groupedByQ2Output = groupBy(results, result => round(result.output_q2, 1))
 
     const filteredResults = Object.values(groupedByQ2Output).flatMap(results => {
+        const filteredResults = results
+            // ignore if the recycler has to have an inserter swing over 3 times to destroy common materials
+            .filter(result => result.recycler_loops <= 3)
         // prefer a higher sulfur yield per liquid input first then minimize number of beacons used
-        const sortedResults = orderBy(results, ["cryo_io_ratio", "recycler_beacon_count"], ["asc", "asc"])
+        const sortedResults = orderBy(filteredResults, ["cryo_q1_output", "recycler_beacon_count"], ["asc", "asc"])
         return sortedResults[0]
-    }).filter(result => result.cryo_petro_rate > 200)
+    }).filter(result => 
+        result.cryo_petro_rate > 200
+    )
 
     filteredResults.forEach(result => {
         result.cryo_petro_rate = round(result.cryo_petro_rate, 2)
@@ -190,12 +189,20 @@ export const sulfurUpcyclerSim = async (props: SulfurUpcyclerProps): Promise<Sul
         result.output_q3 = round(result.output_q3, 2)
         result.output_q4 = round(result.output_q4, 2)
         result.output_q5 = round(result.output_q5, 2)
-        result.recycled_q1 = round(result.recycled_q1, 2)
+        result.cryo_q1_output = round(result.cryo_q1_output, 2)
         result.recycler_quality = round(result.recycler_quality, 2)
+        result.recycler_max_input_rate = round(result.recycler_max_input_rate, 2)
     })
 
 
     return filteredResults
+}
+
+const modulesToString = (modules: Module[]): string => {
+    const groupedModules = groupBy(modules, it => it.name)
+    const sortedNames = Object.keys(groupedModules)
+    const nameToCount = new Map(Object.entries(groupedModules).map(([name, modules]) => ([name, modules.length])))
+    return  sortedNames.map(name => `${name} (x${nameToCount.get(name)})`).join(" | ")
 }
 
 
@@ -240,34 +247,31 @@ const generateBeaconCombinations = (): BeaconEffect[] => {
 
 export const writeSulfurUpcyclerSimResultsToFile = async (path: string, results: SulfurUpcyclerSimResult[], writeMode: CsvWriteMode) => {
 
-    const rows = orderBy(results, ['output_q2', 'cryo_io_ratio'], ['desc', 'desc'])
+    const rows = orderBy(results, ['output_q2'], ['desc'])
 
     await writeCsvFile({
             path: path,
             header: [
                 {id: "cryo_module_prod_count", title: "cryo_module_prod_count"},
                 {id: "cryo_module_quality_count", title: "cryo_module_quality_count"},
+                {id: "recycler_count", title: "recycler_count"},
+                {id: "recycler_loops", title: "recycler_loops"},
+                {id: "recycler_modules", title: "recycler_modules"},
+                {id: "cryo_q1_output", title: "cryo_q1_output"},
+                {id: "recycler_max_input_rate", title: "recycler_max_input_rate"},
                 {id: "cryo_petro_rate", title: "petroleum"},
                 {id: "cryo_water_rate", title: "water"},
                 {id: "cryo_io_ratio", title: "cryo_io_ratio"},
-                {id: "cryo_beacon_1", title: "cryo_beacon_1"},
-                {id: "cryo_beacon_2", title: "cryo_beacon_2"},
-                {id: "cryo_beacon_3", title: "cryo_beacon_3"},
-                {id: "cryo_beacon_4", title: "cryo_beacon_4"},
-                {id: "rec_beacon_1", title: "rec_beacon_1"},
-                {id: "rec_beacon_2", title: "rec_beacon_2"},
-                {id: "rec_beacon_3", title: "rec_beacon_3"},
-                {id: "rec_beacon_4", title: "rec_beacon_4"},
-                {id: "output_q1", title: "output_q1"},
+                {id: "cryo_beacon_modules", title: "cryo_beacon_modules"},
+                {id: "rec_beacon_modules", title: "rec_beacon_modules"},
                 {id: "output_q2", title: "output_q2"},
                 {id: "output_q3", title: "output_q3"},
                 {id: "output_q4", title: "output_q4"},
                 {id: "output_q5", title: "output_q5"},
-                {id: "recycler_modules", title: "recycler_modules"},
-                {id: "recycled_q1", title: "recycled_q1"},
                 {id: "cryo_production_speed", title: "cryo_production_speed"},
                 {id: "cryo_quality", title: "cryo_quality"},
                 {id: "recycler_quality", title: "recycler_quality"},
+
             ],
             rows: rows,
             writeMode: writeMode
