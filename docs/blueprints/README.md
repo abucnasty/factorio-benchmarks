@@ -17,4 +17,4 @@
 | Automation Science (240/s) | 2       | [factoriobin](https://factoriobin.com/post/2szm4a) | [youtube](https://youtu.be/dEM4GHz7N8E) |
 | Logistics Science (480/s)  | 2       | [factoriobin](https://factoriobin.com/post/sujyge) | [youtube](https://youtu.be/Qnk71RHKV0s) |
 | Ore Voiding Miners         | 1       | [factoriobin](https://factoriobin.com/post/axykef) | [youtube](https://youtu.be/SccsA0Dr54k) |
-| Chemical Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/fcfxjt) | pending...                              |
+| Chemical Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4) |
