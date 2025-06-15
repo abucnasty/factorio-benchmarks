@@ -1,0 +1,263 @@
+cryo_module_prod_count,cryo_module_quality_count,recycler_count,recycler_loops,recycler_modules,cryo_q1_output,recycler_max_input_rate,petroleum,water,cryo_io_ratio,cryo_beacon_modules,rec_beacon_modules,output_q2,output_q3,output_q4,output_q5,cryo_production_speed,cryo_quality,recycler_quality
+1,7,1,3,QUALITY,100.08,104.2,1575,1575,0.083333,speed-2-Q5 (x4) | speed-3-Q5 (x4),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),32.57,3.26,0.33,0.04,9.5,23.75,16
+0,8,1,2,QUALITY,74.2,73.6,1590,1590,0.066667,speed-2-Q5 (x4) | speed-3-Q5 (x4),speed-2-Q5 (x1) | efficiency-3-Q5 (x4) | speed-3-Q5 (x1),32.4,3.24,0.32,0.04,9.6,30,19
+0,8,1,2,QUALITY,74.2,72.2,1590,1590,0.066667,speed-2-Q5 (x4) | speed-3-Q5 (x4),speed-1-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),32.33,3.23,0.32,0.04,9.6,30,19
+0,8,1,2,QUALITY,74.2,77.8,1590,1590,0.066667,speed-2-Q5 (x4) | speed-3-Q5 (x4),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),32.24,3.22,0.32,0.04,9.6,30,18
+0,8,1,2,QUALITY,74.2,86.6,1590,1590,0.066667,speed-2-Q5 (x4) | speed-3-Q5 (x4),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),32.05,3.2,0.32,0.04,9.6,30,17
+0,8,1,2,QUALITY,77.46,86.6,1636.5,1636.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | speed-2-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),32.05,3.21,0.32,0.04,9.91,29,17
+0,8,1,2,QUALITY,74.2,60,1590,1590,0.066667,speed-2-Q5 (x4) | speed-3-Q5 (x4),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),31.86,3.19,0.32,0.04,9.6,30,20
+0,8,1,2,QUALITY,74.2,59.2,1590,1590,0.066667,speed-2-Q5 (x4) | speed-3-Q5 (x4),speed-2-Q5 (x2) | efficiency-3-Q5 (x4),31.82,3.18,0.32,0.04,9.6,30,20
+0,8,1,2,QUALITY,74.2,113.2,1590,1590,0.066667,speed-2-Q5 (x4) | speed-3-Q5 (x4),speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),31.66,3.17,0.32,0.04,9.6,30,15
+0,8,1,2,QUALITY,74.2,52,1590,1590,0.066667,speed-2-Q5 (x4) | speed-3-Q5 (x4),speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1),31.56,3.16,0.32,0.04,9.6,30,21
+0,8,1,2,QUALITY,71.96,73.6,1542,1542,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x5) | efficiency-3-Q5 (x1),speed-2-Q5 (x1) | efficiency-3-Q5 (x4) | speed-3-Q5 (x1),31.46,3.15,0.31,0.03,9.28,30,19
+0,8,1,2,QUALITY,68.79,69,1495.5,1495.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),31.35,3.14,0.31,0.03,8.97,31,19
+0,8,1,2,QUALITY,68.86,66.4,1497,1497,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x4),speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-3-Q5 (x1),31.26,3.13,0.31,0.03,8.98,31,19
+0,8,1,2,QUALITY,68.79,77.8,1495.5,1495.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),31.17,3.12,0.31,0.03,8.97,31,18
+0,8,1,2,QUALITY,68.79,60,1495.5,1495.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),31.06,3.11,0.31,0.03,8.97,31,20
+0,8,1,2,QUALITY,68.79,86.6,1495.5,1495.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),30.99,3.1,0.31,0.03,8.97,31,17
+0,8,1,2,QUALITY,68.86,53.4,1497,1497,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x4),efficiency-3-Q5 (x5) | speed-2-Q5 (x2),30.87,3.09,0.31,0.03,8.98,31,21
+0,8,1,2,QUALITY,68.79,104.2,1495.5,1495.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),30.81,3.08,0.31,0.03,8.97,31,16
+0,8,1,2,QUALITY,68.79,51.2,1495.5,1495.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),30.71,3.07,0.31,0.03,8.97,31,21
+0,8,1,2,QUALITY,68.79,113.2,1495.5,1495.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),30.63,3.06,0.31,0.03,8.97,31,15
+0,8,1,2,QUALITY,66.65,66,1449,1449,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x4) | efficiency-3-Q5 (x1),efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),30.52,3.05,0.31,0.03,8.66,31,20
+0,8,1,2,QUALITY,63.58,66,1402.5,1402.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x5) | efficiency-3-Q5 (x2),efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),30.36,3.04,0.3,0.03,8.35,32,20
+0,8,1,2,QUALITY,66.38,69,1443,1443,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x4) | speed-2-Q5 (x1),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),30.25,3.03,0.3,0.03,8.62,31,19
+0,8,1,2,QUALITY,63.58,60,1402.5,1402.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x5) | efficiency-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),30.17,3.02,0.3,0.03,8.35,32,20
+0,8,1,2,QUALITY,60.5,60,1354.5,1354.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | efficiency-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),30.06,3.01,0.3,0.03,8.03,33,20
+0,8,1,2,QUALITY,60.5,59.2,1354.5,1354.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | efficiency-3-Q5 (x2),speed-2-Q5 (x2) | efficiency-3-Q5 (x4),30.02,3,0.3,0.03,8.03,33,20
+0,8,1,2,QUALITY,60.5,69,1354.5,1354.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | efficiency-3-Q5 (x2),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),29.93,2.99,0.3,0.03,8.03,33,19
+0,8,1,2,QUALITY,60.5,77.8,1354.5,1354.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | efficiency-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),29.77,2.98,0.3,0.03,8.03,33,18
+0,8,1,2,QUALITY,60.5,51.2,1354.5,1354.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x5) | efficiency-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),29.72,2.97,0.3,0.03,8.03,33,21
+0,8,1,2,QUALITY,59.56,60,1333.5,1333.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x4) | efficiency-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),29.62,2.96,0.3,0.03,7.89,33,20
+0,8,1,2,QUALITY,59.56,69,1333.5,1333.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x4) | efficiency-3-Q5 (x1),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),29.47,2.95,0.29,0.03,7.89,33,19
+0,8,1,2,QUALITY,59.56,53.4,1333.5,1333.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x4) | efficiency-3-Q5 (x1),efficiency-3-Q5 (x5) | speed-2-Q5 (x2),29.42,2.94,0.29,0.03,7.89,33,21
+0,8,1,2,QUALITY,59.56,77.8,1333.5,1333.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x4) | efficiency-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),29.31,2.93,0.29,0.03,7.89,33,18
+0,8,1,2,QUALITY,56.43,60,1282.5,1282.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x3),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),29.21,2.92,0.29,0.03,7.55,34,20
+0,8,1,2,QUALITY,56.3,60,1279.5,1279.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x4) | efficiency-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),29.14,2.91,0.29,0.03,7.53,34,20
+0,8,1,2,QUALITY,56.3,51.2,1279.5,1279.5,0.066667,speed-1-Q5 (x1) | speed-3-Q5 (x4) | efficiency-3-Q5 (x1),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),29,2.9,0.29,0.03,7.53,34,21
+0,8,1,2,QUALITY,56.43,77.8,1282.5,1282.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x3),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),28.92,2.89,0.29,0.03,7.55,34,18
+0,8,1,2,QUALITY,55.51,53.4,1261.5,1261.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x4) | speed-1-Q5 (x1) | efficiency-3-Q5 (x2),efficiency-3-Q5 (x5) | speed-2-Q5 (x2),28.76,2.88,0.29,0.03,7.41,34,21
+0,8,1,2,QUALITY,55.51,60,1261.5,1261.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x4) | speed-1-Q5 (x1) | efficiency-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),28.73,2.87,0.29,0.03,7.41,34,20
+0,8,1,2,QUALITY,55.51,51.2,1261.5,1261.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x4) | speed-1-Q5 (x1) | efficiency-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),28.63,2.86,0.29,0.03,7.41,34,21
+0,8,1,2,QUALITY,52.65,52,1215,1215,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x3) | efficiency-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1),28.46,2.85,0.28,0.03,7.1,35,21
+0,8,1,2,QUALITY,52.65,60,1215,1215,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x3) | efficiency-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),28.36,2.84,0.28,0.03,7.1,35,20
+0,8,1,2,QUALITY,55.51,86.6,1261.5,1261.5,0.066667,speed-2-Q5 (x1) | speed-3-Q5 (x4) | speed-1-Q5 (x1) | efficiency-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),28.3,2.83,0.28,0.03,7.41,34,17
+0,8,1,2,QUALITY,52.65,69,1215,1215,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x3) | efficiency-3-Q5 (x2),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),28.22,2.82,0.28,0.03,7.1,35,19
+0,8,1,2,QUALITY,52.65,77.8,1215,1215,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x3) | efficiency-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),28.08,2.81,0.28,0.03,7.1,35,18
+0,8,1,2,QUALITY,52.65,42.4,1215,1215,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x3) | efficiency-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),28.02,2.8,0.28,0.03,7.1,35,22
+0,8,1,2,QUALITY,52.65,86.6,1215,1215,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x3) | efficiency-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),27.95,2.79,0.28,0.03,7.1,35,17
+0,8,1,2,QUALITY,52.65,104.2,1215,1215,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x3) | efficiency-3-Q5 (x2),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),27.81,2.78,0.28,0.03,7.1,35,16
+0,8,1,2,QUALITY,52.65,113.2,1215,1215,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x3) | efficiency-3-Q5 (x2),speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),27.67,2.77,0.28,0.03,7.1,35,15
+0,8,1,2,QUALITY,52.65,33.6,1215,1215,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x3) | efficiency-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),27.59,2.76,0.28,0.03,7.1,35,23
+0,8,1,2,QUALITY,50.77,51.2,1171.5,1171.5,0.066667,speed-3-Q5 (x4) | efficiency-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),27.47,2.75,0.27,0.03,6.81,35,21
+0,8,1,2,QUALITY,50.57,51.2,1167,1167,0.066667,speed-3-Q5 (x4) | speed-2-Q5 (x1) | efficiency-3-Q5 (x3),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),27.37,2.74,0.27,0.03,6.78,35,21
+0,8,1,2,QUALITY,50.77,60,1171.5,1171.5,0.066667,speed-3-Q5 (x4) | efficiency-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),27.34,2.73,0.27,0.03,6.81,35,20
+0,8,1,2,QUALITY,50.57,60,1167,1167,0.066667,speed-3-Q5 (x4) | speed-2-Q5 (x1) | efficiency-3-Q5 (x3),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),27.24,2.72,0.27,0.03,6.78,35,20
+0,8,1,2,QUALITY,50.57,69,1167,1167,0.066667,speed-3-Q5 (x4) | speed-2-Q5 (x1) | efficiency-3-Q5 (x3),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),27.11,2.71,0.27,0.03,6.78,35,19
+0,8,1,2,QUALITY,49.86,51.2,1150.5,1150.5,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),26.98,2.7,0.27,0.03,6.67,35,21
+0,8,1,2,QUALITY,47.81,51.2,1120.5,1120.5,0.066667,speed-3-Q5 (x4) | speed-1-Q5 (x1) | efficiency-3-Q5 (x3),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),26.91,2.69,0.27,0.03,6.47,36,21
+0,8,1,2,QUALITY,47.68,51.2,1117.5,1117.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x1),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),26.84,2.68,0.27,0.03,6.45,36,21
+0,8,1,2,QUALITY,47.68,60,1117.5,1117.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),26.71,2.67,0.27,0.03,6.45,36,20
+0,8,1,2,QUALITY,47.68,69,1117.5,1117.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x1),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),26.59,2.66,0.27,0.03,6.45,36,19
+0,8,1,2,QUALITY,47.68,77.8,1117.5,1117.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),26.46,2.65,0.26,0.03,6.45,36,18
+0,8,1,2,QUALITY,47.68,37.6,1117.5,1117.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x1),efficiency-3-Q5 (x4) | speed-2-Q5 (x1),26.36,2.64,0.26,0.03,6.45,36,22
+0,8,1,2,QUALITY,44.67,44.8,1063.5,1063.5,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x4),26.25,2.63,0.26,0.03,6.09,37,22
+0,8,1,2,QUALITY,47.68,104.2,1117.5,1117.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x1),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),26.21,2.62,0.26,0.03,6.45,36,16
+0,8,1,2,QUALITY,44.67,51.2,1063.5,1063.5,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),26.14,2.61,0.26,0.03,6.09,37,21
+0,8,1,2,QUALITY,44.67,60,1063.5,1063.5,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),26.02,2.6,0.26,0.03,6.09,37,20
+0,8,1,2,QUALITY,44.67,69,1063.5,1063.5,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x2),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),25.91,2.59,0.26,0.03,6.09,37,19
+0,8,1,2,QUALITY,44.67,77.8,1063.5,1063.5,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),25.79,2.58,0.26,0.03,6.09,37,18
+0,8,1,2,QUALITY,44.67,86.6,1063.5,1063.5,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),25.67,2.57,0.26,0.03,6.09,37,17
+0,8,1,2,QUALITY,44.67,104.2,1063.5,1063.5,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x2),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),25.56,2.56,0.26,0.03,6.09,37,16
+0,8,1,2,QUALITY,44.67,30.4,1063.5,1063.5,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x2),efficiency-3-Q5 (x4) | speed-1-Q5 (x1),25.49,2.55,0.25,0.03,6.09,37,23
+0,8,1,2,QUALITY,43.16,44.8,1027.5,1027.5,0.066667,speed-3-Q5 (x4) | efficiency-3-Q5 (x4),speed-1-Q5 (x2) | efficiency-3-Q5 (x4),25.36,2.54,0.25,0.03,5.85,37,22
+0,8,1,2,QUALITY,43.16,51.2,1027.5,1027.5,0.066667,speed-3-Q5 (x4) | efficiency-3-Q5 (x4),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),25.25,2.53,0.25,0.03,5.85,37,21
+0,8,1,2,QUALITY,43.16,41,1027.5,1027.5,0.066667,speed-3-Q5 (x4) | efficiency-3-Q5 (x4),efficiency-3-Q5 (x5) | speed-1-Q5 (x2),25.24,2.52,0.25,0.03,5.85,37,22
+0,8,1,2,QUALITY,42.71,42.4,1017,1017,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x1),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),25.09,2.51,0.25,0.03,5.78,37,22
+0,8,1,2,QUALITY,42.71,51.2,1017,1017,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x1),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),24.99,2.5,0.25,0.03,5.78,37,21
+0,8,1,2,QUALITY,42.4,42.4,1009.5,1009.5,0.066667,speed-3-Q5 (x3) | speed-1-Q5 (x1) | efficiency-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),24.92,2.49,0.25,0.03,5.73,37,22
+0,8,1,2,QUALITY,42.4,51.2,1009.5,1009.5,0.066667,speed-3-Q5 (x3) | speed-1-Q5 (x1) | efficiency-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),24.81,2.48,0.25,0.03,5.73,37,21
+0,8,1,2,QUALITY,40.49,42.4,979.5,979.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x3),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),24.73,2.47,0.25,0.03,5.53,38,22
+0,8,1,2,QUALITY,40.49,51.2,979.5,979.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x3),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),24.62,2.46,0.25,0.03,5.53,38,21
+0,8,1,2,QUALITY,40.49,60,979.5,979.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x3),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),24.52,2.45,0.25,0.03,5.53,38,20
+0,8,1,2,QUALITY,40.49,69,979.5,979.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x3),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),24.41,2.44,0.24,0.03,5.53,38,19
+0,8,1,2,QUALITY,40.49,77.8,979.5,979.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x3),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),24.31,2.43,0.24,0.03,5.53,38,18
+0,8,1,2,QUALITY,40.49,86.6,979.5,979.5,0.066667,speed-2-Q5 (x3) | speed-3-Q5 (x2) | efficiency-3-Q5 (x3),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),24.2,2.42,0.24,0.03,5.53,38,17
+0,8,1,2,QUALITY,39.49,42.4,955.5,955.5,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x2) | efficiency-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),24.12,2.41,0.24,0.03,5.37,38,22
+0,8,1,2,QUALITY,39.31,42.4,951,951,0.066667,speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),24.01,2.4,0.24,0.03,5.34,38,22
+0,8,1,2,QUALITY,39.31,51.2,951,951,0.066667,speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),23.91,2.39,0.24,0.03,5.34,38,21
+0,8,1,2,QUALITY,39.31,60,951,951,0.066667,speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),23.81,2.38,0.24,0.03,5.34,38,20
+0,8,1,2,QUALITY,39.31,69,951,951,0.066667,speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),23.7,2.37,0.24,0.03,5.34,38,19
+0,8,1,2,QUALITY,38.56,42.4,933,933,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x4),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),23.55,2.36,0.24,0.03,5.22,38,22
+0,8,1,2,QUALITY,38.56,51.2,933,933,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x4),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),23.45,2.35,0.23,0.03,5.22,38,21
+0,8,1,2,QUALITY,38.56,60,933,933,0.066667,speed-3-Q5 (x3) | speed-2-Q5 (x1) | efficiency-3-Q5 (x4),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),23.35,2.34,0.23,0.03,5.22,38,20
+0,8,1,2,QUALITY,36.66,42.4,901.5,901.5,0.066667,speed-3-Q5 (x3) | efficiency-3-Q5 (x3),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),23.26,2.33,0.23,0.03,5.01,39,22
+0,8,1,2,QUALITY,36.66,51.2,901.5,901.5,0.066667,speed-3-Q5 (x3) | efficiency-3-Q5 (x3),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),23.17,2.32,0.23,0.03,5.01,39,21
+0,8,1,2,QUALITY,36.66,60,901.5,901.5,0.066667,speed-3-Q5 (x3) | efficiency-3-Q5 (x3),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),23.07,2.31,0.23,0.03,5.01,39,20
+0,8,1,2,QUALITY,36.66,69,901.5,901.5,0.066667,speed-3-Q5 (x3) | efficiency-3-Q5 (x3),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),22.98,2.3,0.23,0.03,5.01,39,19
+0,8,1,2,QUALITY,36.05,42.4,886.5,886.5,0.066667,speed-3-Q5 (x3) | speed-1-Q5 (x1) | efficiency-3-Q5 (x4),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),22.88,2.29,0.23,0.03,4.91,39,22
+0,8,1,2,QUALITY,35.99,33.6,885,885,0.066667,speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),22.78,2.28,0.23,0.03,4.9,39,23
+0,8,1,2,QUALITY,35.99,60,885,885,0.066667,speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),22.65,2.27,0.23,0.03,4.9,39,20
+0,8,1,2,QUALITY,35.99,69,885,885,0.066667,speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),22.56,2.26,0.23,0.03,4.9,39,19
+0,8,1,2,QUALITY,35.99,77.8,885,885,0.066667,speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),22.47,2.25,0.22,0.02,4.9,39,18
+0,8,1,2,QUALITY,35.99,86.6,885,885,0.066667,speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),22.37,2.24,0.22,0.02,4.9,39,17
+0,8,1,2,QUALITY,35.99,104.2,885,885,0.066667,speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),22.28,2.23,0.22,0.02,4.9,39,16
+0,8,1,2,QUALITY,33.6,33.6,840,840,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4) | speed-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),22.23,2.22,0.22,0.02,4.6,40,23
+0,8,1,2,QUALITY,33.6,51.2,840,840,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4) | speed-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),22.06,2.21,0.22,0.02,4.6,40,21
+0,8,1,2,QUALITY,33.6,60,840,840,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4) | speed-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),21.97,2.2,0.22,0.02,4.6,40,20
+0,8,1,2,QUALITY,33.6,69,840,840,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4) | speed-3-Q5 (x2),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),21.89,2.19,0.22,0.02,4.6,40,19
+0,8,1,2,QUALITY,33.6,77.8,840,840,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4) | speed-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),21.8,2.18,0.22,0.02,4.6,40,18
+0,8,1,2,QUALITY,32.76,33.6,819,819,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),21.68,2.17,0.22,0.02,4.46,40,23
+0,8,1,2,QUALITY,32.76,42.4,819,819,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),21.59,2.16,0.22,0.02,4.46,40,22
+0,8,1,2,QUALITY,32.76,51.2,819,819,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),21.51,2.15,0.22,0.02,4.46,40,21
+0,8,1,2,QUALITY,32.76,60,819,819,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),21.43,2.14,0.21,0.02,4.46,40,20
+0,8,1,2,QUALITY,32.76,77.8,819,819,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),21.25,2.13,0.21,0.02,4.46,40,18
+0,8,1,2,QUALITY,32.76,86.6,819,819,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),21.17,2.12,0.21,0.02,4.46,40,17
+0,8,1,2,QUALITY,32.76,104.2,819,819,0.066667,speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),21.08,2.11,0.21,0.02,4.46,40,16
+0,8,1,2,QUALITY,31.68,33.6,792,792,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1) | speed-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),20.96,2.1,0.21,0.02,4.28,40,23
+0,8,1,2,QUALITY,31.68,42.4,792,792,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1) | speed-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),20.88,2.09,0.21,0.02,4.28,40,22
+0,8,1,2,QUALITY,31.68,51.2,792,792,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1) | speed-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),20.8,2.08,0.21,0.02,4.28,40,21
+0,8,1,2,QUALITY,31.68,60,792,792,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1) | speed-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),20.72,2.07,0.21,0.02,4.28,40,20
+0,8,1,2,QUALITY,31.68,77.8,792,792,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1) | speed-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),20.55,2.06,0.21,0.02,4.28,40,18
+0,8,1,2,QUALITY,31.68,86.6,792,792,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1) | speed-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),20.47,2.05,0.2,0.02,4.28,40,17
+0,8,1,2,QUALITY,31.68,104.2,792,792,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1) | speed-3-Q5 (x2),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),20.39,2.04,0.2,0.02,4.28,40,16
+0,8,1,2,QUALITY,29.56,33.6,751.5,751.5,0.066667,speed-3-Q5 (x2) | efficiency-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),20.31,2.03,0.2,0.02,4.01,41,23
+0,8,1,2,QUALITY,29.56,51.2,751.5,751.5,0.066667,speed-3-Q5 (x2) | efficiency-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),20.16,2.02,0.2,0.02,4.01,41,21
+0,8,1,2,QUALITY,29.32,33.6,745.5,745.5,0.066667,speed-2-Q5 (x3) | efficiency-3-Q5 (x4) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),20.15,2.01,0.2,0.02,3.97,41,23
+0,8,1,2,QUALITY,29.09,33.6,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),19.99,2,0.2,0.02,3.93,41,23
+0,8,1,2,QUALITY,29.09,42.4,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),19.91,1.99,0.2,0.02,3.93,41,22
+0,8,1,2,QUALITY,29.09,60,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),19.76,1.98,0.2,0.02,3.93,41,20
+0,8,1,2,QUALITY,29.09,69,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),19.69,1.97,0.2,0.02,3.93,41,19
+0,8,1,2,QUALITY,29.09,77.8,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),19.61,1.96,0.2,0.02,3.93,41,18
+0,8,1,2,QUALITY,29.09,86.6,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),19.54,1.95,0.2,0.02,3.93,41,17
+0,8,1,2,QUALITY,29.09,113.2,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),19.38,1.94,0.19,0.02,3.93,41,15
+0,8,1,2,QUALITY,29.09,122,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),19.3,1.93,0.19,0.02,3.93,41,14
+0,8,1,2,QUALITY,29.09,130.8,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),19.23,1.92,0.19,0.02,3.93,41,13
+0,8,1,2,QUALITY,29.09,148.4,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-3-Q5 (x3) | efficiency-3-Q5 (x1),19.07,1.91,0.19,0.02,3.93,41,11
+0,8,1,2,QUALITY,29.09,157.4,739.5,739.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3) | speed-3-Q5 (x2),speed-2-Q5 (x2) | speed-3-Q5 (x2),18.99,1.9,0.19,0.02,3.93,41,10
+0,8,1,2,QUALITY,26.45,33.6,684,684,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x3) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),18.87,1.89,0.19,0.02,3.56,42,23
+0,8,1,2,QUALITY,26.45,42.4,684,684,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x3) | speed-3-Q5 (x1),speed-2-Q5 (x1) | efficiency-3-Q5 (x3),18.8,1.88,0.19,0.02,3.56,42,22
+0,8,1,2,QUALITY,26.45,60,684,684,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x3) | speed-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),18.66,1.87,0.19,0.02,3.56,42,20
+0,8,1,2,QUALITY,26.45,69,684,684,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x3) | speed-3-Q5 (x1),speed-2-Q5 (x2) | efficiency-3-Q5 (x2),18.6,1.86,0.19,0.02,3.56,42,19
+0,8,1,2,QUALITY,26.45,77.8,684,684,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x3) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),18.53,1.85,0.19,0.02,3.56,42,18
+0,8,1,2,QUALITY,26.45,104.2,684,684,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x3) | speed-3-Q5 (x1),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),18.39,1.84,0.18,0.02,3.56,42,16
+0,8,1,2,QUALITY,26.45,113.2,684,684,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x3) | speed-3-Q5 (x1),speed-2-Q5 (x2) | speed-3-Q5 (x1) | efficiency-3-Q5 (x1),18.32,1.83,0.18,0.02,3.56,42,15
+0,8,1,2,QUALITY,26.45,122,684,684,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x3) | speed-3-Q5 (x1),speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),18.25,1.82,0.18,0.02,3.56,42,14
+0,8,1,2,QUALITY,26.45,139.6,684,684,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x3) | speed-3-Q5 (x1),speed-2-Q5 (x3) | speed-3-Q5 (x1),18.11,1.81,0.18,0.02,3.56,42,12
+0,8,1,2,QUALITY,25.23,33.6,652.5,652.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x5) | speed-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),18,1.8,0.18,0.02,3.35,42,23
+0,8,1,2,QUALITY,25.23,51.2,652.5,652.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x5) | speed-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),17.87,1.79,0.18,0.02,3.35,42,21
+0,8,1,2,QUALITY,25.23,60,652.5,652.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x5) | speed-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),17.81,1.78,0.18,0.02,3.35,42,20
+0,8,1,2,QUALITY,25.23,77.8,652.5,652.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x5) | speed-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),17.67,1.77,0.18,0.02,3.35,42,18
+0,8,1,2,QUALITY,25.23,86.6,652.5,652.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x5) | speed-3-Q5 (x2),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),17.61,1.76,0.18,0.02,3.35,42,17
+0,8,1,2,QUALITY,25.23,104.2,652.5,652.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x5) | speed-3-Q5 (x2),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),17.54,1.75,0.18,0.02,3.35,42,16
+0,8,1,2,QUALITY,24.36,33.6,630,630,0.066667,speed-3-Q5 (x2) | efficiency-3-Q5 (x4),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),17.38,1.74,0.17,0.02,3.2,42,23
+0,8,1,2,QUALITY,24.36,51.2,630,630,0.066667,speed-3-Q5 (x2) | efficiency-3-Q5 (x4),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),17.25,1.73,0.17,0.02,3.2,42,21
+0,8,1,2,QUALITY,24.36,60,630,630,0.066667,speed-3-Q5 (x2) | efficiency-3-Q5 (x4),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),17.19,1.72,0.17,0.02,3.2,42,20
+0,8,1,2,QUALITY,23.95,33.6,619.5,619.5,0.066667,speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),17.09,1.71,0.17,0.02,3.13,42,23
+0,8,1,2,QUALITY,22.97,33.6,604.5,604.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),17.01,1.7,0.17,0.02,3.03,43,23
+0,8,1,2,QUALITY,22.97,51.2,604.5,604.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),16.9,1.69,0.17,0.02,3.03,43,21
+0,8,1,2,QUALITY,22.97,60,604.5,604.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),16.84,1.68,0.17,0.02,3.03,43,20
+0,8,1,2,QUALITY,22.97,77.8,604.5,604.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),16.72,1.67,0.17,0.02,3.03,43,18
+0,8,1,2,QUALITY,22.97,104.2,604.5,604.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),16.6,1.66,0.17,0.02,3.03,43,16
+0,8,1,2,QUALITY,22.97,122,604.5,604.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),16.48,1.65,0.16,0.02,3.03,43,14
+0,8,1,2,QUALITY,22.97,130.8,604.5,604.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),16.41,1.64,0.16,0.02,3.03,43,13
+0,8,1,2,QUALITY,22.97,148.4,604.5,604.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-3-Q5 (x3) | efficiency-3-Q5 (x1),16.29,1.63,0.16,0.02,3.03,43,11
+0,8,1,2,QUALITY,21.89,33.6,576,576,0.066667,speed-2-Q5 (x3) | efficiency-3-Q5 (x3),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),16.21,1.62,0.16,0.02,2.84,43,23
+0,8,1,2,QUALITY,21.89,51.2,576,576,0.066667,speed-2-Q5 (x3) | efficiency-3-Q5 (x3),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),16.1,1.61,0.16,0.02,2.84,43,21
+0,8,1,2,QUALITY,21.89,60,576,576,0.066667,speed-2-Q5 (x3) | efficiency-3-Q5 (x3),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),16.04,1.6,0.16,0.02,2.84,43,20
+0,8,1,2,QUALITY,21.89,77.8,576,576,0.066667,speed-2-Q5 (x3) | efficiency-3-Q5 (x3),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),15.93,1.59,0.16,0.02,2.84,43,18
+0,8,1,2,QUALITY,21.89,104.2,576,576,0.066667,speed-2-Q5 (x3) | efficiency-3-Q5 (x3),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),15.81,1.58,0.16,0.02,2.84,43,16
+0,8,1,2,QUALITY,21.2,33.6,558,558,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),15.7,1.57,0.16,0.02,2.72,43,23
+0,8,1,2,QUALITY,21.03,33.6,553.5,553.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),15.58,1.56,0.16,0.02,2.69,43,23
+0,8,1,2,QUALITY,21.03,51.2,553.5,553.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),15.47,1.55,0.15,0.02,2.69,43,21
+0,8,1,2,QUALITY,21.03,60,553.5,553.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),15.42,1.54,0.15,0.02,2.69,43,20
+0,8,1,2,QUALITY,21.03,77.8,553.5,553.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),15.31,1.53,0.15,0.02,2.69,43,18
+0,8,1,2,QUALITY,21.03,104.2,553.5,553.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),15.2,1.52,0.15,0.02,2.69,43,16
+0,8,1,2,QUALITY,21.03,122,553.5,553.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),15.09,1.51,0.15,0.02,2.69,43,14
+0,8,1,2,QUALITY,21.03,130.8,553.5,553.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),15.03,1.5,0.15,0.02,2.69,43,13
+0,8,1,2,QUALITY,21.03,148.4,553.5,553.5,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),speed-3-Q5 (x3) | efficiency-3-Q5 (x1),14.92,1.49,0.15,0.02,2.69,43,11
+0,8,1,1,QUALITY,19.49,33.6,522,522,0.066667,speed-2-Q5 (x1) | efficiency-3-Q5 (x4) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),14.79,1.48,0.15,0.02,2.48,44,23
+0,8,1,1,QUALITY,19.49,60,522,522,0.066667,speed-2-Q5 (x1) | efficiency-3-Q5 (x4) | speed-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),14.66,1.47,0.15,0.02,2.48,44,20
+0,8,1,1,QUALITY,19.49,77.8,522,522,0.066667,speed-2-Q5 (x1) | efficiency-3-Q5 (x4) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),14.57,1.46,0.15,0.02,2.48,44,18
+0,8,1,1,QUALITY,19.1,33.6,511.5,511.5,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),14.49,1.45,0.14,0.02,2.41,44,23
+0,8,1,1,QUALITY,19.1,60,511.5,511.5,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),14.36,1.44,0.14,0.02,2.41,44,20
+0,8,1,1,QUALITY,19.1,77.8,511.5,511.5,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),14.28,1.43,0.14,0.02,2.41,44,18
+0,8,1,1,QUALITY,19.1,86.6,511.5,511.5,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),14.23,1.42,0.14,0.02,2.41,44,17
+0,8,1,2,QUALITY,19.1,148.4,511.5,511.5,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-3-Q5 (x3) | efficiency-3-Q5 (x1),14.08,1.41,0.14,0.02,2.41,44,11
+0,8,1,2,QUALITY,19.1,157.4,511.5,511.5,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-2-Q5 (x2) | speed-3-Q5 (x2),14.03,1.4,0.14,0.02,2.41,44,10
+0,8,1,2,QUALITY,19.1,181.8,511.5,511.5,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x5) | speed-3-Q5 (x1),speed-2-Q5 (x1) | speed-3-Q5 (x4) | efficiency-3-Q5 (x1),13.93,1.39,0.14,0.02,2.41,44,8
+0,8,1,1,QUALITY,18.2,16,487.5,487.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x2),efficiency-3-Q5 (x3),13.77,1.38,0.14,0.02,2.25,44,25
+0,8,1,1,QUALITY,18.2,60,487.5,487.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),13.69,1.37,0.14,0.02,2.25,44,20
+0,8,1,1,QUALITY,18.2,77.8,487.5,487.5,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),13.61,1.36,0.14,0.02,2.25,44,18
+0,8,1,1,QUALITY,17.05,16,465,465,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),efficiency-3-Q5 (x3),13.46,1.35,0.13,0.01,2.1,45,25
+0,8,1,1,QUALITY,17.05,51.2,465,465,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),13.36,1.34,0.13,0.01,2.1,45,21
+0,8,1,1,QUALITY,17.05,60,465,465,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),13.32,1.33,0.13,0.01,2.1,45,20
+0,8,1,1,QUALITY,17.05,77.8,465,465,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),13.25,1.32,0.13,0.01,2.1,45,18
+0,8,1,1,QUALITY,17.05,122,465,465,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),13.09,1.31,0.13,0.01,2.1,45,14
+0,8,1,1,QUALITY,17.05,148.4,465,465,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),speed-3-Q5 (x3) | efficiency-3-Q5 (x1),12.98,1.3,0.13,0.01,2.1,45,11
+0,8,1,1,QUALITY,17.05,157.4,465,465,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),speed-2-Q5 (x2) | speed-3-Q5 (x2),12.94,1.29,0.13,0.01,2.1,45,10
+0,8,1,1,QUALITY,17.05,189.2,465,465,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),speed-2-Q5 (x3) | speed-3-Q5 (x3),12.82,1.28,0.13,0.01,2.1,45,7
+0,8,1,2,QUALITY,17.05,222.2,465,465,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),speed-1-Q5 (x1) | speed-3-Q5 (x5) | speed-2-Q5 (x2),12.75,1.27,0.13,0.01,2.1,45,4
+0,8,1,2,SPEED,17.05,164,465,465,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x1) | speed-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),12.56,1.26,0.13,0.01,2.1,45,0
+0,8,1,2,QUALITY,17.47,228.4,468,468,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-3-Q5 (x1),speed-2-Q5 (x3) | speed-3-Q5 (x5),12.5,1.25,0.13,0.01,2.12,44,3
+0,8,1,2,SPEED,17.47,164,468,468,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-3-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),12.36,1.24,0.12,0.01,2.12,44,0
+1,7,1,2,QUALITY,20.37,130.8,399,399,0.083333,speed-2-Q5 (x2) | efficiency-3-Q5 (x4),speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),12.32,1.23,0.12,0.01,1.66,38.75,13
+0,8,1,1,QUALITY,15.4,16,420,420,0.066667,speed-3-Q5 (x1) | efficiency-3-Q5 (x3),efficiency-3-Q5 (x3),12.21,1.22,0.12,0.01,1.8,45,25
+0,8,1,1,QUALITY,15.29,16,417,417,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x1) | speed-3-Q5 (x1),efficiency-3-Q5 (x3),12.12,1.21,0.12,0.01,1.78,45,25
+0,8,1,1,QUALITY,15.18,16,414,414,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4),efficiency-3-Q5 (x3),12.03,1.2,0.12,0.01,1.76,45,25
+0,8,1,1,QUALITY,15.18,60,414,414,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),11.86,1.19,0.12,0.01,1.76,45,20
+0,8,1,1,QUALITY,15.18,77.8,414,414,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),11.79,1.18,0.12,0.01,1.76,45,18
+0,8,1,1,QUALITY,15.18,104.2,414,414,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),11.72,1.17,0.12,0.01,1.76,45,16
+0,8,1,1,QUALITY,15.18,130.8,414,414,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4),speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),11.62,1.16,0.12,0.01,1.76,45,13
+0,8,1,1,QUALITY,15.18,157.4,414,414,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4),speed-2-Q5 (x2) | speed-3-Q5 (x2),11.52,1.15,0.12,0.01,1.76,45,10
+0,8,1,1,QUALITY,15.18,189.2,414,414,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4),speed-2-Q5 (x3) | speed-3-Q5 (x3),11.42,1.14,0.11,0.01,1.76,45,7
+0,8,1,1,QUALITY,15.18,209.6,414,414,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4),speed-2-Q5 (x2) | speed-3-Q5 (x5) | efficiency-3-Q5 (x1),11.35,1.13,0.11,0.01,1.76,45,5
+0,8,1,1,SPEED,15.18,164,414,414,0.066667,speed-2-Q5 (x2) | efficiency-3-Q5 (x4),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),11.18,1.12,0.11,0.01,1.76,45,0
+1,7,1,1,QUALITY,17.32,60,345,345,0.083333,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),11.06,1.11,0.11,0.01,1.3,39.75,20
+0,8,1,1,QUALITY,13.34,16,370.5,370.5,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x2),efficiency-3-Q5 (x3),10.98,1.1,0.11,0.01,1.47,46,25
+0,8,1,1,QUALITY,13.34,51.2,370.5,370.5,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),10.86,1.09,0.11,0.01,1.47,46,21
+0,8,1,1,QUALITY,13.34,60,370.5,370.5,0.066667,efficiency-3-Q5 (x5) | speed-2-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),10.83,1.08,0.11,0.01,1.47,46,20
+0,8,1,1,QUALITY,12.96,16,360,360,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1),efficiency-3-Q5 (x3),10.67,1.07,0.11,0.01,1.4,46,25
+0,8,1,1,QUALITY,12.96,33.6,360,360,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x4) | speed-2-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x3),10.61,1.06,0.11,0.01,1.4,46,23
+0,8,1,1,QUALITY,12.74,16,354,354,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x2),efficiency-3-Q5 (x3),10.49,1.05,0.1,0.01,1.36,46,25
+0,8,1,1,QUALITY,12.74,51.2,354,354,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x2),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),10.37,1.04,0.1,0.01,1.36,46,21
+0,8,1,1,QUALITY,12.74,60,354,354,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),10.34,1.03,0.1,0.01,1.36,46,20
+0,8,1,1,QUALITY,12.74,104.2,354,354,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x2),speed-3-Q5 (x2) | efficiency-3-Q5 (x2),10.23,1.02,0.1,0.01,1.36,46,16
+0,8,1,1,QUALITY,12.74,130.8,354,354,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x2),speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),10.14,1.01,0.1,0.01,1.36,46,13
+0,8,1,1,QUALITY,12.74,166.2,354,354,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x2),speed-1-Q5 (x1) | speed-3-Q5 (x3),10.03,1,0.1,0.01,1.36,46,9
+0,8,1,1,QUALITY,12.74,196.4,354,354,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x2),speed-1-Q5 (x1) | speed-3-Q5 (x4) | speed-2-Q5 (x1),9.94,0.99,0.1,0.01,1.36,46,6
+0,8,1,1,SPEED,12.74,164,354,354,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),9.77,0.98,0.1,0.01,1.36,46,0
+1,7,1,1,QUALITY,14.37,16,291,291,0.083333,speed-1-Q5 (x2) | efficiency-3-Q5 (x4),efficiency-3-Q5 (x3),9.7,0.97,0.1,0.01,0.94,40.75,25
+0,8,1,1,QUALITY,11.66,16,324,324,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x1) | speed-2-Q5 (x1),efficiency-3-Q5 (x3),9.6,0.96,0.1,0.01,1.16,46,25
+0,8,1,1,QUALITY,11.66,60,324,324,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x1) | speed-2-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),9.47,0.95,0.09,0.01,1.16,46,20
+0,8,1,1,QUALITY,11.66,77.8,324,324,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x1) | speed-2-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),9.41,0.94,0.09,0.01,1.16,46,18
+0,8,1,1,QUALITY,11.66,122,324,324,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x1) | speed-2-Q5 (x1),speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),9.31,0.93,0.09,0.01,1.16,46,14
+0,8,1,1,QUALITY,10.81,16,306,306,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x4),efficiency-3-Q5 (x3),9.24,0.92,0.09,0.01,1.04,47,25
+0,8,1,1,QUALITY,10.81,60,306,306,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x4),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),9.12,0.91,0.09,0.01,1.04,47,20
+0,8,1,1,QUALITY,10.81,86.6,306,306,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x4),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),9.04,0.9,0.09,0.01,1.04,47,17
+0,8,1,1,QUALITY,10.81,130.8,306,306,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x4),speed-3-Q5 (x2) | speed-2-Q5 (x1) | efficiency-3-Q5 (x1),8.95,0.89,0.09,0.01,1.04,47,13
+0,8,1,1,QUALITY,10.81,166.2,306,306,0.066667,speed-1-Q5 (x2) | efficiency-3-Q5 (x4),speed-1-Q5 (x1) | speed-3-Q5 (x3),8.85,0.88,0.09,0.01,1.04,47,9
+0,8,1,1,QUALITY,10.18,16,288,288,0.066667,speed-2-Q5 (x1) | efficiency-3-Q5 (x3),efficiency-3-Q5 (x3),8.69,0.87,0.09,0.01,0.92,47,25
+0,8,1,1,QUALITY,10.18,60,288,288,0.066667,speed-2-Q5 (x1) | efficiency-3-Q5 (x3),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),8.58,0.86,0.09,0.01,0.92,47,20
+0,8,1,1,QUALITY,10.18,77.8,288,288,0.066667,speed-2-Q5 (x1) | efficiency-3-Q5 (x3),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),8.53,0.85,0.09,0.01,0.92,47,18
+0,8,1,1,QUALITY,9.81,16,277.5,277.5,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x2),efficiency-3-Q5 (x3),8.38,0.84,0.08,0.01,0.85,47,25
+0,8,1,1,QUALITY,9.81,60,277.5,277.5,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),8.27,0.83,0.08,0.01,0.85,47,20
+0,8,1,1,QUALITY,9.81,77.8,277.5,277.5,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x2),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),8.22,0.82,0.08,0.01,0.85,47,18
+0,8,1,1,QUALITY,9.81,122,277.5,277.5,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x2),speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),8.13,0.81,0.08,0.01,0.85,47,14
+0,8,1,1,QUALITY,9.81,157.4,277.5,277.5,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x2),speed-2-Q5 (x2) | speed-3-Q5 (x2),8.05,0.8,0.08,0.01,0.85,47,10
+0,8,1,1,QUALITY,9.81,209.6,277.5,277.5,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x2),speed-2-Q5 (x2) | speed-3-Q5 (x5) | efficiency-3-Q5 (x1),7.94,0.79,0.08,0.01,0.85,47,5
+0,8,1,1,SPEED,9.81,164,277.5,277.5,0.066667,efficiency-3-Q5 (x5) | speed-1-Q5 (x2),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),7.83,0.78,0.08,0.01,0.85,47,0
+1,7,1,1,QUALITY,11.7,77.8,237,237,0.083333,efficiency-3-Q5 (x4) | speed-2-Q5 (x1),speed-1-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),7.72,0.77,0.08,0.01,0.58,40.75,18
+0,8,1,1,QUALITY,8.9,16,252,252,0.066667,efficiency-3-Q5 (x4) | speed-2-Q5 (x1),efficiency-3-Q5 (x3),7.61,0.76,0.08,0.01,0.68,47,25
+0,8,1,1,QUALITY,8.9,60,252,252,0.066667,efficiency-3-Q5 (x4) | speed-2-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),7.51,0.75,0.08,0.01,0.68,47,20
+0,8,1,1,QUALITY,8.9,86.6,252,252,0.066667,efficiency-3-Q5 (x4) | speed-2-Q5 (x1),speed-2-Q5 (x1) | efficiency-3-Q5 (x2) | speed-3-Q5 (x1),7.45,0.74,0.07,0.01,0.68,47,17
+0,8,1,1,QUALITY,8.9,148.4,252,252,0.066667,efficiency-3-Q5 (x4) | speed-2-Q5 (x1),speed-3-Q5 (x3) | efficiency-3-Q5 (x1),7.33,0.73,0.07,0.01,0.68,47,11
+0,8,1,1,QUALITY,8.9,189.2,252,252,0.066667,efficiency-3-Q5 (x4) | speed-2-Q5 (x1),speed-2-Q5 (x3) | speed-3-Q5 (x3),7.25,0.72,0.07,0.01,0.68,47,7
+0,8,1,1,SPEED,8.9,164,252,252,0.066667,efficiency-3-Q5 (x4) | speed-2-Q5 (x1),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),7.11,0.71,0.07,0.01,0.68,47,0
+1,7,1,1,QUALITY,10.05,51.2,207,207,0.083333,speed-1-Q5 (x1) | efficiency-3-Q5 (x3),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),6.96,0.7,0.07,0.01,0.38,41.75,21
+1,7,1,1,QUALITY,10.05,60,207,207,0.083333,speed-1-Q5 (x1) | efficiency-3-Q5 (x3),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),6.93,0.69,0.07,0.01,0.38,41.75,20
+0,8,1,1,QUALITY,7.7,51.2,222,222,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3),speed-1-Q5 (x2) | efficiency-3-Q5 (x2),6.76,0.68,0.07,0.01,0.48,48,21
+0,8,1,1,QUALITY,7.7,60,222,222,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),6.74,0.67,0.07,0.01,0.48,48,20
+0,8,1,1,QUALITY,7.7,122,222,222,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3),speed-3-Q5 (x2) | speed-1-Q5 (x1) | efficiency-3-Q5 (x1),6.64,0.66,0.07,0.01,0.48,48,14
+0,8,1,1,QUALITY,7.7,166.2,222,222,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3),speed-1-Q5 (x1) | speed-3-Q5 (x3),6.55,0.65,0.07,0.01,0.48,48,9
+0,8,1,1,SPEED,7.7,164,222,222,0.066667,speed-1-Q5 (x1) | efficiency-3-Q5 (x3),speed-3-Q5 (x1) | efficiency-3-Q5 (x3),6.39,0.64,0.06,0.01,0.48,48,0
