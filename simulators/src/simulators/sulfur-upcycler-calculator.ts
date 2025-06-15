@@ -65,12 +65,12 @@ export const sulfurUpcyclerSim = async (props: SulfurUpcyclerProps): Promise<Sul
             QualityModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
             QualityModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY)
         ],
-        // [
-        //     SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
-        //     SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
-        //     SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
-        //     SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY)
-        // ],
+        [
+            SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
+            SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
+            SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY),
+            SpeedModuleRegistry.get(ModuleTier.L3, QualityLevel.LEGENDARY)
+        ],
     ]
 
     const simulationsToRun = beaconEffects.length * beaconEffects.length * cryogenicPlantModuleCombinations.length * recyclerModuleCombos.length
