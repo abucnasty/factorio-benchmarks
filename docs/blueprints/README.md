@@ -5,6 +5,8 @@
   - [Table of Contents](#table-of-contents)
   - [Megabasing](#megabasing)
     - [Uncommon Science](#uncommon-science)
+  - [General](#general)
+    - [Miscelaneous](#miscelaneous)
 
 
 ## Megabasing
@@ -18,3 +20,9 @@
 | Logistics Science (480/s)  | 2       | [factoriobin](https://factoriobin.com/post/sujyge) | [youtube](https://youtu.be/Qnk71RHKV0s) |
 | Ore Voiding Miners         | 1       | [factoriobin](https://factoriobin.com/post/axykef) | [youtube](https://youtu.be/SccsA0Dr54k) |
 | Chemical Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4) |
+
+## General
+### Miscelaneous
+| Description       | Link                                               | Video              |
+| ----------------- | -------------------------------------------------- | ------------------ |
+| Pollution Control | [factoriobin](https://factoriobin.com/post/ygmdig) | [coming soon...]() |
