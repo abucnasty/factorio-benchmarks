@@ -23,6 +23,6 @@
 
 ## General
 ### Miscelaneous
-| Description       | Link                                               | Video              |
-| ----------------- | -------------------------------------------------- | ------------------ |
-| Pollution Control | [factoriobin](https://factoriobin.com/post/ygmdig) | [coming soon...]() |
+| Description       | Link                                               | Video                                   |
+| ----------------- | -------------------------------------------------- | --------------------------------------- |
+| Pollution Control | [factoriobin](https://factoriobin.com/post/ygmdig) | [youtube](https://youtu.be/O9Il-vpOXNM) |
