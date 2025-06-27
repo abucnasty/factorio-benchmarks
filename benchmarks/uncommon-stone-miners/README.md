@@ -40,4 +40,4 @@ Box and Whisker Plot:
 
 Voiding with landfill is 56% more performant.
 
-Using an RS latch to turn on / off the miner makes a 3.9% improvement so still relevant.
+Using an RS latch to turn on / off the miner makes a slight improvement so still relevant.
