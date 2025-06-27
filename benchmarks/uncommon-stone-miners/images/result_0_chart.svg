@@ -1,0 +1,38 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 1000">
+<rect width="1000" height="1000" x="0" y="0" fill="rgb(252,252,252)" fill-opacity="0"></rect>
+<path d="M212.4 950.5L960 950.5" fill="transparent" stroke="#eeeeee" class="zr0-cls-0"></path>
+<path d="M212.4 653.5L960 653.5" fill="transparent" stroke="#eeeeee" class="zr0-cls-0"></path>
+<path d="M212.4 356.5L960 356.5" fill="transparent" stroke="#eeeeee" class="zr0-cls-0"></path>
+<path d="M212.4 60.5L960 60.5" fill="transparent" stroke="#eeeeee" class="zr0-cls-0"></path>
+<path d="M212.5 950L212.5 60" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr0-cls-0"></path>
+<path d="M212.4 950.5L960 950.5" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr0-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(204.36 801.6667)" fill="#999999">uncommon-recycler-480</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(204.36 505)" fill="#999999">uncommon-recycler-480-clocked</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(204.36 208.3333)" fill="#999999">uncommon-landfill-miner</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(212.36 958)" fill="#999999">0</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(361.888 958)" fill="#999999">100</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(511.416 958)" fill="#999999">200</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(660.944 958)" fill="#999999">300</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(810.472 958)" fill="#999999">400</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(960 958)" fill="#999999">500</text>
+<path d="M212.4 699.3l481.5 0l0 204.7l-481.5 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr0-cls-1"></path>
+<path d="M212.4 402.7l499.4 0l0 204.7l-499.4 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr0-cls-1"></path>
+<path d="M212.4 106l708.8 0l0 204.7l-708.8 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr0-cls-1"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(453.1001 801.6667)" fill="#333">322</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(462.0718 505)" fill="#333">334</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(566.7414 208.3333)" fill="#333">474</text>
+<path d="M-183.1 -5l366.2 0l0 28l-366.2 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr0-cls-0"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#666666">Benchmark Results - Average Effective UPS</text>
+<style ><![CDATA[
+.zr0-cls-0:hover {
+pointer-events:none;
+}
+.zr0-cls-1:hover {
+cursor:pointer;
+fill:rgba(69,194,249,1);
+}
+
+]]>
+
+</style>
+</svg>
