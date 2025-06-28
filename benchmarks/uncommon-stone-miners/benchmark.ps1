@@ -1,8 +1,8 @@
 param (
     # number of ticks to run per save file
-    [int]$ticks = 600,
+    [int]$ticks = 1000,
     # number of runs
-    [int]$runs = 10
+    [int]$runs = 5
 )
 
 belt benchmark . `
