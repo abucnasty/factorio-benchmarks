@@ -1,0 +1,7 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+rs-clocked-iron-480,0,1184.575,1.974,1.632,2.873,506.5107739062533,0,600,unknown,windows-x86_64
+rs-clocked-iron-480,1,1284.134,2.14,1.713,4.381,467.2409577193657,0,600,unknown,windows-x86_64
+rs-clocked-iron-480,2,1180.253,1.967,1.623,3.185,508.36557924445015,0,600,unknown,windows-x86_64
+liquid-iron-voider-240,0,1124.304,1.874,0.992,3.694,533.6634931477607,4.6286679654534035,600,unknown,windows-x86_64
+liquid-iron-voider-240,1,1113.255,1.855,0.97,3.492,538.9600765323308,4.6286679654534035,600,unknown,windows-x86_64
+liquid-iron-voider-240,2,1254.978,2.092,1.039,4.367,478.0960303686598,4.6286679654534035,600,unknown,windows-x86_64
