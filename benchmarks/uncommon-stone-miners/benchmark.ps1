@@ -1,8 +1,13 @@
 param (
     # number of ticks to run per save file
-    [int]$ticks = 2000,
+    [int]$ticks = 600,
     # number of runs
-    [int]$runs = 5
+    [int]$runs = 10
 )
 
-belt benchmark . --ticks $ticks --runs $runs --output ./benchmark-results --template-path ../../scripts/results-template.md.hbs
+belt benchmark . `
+    --ticks $ticks `
+    --runs $runs `
+    --run-order sequential `
+    --template-path ../../scripts/results-template.md.hbs `
+    --output results
