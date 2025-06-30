@@ -6,9 +6,9 @@
   - fully beaconed
   - 16 legendary furnaces (8 smelting iron, 8 smelting steel)
   - 24 legendary stack inserters per module
-- each test file contains 128 copies of the base module with different inserter control strategies
+- each test file contains 512 copies of the base module with different inserter control strategies
 - camera and player model is in the same location for each file
-- each run is executed for 10,000 tics at 100x speed
+- each run is executed for 2000 ticks at 64x speed
 - blueprints used: [blueprints](./blueprints.txt)
 
 Why was this chosen as the candidate?
@@ -21,8 +21,6 @@ Why was this chosen as the candidate?
 Preview of furnace stack (specifically the wake list only variation):
 
 ![furnace_stack_preview](./images/furnace_stack_preview.png)
-
-
 
 ## Control Strategy Definitions
 
@@ -52,6 +50,10 @@ First furnace is monitored by a decider combinator. When it drops below a thresh
 > Note: This assumes that within a single assembly module (like the furnace stack used here) all machines (furnaces, assemblers, etc.) have the same demand for inputs and outputs and highly is dependent on having backpressure on the input material (e.g. ore is oversupplied in the example test case).
 
 
+### Lead / Follower Multi Signal
+Same as Lead / Follower except one network is used and individual item signals are sent across the network for each inserter to enable / disable based off its respective signal. The signals used in this test were iron ore, iron plate, and steel and all inserters per furnace stack were connected together.
+
+
 ### Threshold Guarded
 
 Same as `Threshold` but uses decider combinators to intercept the signal. This is to test the theory that an inserter should be "guarded" from upstream changes to the circuit network and only send a single pulse value when it should be enabled or disabled.
@@ -59,49 +61,36 @@ Same as `Threshold` but uses decider combinators to intercept the signal. This i
 
 ## Results
 
-Here's the full analysis for your **new Factorio benchmark results**, following the same structure as before:
-
-### 🔍 **Overview of Metrics**
+## 📈 **Results**
 
 | Metric            | Description                           |
 | ----------------- | ------------------------------------- |
-| **Mean UPS**      | Updates per second – higher is better |
-| **Mean Avg (ms)** | Average frame time – lower is better  |
-| **Mean Min (ms)** | Minimum frame time – lower is better  |
-| **Mean Max (ms)** | Maximum frame time – lower is better  |
+| **Mean UPS**      | Updates per second - higher is better |
+| **Mean Avg (ms)** | Average frame time - lower is better  |
+| **Mean Min (ms)** | Minimum frame time - lower is better  |
+| **Mean Max (ms)** | Maximum frame time - lower is better  |
 
-### 📈 **Results**
+| Save                        | Avg (ms) | Min (ms) | Max (ms) | UPS     | Execution Time (ms) |
+| --------------------------- | -------- | -------- | -------- | ------- | ------------------- |
+| bm_filter_clocked           | 2.496    | 0.748    | 10.458   | 401     | 24957               |
+| bm_enable_clocked           | 2.397    | 0.696    | 21.587   | 417     | 23964               |
+| bm_wake_list                | 2.346    | 1.431    | 6.087    | 426     | 23462               |
+| bm_threshold                | 2.231    | 1.352    | 14.638   | 448     | 22309               |
+| bm_lead_follow_multi_signal | 2.086    | 0.628    | 6.524    | 479     | 20859               |
+| bm_lead_follow              | 2.046    | 0.645    | 5.941    | **488** | 20461               |
 
-| Control Strategy  | Mean UPS | Mean Avg (ms) | Mean Min (ms) | Mean Max (ms) |
-| ----------------- | -------- | ------------- | ------------- | ------------- |
-| **lead follower** | **1745** | **0.5734**    | 0.3420        | **2.0326**    |
-| enable clocked    | 1697     | 0.5900        | **0.3388**    | 2.2434        |
-| filter clocked    | 1644     | 0.6086        | 0.3604        | 2.1598        |
-| threshold         | 1632     | 0.6136        | 0.4852        | 2.0892        |
-| wake list only    | 1520     | 0.6584        | 0.4662        | 2.3418        |
+![result_0_chart.svg](./images/result_0_chart.svg)
 
-Bold highlighted items indicate best in that category
+Box and Whisker Plot:
+![result_1_chart.svg](./images/result_1_chart.svg)
 
-![benchmark_result_bar_graph_ups](./images/benchmark_result_bar_graph_ups.png)
-![benchmark_result_bar_graph_ups_percent_diff](./images/benchmark_result_bar_graph_ups_percent_diff.png)
+| Save                        | % Difference from base |
+| --------------------------- | ---------------------- |
+| bm_filter_clocked           | 0.00%                  |
+| bm_enable_clocked           | 3.93%                  |
+| bm_wake_list                | 6.11%                  |
+| bm_threshold                | 11.62%                 |
+| bm_lead_follow_multi_signal | 19.40%                 |
+| bm_lead_follow              | 21.67%                 |
 
-### 🧠 **Analysis & Conculsions**
-
-#### ✅ **Best Overall Performance** - **Lead follower**
-
-- **Highest UPS** (1745)
-- **Lowest average (0.5734 ms)** and **max frame time (2.0326 ms)**
-
-#### ⚠️ **Least Efficient** - **Wake list only**
-- **Lowest UPS (1520)** and **highest average frame time (0.6584 ms)**
-
-#### 🧐 **Threshold vs Others**
-
-- **Threshold** lags in min latency (0.4852 ms – worst in group) despite decent max latency
-- Its **UPS is ~6.5% below** lead follower, suggesting overhead or inefficiency under this logic
-
-### 📌 **Recommendations**
-
-- **Use lead follower** for optimal throughput and stability
-- **Enable clocked** is a close second 
-- Avoid **wake list only**, as it underperforms in every category
+![result_2_chart.svg](./images/result_2_chart.svg)
