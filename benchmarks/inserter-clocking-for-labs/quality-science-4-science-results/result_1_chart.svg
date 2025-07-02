@@ -1,0 +1,37 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 1000">
+<rect width="1000" height="1000" x="0" y="0" fill="rgb(252,252,252)" fill-opacity="0"></rect>
+<path d="M148.5 60L148.5 785.5" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M399.5 60L399.5 785.5" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M649.5 60L649.5 785.5" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M900.5 60L900.5 785.5" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M148.5 785.5L148.5 60" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="-6" transform="translate(148.32 45)" fill="#cccccc">UPS</text>
+<path d="M148.3 785.5L900 785.5" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 785.4781)" fill="#999999">899</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 640.3825)" fill="#999999">1,047.2</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 495.2869)" fill="#999999">1,195.4</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 350.1913)" fill="#999999">1,343.6</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 205.0956)" fill="#999999">1,491.8</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 60)" fill="#999999">1,640</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,273.6,793.4781)" fill="#999999">quality_common_mining_prod</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,524.16,793.4781)" fill="#999999">quality_uncommon_mining_prod</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,774.72,793.4781)" fill="#999999">quality_legendary_mining_prod</text>
+<path d="M248.6 738.5L298.6 738.5L298.6 672.3L248.6 672.3ZM273.6 738.5M273.6 672.3M248.6 738.5L298.6 738.5M248.6 672.3L298.6 672.3M248.6 736.5L298.6 736.5" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M499.2 493.2L549.2 493.2L549.2 434.7L499.2 434.7ZM524.2 493.2M524.2 434.7M499.2 493.2L549.2 493.2M499.2 434.7L549.2 434.7M499.2 435.1L549.2 435.1" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M749.7 246.7L799.7 246.7L799.7 137.3L749.7 137.3ZM774.7 246.7M774.7 137.3M749.7 246.7L799.7 246.7M749.7 137.3L799.7 137.3M749.7 139.3L799.7 139.3" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M-194.5 -5l389.1 0l0 28l-389.1 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#666666">Benchmark Results - Effective UPS Distribution</text>
+<style ><![CDATA[
+.zr1-cls-2:hover {
+pointer-events:none;
+}
+.zr1-cls-3:hover {
+cursor:pointer;
+fill:rgba(255,255,255,1);
+stroke-width:2;
+}
+
+]]>
+
+</style>
+</svg>

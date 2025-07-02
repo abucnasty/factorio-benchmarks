@@ -1,0 +1,5 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+quality_common_research_prod,0,6454.4,1.793,0.768,10.24,557.7590480912246,0,3600,unknown,windows-x86_64
+quality_common_research_prod,1,6400.673,1.778,0.752,9.283,562.4408558287543,0,3600,unknown,windows-x86_64
+quality_uncommon_research_prod,0,5297.589,1.472,0.631,13.915,679.5544161693177,20.237140645886548,3600,unknown,windows-x86_64
+quality_uncommon_research_prod,1,5394.536,1.498,0.68,13.143,667.3419178220332,20.237140645886548,3600,unknown,windows-x86_64

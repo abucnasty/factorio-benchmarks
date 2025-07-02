@@ -1,0 +1,37 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 1000">
+<rect width="1000" height="1000" x="0" y="0" fill="rgb(252,252,252)" fill-opacity="0"></rect>
+<path d="M148.5 60L148.5 779.3" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M399.5 60L399.5 779.3" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M649.5 60L649.5 779.3" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M900.5 60L900.5 779.3" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M148.5 779.3L148.5 60" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="-6" transform="translate(148.32 45)" fill="#cccccc">UPS</text>
+<path d="M148.3 779.5L900 779.5" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 779.2839)" fill="#999999">700</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 635.4271)" fill="#999999">834.4</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 491.5703)" fill="#999999">968.8</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 347.7136)" fill="#999999">1,103.2</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 203.8568)" fill="#999999">1,237.6</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 60)" fill="#999999">1,372</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,273.6,787.2839)" fill="#999999">quality_common_laser_weapon</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,524.16,787.2839)" fill="#999999">quality_uncommon_laser_weapon</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,774.72,787.2839)" fill="#999999">quality_legendary_laser_weapon</text>
+<path d="M248.6 739.2L298.6 739.2L298.6 705.4L248.6 705.4ZM273.6 739.2M273.6 705.4M248.6 739.2L298.6 739.2M248.6 705.4L298.6 705.4M248.6 716.2L298.6 716.2" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M499.2 449.9L549.2 449.9L549.2 447.1L499.2 447.1ZM524.2 449.9M524.2 447.1M499.2 449.9L549.2 449.9M499.2 447.1L549.2 447.1M499.2 448.2L549.2 448.2" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M749.7 142.8L799.7 142.8L799.7 130.5L749.7 130.5ZM774.7 142.8M774.7 130.5M749.7 142.8L799.7 142.8M749.7 130.5L799.7 130.5M749.7 140.3L799.7 140.3" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M-194.5 -5l389.1 0l0 28l-389.1 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#666666">Benchmark Results - Effective UPS Distribution</text>
+<style ><![CDATA[
+.zr1-cls-2:hover {
+pointer-events:none;
+}
+.zr1-cls-3:hover {
+cursor:pointer;
+fill:rgba(255,255,255,1);
+stroke-width:2;
+}
+
+]]>
+
+</style>
+</svg>
