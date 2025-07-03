@@ -21,7 +21,7 @@
 | Logistics Science (480/s)  | 2       | [factoriobin](https://factoriobin.com/post/sujyge) | [youtube](https://youtu.be/Qnk71RHKV0s) |
 | Ore Voiding Miners         | 2       | [factoriobin](https://factoriobin.com/post/go8gwi) | [youtube](https://youtu.be/SccsA0Dr54k) |
 | Chemical Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4) |
-| Production Science (240/s) | 2.4     | [factoriobin](https://factoriobin.com/post/6moqzn) | [youtube](https://youtu.be/hYOpCNZCWkY) |
+| Production Science (240/s) | 2.5     | [factoriobin](https://factoriobin.com/post/3noug4) | [youtube](https://youtu.be/hYOpCNZCWkY) |
 
 ### Modules
 | Description            | Version | Link                                               | Video                                   |
