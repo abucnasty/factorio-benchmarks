@@ -1,31 +1,36 @@
 <svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 1000">
 <rect width="1000" height="1000" x="0" y="0" fill="rgb(252,252,252)" fill-opacity="0"></rect>
 <path d="M231.4 950.5L960 950.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-5"></path>
-<path d="M231.4 727.5L960 727.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-5"></path>
-<path d="M231.4 505.5L960 505.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-5"></path>
-<path d="M231.4 282.5L960 282.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-5"></path>
+<path d="M231.4 772.5L960 772.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-5"></path>
+<path d="M231.4 594.5L960 594.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-5"></path>
+<path d="M231.4 416.5L960 416.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-5"></path>
+<path d="M231.4 238.5L960 238.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-5"></path>
 <path d="M231.4 60.5L960 60.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-5"></path>
 <path d="M231.5 950L231.5 60" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr2-cls-5"></path>
 <path d="M231.4 950.5L960 950.5" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr2-cls-5"></path>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(223.44 838.75)" fill="#999999">bm_uncommon_purple_v1</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(223.44 616.25)" fill="#999999">bm_uncommon_purple_v2.1</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(223.44 393.75)" fill="#999999">bm_uncommon_purple_v2.3</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(223.44 171.25)" fill="#999999">bm_uncommon_purple_v2.3_landfill</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(223.44 861)" fill="#999999">bm_uncommon_purple_v1</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(223.44 683)" fill="#999999">bm_uncommon_purple_v2.1</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(223.44 505)" fill="#999999">bm_uncommon_purple_v2.3</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(223.44 327)" fill="#999999">bm_uncommon_purple_v2.3_landfill</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(223.44 149)" fill="#999999">bm_uncommon_purple_v2.5_landfill</text>
 <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(231.44 958)" fill="#999999">0</text>
-<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(352.8667 958)" fill="#999999">5</text>
-<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(474.2933 958)" fill="#999999">10</text>
-<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(595.72 958)" fill="#999999">15</text>
-<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(717.1467 958)" fill="#999999">20</text>
-<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(838.5733 958)" fill="#999999">25</text>
-<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(960 958)" fill="#999999">30</text>
-<path d="M231.4 762l0 0l0 153.5l0 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr2-cls-6"></path>
-<path d="M231.4 539.5l368.9 0l0 153.5l-368.9 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr2-cls-6"></path>
-<path d="M231.4 317l379.6 0l0 153.5l-379.6 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr2-cls-6"></path>
-<path d="M231.4 94.5l721.8 0l0 153.5l-721.8 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr2-cls-6"></path>
-<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(231.44 838.75)" fill="#333">0</text>
-<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(415.8871 616.25)" fill="#333">15.19</text>
-<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(421.2299 393.75)" fill="#333">15.63</text>
-<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(592.3201 171.25)" fill="#333">29.72</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(335.52 958)" fill="#999999">5</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(439.6 958)" fill="#999999">10</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(543.68 958)" fill="#999999">15</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(647.76 958)" fill="#999999">20</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(751.84 958)" fill="#999999">25</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(855.92 958)" fill="#999999">30</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(960 958)" fill="#999999">35</text>
+<path d="M231.4 799.6l0 0l0 122.8l0 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr2-cls-6"></path>
+<path d="M231.4 621.6l351.6 0l0 122.8l-351.6 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr2-cls-6"></path>
+<path d="M231.4 443.6l354.3 0l0 122.8l-354.3 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr2-cls-6"></path>
+<path d="M231.4 265.6l619.3 0l0 122.8l-619.3 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr2-cls-6"></path>
+<path d="M231.4 87.6l725.6 0l0 122.8l-725.6 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr2-cls-6"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(231.44 861)" fill="#333">0</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(407.2311 683)" fill="#333">16.89</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(408.5842 505)" fill="#333">17.02</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(541.078 327)" fill="#333">29.75</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(594.2629 149)" fill="#333">34.86</text>
 <path d="M-192.6 -5l385.3 0l0 28l-385.3 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr2-cls-5"></path>
 <text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#666666">Benchmark Results - Percentage Improvement</text>
 <style ><![CDATA[
