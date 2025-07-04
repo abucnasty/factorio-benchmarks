@@ -16,13 +16,11 @@ Lorem ipsum..
 
 | Save | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) |
 |------|----------|----------|----------|-----|---------------------|
-| labs_research_prod_no_clock_stack_16 | 3.445 | 0.919 | 27.311 | 290 | 62007 |
-| labs_research_prod_lead_follow_multinet | 3.407 | 1.113 | 33.018 | 293 | 61328 |
-| labs_research_prod_lead_follow_stack_4_12 | 2.967 | 1.055 | 19.947 | 337 | 53406 |
-| labs_research_prod_lead_follow_stack_4_8 | 2.918 | 1.040 | 16.572 | 342 | 52523 |
-| labs_research_prod_clocked_bulk | 2.812 | 1.057 | 33.415 | 355 | 50620 |
-| labs_research_prod_lead_follow_stack_auto | 2.775 | 1.158 | 17.942 | 360 | 49951 |
-| labs_research_prod_lead_follow_bulk | 2.617 | 1.127 | 25.552 | **382** | 47102 |
+| labs_research_prod_no_clock_stack_16 | 3.315 | 0.880 | 22.111 | 301 | 23864 |
+| labs_research_prod_lead_follow_stack_16_v2 | 3.259 | 1.191 | 12.238 | 306 | 23466 |
+| labs_research_prod_clocked_bulk | 2.765 | 1.051 | 25.734 | 361 | 19905 |
+| labs_research_prod_lead_follow_stack_16 | 2.659 | 1.008 | 30.692 | 376 | 19143 |
+| labs_research_prod_lead_follow_bulk_v2 | 2.611 | 1.100 | 17.894 | **383** | 18800 |
 
 ![result_0_chart.svg](result_0_chart.svg)
 
@@ -32,12 +30,10 @@ Box and Whisker Plot:
 | Save | % Difference from base |
 |------|------------------------|
 | labs_research_prod_no_clock_stack_16 | 0.00% |
-| labs_research_prod_lead_follow_multinet | 1.11% |
-| labs_research_prod_lead_follow_stack_4_12 | 16.11% |
-| labs_research_prod_lead_follow_stack_4_8 | 18.09% |
-| labs_research_prod_clocked_bulk | 22.49% |
-| labs_research_prod_lead_follow_stack_auto | 24.13% |
-| labs_research_prod_lead_follow_bulk | 31.63% |
+| labs_research_prod_lead_follow_stack_16_v2 | 1.71% |
+| labs_research_prod_clocked_bulk | 19.89% |
+| labs_research_prod_lead_follow_stack_16 | 24.67% |
+| labs_research_prod_lead_follow_bulk_v2 | 26.99% |
 
 ![result_2_chart.svg](result_2_chart.svg)
 
