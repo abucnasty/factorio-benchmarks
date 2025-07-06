@@ -9,22 +9,24 @@
 <path d="M138.5 741.4L138.5 60" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
 <text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="-6" transform="translate(138.24 45)" fill="#cccccc">UPS</text>
 <path d="M138.2 741.5L900 741.5" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 741.3547)" fill="#999999">492</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 605.0837)" fill="#999999">545.6</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 468.8128)" fill="#999999">599.2</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 332.5419)" fill="#999999">652.8</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 196.2709)" fill="#999999">706.4</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 60)" fill="#999999">760</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 741.3547)" fill="#999999">465</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 605.0837)" fill="#999999">522.6</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 468.8128)" fill="#999999">580.2</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 332.5419)" fill="#999999">637.8</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 196.2709)" fill="#999999">695.4</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(130.24 60)" fill="#999999">753</text>
 <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,214.416,749.3547)" fill="#999999">labs_mining_prod_clocked_bulk</text>
 <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,366.768,749.3547)" fill="#999999">labs_mining_prod_no_clock_stack_16</text>
 <text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,519.12,749.3547)" fill="#999999">labs_mining_prod_lead_follow_stack_16_v2</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,671.472,749.3547)" fill="#999999">labs_mining_prod_lead_follow_bulk_v2</text>
-<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,823.824,749.3547)" fill="#999999">labs_mining_prod_lead_follow_stack_16</text>
-<path d="M189.4 674L239.4 674L239.4 550.5L189.4 550.5ZM214.4 674M214.4 550.5M189.4 674L239.4 674M189.4 550.5L239.4 550.5M189.4 550.5L239.4 550.5" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
-<path d="M341.8 580.8L391.8 580.8L391.8 574.6L341.8 574.6ZM366.8 580.8M366.8 574.6M341.8 580.8L391.8 580.8M341.8 574.6L391.8 574.6M341.8 574.6L391.8 574.6" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
-<path d="M494.1 294.1L544.1 294.1L544.1 175L494.1 175ZM519.1 294.1M519.1 175M494.1 294.1L544.1 294.1M494.1 175L544.1 175M494.1 175L544.1 175" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
-<path d="M646.5 181.7L696.5 181.7L696.5 167.5L646.5 167.5ZM671.5 181.7M671.5 167.5M646.5 181.7L696.5 181.7M646.5 167.5L696.5 167.5M646.5 167.5L696.5 167.5" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
-<path d="M798.8 158.3L848.8 158.3L848.8 154.3L798.8 154.3ZM823.8 158.3M823.8 154.3M798.8 158.3L848.8 158.3M798.8 154.3L848.8 154.3M798.8 154.3L848.8 154.3" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,671.472,749.3547)" fill="#999999">labs_mining_prod_lead_follow_stack_16</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,823.824,749.3547)" fill="#999999">labs_mining_prod_lead_follow_bulk_v2</text>
+<path d="M189.4 632.8L239.4 632.8L239.4 520.1L189.4 520.1ZM214.4 681.6L214.4 632.8M214.4 485L214.4 520.1M189.4 681.6L239.4 681.6M189.4 485L239.4 485M189.4 613.7L239.4 613.7" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M341.8 636.1L391.8 636.1L391.8 531.4L341.8 531.4ZM366.8 655.9L366.8 636.1M366.8 503.4L366.8 531.4M341.8 655.9L391.8 655.9M341.8 503.4L391.8 503.4M341.8 569.7L391.8 569.7" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M494.1 297.3L544.1 297.3L544.1 224.6L494.1 224.6ZM519.1 341L519.1 297.3M519.1 197.3L519.1 224.6M494.1 341L544.1 341M494.1 197.3L544.1 197.3M494.1 256.6L544.1 256.6" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M646.5 209.9L696.5 209.9L696.5 192.7L646.5 192.7ZM671.5 209.9M671.5 192.7M646.5 209.9L696.5 209.9M646.5 192.7L696.5 192.7M646.5 197L696.5 197" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M798.8 260.4L848.8 260.4L848.8 187.8L798.8 187.8ZM823.8 280.1L823.8 260.4M823.8 144.8L823.8 187.8M798.8 280.1L848.8 280.1M798.8 144.8L848.8 144.8M798.8 255.2L848.8 255.2" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(5,0,0,5,671.472,386.4488)" fill="#3fb1e3" fill-opacity="0.8" stroke="#ccc" stroke-width="0" stroke-opacity="0.8" ecmeta_series_index="1" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr1-cls-4"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.1A1 1 0 0 1 1 0" transform="matrix(5,0,0,5,671.472,152.6508)" fill="#3fb1e3" fill-opacity="0.8" stroke="#ccc" stroke-width="0" stroke-opacity="0.8" ecmeta_series_index="1" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr1-cls-4"></path>
 <path d="M-194.5 -5l389.1 0l0 28l-389.1 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr1-cls-2"></path>
 <text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#666666">Benchmark Results - Effective UPS Distribution</text>
 <style ><![CDATA[
@@ -35,6 +37,10 @@ pointer-events:none;
 cursor:pointer;
 fill:rgba(255,255,255,1);
 stroke-width:2;
+}
+.zr1-cls-4:hover {
+cursor:pointer;
+fill:rgba(69,194,249,1);
 }
 
 ]]>
