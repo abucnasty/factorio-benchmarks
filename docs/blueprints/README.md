@@ -23,6 +23,10 @@
 | Chemical Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4) |
 | Production Science (240/s) | 2.5     | [factoriobin](https://factoriobin.com/post/3noug4) | [youtube](https://youtu.be/hYOpCNZCWkY) |
 
+| Description   | Version | Link                                               | Video      |
+| ------------- | ------- | -------------------------------------------------- | ---------- |
+| Stack 16 Labs | 1       | [factoriobin](https://factoriobin.com/post/pfvnyt) | pending... |
+
 ### Modules
 | Description            | Version | Link                                               | Video                                   |
 | ---------------------- | ------- | -------------------------------------------------- | --------------------------------------- |
