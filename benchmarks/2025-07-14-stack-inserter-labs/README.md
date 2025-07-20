@@ -65,8 +65,16 @@ Since promethium has an automated insertion limit of 5, you cannot use the above
 
 
 ## Results
+
+10 Runs at 3600 ticks per save
 - [control-comparison-4-science-results](control-comparison-4-science-results/results.md)
 - [control-comparison-7-science-results](control-comparison-7-science-results/results.md)
 - [control-comparison-12-science-results](control-comparison-12-science-results/results.md)
 - [control-comparison-agri-science-results](control-comparison-agri-science-results/results.md)
 - [control-comparison-sync-method](control-comparison-sync-method/results.md)
+
+3 Runs at 48000 ticks per save
+- [48k-control-comparison-4-science-results](48k-control-comparison-4-science-results/results.md)
+- [48k-control-comparison-7-science-results](48k-control-comparison-7-science-results/results.md)
+- [48k-control-comparison-12-science-results](48k-control-comparison-12-science-results/results.md)
+- [48k-control-comparison-agri-science-results](48k-control-comparison-agri-science-results/results.md)
