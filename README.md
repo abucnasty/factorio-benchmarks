@@ -16,6 +16,11 @@ This directory contains the following:
 3. data results
 4. conclusion files in markdown notation
 
+### Scripts
+The `scripts/` directory contains benchmark automation tools:
+- `benchmark.ps1` - PowerShell version for Windows
+- `benchmark.sh` - Bash version for Linux and macOS
+
 ## Simulators
 [simulators]("/simulators")
 
