@@ -1,0 +1,7 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+pollution_no_entity,0,16916.951,0.47,0.277,5.512,2128.0430498379997,0,36000,2.0.60,windows-x86_64
+pollution_no_entity,1,17130.282,0.476,0.29,3.296,2101.541585830286,0,36000,2.0.60,windows-x86_64
+pollution_no_entity_no_gleba,0,14040.743,0.39,0.232,3.508,2563.9668783909797,21.581096698132203,36000,2.0.60,windows-x86_64
+pollution_no_entity_no_gleba,1,13962.101,0.388,0.229,5.101,2578.408507430221,21.581096698132203,36000,2.0.60,windows-x86_64
+pollution_no_entity_no_pollution,0,4446.76,0.124,0.046,2.148,8095.782097527188,280.837423154312,36000,2.0.60,windows-x86_64
+pollution_no_entity_no_pollution,1,4493.227,0.125,0.044,1.061,8012.059039082602,280.837423154312,36000,2.0.60,windows-x86_64
