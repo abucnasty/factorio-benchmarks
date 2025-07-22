@@ -1,0 +1,39 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 1000">
+<rect width="1000" height="1000" x="0" y="0" fill="rgb(252,252,252)" fill-opacity="0"></rect>
+<path d="M145.2 950.5L960 950.5" fill="transparent" stroke="#eeeeee" class="zr0-cls-0"></path>
+<path d="M145.2 653.5L960 653.5" fill="transparent" stroke="#eeeeee" class="zr0-cls-0"></path>
+<path d="M145.2 356.5L960 356.5" fill="transparent" stroke="#eeeeee" class="zr0-cls-0"></path>
+<path d="M145.2 60.5L960 60.5" fill="transparent" stroke="#eeeeee" class="zr0-cls-0"></path>
+<path d="M145.5 950L145.5 60" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr0-cls-0"></path>
+<path d="M145.2 950.5L960 950.5" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr0-cls-0"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(137.16 801.6667)" fill="#999999">biolab_uncontrolled</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(137.16 505)" fill="#999999">abuc</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(137.16 208.3333)" fill="#999999">biolab_synchronous</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(145.16 958)" fill="#999999">0</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(280.9667 958)" fill="#999999">500</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(416.7733 958)" fill="#999999">1,000</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(552.58 958)" fill="#999999">1,500</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(688.3867 958)" fill="#999999">2,000</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(824.1933 958)" fill="#999999">2,500</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(960 958)" fill="#999999">3,000</text>
+<path d="M145.2 699.3l570.7 0l0 204.7l-570.7 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr0-cls-1"></path>
+<path d="M145.2 402.7l774.4 0l0 204.7l-774.4 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr0-cls-1"></path>
+<path d="M145.2 106l799.4 0l0 204.7l-799.4 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr0-cls-1"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(430.4898 801.6667)" fill="#333">2101</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(532.3448 505)" fill="#333">2851</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(544.839 208.3333)" fill="#333">2943</text>
+<path d="M-183.1 -5l366.2 0l0 28l-366.2 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr0-cls-0"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#666666">Benchmark Results - Average Effective UPS</text>
+<style ><![CDATA[
+.zr0-cls-0:hover {
+pointer-events:none;
+}
+.zr0-cls-1:hover {
+cursor:pointer;
+fill:rgba(69,194,249,1);
+}
+
+]]>
+
+</style>
+</svg>

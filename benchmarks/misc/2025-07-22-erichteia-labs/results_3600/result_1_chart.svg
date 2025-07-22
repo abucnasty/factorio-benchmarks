@@ -1,0 +1,37 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 1000">
+<rect width="1000" height="1000" x="0" y="0" fill="rgb(252,252,252)" fill-opacity="0"></rect>
+<path d="M148.5 60L148.5 832.7" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M399.5 60L399.5 832.7" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M649.5 60L649.5 832.7" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M900.5 60L900.5 832.7" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M148.5 832.7L148.5 60" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="-6" transform="translate(148.32 45)" fill="#cccccc">UPS</text>
+<path d="M148.3 832.5L900 832.5" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 832.7412)" fill="#999999">2,038</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 678.1929)" fill="#999999">2,311.8</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 523.6447)" fill="#999999">2,585.6</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 369.0965)" fill="#999999">2,859.4</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 214.5482)" fill="#999999">3,133.2</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(140.32 60)" fill="#999999">3,407</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,273.6,840.7412)" fill="#999999">biolab_uncontrolled</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,524.16,840.7412)" fill="#999999">abuc</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,774.72,840.7412)" fill="#999999">biolab_synchronous</text>
+<path d="M248.6 765.5L298.6 765.5L298.6 729.9L248.6 729.9ZM273.6 771.8L273.6 765.5M273.6 720.4L273.6 729.9M248.6 771.8L298.6 771.8M248.6 720.4L298.6 720.4M248.6 761.6L298.6 761.6" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M499.2 277.1L549.2 277.1L549.2 257.2L499.2 257.2ZM524.2 284.9L524.2 277.1M524.2 230.5L524.2 257.2M499.2 284.9L549.2 284.9M499.2 230.5L549.2 230.5M499.2 260.9L549.2 260.9" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M749.7 200.7L799.7 200.7L799.7 161L749.7 161ZM774.7 232.8L774.7 200.7M774.7 151.9L774.7 161M749.7 232.8L799.7 232.8M749.7 151.9L799.7 151.9M749.7 163L799.7 163" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M-194.5 -5l389.1 0l0 28l-389.1 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#666666">Benchmark Results - Effective UPS Distribution</text>
+<style ><![CDATA[
+.zr1-cls-2:hover {
+pointer-events:none;
+}
+.zr1-cls-3:hover {
+cursor:pointer;
+fill:rgba(255,255,255,1);
+stroke-width:2;
+}
+
+]]>
+
+</style>
+</svg>
