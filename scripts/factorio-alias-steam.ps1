@@ -1,1 +1,0 @@
-Set-Alias -Name factorio.exe -Value "C:\Program Files (x86)\Steam\steamapps\common\Factorio\bin\x64\factorio.exe"

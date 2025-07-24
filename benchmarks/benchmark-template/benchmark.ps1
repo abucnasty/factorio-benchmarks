@@ -1,27 +1,16 @@
 param (
     # number of ticks to run per save file
-    [int]$ticks = 5000,
+    [int]$ticks = 32000,
     # number of runs
-    [int]$runs = 5,
-    # Defaults to all files ending with .zip
-    [string]$filePattern = "\.zip",
-    # Output of verbose statistics
-    [switch]$verboseResult = $false
+    [int]$runs = 6
 )
-$repoRoot = (Get-Item -Path $PSScriptRoot).Parent.Parent.FullName
-$benchmarkScriptPath = Join-Path -Path $repoRoot -ChildPath "scripts\benchmark.ps1"
-$modPath = Join-Path -Path $PSScriptRoot -ChildPath "\benchmark-mods"
-$modPathUnix = ($modPath -replace "\\","/").ToLower().Trim("/")
 
-$argumentString = "$ticks $runs `"$filePattern`" -enableMods -benchmarkModFolder `"$modPathUnix`""
 
-if ($verboseResult) {
-    $argumentString += " -verboseResult"
-} else {
-    $argumentString += " -forceCSV"
-}
-
-Start-Process -FilePath "powershell.exe" `
-    -ArgumentList "-ExecutionPolicy Bypass -File `"$benchmarkScriptPath`" $argumentString" `
-    -WorkingDirectory (Get-Location) `
-    -NoNewWindow -Wait
+belt benchmark . `
+    --ticks $ticks `
+    --runs $runs `
+    --run-order sequential `
+    --template-path ../../scripts/results-template.md.hbs `
+    --pattern "*" `
+    --output control-comparison-4-science-results-verbose `
+    --verbose-metrics "wholeUpdate,transportLinesUpdate,controlBehaviorUpdate,entityUpdate"
