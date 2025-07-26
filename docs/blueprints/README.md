@@ -5,8 +5,10 @@
   - [Table of Contents](#table-of-contents)
   - [Megabasing](#megabasing)
     - [Uncommon Science](#uncommon-science)
+    - [Generic Space Age](#generic-space-age)
     - [Modules](#modules)
   - [General](#general)
+    - [Circuits](#circuits)
     - [Miscelaneous](#miscelaneous)
 
 
@@ -23,6 +25,7 @@
 | Chemical Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4) |
 | Production Science (240/s) | 2.5     | [factoriobin](https://factoriobin.com/post/3noug4) | [youtube](https://youtu.be/hYOpCNZCWkY) |
 
+### Generic Space Age
 | Description   | Version | Link                                               | Video                                   |
 | ------------- | ------- | -------------------------------------------------- | --------------------------------------- |
 | Stack 16 Labs | 1       | [factoriobin](https://factoriobin.com/post/pfvnyt) | [youtube](https://youtu.be/BUbxS0Onr5E) |
@@ -33,6 +36,11 @@
 | Lead Follower Furnaces | 2       | [factoriobin](https://factoriobin.com/post/jbcdkk) | [youtube](https://youtu.be/cjkMcoFJJOE) |
 
 ## General
+### Circuits
+| Description          | Link                                               | Video                                   |
+| -------------------- | -------------------------------------------------- | --------------------------------------- |
+| Packed RGB Dashboard | [factoriobin](https://factoriobin.com/post/2fs995) | [youtube](https://youtu.be/XbROdpgXeXQ) |
+
 ### Miscelaneous
 | Description       | Link                                               | Video                                   |
 | ----------------- | -------------------------------------------------- | --------------------------------------- |
