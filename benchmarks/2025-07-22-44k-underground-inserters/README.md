@@ -17,7 +17,33 @@
 - For a more accurate represenation see [14400 Tick Run Results](results_14400/README.md)
 
 ## Conclusion
-- staggering with the direction of travel is superior over staggering against the direction of travel
-- staggering with the direction of travel reduces large spikes of entity usage time
+
+### Staggering Direction
+Staggering with the direction of travel is superior over staggering against the direction of travel. You can see this by comparing the entity update and transport line time between the two control methods.
+
+Against direction of travel entity update time:
+![against_direction_of_travel](./results_1200/bench_4_every_240_staggered_reverse_entityUpdate_min_per_tick.svg)
+
+With direction of travel entity update time:
+![with_direction_of_travel](./results_1200/bench_4_every_240_staggered_entityUpdate_min_per_tick.svg)
+
+
+Against direction of travel transport line updates:
+![against_direction_of_travel](./results_1200/bench_4_every_240_staggered_reverse_transportLinesUpdate_min_per_tick.svg)
+
+With direction of travel transport line updates:
+![with_direction_of_travel](./results_1200/bench_4_every_240_staggered_transportLinesUpdate_min_per_tick.svg)
+
+### Staggering vs All Together
+Staggering with the direction of travel reduces large spikes of entity usage time. The longer the tests run, the more their update time becomes equal.
+
+Staggering:
+![with_direction_of_travel](./results_1200/bench_4_every_240_staggered_entityUpdate_min_per_tick.svg)
+
+All Together:
+![with_direction_of_travel](./results_1200/bench_4_every_240_entityUpdate_min_per_tick.svg)
+
+### Other
 - staggering against the direction of travel is one of the worst possible options
   - assumption being that each inserter is always interacting with a moving belt
+
