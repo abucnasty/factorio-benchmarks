@@ -1,0 +1,54 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 1000">
+<rect width="1000" height="1000" x="0" y="0" fill="rgb(252,252,252)" fill-opacity="0"></rect>
+<path d="M227.1 950.5L960 950.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-4"></path>
+<path d="M227.1 823.5L960 823.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-4"></path>
+<path d="M227.1 695.5L960 695.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-4"></path>
+<path d="M227.1 568.5L960 568.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-4"></path>
+<path d="M227.1 441.5L960 441.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-4"></path>
+<path d="M227.1 314.5L960 314.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-4"></path>
+<path d="M227.1 187.5L960 187.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-4"></path>
+<path d="M227.1 60.5L960 60.5" fill="transparent" stroke="#eeeeee" class="zr2-cls-4"></path>
+<path d="M227.5 950L227.5 60" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr2-cls-4"></path>
+<path d="M227.1 950.5L960 950.5" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr2-cls-4"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(219.12 886.4286)" fill="#999999">q1_stack_wake_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(219.12 759.2857)" fill="#999999">q1_bulk_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(219.12 632.1429)" fill="#999999">q1_stack_sync_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(219.12 505)" fill="#999999">q1_stack_desync_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(219.12 377.8571)" fill="#999999">q1_stack_desync_v1_9_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(219.12 250.7143)" fill="#999999">q2_stack_desync_v1_9_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(219.12 123.5714)" fill="#999999">q2_stack_desync_bot_speed</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(227.12 958)" fill="#999999">0</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(373.696 958)" fill="#999999">30</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(520.272 958)" fill="#999999">60</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(666.848 958)" fill="#999999">90</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(813.424 958)" fill="#999999">120</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="6" transform="translate(960 958)" fill="#999999">150</text>
+<path d="M227.1 842.6l0 0l0 87.7l0 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr2-cls-5"></path>
+<path d="M227.1 715.4l230.6 0l0 87.7l-230.6 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr2-cls-5"></path>
+<path d="M227.1 588.3l260.7 0l0 87.7l-260.7 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr2-cls-5"></path>
+<path d="M227.1 461.1l318.3 0l0 87.7l-318.3 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr2-cls-5"></path>
+<path d="M227.1 334l339.3 0l0 87.7l-339.3 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr2-cls-5"></path>
+<path d="M227.1 206.8l690.3 0l0 87.7l-690.3 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="zr2-cls-5"></path>
+<path d="M227.1 79.7l690.6 0l0 87.7l-690.6 0Z" fill="#3fb1e3" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="zr2-cls-5"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(227.12 886.4286)" fill="#333">0</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(342.402 759.2857)" fill="#333">47.19</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(357.4749 632.1429)" fill="#333">53.36</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(386.2527 505)" fill="#333">65.14</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(396.7817 377.8571)" fill="#333">69.45</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(572.2821 250.7143)" fill="#333">141.29</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" transform="translate(572.4286 123.5714)" fill="#333">141.35</text>
+<path d="M-192.6 -5l385.3 0l0 28l-385.3 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr2-cls-4"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#666666">Benchmark Results - Percentage Improvement</text>
+<style ><![CDATA[
+.zr2-cls-4:hover {
+pointer-events:none;
+}
+.zr2-cls-5:hover {
+cursor:pointer;
+fill:rgba(69,194,249,1);
+}
+
+]]>
+
+</style>
+</svg>

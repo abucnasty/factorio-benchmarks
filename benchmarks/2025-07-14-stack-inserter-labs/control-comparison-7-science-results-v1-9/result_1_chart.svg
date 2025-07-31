@@ -1,0 +1,49 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 1000">
+<rect width="1000" height="1000" x="0" y="0" fill="rgb(252,252,252)" fill-opacity="0"></rect>
+<path d="M128.5 60L128.5 774.8" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M238.5 60L238.5 774.8" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M348.5 60L348.5 774.8" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M459.5 60L459.5 774.8" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M569.5 60L569.5 774.8" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M679.5 60L679.5 774.8" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M789.5 60L789.5 774.8" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M900.5 60L900.5 774.8" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M128.5 774.8L128.5 60" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="-6" transform="translate(128.16 45)" fill="#cccccc">UPS</text>
+<path d="M128.2 775.5L900 775.5" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 774.7867)" fill="#999999">275</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 631.8293)" fill="#999999">369</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 488.872)" fill="#999999">463</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 345.9147)" fill="#999999">557</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 202.9573)" fill="#999999">651</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 60)" fill="#999999">745</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,183.2914,782.7867)" fill="#999999">q1_stack_wake_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,293.5543,782.7867)" fill="#999999">q1_bulk_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,403.8171,782.7867)" fill="#999999">q1_stack_sync_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,514.08,782.7867)" fill="#999999">q1_stack_desync_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,624.3429,782.7867)" fill="#999999">q1_stack_desync_v1_9_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,734.6057,782.7867)" fill="#999999">q2_stack_desync_v1_9_bot_speed</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,844.8686,782.7867)" fill="#999999">q2_stack_desync_bot_speed</text>
+<path d="M158.3 752.7L208.3 752.7L208.3 747.3L158.3 747.3ZM183.3 752.7M183.3 747.3M158.3 752.7L208.3 752.7M158.3 747.3L208.3 747.3M158.3 748.1L208.3 748.1" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M268.6 541.9L318.6 541.9L318.6 536.8L268.6 536.8ZM293.6 541.9M293.6 536.8M268.6 541.9L318.6 541.9M268.6 536.8L318.6 536.8M268.6 541.4L318.6 541.4" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M378.8 515.1L428.8 515.1L428.8 511L378.8 511ZM403.8 515.1M403.8 511M378.8 515.1L428.8 515.1M378.8 511L428.8 511M378.8 511.8L428.8 511.8" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M489.1 472.3L539.1 472.3L539.1 449.2L489.1 449.2ZM514.1 472.3M514.1 449.2M489.1 472.3L539.1 472.3M489.1 449.2L539.1 449.2M489.1 459.7L539.1 459.7" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M599.3 451.3L649.3 451.3L649.3 435.3L599.3 435.3ZM624.3 451.3M624.3 435.3M599.3 451.3L649.3 451.3M599.3 435.3L649.3 435.3M599.3 437.2L649.3 437.2" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M709.6 124.2L759.6 124.2L759.6 119.8L709.6 119.8ZM734.6 124.2M734.6 119.8M709.6 124.2L759.6 124.2M709.6 119.8L759.6 119.8M709.6 123.6L759.6 123.6" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M819.9 131L869.9 131L869.9 114.9L819.9 114.9ZM844.9 131M844.9 114.9M819.9 131L869.9 131M819.9 114.9L869.9 114.9M819.9 120.9L869.9 120.9" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M-194.5 -5l389.1 0l0 28l-389.1 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#666666">Benchmark Results - Effective UPS Distribution</text>
+<style ><![CDATA[
+.zr1-cls-2:hover {
+pointer-events:none;
+}
+.zr1-cls-3:hover {
+cursor:pointer;
+fill:rgba(255,255,255,1);
+stroke-width:2;
+}
+
+]]>
+
+</style>
+</svg>

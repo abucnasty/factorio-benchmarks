@@ -64,7 +64,7 @@ While the alert signal is active, the stack size is reduced by 12 to only have i
 Since promethium has an automated insertion limit of 5, you cannot use the above fallback alone to transition unless you reduced the stack size to 1 which would cause an imbalance on all the belts that are stacked to the max of 4.
 
 
-## Results
+## Results V1.0
 
 10 Runs at 3600 ticks per save
 - [control-comparison-4-science-results](control-comparison-4-science-results/results.md)
@@ -78,3 +78,10 @@ Since promethium has an automated insertion limit of 5, you cannot use the above
 - [48k-control-comparison-7-science-results](48k-control-comparison-7-science-results/results.md)
 - [48k-control-comparison-12-science-results](48k-control-comparison-12-science-results/results.md)
 - [48k-control-comparison-agri-science-results](48k-control-comparison-agri-science-results/results.md)
+
+## Results V1.13
+3 run(s) for 48000 tick(s)
+- [control-comparison-4-science-results-v1-9](control-comparison-4-science-results-v1-9/results.md)
+- [control-comparison-7-science-results-v1-9](control-comparison-7-science-results-v1-9/results.md)
+- [control-comparison-12-science-results-v1-9](control-comparison-12-science-results-v1-9/results.md)
+- [control-comparison-agri-science-results-v1-9](control-comparison-agri-science-results-v1-9/results.md)
