@@ -26,9 +26,10 @@
 | Production Science (240/s) | 2.5     | [factoriobin](https://factoriobin.com/post/3noug4) | [youtube](https://youtu.be/hYOpCNZCWkY) |
 
 ### Generic Space Age
-| Description   | Version | Link                                               | Video                                   |
-| ------------- | ------- | -------------------------------------------------- | --------------------------------------- |
-| Stack 16 Labs | 1       | [factoriobin](https://factoriobin.com/post/pfvnyt) | [youtube](https://youtu.be/BUbxS0Onr5E) |
+| Description                | Version | Link                                               | Video                                   |
+| -------------------------- | ------- | -------------------------------------------------- | --------------------------------------- |
+| Stack 16 Labs (deprecated) | 1       | [factoriobin](https://factoriobin.com/post/pfvnyt) | [youtube](https://youtu.be/BUbxS0Onr5E) |
+| Stack 16 Labs              | 1.13    | [factoriobin](https://factoriobin.com/post/1op71h) | [youtube](https://youtu.be/GhdUm3fSGlw) |
 
 ### Modules
 | Description            | Version | Link                                               | Video                                   |
