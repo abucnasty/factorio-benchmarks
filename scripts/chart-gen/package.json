@@ -1,0 +1,21 @@
+{
+  "name": "chart-gen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "chart_gen": "./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chartjs-node-canvas": "^5.0.0",
+    "csv-parser": "^3.2.0",
+    "glob": "^11.0.3"
+  }
+}
