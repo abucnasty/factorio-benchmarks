@@ -55,8 +55,9 @@ async function processFile(filePath) {
   const otherAvg = wholeUpdateAverage - sumOfParts;
 
   return {
-    label: path.basename(filePath, ".csv"),
+    label: path.basename(filePath, ".csv").replace("_verbose_metrics", ""),
     values: [entityAvg, controlAvg, transportAvg, electricAvg, otherAvg],
+    wholeUpdateAverage
   };
 }
 
@@ -71,6 +72,9 @@ async function main() {
   for (const file of files) {
     results.push(await processFile(file));
   }
+
+  // Sort results by "Whole Update" total time ascending
+  results.sort((a, b) => a.wholeUpdateAverage - b.wholeUpdateAverage);
 
   const categories = [
     "Entity Update",
@@ -92,7 +96,7 @@ async function main() {
     label: cat,
     data: results.map((r) => r.values[idx]),
     backgroundColor: colors[idx],
-  }));
+  }))
 
   // Plugin: black background
   const backgroundPlugin = {
@@ -145,7 +149,7 @@ async function main() {
   const configuration = {
     type: "bar",
     data: {
-      labels: results.map((r) => r.label.replace("_verbose_metrics", "")),
+      labels: results.map((r) => r.label),
       datasets,
     },
     options: {
@@ -187,7 +191,7 @@ async function main() {
 
   const imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
 
-  const outputFile = "verbose_metrics.png";
+  const outputFile = path.resolve(process.cwd(), "verbose_metrics.png");
   fs.writeFileSync(outputFile, imageBuffer);
   console.log(`Stacked horizontal chart with table saved to ${outputFile}`);
 }
