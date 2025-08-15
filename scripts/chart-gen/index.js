@@ -15,8 +15,8 @@ program
   .description("Extension of Belt's verbose_metrics to generate charts")
   .argument("<glob-pattern>", "Glob pattern for CSV files (e.g. './data/*.csv')")
   .option("-o, --output <file>", "Output PNG file", "verbose_metrics.png")
-  .option("-w, --width <px>", "Chart width in pixels", parseInt, 1400)
-  .option("-h, --height <px>", "Chart height in pixels", parseInt, 800)
+  .option("-w, --width <px>", "Chart width in pixels", (it) => parseInt(it), 1400)
+  .option("-h, --height <px>", "Chart height in pixels", (it) => parseInt(it), 800)
   .parse();
 
 const options = program.opts();
