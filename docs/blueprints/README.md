@@ -5,6 +5,7 @@
   - [Table of Contents](#table-of-contents)
   - [Megabasing](#megabasing)
     - [Uncommon Science](#uncommon-science)
+    - [Common Quality Science](#common-quality-science)
     - [Generic Space Age](#generic-space-age)
     - [Modules](#modules)
   - [General](#general)
@@ -24,6 +25,14 @@
 | Ore Voiding Miners         | 2       | [factoriobin](https://factoriobin.com/post/go8gwi) | [youtube](https://youtu.be/SccsA0Dr54k) |
 | Chemical Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4) |
 | Production Science (240/s) | 2.5     | [factoriobin](https://factoriobin.com/post/3noug4) | [youtube](https://youtu.be/hYOpCNZCWkY) |
+
+### Common Quality Science
+| Description                | Author                   | Average Update Time | Link                                                  | Video |
+| -------------------------- | ------------------------ | ------------------- | ----------------------------------------------------- | ----- |
+| Automation Science (240/s) | Syvkal, phlap            | 3216 nanoseconds    | [factoriobin](https://factoriobin.com/post/d26fun/12) |       |
+| Automation Science (480/s) | The End                  | 6484 nanoseconds    | [factoriobin](https://factoriobin.com/post/d26fun/16) |       |
+| Automation Science (480/s) | Syvkal, phlap, abucnasty | 6630 nanoseconds    | [factoriobin](https://factoriobin.com/post/za8jg5)    |       |
+
 
 ### Generic Space Age
 | Description                | Version | Link                                               | Video                                   |
