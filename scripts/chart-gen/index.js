@@ -1,20 +1,30 @@
-// stacked-chart-multi-table-dark.js
-// Usage: node stacked-chart-multi-table-dark.js "./data/*.csv"
+#!/usr/bin/env node
+// Usage: node index "./data/*.csv"
 
-const fs = require("fs");
-const path = require("path");
-const csv = require("csv-parser");
-const glob = require("glob");
-const { ChartJSNodeCanvas } = require("chartjs-node-canvas");
+import fs from "fs";
+import path from "path";
+import csv from "csv-parser";
+import * as glob from "glob";
+import { ChartJSNodeCanvas } from "chartjs-node-canvas";
+import { Command } from "commander";
 
-const pattern = process.argv[2];
-if (!pattern) {
-  console.error('Usage: node stacked-chart-multi-table-dark.js "<glob-pattern>"');
-  process.exit(1);
-}
+const program = new Command();
 
-const width = 1400;
-const height = 800; // taller for table
+program
+  .name("chart-gen")
+  .description("Extension of Belt's verbose_metrics to generate charts")
+  .argument("<glob-pattern>", "Glob pattern for CSV files (e.g. './data/*.csv')")
+  .option("-o, --output <file>", "Output PNG file", "verbose_metrics.png")
+  .option("-w, --width <px>", "Chart width in pixels", parseInt, 1400)
+  .option("-h, --height <px>", "Chart height in pixels", parseInt, 800)
+  .parse();
+
+const options = program.opts();
+const pattern = program.args[0];
+const width = options.width;
+const height = options.height;
+const outputFile = path.resolve(process.cwd(), options.output);
+
 const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
 
 async function readCSV(filePath) {
@@ -191,7 +201,6 @@ async function main() {
 
   const imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
 
-  const outputFile = path.resolve(process.cwd(), "verbose_metrics.png");
   fs.writeFileSync(outputFile, imageBuffer);
   console.log(`Stacked horizontal chart with table saved to ${outputFile}`);
 }
