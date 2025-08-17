@@ -122,6 +122,10 @@ assembly machine dropped below 15.
 The simplest way to work around this is to just set the condition much lower to something well under the automated insertion limit (e.g. 10 in this case). 
 The value can be too low however and it should be high enough to ensure that the amount in the assembly machine is not fully consumed before the inserter can insert into the assembly machine.
 
+This makes a difference in entity update time as can be seen here in the comparison between the original `13` design vs the `13_V2` where the combinator conditions were corrected to be well below the automated insertion limit:
+
+![13_vs_13_V2.png](./images/13_vs_13_V2.png)
+
 ### Power Poles Not Connected to Global Network
 There were two builds that had isolated power poles to bridge signals between inserters (design 05 and design 06). Upon looking deeper into the verbose metrics, this was uncovered and corrected to have all power poles connected by at least 1 copper wire to form a single network.
 
