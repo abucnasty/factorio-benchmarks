@@ -20,11 +20,17 @@
 | Description                | Version | Link                                               | Video                                   |
 | -------------------------- | ------- | -------------------------------------------------- | --------------------------------------- |
 | Military Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/z6tbrf) | [youtube](https://youtu.be/uKT3MZw8agg) |
-| Automation Science (240/s) | 2       | [factoriobin](https://factoriobin.com/post/2szm4a) | [youtube](https://youtu.be/dEM4GHz7N8E) |
+| Automation Science (480/s) | 4       | [factoriobin](https://factoriobin.com/post/s0xzia) | [youtube](https://youtu.be/yVhEDCcWE7s) |
 | Logistics Science (480/s)  | 2       | [factoriobin](https://factoriobin.com/post/sujyge) | [youtube](https://youtu.be/Qnk71RHKV0s) |
 | Ore Voiding Miners         | 2       | [factoriobin](https://factoriobin.com/post/go8gwi) | [youtube](https://youtu.be/SccsA0Dr54k) |
 | Chemical Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4) |
 | Production Science (240/s) | 2.5     | [factoriobin](https://factoriobin.com/post/3noug4) | [youtube](https://youtu.be/hYOpCNZCWkY) |
+
+Deprecated:
+
+| Description                | Version | Link                                               | Video                                   |
+| -------------------------- | ------- | -------------------------------------------------- | --------------------------------------- |
+| Automation Science (480/s) | 3       | [factoriobin](https://factoriobin.com/post/2szm4a) | [youtube](https://youtu.be/dEM4GHz7N8E) |
 
 ### Common Quality Science
 | Description                | Author                   | Average Update Time | Link                                                  | Video |
