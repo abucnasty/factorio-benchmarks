@@ -1,0 +1,4 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+q1_red_2048_labs_with_ship,0,91505.883,0.847,0.514,3.644,1180.2519844543765,0,108000,2.0.64,windows-x86_64
+q2_red_2048_labs_with_ship,0,90439.696,0.837,0.459,17.45,1194.1658892794155,1.1788927286973674,108000,2.0.64,windows-x86_64
+q2_red_2048_labs,0,87554.332,0.811,0.452,2.891,1233.519776040322,4.513255837529557,108000,2.0.64,windows-x86_64
