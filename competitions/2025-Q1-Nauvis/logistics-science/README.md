@@ -6,7 +6,6 @@
   - [Logistic Science Entries](#logistic-science-entries)
     - [Competition Entries](#competition-entries)
     - [Notes](#notes)
-    - [Testing Notes](#testing-notes)
 
 ## Logistic Science Entries
 ### Competition Entries
@@ -38,6 +37,3 @@
 
 ### Notes
 - design 06 and design 07 are created to prove that more beacons doesn't necessarily mean more UPS
-
-### Testing Notes
-- Berg's design (13) has some intermittent issues with half stacked science belts (pending changes)
