@@ -2,21 +2,33 @@
   "name": "chart-gen",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "ncc build ./src/index.ts -w -o dist/",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "chart-gen": "./index.js"
+    "chart-gen": "./dist/index.js"
   },
   "type": "module",
   "keywords": [],
-  "author": "",
+  "author": "abucnasty",
   "license": "ISC",
   "dependencies": {
     "chartjs-node-canvas": "^5.0.0",
+    "chartjs-plugin-annotation": "^3.1.0",
     "commander": "^14.0.0",
     "csv-parser": "^3.2.0",
     "glob": "^11.0.3"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/glob": "^8.1.0",
+    "@types/node": "^20.11.30",
+    "ncc": "^0.3.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
   }
 }
