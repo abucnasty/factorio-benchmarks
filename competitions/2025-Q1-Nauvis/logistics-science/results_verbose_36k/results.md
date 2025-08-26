@@ -44,6 +44,6 @@
 Box and Whisker Plot:
 ![result_1_chart.svg](result_1_chart.svg)
 
-![verbose_metrics.png](verbose_metrics.png)
+![verbose_metrics_average_per_tick.png](verbose_metrics_average_per_tick.png)
 
 ## Conclusion
