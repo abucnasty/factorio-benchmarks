@@ -33,11 +33,13 @@ Deprecated:
 | Automation Science (480/s) | 3       | [factoriobin](https://factoriobin.com/post/2szm4a) | [youtube](https://youtu.be/dEM4GHz7N8E) |
 
 ### Common Quality Science
-| Description                | Author                   | Average Update Time | Link                                                  | Video |
-| -------------------------- | ------------------------ | ------------------- | ----------------------------------------------------- | ----- |
-| Automation Science (240/s) | Syvkal, phlap            | 3216 nanoseconds    | [factoriobin](https://factoriobin.com/post/d26fun/12) |       |
-| Automation Science (480/s) | The End                  | 6484 nanoseconds    | [factoriobin](https://factoriobin.com/post/d26fun/16) |       |
-| Automation Science (480/s) | Syvkal, phlap, abucnasty | 6630 nanoseconds    | [factoriobin](https://factoriobin.com/post/za8jg5)    |       |
+| Description                | Author                   | Link                                                  | Video                                                  |
+| -------------------------- | ------------------------ | ----------------------------------------------------- | ------------------------------------------------------ |
+| Automation Science (240/s) | Syvkal, phlap            | [factoriobin](https://factoriobin.com/post/d26fun/12) | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
+| Automation Science (480/s) | The End                  | [factoriobin](https://factoriobin.com/post/d26fun/16) | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
+| Automation Science (480/s) | Syvkal, phlap, abucnasty | [factoriobin](https://factoriobin.com/post/za8jg5)    | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
+| Logistics Science (480/s)  | The End                  | [factoriobin](https://factoriobin.com/post/bmvzi0)    |                                                        |
+| Logistics Science (480/s)  | Syvkal                   | [factoriobin](https://factoriobin.com/post/6rtm1k)    |                                                        |
 
 
 ### Generic Space Age
