@@ -1,35 +1,29 @@
 # Factorio Benchmark Results
 
-**Platform:** {{platform}}  
-**Factorio Version:** {{factorio_version}}  
+**Platform:** {{platform}}
+**Factorio Version:** {{factorio_version}}
 
 ## Scenario
 * Each save was tested for {{ticks}} tick(s) and {{runs}} run(s)
 
 ## Results
-| Metric            | Description                           |
+| Metric | Description |
 | ----------------- | ------------------------------------- |
-| **Mean UPS**      | Updates per second - higher is better |
-| **Mean Avg (ms)** | Average frame time - lower is better  |
-| **Mean Min (ms)** | Minimum frame time - lower is better  |
-| **Mean Max (ms)** | Maximum frame time - lower is better  |
+| **Mean UPS** | Updates per second - higher is better |
+| **Mean Avg (ms)** | Average frame time - lower is better |
+| **Mean Min (ms)** | Minimum frame time - lower is better |
+| **Mean Max (ms)** | Maximum frame time - lower is better |
 
-| Save | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) |
-|------|----------|----------|----------|-----|---------------------|
+| Save | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) | % Difference from Worst |
+|------|----------|----------|----------|-----|---------------------| --- |
 {{#each results}}
-| {{save_name}} | {{avg_ms}} | {{min_ms}} | {{max_ms}} | {{{avg_effective_ups}}} | {{total_execution_time_ms}} |
+| {{save_name}} | {{avg_ms}} | {{min_ms}} | {{max_ms}} | {{{avg_effective_ups}}} | {{total_execution_time_ms}} | {{percentage_improvement}} |
 {{/each}}
 
 ![result_0_chart.svg](result_0_chart.svg)
 
 Box and Whisker Plot:
 ![result_1_chart.svg](result_1_chart.svg)
-
-| Save | % Difference from base |
-|------|------------------------|
-{{#each results}}
-| {{save_name}} | {{percentage_improvement}} |
-{{/each}}
 
 ![result_2_chart.svg](result_2_chart.svg)
 
