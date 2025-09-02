@@ -1,0 +1,40 @@
+<svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 1000 1000">
+<rect width="1000" height="1000" x="0" y="0" fill="rgb(252,252,252)" fill-opacity="0"></rect>
+<path d="M128.5 60L128.5 880.5" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M321.5 60L321.5 880.5" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M514.5 60L514.5 880.5" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M707.5 60L707.5 880.5" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M900.5 60L900.5 880.5" fill="transparent" stroke="#eeeeee" class="zr1-cls-2"></path>
+<path d="M128.5 880.5L128.5 60" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" y="-6" transform="translate(128.16 45)" fill="#cccccc">UPS</text>
+<path d="M128.2 880.5L900 880.5" fill="transparent" stroke="#cccccc" stroke-linecap="round" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 880.5133)" fill="#999999">619</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 716.4106)" fill="#999999">671</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 552.308)" fill="#999999">723</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 388.2053)" fill="#999999">775</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 224.1027)" fill="#999999">827</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="translate(120.16 60)" fill="#999999">879</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,224.64,888.5133)" fill="#999999">test_01</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,417.6,888.5133)" fill="#999999">test_02</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,610.56,888.5133)" fill="#999999">test_04</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:sans-serif;" transform="matrix(0.707,-0.707,0.707,0.707,803.52,888.5133)" fill="#999999">test_03</text>
+<path d="M199.6 715.5L249.6 715.5L249.6 639.1L199.6 639.1ZM224.6 774.5L224.6 715.5M224.6 614.5L224.6 639.1M199.6 774.5L249.6 774.5M199.6 614.5L249.6 614.5M199.6 697.7L249.6 697.7" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M392.6 402.5L442.6 402.5L442.6 336.9L392.6 336.9ZM417.6 456.4L417.6 402.5M417.6 291.3L417.6 336.9M392.6 456.4L442.6 456.4M392.6 291.3L442.6 291.3M392.6 353.9L442.6 353.9" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M585.6 367.7L635.6 367.7L635.6 274.4L585.6 274.4ZM610.6 409.4L610.6 367.7M610.6 264.5L610.6 274.4M585.6 409.4L635.6 409.4M585.6 264.5L635.6 264.5M585.6 309.1L635.6 309.1" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M778.5 322.5L828.5 322.5L828.5 193.3L778.5 193.3ZM803.5 367.2L803.5 322.5M803.5 192.9L803.5 193.3M778.5 367.2L828.5 367.2M778.5 192.9L828.5 192.9M778.5 272.5L828.5 272.5" fill="#fff" stroke="#3FB1E3" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr1-cls-3"></path>
+<path d="M-194.5 -5l389.1 0l0 28l-389.1 0Z" transform="translate(500 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr1-cls-2"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:18px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="9" transform="translate(500 5)" fill="#666666">Benchmark Results - Effective UPS Distribution</text>
+<style ><![CDATA[
+.zr1-cls-2:hover {
+pointer-events:none;
+}
+.zr1-cls-3:hover {
+cursor:pointer;
+fill:rgba(255,255,255,1);
+stroke-width:2;
+}
+
+]]>
+
+</style>
+</svg>
