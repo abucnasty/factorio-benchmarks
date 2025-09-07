@@ -38,8 +38,8 @@ Deprecated:
 | Automation Science (240/s) | Syvkal, phlap            | [factoriobin](https://factoriobin.com/post/d26fun/12) | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
 | Automation Science (480/s) | The End                  | [factoriobin](https://factoriobin.com/post/d26fun/16) | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
 | Automation Science (480/s) | Syvkal, phlap, abucnasty | [factoriobin](https://factoriobin.com/post/za8jg5)    | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
-| Logistics Science (480/s)  | The End                  | [factoriobin](https://factoriobin.com/post/bmvzi0)    |                                                        |
-| Logistics Science (240/s)  | Syvkal                   | [factoriobin](https://factoriobin.com/post/jl6mt3)    |                                                        |
+| Logistics Science (480/s)  | The End                  | [factoriobin](https://factoriobin.com/post/bmvzi0)    | [youtube](https://www.youtube.com/watch?v=2ENY4AjjdqE) |
+| Logistics Science (240/s)  | Syvkal                   | [factoriobin](https://factoriobin.com/post/gyv13q)    | [youtube](https://www.youtube.com/watch?v=2ENY4AjjdqE) |
 
 
 ### Generic Space Age
