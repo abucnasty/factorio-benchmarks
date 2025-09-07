@@ -37,6 +37,8 @@
 | 10          | 1.282    | 0.319    | 6.783    | 780     | 461391              |
 | 04          | 1.270    | 0.632    | 4.836    | 787     | 457250              |
 | 15          | 1.265    | 0.372    | 8.162    | 790     | 455580              |
+| 09_prod     | 1.200    | 0.334    | 5.808    | 833     | 431870              |
+| 10_prod     | 1.190    | 0.339    | 5.462    | 840     | 428530              |
 | 16          | 1.188    | 0.414    | 7.304    | **842** | 427724              |
 
 ![result_0_chart.svg](result_0_chart.svg)
@@ -45,5 +47,3 @@ Box and Whisker Plot:
 ![result_1_chart.svg](result_1_chart.svg)
 
 ![verbose_metrics_average_per_tick.png](verbose_metrics_average_per_tick.png)
-
-## Conclusion
