@@ -3,7 +3,7 @@
 ## Table of Contents
 - [2025 Q1 Nauvis Science Competition: Chemical Science](#2025-q1-nauvis-science-competition-chemical-science)
   - [Table of Contents](#table-of-contents)
-  - [Logistic Science Entries](#logistic-science-entries)
+  - [Chemical Science Entries](#chemical-science-entries)
     - [Validation](#validation)
     - [Designs that Passed Tests ✅](#designs-that-passed-tests-)
     - [Designs that Failed Tests ❌](#designs-that-failed-tests-)
@@ -11,7 +11,7 @@
       - [05\_derantrix](#05_derantrix)
   - [Save Files](#save-files)
 
-## Logistic Science Entries
+## Chemical Science Entries
 ### Validation
 All designs must be able to pass my acceptance criteria which is as follows:
 
