@@ -9,6 +9,9 @@
     - [Designs that Failed Tests ❌](#designs-that-failed-tests-)
     - [Design Alterations](#design-alterations)
       - [05\_derantrix](#05_derantrix)
+      - [28\_geist](#28_geist)
+      - [29\_geist](#29_geist)
+      - [34\_osboz](#34_osboz)
   - [Save Files](#save-files)
 
 ## Chemical Science Entries
@@ -16,8 +19,8 @@
 All designs must be able to pass my acceptance criteria which is as follows:
 
 All tests must reach a stable state and have fully saturated belts for 5 min after becoming stable:
-1. cold start until science belt is fully saturated,
-2. Run until belts are backed up then release into infinity loaders,
+1. cold start until science belt is fully saturated
+2. Run until belts are backed up then release into infinity loaders
 3. Remove one input and add it back
 4. Cut off all inputs and add it back
 
@@ -26,7 +29,8 @@ It also ensures that when I run a 36k+ tick benchmark, they will continue to pro
 test without any hiccups.  
 
 Additionally, since there are many RS latches in these designs, longer benchmarks will need to be run for 
-the final bracket. Therefore, each design must produce at 240/s continuously for 1 hour (216k ticks).
+the final bracket. Therefore:
+5. each design must produce at 240/s continuously for 1 hour (216k ticks).
   
 
 ### Designs that Passed Tests ✅
@@ -46,17 +50,30 @@ the final bracket. Therefore, each design must produce at 240/s continuously for
 | phlap                 | 13_phlap                 | 240/s              | Recipe Switching, Basic Oil                                                                                      | [design_13_phlap](blueprints/design_13_phlap.txt)                                 | [design_13_phlap.zip](maps/design_13_phlap.zip)                                 |
 | abucnasty             | 14_abucnasty             | 240/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil                                                  | [design_14_abucnasty](blueprints/design_14_abucnasty.txt)                         | [design_14_abucnasty.zip](maps/design_14_abucnasty.zip)                         |
 | Yuu                   | 16_yuu                   | 240/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Silo                                            | [design_16_yuu](blueprints/design_16_yuu.txt)                                     | [design_16_yuu.zip](maps/design_16_yuu.zip)                                     |
+| HenryJk               | 17_henryjk               | 240/s              |                                                                                                                  | [design_17_henryjk](blueprints/design_17_henryjk.txt)                             | [design_17_henryjk.zip](maps/design_17_henryjk.zip)                             |
 | lady_meyneth          | 18_lady_meyneth          | 240/s              | Direct Insertion, Molten Fluid Bus, Basic Oil, CARGO WAGONS!!!, 11 Beacon Science                                | [design_18_lady_meyneth](blueprints/design_18_lady_meyneth.txt)                   | [design_18_lady_meyneth.zip](maps/design_18_lady_meyneth.zip)                   |
 | Werezwolf             | 19_werezwolf             | 240/s              |                                                                                                                  | [design_19_werezwolf](blueprints/design_19_werezwolf.txt)                         | [design_19_werezwolf.zip](maps/design_19_werezwolf.zip)                         |
 | Toda1                 | 20_toda1                 | 240/s              | Direct Insertion, Molten Fluid Bus, Advanced Oil                                                                 | [design_20_toda1](blueprints/design_20_toda1.txt)                                 | [design_20_toda1.zip](maps/design_20_toda1.zip)                                 |
+| MCMayhem57            | 22_mcmayhem57            | 240/s              | Direct Insertion, Molten Fluid Bus, Basic Oil, Requires input synchronization                                    | [design_22_mcmayhem57](blueprints/design_22_mcmayhem57.txt)                       | [design_22_mcmayhem57.zip](maps/design_22_mcmayhem57.zip)                       |
+| MCMayhem57            | 23_mcmayhem57            | 240/s              | Direct Insertion, Molten Fluid Bus, Basic Oil, Requires input synchronization                                    | [design_23_mcmayhem57](blueprints/design_23_mcmayhem57.txt)                       | [design_23_mcmayhem57.zip](maps/design_23_mcmayhem57.zip)                       |
+| MrCooki4              | 26_mrcooki4              | 480/s              | Direct Insertion, Basic Oil, Metal Ore Inputs                                                                    | [design_26_mrcooki4](blueprints/design_26_mrcooki4.txt)                           | [design_26_mrcooki4.zip](maps/design_26_mrcooki4.zip)                           |
+| Geist                 | 27_geist                 | 480/s              | Direct Insertion, Molten Fluid Bus, Basic Oil, Engine DI                                                         | [design_27_geist](blueprints/design_27_geist.txt)                                 | [design_27_geist.zip](maps/design_27_geist.zip)                                 |
+| Geist                 | 28_geist                 | 480/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil                                                  | [design_28_geist](blueprints/design_28_geist.txt)                                 | [design_28_geist.zip](maps/design_28_geist.zip)                                 |
+| Geist                 | 29_geist                 | 480/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Red Circ/Sulfur DI                              | [design_29_geist](blueprints/design_29_geist.txt)                                 | [design_29_geist.zip](maps/design_29_geist.zip)                                 |
+| reja                  | 30_reja                  | 240/s              | Molten Fluid Bus, Basic Oil, belt based                                                                          | [design_30_reja](blueprints/design_30_reja.txt)                                   | [design_30_reja.zip](maps/design_30_reja.zip)                                   |
+| Minebuilder           | 31_minebuilder           | 240/s              | Basic Oil, Metal Ore Inputs, Buner Inserters, Stone Furnaces                                                     | [design_31_minebuilder](blueprints/design_31_minebuilder.txt)                     | [design_31_minebuilder.zip](maps/design_31_minebuilder.zip)                     |
+| reja                  | 32_reja                  | 240/s              | Molten Fluid Bus, Basic Oil, belt based, Improvemenets on Design 30                                              | [design_32_reja](blueprints/design_32_reja.txt)                                   | [design_32_reja.zip](maps/design_32_reja.zip)                                   |
+| Osboz                 | 34_osboz                 | 480/s              | Basic Oil, Metal Ore Inputs                                                                                      | [design_34_osboz](blueprints/design_34_osboz.txt)                                 | [design_34_osboz.zip](maps/design_34_osboz.zip)                                 |
 
-> Note: MCMayhem57 has three designs and need to be broken up into tests (design 22, 23, and 24)
-
-**Special Considerations**
-- 15_yuu no idea how to start it from blueprint... waiting response
-- 16_yuu uses rocket silo chesting, so two versions were created. One with a realistic scenario with 5 ships over Nauvis and one without any ships.
-  - thus, for the first round it is only competing against the baseline, so 16_yuu
-- 17_henryjk (waiting on fixed version)
+**Notes**
+- `16_yuu` uses rocket silo chesting, so two versions were created. One with a realistic scenario with 5 ships over Nauvis and one without any ships.
+  - for the first round it is only competing against the baseline, so 16_yuu will go up against 16_yuu_baseline as there are no ship overhead
+  - `16_yuu_with_ships` will be run independently against `00_baseline_with_ships`
+  - if the design performs above the baseline in both scenarios, 5 ships will need to be created above orbit for all designs that previously passed tests.
+- `27_geist` cannot be flipped
+- `28_geist` cannot be flipped
+- `29_geist` has an issue starting up if coal is not instantly supplied to the input belt. Not necessarily a test failure as there isn't a test case for this at the time of submission, but makes it difficult to supply from a single belt until everything is fully saturated.
+- `31_minebuilder` with full 96 copies was running at over 17 ms of update time so since it passed the tests it is included, but for the sake of abucnasty's computer and time, it is only 1/12 the scale of all other builds producing only 8 stacked lanes worth of science.
 
 
 ### Designs that Failed Tests ❌
@@ -66,7 +83,11 @@ the final bracket. Therefore, each design must produce at 240/s continuously for
 | SwiftDeath007 | 02_swiftdeath007 | 240/s              | [design_02_swiftdeath007](blueprints/design_02_swiftdeath007.txt) | Failed losing molten iron (test 3)                                                                         |
 | Osboz         | 07_osboz         | 480/s              | [design_07_osboz](blueprints/design_07_osboz.txt)                 | Failed upon losing coal, deadlock on lead assembler stuck at 8 science (test 3)                            |
 | Ztirom22      | 10_ztirom22      | 240/s              | [design_10_ztirom22](blueprints/design_10_ztirom22.txt)           | Failed to produce 240/s consistently, waited for 216k ticks for it to stabilize but it never did. (test 1) |
+| HenryJk       | 17_henryjk       | 240/s              | [design_17_henryjk](blueprints/design_17_henryjk.txt)             | Failed to startup (test 1)                                                                                 |
 | Syvkal        | 21_syvkal        | 480/s              | [design_21_syvkal](blueprints/design_21_syvkal.txt)               | Failed losing molten iron (test 3)                                                                         |
+| MCMayhem57    | 24_mcmayhem57    | 240/s              | [design_24_mcmayhem57](blueprints/design_24_mcmayhem57.txt)       | Eventually gets desynced being output blocked on engine production and never recovers (test 5)             |
+| Ashtroboy     | 25_ashtroboy     | 240/s              | [design_25_ashtroboy](blueprints/design_25_ashtroboy.txt)         | Cannot be build in a real game only in an editor. Fails Test 2, 3, 4.                                      |
+| Syvkal        | 33_syvkal        | 480/s              | [design_33_syvkal](blueprints/design_33_syvkal.txt)               | Failed starting stopping production and recovering (test 1)                                                |
 
 ### Design Alterations
 Below are changes made by abucnasty while creating the save files from the original blueprints.
@@ -76,7 +97,15 @@ Below are changes made by abucnasty while creating the save files from the origi
 Moved corner beacons to all be in line with the rest of the beacons. No impact to the design, just allows them to tile perfectly and was a seemingly small change.
 ![05_derantrix_modification.png](images/05_derantrix_modification.png)
 
+#### 28_geist
+- missing molten copper pipe connection added
+- missing water connection added
 
+#### 29_geist
+- missing prod modules in refinery added to not add excessive pump jacks (and for stability)
+
+#### 34_osboz
+- fixed instability on losing calcite by just extending the belt buffer on the last assemblers to 10 belts
 
 
 ## Save Files
@@ -114,3 +143,5 @@ To keep the map files relatively consistent and prevent cloning problems during 
 /c game.player.force.chart(game.player.surface, {{-466,477}, {-145, -4500}})
 
 ```
+
+/c game.player.force.chart(game.player.surface, {{-484,477}, {85, -4000}})
