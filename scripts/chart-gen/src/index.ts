@@ -12,6 +12,7 @@ import { createLineChartForMetrics } from "./charts/LineChart";
 import { ignoreFirstTicksFromResult } from "./data/BenchmarkAggregates";
 import { MetricEnum } from "./data/MetricEnum";
 import { nanoToMicro } from "./utils";
+import { MetricRegistryInstance } from "./data/MetricRegistry";
 
 const program = new Command();
 
@@ -27,6 +28,14 @@ program
   .option("--max-ticks <number>", "Max tick to include in charts", (it: string) => parseInt(it), 0)
   .option("--max-update <number>", "Max ms value to plot", (it: string) => Number(it), null)
   .option("--trim-prefix <string>", "Trim the prefix of the map name", (it: string) => it, "")
+  .option("--summary-table <boolean>", "Create a verbose summary stats table in summary chart (default true)", (it) => it.toLowerCase() == "true", true)
+  .option("--metrics <string>", "Comma seperated list of specific metrics to use (default: *)", (it: string) => {
+    if (it == "*") {
+      return MetricRegistryInstance.all()
+    } else {
+      return it.split(",").map(metricName => MetricRegistryInstance.getOrThrow(metricName))
+    }
+  }, MetricRegistryInstance.all())
   .option("-a, --aggregate-strategy <average | minimum>", "aggregate the runs by either minimum per tick or average per tick", "average")
   .action(async (pattern, options) => {
     const width: number = options.width;
@@ -35,7 +44,9 @@ program
     const removeFirstTicks: number = options.removeFirstTicks;
     const type: string = options.type;
     const trimPrefix = options.trimPrefix;
-    console.log(options)
+
+    const metrics: MetricEnum[] = options.metrics
+    console.debug(options)
 
     const files = glob.sync(pattern);
     if (files.length === 0) {
@@ -68,7 +79,7 @@ program
     }
 
     if (type == "summary") {
-      const configuration = createSummaryChartConfiguration(benchmarkResults);
+      const configuration = createSummaryChartConfiguration(benchmarkResults, { metrics: metrics, includeTable: options.summaryTable });
       console.log("Chart configuration created.");
       const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
       const imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);

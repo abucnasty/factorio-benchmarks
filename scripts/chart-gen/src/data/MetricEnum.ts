@@ -159,6 +159,10 @@ export const MetricEnum = {
         name: "scriptUpdate",
         description: "Script Update"
     },
+    OTHER: {
+        name: "other",
+        description: "Other"
+    }
 } as const;
 
 export type MetricEnum = typeof MetricEnum[keyof typeof MetricEnum];

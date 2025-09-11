@@ -1,11 +1,14 @@
+/**
+ * colors from https://davidmathlogic.com/colorblind/
+ */
 export const colors = {
-  blue: "rgb(0,114,178)",   
-  orange: "rgb(230,159,0)",   
-  yellow: "rgb(240,228,66)",  
-  green: "rgb(0,158,115)",   
-  sky_blue: "rgb(86,180,233)",  
-  vermillion: "rgb(213,94,0)",    
-  reddish_purple: "rgb(204,121,167)", 
-  dark_grey: "rgb(85,85,85)",
-  white: "rgb(255,255,255)"        
+  blue: "#0072B2",   
+  orange: "#E69F00",   
+  yellow: "#F0E442",
+  green: "#009E73",   
+  sky_blue: "#56B4E9",  
+  vermillion: "#D55E00",    
+  reddish_purple: "#CC79A7", 
+  dark_grey: "#585858",
+  white: "#FFFFFF"        
 } as const;

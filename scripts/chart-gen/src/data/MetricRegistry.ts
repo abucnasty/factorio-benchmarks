@@ -1,31 +1,35 @@
-import { Metric, MetricName } from "./Metric";
+import { MetricName } from "./Metric";
 import { MetricEnum } from "./MetricEnum";
 
 export class MetricRegistry {
-    private readonly metrics: Map<MetricName, Metric> = new Map();
+    private readonly metrics: Map<MetricName, MetricEnum> = new Map();
 
-    constructor(metrics: Metric[] = []) {
+    constructor(metrics: MetricEnum[] = []) {
         this.setMany(metrics);
     }
 
-    public set(metric: Metric) {
+    public set(metric: MetricEnum) {
         this.metrics.set(metric.name, metric);
     }
 
-    public setMany(metrics: Metric[]) {
+    public setMany(metrics: MetricEnum[]) {
         metrics.forEach((metric) => this.set(metric));
     }
 
-    public get(name: MetricName): Metric | null {
+    public get(name: MetricName): MetricEnum | null {
         return this.metrics.get(name) ?? null;
     }
 
-    public getOrThrow(name: string): Metric {
+    public getOrThrow(name: string): MetricEnum {
         const metric = this.get(name as MetricName);
         if (!metric) {
             throw new Error(`Metric not supported: ${name}`);
         }
         return metric;
+    }
+
+    public all(): MetricEnum[] {
+        return Array.from(this.metrics.values())
     }
 }
 
