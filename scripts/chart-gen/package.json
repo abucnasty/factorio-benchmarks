@@ -6,7 +6,7 @@
   "scripts": {
     "build": "ncc build ./src/index.ts -w -o dist/",
     "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts",
+    "dev": "ncc build ./src/index.ts -w -o dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {

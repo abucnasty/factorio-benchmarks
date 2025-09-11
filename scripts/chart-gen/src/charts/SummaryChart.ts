@@ -2,6 +2,7 @@ import { metricValueAverage } from "../data/BenchmarkAggregates"
 import { BenchmarkResult } from "../data/BenchmarkResult"
 import { MetricName } from "../data/Metric"
 import { MetricEnum } from "../data/MetricEnum"
+import { MetricRegistryInstance } from "../data/MetricRegistry"
 import { max, min, nanoToMicro, percentDecrease, percentDifference } from "../utils"
 import { colors } from "./constants"
 import type { ChartConfiguration } from "chart.js";
@@ -13,26 +14,29 @@ const supportedMetrics: Partial<Record<MetricName, MetricEnum>> = Object.fromEnt
     MetricEnum.TRANSPORT_LINES_UPDATE,
     MetricEnum.ELECTRIC_HEAT_FLUID_CIRCUIT_UPDATE,
     MetricEnum.SPACE_PLATFORMS,
+    MetricEnum.TRAINS,
+    MetricEnum.OTHER
   ].map(it => [it.name, it])
 )
 
-const metricNameToColor: Partial<Record<MetricName | string, string>> = {
+const metricNameToPattern: Partial<Record<MetricName | string, string>> = {
   [MetricEnum.ENTITY_UPDATE.name]: colors.blue,
   [MetricEnum.CONTROL_BEHAVIOR_UPDATE.name]: colors.reddish_purple,
   [MetricEnum.TRANSPORT_LINES_UPDATE.name]: colors.green,
   [MetricEnum.ELECTRIC_HEAT_FLUID_CIRCUIT_UPDATE.name]: colors.orange,
   [MetricEnum.SPACE_PLATFORMS.name]: colors.vermillion,
+  [MetricEnum.TRAINS.name]: colors.yellow,
   ["other"]: colors.dark_grey,
 }
 
 interface SummaryChartData {
   mapName: string;
   wholeUpdateAverage: number;
-  metrics: Array<{ metricName: string; metricDescription: string }>;
+  metrics: Array<MetricEnum>;
   metricValues: { metricName: string; metricDescription: string; average: number, min?: number, max?: number }[];
 }
 
-const mapSummaryChartData = (result: BenchmarkResult): SummaryChartData => {
+const mapSummaryChartData = (result: BenchmarkResult, configuredMetrics: Partial<Record<MetricName, MetricEnum>>): SummaryChartData => {
   const fileName = result.fileName;
   const metrics = result.metrics;
 
@@ -44,7 +48,7 @@ const mapSummaryChartData = (result: BenchmarkResult): SummaryChartData => {
 
   const otherMetricAverages = metrics
     .filter(it => it.name !== "wholeUpdate")
-    .filter(it => supportedMetrics[it.name] != undefined)
+    .filter(it => configuredMetrics[it.name] != undefined)
     .map(metric => {
       return {
         metricName: metric.name,
@@ -62,8 +66,8 @@ const mapSummaryChartData = (result: BenchmarkResult): SummaryChartData => {
   const metricValues = [
     ...otherMetricAverages,
     {
-      metricName: "other",
-      metricDescription: "Other",
+      metricName: MetricEnum.OTHER.name,
+      metricDescription: MetricEnum.OTHER.description,
       average: otherAvg,
     },
     {
@@ -77,31 +81,45 @@ const mapSummaryChartData = (result: BenchmarkResult): SummaryChartData => {
 
   return {
     mapName: result.fileName,
-    metrics: metricValues.map(it => {
-      return {
-        metricName: it.metricName,
-        metricDescription: it.metricDescription,
-      }
-    }),
+    metrics: metricValues.map(it => MetricRegistryInstance.getOrThrow(it.metricName)),
     metricValues: metricValues,
     wholeUpdateAverage,
   }
 }
 
-export const createSummaryChartConfiguration = (results: BenchmarkResult[]): ChartConfiguration<"bar"> => {
-  const chartData = results.map(mapSummaryChartData);
+interface SummaryChartOptions {
+  /**
+   * metrics to plot
+   */
+  metrics?: MetricEnum[];
+  includeTable?: boolean;
+}
+
+export const createSummaryChartConfiguration = (results: BenchmarkResult[], options: SummaryChartOptions): ChartConfiguration<"bar"> => {
+
+
+  let configuredDisplayMetrics: Partial<Record<MetricName, MetricEnum>> = {}
+  if (options.metrics) {
+    options.metrics
+      .filter(it => supportedMetrics[it.name] != undefined)
+      .forEach(metric => configuredDisplayMetrics[metric.name] = metric)
+  } else {
+    configuredDisplayMetrics = { ...supportedMetrics }
+  }
+
+  const chartData = results.map(result => mapSummaryChartData(result, configuredDisplayMetrics));
   // Sort data by "Whole Update" total time ascending
   chartData.sort((a, b) => a.wholeUpdateAverage - b.wholeUpdateAverage);
 
-  const metrics = chartData[0].metrics;
+  const metrics = Array.from(new Set(chartData.flatMap(it => it.metrics.map(metric => metric.name)))).map(metricName => MetricRegistryInstance.getOrThrow(metricName))
 
   const datasets = metrics
-    .filter(metric => metric.metricName != MetricEnum.WHOLE_UPDATE.name) // Exclude wholeUpdate from stacked bars
+    .filter(metric => metric.name != MetricEnum.WHOLE_UPDATE.name) // Exclude wholeUpdate from stacked bars
     .map(metric => {
       return {
-        label: metric.metricDescription,
-        data: chartData.map(data => data.metricValues.find(it => it.metricName === metric.metricName)?.average || 0),
-        backgroundColor: metricNameToColor[metric.metricName]
+        label: metric.description,
+        data: chartData.map(data => data.metricValues.find(it => it.metricName === metric.name)?.average || 0),
+        backgroundColor: metricNameToPattern[metric.name],
       }
     })
 
@@ -147,9 +165,9 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[]): Cha
       ctx.font = "12px Arial";
       metrics.forEach((metric, rowIdx) => {
         const y = tableTop + (rowIdx + 1) * rowHeight;
-        ctx.fillText(metric.metricDescription, left + colWidth / 2, y);
+        ctx.fillText(metric.description, left + colWidth / 2, y);
         chartData.forEach((res, colIdx) => {
-          const metricValue = res.metricValues.find(it => it.metricName == metric.metricName)
+          const metricValue = res.metricValues.find(it => it.metricName == metric.name)
           const average = Math.round(metricValue?.average ?? NaN)
           const text = `${average}`
           ctx.fillText(text, left + colWidth * (colIdx + 1) + colWidth / 2, y);
@@ -197,6 +215,12 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[]): Cha
     },
   };
 
+  const padding = options.includeTable && { bottom: (metrics.length + 3) * 20 + 10 }
+
+  datasets.sort((a, b) => {
+    return Object.values(supportedMetrics).findIndex(it => it.description == a.label) - Object.values(supportedMetrics).findIndex(it => it.description == b.label)
+  })
+
   const configuration: ChartConfiguration<"bar"> = {
     type: "bar",
     data: {
@@ -207,7 +231,7 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[]): Cha
       indexAxis: "y", // horizontal bars
       layout: {
         // autoPadding: true,
-        padding: { bottom: (metrics.length + 3) * 20 + 10 },
+        padding: padding
       },
       plugins: {
         title: {
@@ -216,7 +240,13 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[]): Cha
           color: colors.white,
         },
         legend: {
-          labels: { color: colors.white, },
+          labels: { 
+            color: colors.white, 
+            // order by supported metric order
+            sort: (a, b) => {
+              return Object.values(supportedMetrics).findIndex(it => it.description == a.text) - Object.values(supportedMetrics).findIndex(it => it.description == b.text)
+            }
+          },
         },
         tooltip: {
           callbacks: {
@@ -237,7 +267,7 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[]): Cha
         },
       },
     },
-    plugins: [backgroundPlugin, tablePlugin],
+    plugins: [backgroundPlugin, options.includeTable && tablePlugin],
   };
 
   return configuration;

@@ -1,10 +1,10 @@
 import fs from "fs";
 import csv from "csv-parser";
 import path from "path";
-import { Metric, MetricName } from "./Metric";
+import { MetricName } from "./Metric";
 import { MetricRegistryInstance } from "./MetricRegistry";
-import { MetricEnum } from "./MetricEnum";
 import { average } from "../utils";
+import { MetricEnum } from "./MetricEnum";
 
 export type BenchmarkResultRaw = Record<MetricName, number> & {
     tick: number;
@@ -19,13 +19,13 @@ export interface MetricValue {
 
 export interface BenchmarkResult {
     fileName: string;
-    metrics: Metric[]
+    metrics: MetricEnum[]
     metricValues: Map<MetricName, MetricValue[]>
 }
 
 export const parseBenchmarkAveragePerTickResultFromCsv = async (filePath: string): Promise<BenchmarkResult> => {
     const baseName = path.basename(filePath, ".csv").replace("_verbose_metrics", "");
-    let metrics: Metric[] = [];
+    let metrics: MetricEnum[] = [];
     const rawResultsPerTick: Map<number, BenchmarkResultRaw[]> = new Map();
 
     await new Promise<void>((resolve, reject) => {
@@ -74,7 +74,7 @@ export const parseBenchmarkAveragePerTickResultFromCsv = async (filePath: string
 
 export const parseBenchmarkAverageResultLazyFromCsv = async (filePath: string): Promise<BenchmarkResult> => {
     const baseName = path.basename(filePath, ".csv").replace("_verbose_metrics", "");
-    let metrics: Metric[] = [];
+    let metrics: MetricEnum[] = [];
     const rawResultsPerMetric: Map<MetricName, MetricValue[]> = new Map();
 
     await new Promise<void>((resolve, reject) => {
@@ -121,7 +121,7 @@ export const parseBenchmarkAverageResultLazyFromCsv = async (filePath: string): 
 
 export const parseBenchmarkMinPerTickResultFromCsv = async (filePath: string): Promise<BenchmarkResult> => {
     const baseName = path.basename(filePath, ".csv").replace("_verbose_metrics", "");
-    let metrics: Metric[] = [];
+    let metrics: MetricEnum[] = [];
 
     const bestWholeUpdatePerRow: Map<number, BenchmarkResultRaw> = new Map();
 
