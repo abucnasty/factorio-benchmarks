@@ -5,7 +5,6 @@ import { MetricEnum } from "../data/MetricEnum"
 import { average, nanoToMicro } from "../utils"
 import { colors } from "./constants"
 import type { ChartConfiguration } from "chart.js";
-import { AnnotationOptions } from 'chartjs-plugin-annotation';
 
 
 const supportedMetrics: Partial<Record<MetricName, MetricEnum>> = Object.fromEntries(
