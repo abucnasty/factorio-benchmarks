@@ -64,10 +64,11 @@ the final bracket. Therefore:
 | Minebuilder           | 31_minebuilder           | 240/s              | Basic Oil, Metal Ore Inputs, Buner Inserters, Stone Furnaces                                                     | [design_31_minebuilder](blueprints/design_31_minebuilder.txt)                     | [design_31_minebuilder.zip](maps/design_31_minebuilder.zip)                     |
 | reja                  | 32_reja                  | 240/s              | Molten Fluid Bus, Basic Oil, belt based, Improvemenets on Design 30                                              | [design_32_reja](blueprints/design_32_reja.txt)                                   | [design_32_reja.zip](maps/design_32_reja.zip)                                   |
 | Osboz                 | 34_osboz                 | 480/s              | Basic Oil, Metal Ore Inputs                                                                                      | [design_34_osboz](blueprints/design_34_osboz.txt)                                 | [design_34_osboz.zip](maps/design_34_osboz.zip)                                 |
+| HenryJk               | 35_henryjk               | 240/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil                                                  | [design_35_henryjk](blueprints/design_35_henryjk.txt)                             | [design_35_henryjk.zip](maps/design_35_henryjk.zip)                             |
 
 **Notes**
 - `16_yuu` uses rocket silo chesting, so two versions were created. One with a realistic scenario with 5 ships over Nauvis and one without any ships.
-  - for the first round it is only competing against the baseline, so 16_yuu will go up against 16_yuu_baseline as there are no ship overhead
+  - for the first round it is only competing against the baseline, so 16_yuu will go up against 00_baseline as there are no ships overhead
   - `16_yuu_with_ships` will be run independently against `00_baseline_with_ships`
   - if the design performs above the baseline in both scenarios, 5 ships will need to be created above orbit for all designs that previously passed tests.
 - `27_geist` cannot be flipped
