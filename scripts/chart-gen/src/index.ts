@@ -6,7 +6,8 @@ import path from "path";
 import * as glob from "glob";
 import { ChartJSNodeCanvas } from "chartjs-node-canvas";
 import { Command } from "commander";
-import { BenchmarkResult, parseBenchmarkMinPerTickResultFromCsv, parseBenchmarkAveragePerTickResultFromCsv } from "./data/BenchmarkResult";
+import { BenchmarkResult, parseBenchmarkAveragePerTickResultFromCsv } from "./data/BenchmarkResult";
+import { AggregationStrategy, aggregationStrategyFromString } from "./data/AggregationStrategy";
 import { createSummaryChartConfiguration } from "./charts/SummaryChart";
 import { createLineChartForMetrics } from "./charts/LineChart";
 import { ignoreFirstTicksFromResult } from "./data/BenchmarkAggregates";
@@ -36,7 +37,7 @@ program
       return it.split(",").map(metricName => MetricRegistryInstance.getOrThrow(metricName))
     }
   }, MetricRegistryInstance.all())
-  .option("-a, --aggregate-strategy <average | minimum>", "aggregate the runs by either minimum per tick or average per tick", "average")
+  .option("-a, --aggregate-strategy <average | minimum | maximum | median | standard_deviation", "aggregate the runs by either minimum per tick or average per tick", "average")
   .action(async (pattern, options) => {
     const width: number = options.width;
     const height: number = options.height;
@@ -44,6 +45,7 @@ program
     const removeFirstTicks: number = options.removeFirstTicks;
     const type: string = options.type;
     const trimPrefix = options.trimPrefix;
+    const aggregationStrategy: AggregationStrategy = aggregationStrategyFromString(options.aggregateStrategy)
 
     const metrics: MetricEnum[] = options.metrics
     console.debug(options)
@@ -57,17 +59,8 @@ program
     const benchmarkResults: BenchmarkResult[] = [];
     for (const file of files) {
       console.log(`Processing file: ${file}`);
-      let result: BenchmarkResult | null = null;
-      switch (options.aggregateStrategy) {
-        case "average":
-          result = await parseBenchmarkAveragePerTickResultFromCsv(file);
-          break;
-        case "minimum":
-          result = await parseBenchmarkMinPerTickResultFromCsv(file);
-          break;
-        default:
-          throw new Error(`Unknown aggregate strategy: ${options.aggregateStrategy}`);
-      }
+      let result: BenchmarkResult = await parseBenchmarkAveragePerTickResultFromCsv(file);
+      
       if (removeFirstTicks > 0) {
         result = ignoreFirstTicksFromResult(result, removeFirstTicks);
       }
@@ -79,7 +72,11 @@ program
     }
 
     if (type == "summary") {
-      const configuration = createSummaryChartConfiguration(benchmarkResults, { metrics: metrics, includeTable: options.summaryTable });
+      const configuration = createSummaryChartConfiguration(benchmarkResults, { 
+        metrics: metrics,
+        includeTable: options.summaryTable,
+        aggregationStrategy: aggregationStrategy
+      });
       console.log("Chart configuration created.");
       const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
       const imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
@@ -90,24 +87,22 @@ program
     }
 
     if (type == "line" || type == "bar") {
-      const maxTicks = options.maxTicks
       let maxWholeUpdate = 0;
       if (options.maxUpdate) {
         maxWholeUpdate = options.maxUpdate * 1000
       } else {
-        benchmarkResults.forEach(result => result.metricValues.get(MetricEnum.WHOLE_UPDATE.name).forEach(metricValue => {
-          maxWholeUpdate = Math.max(maxWholeUpdate, nanoToMicro(metricValue.value))
+        benchmarkResults.forEach(result => result.metricTickStats.get(MetricEnum.WHOLE_UPDATE.name).forEach(metricValue => {
+          maxWholeUpdate = Math.max(maxWholeUpdate, nanoToMicro(metricValue.maximum))
         }))
       }
-
-
       const configurations = benchmarkResults.map(result => {
         return {
           result: result,
           config: createLineChartForMetrics(result, {
-            maxTicks: maxTicks,
+            maxTicks: options.maxTicks,
             maxUpdateValue: maxWholeUpdate,
             type: type,
+            aggregationStrategy
           })
         }
       })

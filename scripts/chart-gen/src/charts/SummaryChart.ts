@@ -1,5 +1,6 @@
 import { metricValueAverage } from "../data/BenchmarkAggregates"
-import { BenchmarkResult } from "../data/BenchmarkResult"
+import { BenchmarkResult, transformResultToMetricValues } from "../data/BenchmarkResult"
+import { AggregationStrategy } from "../data/AggregationStrategy"
 import { MetricName } from "../data/Metric"
 import { MetricEnum } from "../data/MetricEnum"
 import { MetricRegistryInstance } from "../data/MetricRegistry"
@@ -36,11 +37,13 @@ interface SummaryChartData {
   metricValues: { metricName: string; metricDescription: string; average: number, min?: number, max?: number }[];
 }
 
-const mapSummaryChartData = (result: BenchmarkResult, configuredMetrics: Partial<Record<MetricName, MetricEnum>>): SummaryChartData => {
+const mapSummaryChartData = (result: BenchmarkResult, configuredMetrics: Partial<Record<MetricName, MetricEnum>>, aggregationStrategy: AggregationStrategy): SummaryChartData => {
   const fileName = result.fileName;
   const metrics = result.metrics;
 
-  const wholeUpdateVals = result.metricValues.get(MetricEnum.WHOLE_UPDATE.name);
+  const resultMetricValues = transformResultToMetricValues(result, aggregationStrategy)
+
+  const wholeUpdateVals = resultMetricValues.get(MetricEnum.WHOLE_UPDATE.name);
   if (!wholeUpdateVals) {
     throw new Error(`No ${MetricEnum.WHOLE_UPDATE.name} metric values found in ${fileName}`);
   }
@@ -53,9 +56,9 @@ const mapSummaryChartData = (result: BenchmarkResult, configuredMetrics: Partial
       return {
         metricName: metric.name,
         metricDescription: metric.description,
-        average: nanoToMicro(metricValueAverage(result.metricValues.get(metric.name))),
-        min: nanoToMicro(min(result.metricValues.get(metric.name).map(it => it.value))),
-        max: nanoToMicro(max(result.metricValues.get(metric.name).map(it => it.value)))
+        average: nanoToMicro(metricValueAverage(resultMetricValues.get(metric.name))),
+        min: nanoToMicro(min(resultMetricValues.get(metric.name).map(it => it.value))),
+        max: nanoToMicro(max(resultMetricValues.get(metric.name).map(it => it.value)))
       }
     })
     .sort((a, b) => b.average - a.average); // Descending order
@@ -88,6 +91,7 @@ const mapSummaryChartData = (result: BenchmarkResult, configuredMetrics: Partial
 }
 
 interface SummaryChartOptions {
+  aggregationStrategy: AggregationStrategy;
   /**
    * metrics to plot
    */
@@ -107,7 +111,7 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[], opti
     configuredDisplayMetrics = { ...supportedMetrics }
   }
 
-  const chartData = results.map(result => mapSummaryChartData(result, configuredDisplayMetrics));
+  const chartData = results.map(result => mapSummaryChartData(result, configuredDisplayMetrics, options.aggregationStrategy));
   // Sort data by "Whole Update" total time ascending
   chartData.sort((a, b) => a.wholeUpdateAverage - b.wholeUpdateAverage);
 
@@ -221,6 +225,28 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[], opti
     return Object.values(supportedMetrics).findIndex(it => it.description == a.label) - Object.values(supportedMetrics).findIndex(it => it.description == b.label)
   })
 
+  let aggregationStrategyLabel = ""
+  switch (options.aggregationStrategy) {
+    case AggregationStrategy.AVERAGE:
+      aggregationStrategyLabel = "Average"
+      break;
+    case AggregationStrategy.MINIMUM:
+      aggregationStrategyLabel = "Minimum"
+      break;
+    case AggregationStrategy.MAXIMUM:
+      aggregationStrategyLabel = "Minimum"
+      break;
+    case AggregationStrategy.MEDIAN:
+      aggregationStrategyLabel = "Median"
+      break;
+    case AggregationStrategy.STANDARD_DEVIATION:
+      aggregationStrategyLabel = "σ"
+  }
+
+  const xAxisLabel = `Average Time using ${aggregationStrategyLabel} per tick [microseconds] (lower is better)`
+
+
+
   const configuration: ChartConfiguration<"bar"> = {
     type: "bar",
     data: {
@@ -240,8 +266,8 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[], opti
           color: colors.white,
         },
         legend: {
-          labels: { 
-            color: colors.white, 
+          labels: {
+            color: colors.white,
             // order by supported metric order
             sort: (a, b) => {
               return Object.values(supportedMetrics).findIndex(it => it.description == a.text) - Object.values(supportedMetrics).findIndex(it => it.description == b.text)
@@ -259,7 +285,7 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[], opti
         x: {
           stacked: true,
           ticks: { color: colors.white, },
-          title: { display: true, text: "Average Time [microseconds] (lower is better)", color: "white" },
+          title: { display: true, text: xAxisLabel, color: "white" },
         },
         y: {
           stacked: true,
