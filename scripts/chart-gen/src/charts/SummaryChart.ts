@@ -190,7 +190,6 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[], opti
 
       chartData.forEach((data, colIdx) => {
         let currentMapWholeUpdate = data.metricValues.find(it => it.metricName == MetricEnum.WHOLE_UPDATE.name).average
-        console.log({ mapName: data.mapName })
 
         if (previousMapWholeUpdate) {
           const difference = Math.round(percentDecrease(previousMapWholeUpdate, currentMapWholeUpdate) * 100) / 100
@@ -234,16 +233,18 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[], opti
       aggregationStrategyLabel = "Minimum"
       break;
     case AggregationStrategy.MAXIMUM:
-      aggregationStrategyLabel = "Minimum"
+      aggregationStrategyLabel = "Maximum"
       break;
     case AggregationStrategy.MEDIAN:
       aggregationStrategyLabel = "Median"
       break;
     case AggregationStrategy.STANDARD_DEVIATION:
-      aggregationStrategyLabel = "σ"
+      aggregationStrategyLabel = "Standard Deviation"
   }
 
-  const xAxisLabel = `Average Time using ${aggregationStrategyLabel} per tick [microseconds] (lower is better)`
+  const xAxisLabel = `Average Time using ${aggregationStrategyLabel.toLowerCase()} per tick [microseconds] (lower is better)`
+
+  const title = `${aggregationStrategyLabel} Per Tick Metrics`
 
 
 
@@ -262,8 +263,11 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[], opti
       plugins: {
         title: {
           display: true,
-          text: "Verbose Metrics",
+          text: title,
           color: colors.white,
+          font: {
+            size: 18
+          },
         },
         legend: {
           labels: {
@@ -273,13 +277,7 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[], opti
               return Object.values(supportedMetrics).findIndex(it => it.description == a.text) - Object.values(supportedMetrics).findIndex(it => it.description == b.text)
             }
           },
-        },
-        tooltip: {
-          callbacks: {
-            label: (context: any) =>
-              `${context.dataset.label}: ${Math.round(context.parsed.x)}`,
-          },
-        },
+        }
       },
       scales: {
         x: {
@@ -290,6 +288,9 @@ export const createSummaryChartConfiguration = (results: BenchmarkResult[], opti
         y: {
           stacked: true,
           ticks: { color: colors.white, },
+          grid: {
+                        color: colors.dark_grey
+                    },
         },
       },
     },

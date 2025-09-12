@@ -12,6 +12,11 @@ export type BenchmarkResultRaw = Record<MetricName, number> & {
     run: number;
 }
 
+export type RunValue = {
+    run: number
+    value: number
+}
+
 export interface MetricValue {
     value: number; // in nanoseconds
     tick: number;
@@ -24,7 +29,7 @@ export interface MetricTickStat {
     maximum: number;
     median: number; // in nanoseconds
     tick: number;
-    raw: number[];
+    raw: RunValue[];
 }
 
 export interface BenchmarkResult {
@@ -113,7 +118,10 @@ export const parseBenchmarkAveragePerTickResultFromCsv = async (filePath: string
                 minimum: min(rawMetricValues),
                 maximum: max(rawMetricValues),
                 median: median(rawMetricValues),
-                raw: rawMetricValues,
+                raw: rows.map((row: BenchmarkResultRaw) => ({
+                    run: row.run,
+                    value: row[metric.name]
+                })),
                 tick: Number(tick),
             });
         })

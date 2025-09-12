@@ -147,9 +147,6 @@ export const createLineChartForMetrics = (result: BenchmarkResult, options: Line
                     ticks: {
                         color: 'white'
                     },
-                    // grid: {
-                    //     color: colors.white
-                    // }
                 },
                 y: {
                     stacked: true,
