@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 // Usage: node index "./data/*.csv"
 
-import fs from "fs";
 import path from "path";
-import * as glob from "glob";
-import { ChartJSNodeCanvas } from "chartjs-node-canvas";
+import {globSync} from "glob";
 import { Command } from "commander";
 import { BenchmarkResult, parseBenchmarkAveragePerTickResultFromCsv } from "./data/BenchmarkResult";
 import { AggregationStrategy, aggregationStrategyFromString } from "./data/AggregationStrategy";
@@ -14,6 +12,19 @@ import { ignoreFirstTicksFromResult } from "./data/BenchmarkAggregates";
 import { MetricEnum } from "./data/MetricEnum";
 import { nanoToMicro } from "./utils";
 import { MetricRegistryInstance } from "./data/MetricRegistry";
+import { BoxPlotController, BoxAndWiskers } from '@sgratzl/chartjs-chart-boxplot';
+import { createBoxPlotChartConfiguration } from "./charts/BoxPlot";
+import { Canvas } from "skia-canvas"
+import { Chart, LinearScale, CategoryScale, registerables } from "chart.js";
+import fsp from 'node:fs/promises';
+
+Chart.register(
+  BoxPlotController,
+  BoxAndWiskers,
+  LinearScale,
+  CategoryScale,
+  ...registerables
+);
 
 const program = new Command();
 
@@ -21,7 +32,7 @@ program
   .name("chart-gen")
   .description("Extension of Belt's verbose_metrics to generate charts")
   .argument("<glob-pattern>", "Glob pattern for CSV files (e.g. './data/*.csv')")
-  .option("-t, --type <type>", "Type of chart to generate (summary)", "summary")
+  .option("-t, --type <summary | line | bar | boxplot>", "Type of chart to generate (summary)", "summary")
   .option("-o, --output <file>", "Output PNG file", "verbose_metrics.png")
   .option("-w, --width <px>", "Chart width in pixels", (it: string) => parseInt(it), 1400)
   .option("-h, --height <px>", "Chart height in pixels", (it: string) => parseInt(it), 800)
@@ -30,6 +41,7 @@ program
   .option("--max-update <number>", "Max ms value to plot", (it: string) => Number(it), null)
   .option("--trim-prefix <string>", "Trim the prefix of the map name", (it: string) => it, "")
   .option("--summary-table <boolean>", "Create a verbose summary stats table in summary chart (default true)", (it) => it.toLowerCase() == "true", true)
+  .option("--tick-window-aggregation <number> (default 0)", "Take the time weighted average for the tick window specified", (it: string) => Number(it), 0)
   .option("--metrics <string>", "Comma seperated list of specific metrics to use (default: *)", (it: string) => {
     if (it == "*") {
       return MetricRegistryInstance.all()
@@ -45,14 +57,15 @@ program
     const removeFirstTicks: number = options.removeFirstTicks;
     const type: string = options.type;
     const trimPrefix = options.trimPrefix;
+    const tickWindowAggregation: number = options.tickWindowAggregation
     const aggregationStrategy: AggregationStrategy = aggregationStrategyFromString(options.aggregateStrategy)
 
     const metrics: MetricEnum[] = options.metrics
     console.debug(options)
 
-    const files = glob.sync(pattern);
+    const files = globSync(pattern);
     if (files.length === 0) {
-      console.error("No files matched the given pattern.");
+      console.error(`No files matched the given pattern ${pattern}`);
       process.exit(1);
     }
 
@@ -60,7 +73,7 @@ program
     for (const file of files) {
       console.log(`Processing file: ${file}`);
       let result: BenchmarkResult = await parseBenchmarkAveragePerTickResultFromCsv(file);
-      
+
       if (removeFirstTicks > 0) {
         result = ignoreFirstTicksFromResult(result, removeFirstTicks);
       }
@@ -72,17 +85,22 @@ program
     }
 
     if (type == "summary") {
-      const configuration = createSummaryChartConfiguration(benchmarkResults, { 
+      const config = createSummaryChartConfiguration(benchmarkResults, {
         metrics: metrics,
         includeTable: options.summaryTable,
         aggregationStrategy: aggregationStrategy
       });
       console.log("Chart configuration created.");
-      const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
-      const imageBuffer = await chartJSNodeCanvas.renderToBuffer(configuration);
+      const canvas = new Canvas(width, height)
+      const chart = new Chart(
+        canvas as any,
+        config
+      )
+      const imageBuffer = await await canvas.toBuffer("png");
 
-      fs.writeFileSync(outputFile, imageBuffer);
+      await fsp.writeFile(outputFile, imageBuffer);
       console.log(`Summary chart with table saved to ${outputFile}`);
+      chart.destroy()
       return;
     }
 
@@ -102,7 +120,8 @@ program
             maxTicks: options.maxTicks,
             maxUpdateValue: maxWholeUpdate,
             type: type,
-            aggregationStrategy
+            aggregationStrategy,
+            tickWindow: tickWindowAggregation
           })
         }
       })
@@ -111,17 +130,37 @@ program
       const fileNameWithoutExt = outputFile.replace(/\.[^/.]+$/, "")
 
       configurations.forEach(async ({ result, config }) => {
-        const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
-        const imageBuffer = await chartJSNodeCanvas.renderToBuffer(config);
+        const canvas = new Canvas(width, height)
+        const chart = new Chart(
+          canvas as any,
+          config
+        )
+        const imageBuffer = await canvas.toBuffer("png");
 
         const fileName = `${fileNameWithoutExt}_${result.fileName}.png`
 
-        fs.writeFileSync(fileName, imageBuffer);
+        await fsp.writeFile(fileName, imageBuffer);
+        chart.destroy()
         console.log(`Metric Line Chart Generated for ${fileName}`);
       });
 
 
       return;
+    }
+
+    if (type == "boxplot") {
+      const config = createBoxPlotChartConfiguration(benchmarkResults, aggregationStrategy);
+      console.log("Chart configuration created.");
+      const canvas = new Canvas(width, height)
+      const chart = new Chart(
+        canvas as any,
+        config
+      )
+      const imageBuffer = await await canvas.toBuffer("png");
+
+      await fsp.writeFile(outputFile, imageBuffer);
+      console.log(`Summary chart with table saved to ${outputFile}`);
+      chart.destroy()
     }
 
     console.error(`Unknown chart type: ${type}`);

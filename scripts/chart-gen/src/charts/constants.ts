@@ -10,5 +10,6 @@ export const colors = {
   vermillion: "#D55E00",    
   reddish_purple: "#CC79A7", 
   dark_grey: "#585858",
-  white: "#FFFFFF"        
+  white: "#FFFFFF",
+  black: "#000000"
 } as const;
