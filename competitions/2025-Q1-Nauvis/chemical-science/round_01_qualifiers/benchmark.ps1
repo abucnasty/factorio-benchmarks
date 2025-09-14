@@ -1,19 +1,15 @@
 param (
     # number of ticks to run per save file
-    [int]$ticks = 36000,
+    [int]$ticks = 18000,
     # number of runs
-    [int]$runs = 10
+    [int]$runs = 5
 )
- belt benchmark maps `
+ belt benchmark ../maps `
     --ticks $ticks `
     --runs $runs `
-    --run-order grouped `
+    --run-order random `
     --template-path ../../../../scripts/results.md.hbs `
-    --pattern "design_36*" `
-    --output . `
+    --pattern "design_*" `
+    --output results_affinity_8 `
     --strip-prefix "design_" `
-    --verbose-metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,electricNetworkUpdate,fluidFlowUpdate,entityUpdate"
-
-chart-gen "design_*.csv" -w 1650 -h 800 --type "summary" --remove-first-ticks 240 -o "verbose_metrics_summary.png" -a "average" --trim-prefix "design_"
-chart-gen "design_*belt*.csv" -w 1400 -h 800 --type "summary" --remove-first-ticks 240 -o "verbose_metrics_belts_summary.png" -a "average"
-chart-gen "design_*.csv" -w 2500 -h 800 --type "bar"     --remove-first-ticks 240 -o "timeseries.png" -a "average" --max-ticks 720  --max-update 4.5
+    --verbose-metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,electricNetworkUpdate,fluidFlowUpdate,entityUpdate,trains,spacePlatforms"

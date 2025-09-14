@@ -13,6 +13,17 @@
       - [29\_geist](#29_geist)
       - [34\_osboz](#34_osboz)
   - [Save Files](#save-files)
+  - [Round 1: Qualifiers](#round-1-qualifiers)
+    - [Results Overview](#results-overview)
+    - [Design 16 Yuu (Silo Chesting)](#design-16-yuu-silo-chesting)
+    - [Average Whole Update Time Distribution](#average-whole-update-time-distribution)
+    - [Above Baseline Designs](#above-baseline-designs)
+      - [Run Distribution](#run-distribution)
+      - [Verbose Metrics Summary](#verbose-metrics-summary)
+    - [Below Baseline Designs](#below-baseline-designs)
+    - [Designs Moving on to Round 2](#designs-moving-on-to-round-2)
+    - [Designs Eliminated](#designs-eliminated)
+    - [Round 1: All Results and Charts](#round-1-all-results-and-charts)
 
 ## Chemical Science Entries
 ### Validation
@@ -35,8 +46,8 @@ the final bracket. Therefore:
 
 ### Designs that Passed Tests ✅
 
-| Author                | Design Index             | Science Per Second | Design Tags                                                                                                      | Screenshot                                                                                                                                                                     | Blueprint                                                                         | Save File                                                                       |
-| --------------------- | ------------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Author                | Design Index             | Science Per Second | Design Tags                                                                                                      | Screenshot                                                                                                                                                          | Blueprint                                                                         | Save File                                                                       |
+| --------------------- | ------------------------ | ------------------ | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | abucnasty             | 00_baseline              | 240/s              |                                                                                                                  | <a href="design_screenshot/00_baseline.png"><img src="design_screenshot/00_baseline.png" alt="00_baseline" height="50"/></a>                                        | [design_00_baseline](blueprints/design_00_baseline.txt)                           | [design_00_baseline.zip](maps/design_00_baseline.zip)                           |
 | undertow              | 01_undertow              | 480/s              | Direct Insertion, Molten Fluid Bus, Basic Oil                                                                    | <a href="design_screenshot/01_undertow.png"><img src="design_screenshot/01_undertow.png" alt="01_undertow" height="50"/></a>                                        | [design_01_undertow](blueprints/design_01_undertow.txt)                           | [design_01_undertow.zip](maps/design_01_undertow.zip)                           |
 | SwiftDeath007         | 03_swiftdeath007         | 240/s              | Direct Insertion, Molten Fluid Bus, Basic Oil, 6 Beacon Science                                                  | <a href="design_screenshot/03_swiftdeath007.png"><img src="design_screenshot/03_swiftdeath007.png" alt="03_swiftdeath007" height="50"/></a>                         | [design_03_swiftdeath007](blueprints/design_03_swiftdeath007.txt)                 | [design_03_swiftdeath007.zip](maps/design_03_swiftdeath007.zip)                 |
@@ -49,6 +60,7 @@ the final bracket. Therefore:
 | phlap                 | 12_phlap                 | 240/s              | Direct Insertion, Molten Fluid Bus, Basic Oil                                                                    | <a href="design_screenshot/12_phlap.png"><img src="design_screenshot/12_phlap.png" alt="12_phlap" height="50"/></a>                                                 | [design_12_phlap](blueprints/design_12_phlap.txt)                                 | [design_12_phlap.zip](maps/design_12_phlap.zip)                                 |
 | phlap                 | 13_phlap                 | 240/s              | Recipe Switching, Basic Oil                                                                                      | <a href="design_screenshot/13_phlap.png"><img src="design_screenshot/13_phlap.png" alt="13_phlap" height="50"/></a>                                                 | [design_13_phlap](blueprints/design_13_phlap.txt)                                 | [design_13_phlap.zip](maps/design_13_phlap.zip)                                 |
 | abucnasty             | 14_abucnasty             | 240/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil                                                  | <a href="design_screenshot/14_abucnasty.png"><img src="design_screenshot/14_abucnasty.png" alt="14_abucnasty" height="50"/></a>                                     | [design_14_abucnasty](blueprints/design_14_abucnasty.txt)                         | [design_14_abucnasty.zip](maps/design_14_abucnasty.zip)                         |
+| Yuu                   | 15_yuu                   | 240/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Trains                                            | <a href="design_screenshot/15_yuu.png"><img src="design_screenshot/15_yuu.png" alt="15_yuu" height="50"/></a>                                                       | [design_15_yuu](blueprints/design_15_yuu.txt)                                     | [design_15_yuu.zip](maps/design_15_yuu.zip)                                     |
 | Yuu                   | 16_yuu                   | 240/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Silo                                            | <a href="design_screenshot/16_yuu.png"><img src="design_screenshot/16_yuu.png" alt="16_yuu" height="50"/></a>                                                       | [design_16_yuu](blueprints/design_16_yuu.txt)                                     | [design_16_yuu.zip](maps/design_16_yuu.zip)                                     |
 | HenryJk               | 17_henryjk               | 240/s              |                                                                                                                  | <a href="design_screenshot/17_henryjk.png"><img src="design_screenshot/17_henryjk.png" alt="17_henryjk" height="50"/></a>                                           | [design_17_henryjk](blueprints/design_17_henryjk.txt)                             | [design_17_henryjk.zip](maps/design_17_henryjk.zip)                             |
 | lady_meyneth          | 18_lady_meyneth          | 240/s              | Direct Insertion, Molten Fluid Bus, Basic Oil, CARGO WAGONS!!!, 11 Beacon Science                                | <a href="design_screenshot/18_lady_meyneth.png"><img src="design_screenshot/18_lady_meyneth.png" alt="18_lady_meyneth" height="50"/></a>                            | [design_18_lady_meyneth](blueprints/design_18_lady_meyneth.txt)                   | [design_18_lady_meyneth.zip](maps/design_18_lady_meyneth.zip)                   |
@@ -144,3 +156,133 @@ To keep the map files relatively consistent and prevent cloning problems during 
 /c game.player.force.chart(game.player.surface, {{-466,477}, {-145, -4500}})
 
 ```
+
+## Round 1: Qualifiers
+
+> **IMPORTANT**: The results from this round are only to be used to determine which designs perform above the baseline, the results are inconclusive however due to the number of RS latches present in these designs and will need to be run for much longer to generate more conclusive results.
+
+### Results Overview
+In this round, each save was tested for 18000 tick(s) and 5 run(s) in random order.
+
+The raw results are in the table below
+
+| Save                     | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) |
+| ------------------------ | -------- | -------- | -------- | --- | ------------------- |
+| 03_swiftdeath007         | 3.355    | 1.550    | 26.859   | 298 | 301975              |
+| 31_minebuilder           | 2.594    | 1.888    | 8.111    | 385 | 233463              |
+| 16_yuu_with_ships        | 2.340    | 1.570    | 6.935    | 427 | 210577              |
+| 15_yuu                   | 2.314    | 1.287    | 7.723    | 432 | 208276              |
+| 19_werezwolf             | 2.091    | 1.294    | 19.536   | 480 | 188206              |
+| 20_toda1                 | 1.941    | 0.915    | 12.738   | 515 | 174715              |
+| 04_swiftdeath007         | 1.778    | 0.827    | 7.925    | 562 | 160029              |
+| 00_baseline_with_ships   | 1.716    | 1.056    | 5.026    | 582 | 154417              |
+| 00_baseline              | 1.701    | 1.057    | 5.663    | 588 | 153043              |
+| 34_osboz                 | 1.625    | 1.129    | 4.245    | 615 | 146271              |
+| 11_theflyingcurryfish154 | 1.617    | 1.004    | 7.102    | 618 | 145561              |
+| 16_yuu                   | 1.547    | 0.822    | 5.702    | 646 | 139187              |
+| 22_mcmayhem57            | 1.504    | 0.878    | 6.882    | 665 | 135313              |
+| 05_derantrix             | 1.492    | 0.748    | 6.066    | 670 | 134276              |
+| 23_mcmayhem57            | 1.488    | 0.804    | 4.922    | 671 | 133947              |
+| 06_imp                   | 1.449    | 0.673    | 5.969    | 690 | 130415              |
+| 29_geist                 | 1.409    | 0.675    | 5.776    | 709 | 126781              |
+| 30_reja                  | 1.406    | 0.628    | 6.087    | 711 | 126509              |
+| 32_reja                  | 1.373    | 0.536    | 5.492    | 728 | 123541              |
+| 26_mrcooki4              | 1.332    | 0.761    | 4.722    | 751 | 119879              |
+| 09_jobo                  | 1.302    | 0.590    | 6.572    | 768 | 117177              |
+| 01_undertow              | 1.281    | 0.825    | 4.896    | 781 | 115271              |
+| 13_phlap                 | 1.277    | 0.618    | 6.204    | 783 | 114892              |
+| 27_geist                 | 1.240    | 0.652    | 5.524    | 806 | 111622              |
+| 28_geist                 | 1.228    | 0.562    | 5.377    | 814 | 110526              |
+| 35_henryjk               | 1.226    | 0.434    | 9.708    | 815 | 110312              |
+| 08_lady_meyneth          | 1.212    | 0.514    | 8.809    | 825 | 109069              |
+| 14_abucnasty             | 1.205    | 0.482    | 5.373    | 829 | 108448              |
+| 12_phlap                 | 1.194    | 0.617    | 5.465    | 837 | 107462              |
+| 18_lady_meyneth          | 1.190    | 0.503    | 15.982   | 840 | 107142              |
+
+
+### Design 16 Yuu (Silo Chesting)
+<a href="design_screenshot/16_yuu.png"><img src="design_screenshot/16_yuu.png" alt="16_yuu" height="300"/></a>
+
+Design 16 is the only design that incorporated silo chesting. Instead of adding ships to all designs, two save files were created for this design instead.
+
+The designs with the postfix of `with_ships` have 5 space platforms and those without have none. In order to move on to round 2 this design would have to perform above two baselines:
+
+1. `16_yuu` must perform better than `00_baseline` 
+2. `16_yuu_with_ships` must perform better than `00_baseline_with_ships`
+
+The following chart compares all four of these maps:
+
+![design_16.png](round_01_qualifiers/charts_affinity_16/design_16.png)
+
+Without ships orbitting the planet, `16_yuu` performed above the baseline with a 9.9% improvement. However, when the ships were added, the additional processing of the silo chests interacting with the space platforms drove the space platform time from 4 at baseline to 714 microseconds.
+
+This resulted in the design performing 36% worse than the baseline. It also showed a 51% decrease in performance compared to the same design without space platforms orbitting.
+
+
+### Average Whole Update Time Distribution
+The following shows the average whole update time in microseconds across all designs.
+
+![summary_run_distribution_all](round_01_qualifiers/charts_affinity_16/summary_run_distribution_all.png)
+
+Design 19 had a larger standard distributiuon than is desireable, however even the minimum run performed worse than the baseline so rerunning this specific design again is unnecessary.
+
+### Above Baseline Designs
+
+#### Run Distribution
+The following graph shows the average whole update time in microseconds for all designs above the baseline.
+
+![summary_run_distribution_above_baseline](round_01_qualifiers/charts_affinity_16/summary_run_distribution_above_baseline.png)
+
+> Take note that the scale for the above graph is clamped now due to the designs performing below the baseline in performance.
+
+#### Verbose Metrics Summary
+![summary_verbose_metrics_above_baseline](round_01_qualifiers/charts_affinity_16/summary_verbose_metrics_above_baseline.png)
+
+### Below Baseline Designs
+The following graph shows the average whole update time in microseconds for all designs below the baseline.
+
+![summary_verbose_metrics_below_baseline](round_01_qualifiers/charts_affinity_16/summary_verbose_metrics_below_baseline.png)
+
+Take note on the section on 16_yuu for why this designed performed below the baseline as the design with ships is used as the true cost of this build.
+
+
+### Designs Moving on to Round 2
+The following 20 designs performed above the baseline and will move on to round 2:
+- 01_undertow
+- 05_derantrix
+- 06_imp
+- 08_lady_meyneth
+- 09_jobo
+- 11_theflyingcurryfish154
+- 12_phlap
+- 13_phlap
+- 14_abucnasty
+- 18_lady_meyneth
+- 22_mcmayhem57
+- 23_mcmayhem57
+- 26_mrcooki4
+- 27_geist
+- 28_geist
+- 29_geist
+- 30_reja
+- 32_reja
+- 34_osboz
+- 35_henryjk
+
+### Designs Eliminated
+
+The following 7 designs performed below the baseline and are eliminated:
+- 03_swiftdeath007
+- 04_swiftdeath007
+- 15_yuu
+- 16_yuu
+- 19_werezwolf
+- 20_toda1
+- 31_minebuilder
+
+### Round 1: All Results and Charts
+All results can be found under [round_01_qualifiers](round_01_qualifiers)
+
+- [charts_affinity_2](round_01_qualifiers/charts_affinity_2) (1 core, 2 thread performance)
+- [charts_affinity_8](round_01_qualifiers/charts_affinity_8) (4 core, 8 thread performance)
+- [charts_affinity_16](round_01_qualifiers/charts_affinity_16) (8 core, 16 thread performance)
