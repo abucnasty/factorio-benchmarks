@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-// Usage: node index "./data/*.csv"
-
 import path from "path";
-import {globSync} from "glob";
+import { globSync } from "glob";
 import { Command } from "commander";
-import { BenchmarkResult, parseBenchmarkAveragePerTickResultFromCsv } from "./data/BenchmarkResult";
+import { BenchmarkTickResult, parseBenchmarkAveragePerTickResultFromCsv } from "./data/BenchmarkTickResult";
 import { AggregationStrategy, aggregationStrategyFromString } from "./data/AggregationStrategy";
 import { createSummaryChartConfiguration } from "./charts/SummaryChart";
 import { createLineChartForMetrics } from "./charts/LineChart";
@@ -17,6 +15,7 @@ import { createBoxPlotChartConfiguration } from "./charts/BoxPlot";
 import { Canvas } from "skia-canvas"
 import { Chart, LinearScale, CategoryScale, registerables } from "chart.js";
 import fsp from 'node:fs/promises';
+import { BenchmarkAggregateRunResult, parseBenchmarkAggregatesPerRunResultFromCsv, saveBenchmarkAggregateRunResultsToCsv } from "./data/BenchmarkAggregateResult";
 
 Chart.register(
   BoxPlotController,
@@ -32,7 +31,7 @@ program
   .name("chart-gen")
   .description("Extension of Belt's verbose_metrics to generate charts")
   .argument("<glob-pattern>", "Glob pattern for CSV files (e.g. './data/*.csv')")
-  .option("-t, --type <summary | line | bar | boxplot>", "Type of chart to generate (summary)", "summary")
+  .option("-t, --type <summary | line | bar | boxplot | table>", "Type of chart to generate (summary)", "summary")
   .option("-o, --output <file>", "Output PNG file", "verbose_metrics.png")
   .option("-w, --width <px>", "Chart width in pixels", (it: string) => parseInt(it), 1400)
   .option("-h, --height <px>", "Chart height in pixels", (it: string) => parseInt(it), 800)
@@ -69,23 +68,20 @@ program
       process.exit(1);
     }
 
-    const benchmarkResults: BenchmarkResult[] = [];
-    for (const file of files) {
-      console.log(`Processing file: ${file}`);
-      let result: BenchmarkResult = await parseBenchmarkAveragePerTickResultFromCsv(file);
 
-      if (removeFirstTicks > 0) {
-        result = ignoreFirstTicksFromResult(result, removeFirstTicks);
-      }
-
-      if (trimPrefix && result.fileName.startsWith(trimPrefix)) {
-        result.fileName = result.fileName.slice(trimPrefix.length);
-      }
-      benchmarkResults.push(result);
-    }
 
     if (type == "summary") {
-      const config = createSummaryChartConfiguration(benchmarkResults, {
+      const aggregateResults: BenchmarkAggregateRunResult[] = []
+      for (const file of files) {
+        console.log(`Processing file: ${file}`);
+        let result: BenchmarkAggregateRunResult = await parseBenchmarkAggregatesPerRunResultFromCsv(file, removeFirstTicks);
+
+        if (trimPrefix && result.fileName.startsWith(trimPrefix)) {
+          result.fileName = result.fileName.slice(trimPrefix.length);
+        }
+        aggregateResults.push(result);
+      }
+      const config = createSummaryChartConfiguration(aggregateResults, {
         metrics: metrics,
         includeTable: options.summaryTable,
         aggregationStrategy: aggregationStrategy
@@ -96,7 +92,7 @@ program
         canvas as any,
         config
       )
-      const imageBuffer = await await canvas.toBuffer("png");
+      const imageBuffer = await canvas.toBuffer("png");
 
       await fsp.writeFile(outputFile, imageBuffer);
       console.log(`Summary chart with table saved to ${outputFile}`);
@@ -105,6 +101,20 @@ program
     }
 
     if (type == "line" || type == "bar") {
+      const benchmarkResults: BenchmarkTickResult[] = [];
+      for (const file of files) {
+        console.log(`Processing file: ${file}`);
+        let result: BenchmarkTickResult = await parseBenchmarkAveragePerTickResultFromCsv(file);
+
+        if (removeFirstTicks > 0) {
+          result = ignoreFirstTicksFromResult(result, removeFirstTicks);
+        }
+
+        if (trimPrefix && result.fileName.startsWith(trimPrefix)) {
+          result.fileName = result.fileName.slice(trimPrefix.length);
+        }
+        benchmarkResults.push(result);
+      }
       let maxWholeUpdate = 0;
       if (options.maxUpdate) {
         maxWholeUpdate = options.maxUpdate * 1000
@@ -149,7 +159,17 @@ program
     }
 
     if (type == "boxplot") {
-      const config = createBoxPlotChartConfiguration(benchmarkResults, aggregationStrategy);
+      const aggregateResults: BenchmarkAggregateRunResult[] = []
+      for (const file of files) {
+        console.log(`Processing file: ${file}`);
+        let result: BenchmarkAggregateRunResult = await parseBenchmarkAggregatesPerRunResultFromCsv(file, removeFirstTicks);
+
+        if (trimPrefix && result.fileName.startsWith(trimPrefix)) {
+          result.fileName = result.fileName.slice(trimPrefix.length);
+        }
+        aggregateResults.push(result);
+      }
+      const config = createBoxPlotChartConfiguration(aggregateResults, aggregationStrategy);
       console.log("Chart configuration created.");
       const canvas = new Canvas(width, height)
       const chart = new Chart(
@@ -161,6 +181,28 @@ program
       await fsp.writeFile(outputFile, imageBuffer);
       console.log(`Summary chart with table saved to ${outputFile}`);
       chart.destroy()
+      return;
+    }
+
+
+    if (type == "table") {
+      const aggregateResults: BenchmarkAggregateRunResult[] = []
+      for (const file of files) {
+        console.log(`Processing file: ${file}`);
+        let result: BenchmarkAggregateRunResult = await parseBenchmarkAggregatesPerRunResultFromCsv(file, removeFirstTicks);
+
+        if (trimPrefix && result.fileName.startsWith(trimPrefix)) {
+          result.fileName = result.fileName.slice(trimPrefix.length);
+        }
+        aggregateResults.push(result);
+      }
+
+      const fileNameWithoutExt = outputFile.replace(/\.[^/.]+$/, "")
+
+      await saveBenchmarkAggregateRunResultsToCsv(aggregateResults, aggregationStrategy, `${fileNameWithoutExt}.csv`)
+
+      console.log(`Verbose Run Statistics Saved to ${fileNameWithoutExt}`)
+      return;
     }
 
     console.error(`Unknown chart type: ${type}`);

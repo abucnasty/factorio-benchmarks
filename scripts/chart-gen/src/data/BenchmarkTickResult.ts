@@ -29,16 +29,15 @@ export interface MetricTickStat {
     maximum: number;
     median: number; // in nanoseconds
     tick: number;
-    raw: RunValue[];
 }
 
-export interface BenchmarkResult {
+export interface BenchmarkTickResult {
     fileName: string;
     metrics: MetricEnum[]
     metricTickStats: Map<MetricName, MetricTickStat[]>
 }
 
-export const transformResultToMetricValues = (result: BenchmarkResult, strategy: AggregationStrategy): Map<MetricName, MetricValue[]> => {
+export const transformResultToMetricValues = (result: BenchmarkTickResult, strategy: AggregationStrategy): Map<MetricName, MetricValue[]> => {
     const map: Map<MetricName, MetricValue[]> = new Map()
 
     result.metricTickStats.forEach((stats, metricName) => {
@@ -74,7 +73,7 @@ export const transformMetricTickStatToMetricValue = (metricTickStat: MetricTickS
     }
 }
 
-export const parseBenchmarkAveragePerTickResultFromCsv = async (filePath: string): Promise<BenchmarkResult> => {
+export const parseBenchmarkAveragePerTickResultFromCsv = async (filePath: string): Promise<BenchmarkTickResult> => {
     const baseName = path.basename(filePath, ".csv").replace("_verbose_metrics", "");
     let metrics: MetricEnum[] = [];
     const rawResultsPerTick: Map<number, BenchmarkResultRaw[]> = new Map();
@@ -118,10 +117,6 @@ export const parseBenchmarkAveragePerTickResultFromCsv = async (filePath: string
                 minimum: min(rawMetricValues),
                 maximum: max(rawMetricValues),
                 median: median(rawMetricValues),
-                raw: rows.map((row: BenchmarkResultRaw) => ({
-                    run: row.run,
-                    value: row[metric.name]
-                })),
                 tick: Number(tick),
             });
         })

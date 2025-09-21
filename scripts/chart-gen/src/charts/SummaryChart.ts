@@ -1,5 +1,5 @@
 import { metricValueAverage } from "../data/BenchmarkAggregates"
-import { BenchmarkResult, transformResultToMetricValues } from "../data/BenchmarkResult"
+import { BenchmarkTickResult, transformResultToMetricValues } from "../data/BenchmarkTickResult"
 import { AggregationStrategy } from "../data/AggregationStrategy"
 import { MetricName } from "../data/Metric"
 import { MetricEnum } from "../data/MetricEnum"
@@ -7,6 +7,7 @@ import { MetricRegistryInstance } from "../data/MetricRegistry"
 import { max, min, nanoToMicro, percentDecrease, percentDifference } from "../utils"
 import { colors } from "./constants"
 import type { ChartConfiguration } from "chart.js";
+import { BenchmarkAggregateRunResult } from "../data/BenchmarkAggregateResult"
 
 const supportedMetrics: Partial<Record<MetricName, MetricEnum>> = Object.fromEntries(
   [
@@ -37,17 +38,15 @@ interface SummaryChartData {
   metricValues: { metricName: string; metricDescription: string; average: number, min?: number, max?: number }[];
 }
 
-const mapSummaryChartData = (result: BenchmarkResult, configuredMetrics: Partial<Record<MetricName, MetricEnum>>, aggregationStrategy: AggregationStrategy): SummaryChartData => {
+const mapSummaryChartData = (result: BenchmarkAggregateRunResult, configuredMetrics: Partial<Record<MetricName, MetricEnum>>, aggregationStrategy: AggregationStrategy): SummaryChartData => {
   const fileName = result.fileName;
   const metrics = result.metrics;
 
-  const resultMetricValues = transformResultToMetricValues(result, aggregationStrategy)
-
-  const wholeUpdateVals = resultMetricValues.get(MetricEnum.WHOLE_UPDATE.name);
-  if (!wholeUpdateVals) {
+  const wholeUpdateAgg = result.all.get(MetricEnum.WHOLE_UPDATE.name);
+  if (!wholeUpdateAgg) {
     throw new Error(`No ${MetricEnum.WHOLE_UPDATE.name} metric values found in ${fileName}`);
   }
-  const wholeUpdateAverage = nanoToMicro(metricValueAverage(wholeUpdateVals));
+  const wholeUpdateAverage = nanoToMicro(wholeUpdateAgg.average);
 
   const otherMetricAverages = metrics
     .filter(it => it.name !== "wholeUpdate")
@@ -56,9 +55,9 @@ const mapSummaryChartData = (result: BenchmarkResult, configuredMetrics: Partial
       return {
         metricName: metric.name,
         metricDescription: metric.description,
-        average: nanoToMicro(metricValueAverage(resultMetricValues.get(metric.name))),
-        min: nanoToMicro(min(resultMetricValues.get(metric.name).map(it => it.value))),
-        max: nanoToMicro(max(resultMetricValues.get(metric.name).map(it => it.value)))
+        average: nanoToMicro(result.all.get(metric.name).average),
+        min: nanoToMicro(result.all.get(metric.name).minimum),
+        max: nanoToMicro(result.all.get(metric.name).maximum)
       }
     })
     .sort((a, b) => b.average - a.average); // Descending order
@@ -77,8 +76,8 @@ const mapSummaryChartData = (result: BenchmarkResult, configuredMetrics: Partial
       metricName: MetricEnum.WHOLE_UPDATE.name,
       metricDescription: MetricEnum.WHOLE_UPDATE.description,
       average: wholeUpdateAverage,
-      min: nanoToMicro(min(wholeUpdateVals.map(it => it.value))),
-      max: nanoToMicro(max(wholeUpdateVals.map(it => it.value)))
+      min: nanoToMicro(wholeUpdateAgg.minimum),
+      max: nanoToMicro(wholeUpdateAgg.maximum)
     },
   ]
 
@@ -99,7 +98,7 @@ interface SummaryChartOptions {
   includeTable?: boolean;
 }
 
-export const createSummaryChartConfiguration = (results: BenchmarkResult[], options: SummaryChartOptions): ChartConfiguration<"bar"> => {
+export const createSummaryChartConfiguration = (results: BenchmarkAggregateRunResult[], options: SummaryChartOptions): ChartConfiguration<"bar"> => {
 
 
   let configuredDisplayMetrics: Partial<Record<MetricName, MetricEnum>> = {}

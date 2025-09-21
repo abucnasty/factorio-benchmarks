@@ -1,5 +1,5 @@
 import { average } from "../utils";
-import { BenchmarkResult, MetricTickStat, MetricValue } from "./BenchmarkResult";
+import { BenchmarkTickResult, MetricTickStat, MetricValue } from "./BenchmarkTickResult";
 import { MetricName } from "./Metric";
 
 export interface BenchmarkAggregate {
@@ -7,7 +7,7 @@ export interface BenchmarkAggregate {
     data: Map<MetricName, number>;
 }
 
-export const ignoreFirstTicksFromResult = (result: BenchmarkResult, ticksToIgnore: number): BenchmarkResult => {
+export const ignoreFirstTicksFromResult = (result: BenchmarkTickResult, ticksToIgnore: number): BenchmarkTickResult => {
     const filteredMetricValues: Map<MetricName, MetricTickStat[]> = new Map();
     result.metricTickStats.forEach((values, metricName) => {
         filteredMetricValues.set(metricName, values.filter(v => v.tick > ticksToIgnore));
