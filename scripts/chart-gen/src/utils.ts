@@ -1,4 +1,4 @@
-import { MetricValue } from "./data/BenchmarkResult";
+import { MetricValue } from "./data/BenchmarkTickResult";
 
 export function average(array: number[]): number {
   return array.reduce((sum, val) => sum + val, 0) / array.length;
@@ -15,11 +15,13 @@ export function standardDeviation(array: number[]): number {
 }
 
 export function max(array: number[]): number {
-  return Math.max(...array)
+  const sorted = [...array].sort((a, b) => a - b)
+  return sorted[sorted.length - 1]
 }
 
 export function min(array: number[]): number {
-  return Math.min(...array)
+  const sorted = [...array].sort((a, b) => a - b)
+  return sorted[0]
 }
 
 export function median(array: number[]): number {

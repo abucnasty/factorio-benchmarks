@@ -1,5 +1,5 @@
 import { metricValueAverage } from "../data/BenchmarkAggregates"
-import { BenchmarkResult, MetricValue, transformResultToMetricValues } from "../data/BenchmarkResult"
+import { BenchmarkTickResult, MetricValue, transformResultToMetricValues } from "../data/BenchmarkTickResult"
 import { AggregationStrategy } from "../data/AggregationStrategy"
 import { MetricName } from "../data/Metric"
 import { MetricEnum } from "../data/MetricEnum"
@@ -71,7 +71,7 @@ const autoTickWindow = (maxTick: number): number => {
     return 0
 }
 
-export const createLineChartForMetrics = (result: BenchmarkResult, options: LineChartOptions): ChartConfiguration<"bar" | "line"> => {
+export const createLineChartForMetrics = (result: BenchmarkTickResult, options: LineChartOptions): ChartConfiguration<"bar" | "line"> => {
 
     const datasets = []
 

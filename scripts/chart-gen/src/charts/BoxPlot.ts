@@ -1,10 +1,11 @@
 import { ChartConfiguration } from "chart.js";
-import { BenchmarkResult } from "../data/BenchmarkResult";
+import { BenchmarkTickResult } from "../data/BenchmarkTickResult";
 import { colors } from "./constants";
 import { MetricEnum } from "../data/MetricEnum";
 import { average, max, median, min, nanoToMicro, standardDeviation } from "../utils";
 import { AggregationStrategy } from "../data/AggregationStrategy";
 import { IBaseStats, BoxPlotDataPoint } from "@sgratzl/chartjs-chart-boxplot";
+import { BenchmarkAggregateRunResult } from "../data/BenchmarkAggregateResult";
 
 // Plugin: black background
 const backgroundPlugin = {
@@ -18,21 +19,24 @@ const backgroundPlugin = {
     },
 };
 
-export const createBoxPlotChartConfiguration = (results: BenchmarkResult[], aggregationStrategy: AggregationStrategy = AggregationStrategy.AVERAGE): ChartConfiguration<"boxplot"> => {
+export const createBoxPlotChartConfiguration = (results: BenchmarkAggregateRunResult[], aggregationStrategy: AggregationStrategy = AggregationStrategy.AVERAGE): ChartConfiguration<"boxplot"> => {
 
     const dataSets: { fileName: string, stats: IBaseStats }[] = []
+
     results.forEach(result => {
         const fileName = result.fileName
 
         const valuesPerRun: number[][] = []
 
-        result.metricTickStats.get(MetricEnum.WHOLE_UPDATE.name).map(metricTickStat => {
-            metricTickStat.raw.forEach(({ run, value }) => {
-                if (!valuesPerRun[run]) {
-                    valuesPerRun[run] = []
-                }
-                valuesPerRun[run].push(nanoToMicro(value))
-            })
+        const wholeUpdateRunAggregates = result.runs.get(MetricEnum.WHOLE_UPDATE.name)
+
+        wholeUpdateRunAggregates.forEach(aggregate => {
+            const run = aggregate.run
+            if (!valuesPerRun[run]) {
+                valuesPerRun[run] = []
+            }
+
+            valuesPerRun[run].push(nanoToMicro(aggregate.average))
         })
 
         const aggregatePerRun = valuesPerRun.map(values => {
@@ -55,6 +59,17 @@ export const createBoxPlotChartConfiguration = (results: BenchmarkResult[], aggr
 
         const medianValue = median(aggregatePerRun)
         const mid = Math.floor(aggregatePerRun.length / 2)
+
+        const stats = {
+            min: min(aggregatePerRun),
+            q1: median(aggregatePerRun.slice(0, mid)),
+            median: medianValue,
+            q3: median(aggregatePerRun.slice(aggregatePerRun.length % 2 === 0 ? mid : mid + 1)),
+            max: max(aggregatePerRun),
+            mean: average(aggregatePerRun),
+            items: aggregatePerRun,
+            outliers: []
+        }
 
         dataSets.push({
             fileName: fileName,
@@ -93,7 +108,7 @@ export const createBoxPlotChartConfiguration = (results: BenchmarkResult[], aggr
 
     const title = `${aggregationStrategyLabel} Whole Update Time Distribution`
 
-    dataSets.sort((a, b) => a.stats.mean - b.stats.mean)
+    dataSets.sort((a, b) => b.stats.mean - a.stats.mean)
 
     const minimum = min(dataSets.map(it => it.stats.min))
     const maximum = max(dataSets.map(it => it.stats.max))
@@ -130,7 +145,7 @@ export const createBoxPlotChartConfiguration = (results: BenchmarkResult[], aggr
                 y: {
                     stacked: true,
                     ticks: { color: colors.white, },
-                    title: { 
+                    title: {
                         display: true,
                         color: colors.white,
                         text: axisLabel,
