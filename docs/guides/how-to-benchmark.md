@@ -31,7 +31,7 @@ Make sure the following are installed:
 You can install the `belt` CLI directly from [crates.io](https://crates.io/crates/factorio-belt):
 
 ```bash
-cargo install factorio-belt
+cargo install belt
 ```
 
 After installation, the `belt` binary will be available in your Cargo bin path.
