@@ -56,13 +56,14 @@ const INSERTER_SIZES = {
 
 const ENTITY_SIZES = { ...BUILDING_SIZES, ...CHEST_SIZES, ...BELT_SIZES, ...INSERTER_SIZES };
 
+const BEACON_RANGE = [9, 9]
+
 
 // Entity Categories
 
 const ENTITY_CATEGORIES = {
     ELECTRIC_INTERFACE: "electric_interface",
-    FLUID_INTERFACE: "fluid_interface",
-    CIRCUIT_NETWORK_CONNECTED: "circuit_network",
+    FLUID_INTERFACE: "fluid_interface"
 }
 
 
@@ -230,6 +231,13 @@ const toSnakeCase = (str) => {
         .toLowerCase();
 }
 
+function average(arr) {
+    if(arr.length == 0) {
+        return 0
+    }
+    return arr.reduce((acc, it) => acc + it, 0) / arr.length
+}
+
 
 // Entity Helpers
 const assertEntityExists = (entity) => assert(entity !== undefined, "entity is not defined")
@@ -255,6 +263,17 @@ const isChest = (entity) => {
 const isBuilding = (entity) => {
     assertEntityExists(entity)
     return BUILDING_SIZES[entity.name] !== undefined;
+}
+
+const buildingRecipeLabel = (ent) => {
+    assertEntityExists(ent)
+    assert(isBuilding(ent), `entity ${ent.name} is not a building`)
+    const setRecipe = ent.control_behavior?.set_recipe ?? false
+    if (setRecipe) {
+        return "set_recipe"
+    }
+
+    return ent.recipe
 }
 
 const getEntitySize = (entity) => {
@@ -285,6 +304,34 @@ const pointInArea = (fromPos, toPos, area) => {
         fromPos.y < toPos.y + halfH
     );
 }
+
+const areasOverlap = (posA, sizeA, posB, sizeB) => {
+    const [wA, hA] = sizeA;
+    const [wB, hB] = sizeB;
+
+    const halfWA = wA / 2, halfHA = hA / 2;
+    const halfWB = wB / 2, halfHB = hB / 2;
+
+    // A’s edges
+    const leftA = posA.x - halfWA;
+    const rightA = posA.x + halfWA;
+    const topA = posA.y - halfHA;
+    const bottomA = posA.y + halfHA;
+
+    // B’s edges
+    const leftB = posB.x - halfWB;
+    const rightB = posB.x + halfWB;
+    const topB = posB.y - halfHB;
+    const bottomB = posB.y + halfHB;
+
+    // Overlap occurs if both X and Y projections overlap
+    return (
+        leftA < rightB &&
+        rightA > leftB &&
+        topA < bottomB &&
+        bottomA > topB
+    );
+};
 
 const pointInEntity = (pos, entity) => {
     let [w, h] = getEntitySize(entity);
@@ -370,10 +417,10 @@ const entityIdTags = (entity, ...tags) => tags.map(tag => entityIdWithTag(entity
 /**
  * 
  * @param {Record<string, number} counts 
- * @param {string} entityId
+ * @param {string} id
  */
-const incrementCountForId = (counts, entityId) => {
-    counts[entityId] = (counts[entityId] || 0) + 1;
+const incrementCountForId = (counts, id) => {
+    counts[id] = (counts[id] || 0) + 1;
 }
 
 /**
@@ -455,12 +502,80 @@ function handleRecipeCounts(counts, entity) {
 
 function handleCircuitNetworkCounts(counts, entities, wires) {
     const circuitNetworks = buildCircuitNetworks(entities, wires)
-    console.log(circuitNetworks)
-    
+
     counts["total_circuit_networks"] = circuitNetworks.red.length + circuitNetworks.green.length
     counts["total_electric_networks"] = circuitNetworks.copper.length
 
     counts["total_power_poles"] = circuitNetworks.copper.reduce((acc, it) => acc + it.length, 0)
+}
+
+function handleAverageBeaconsPerBuildingType(counts, entities) {
+    const beacons = entities.filter(it => it.name == "beacon")
+    const buildings = entities.filter(it => isBuilding(it))
+
+    const countByBuildingIds = {}
+
+    buildings.forEach(building => {
+        const buildingId = building.name
+        const recipeId = idChain(buildingRecipeLabel(building), "recipe")
+
+        if(!countByBuildingIds[buildingId]) {
+            countByBuildingIds[buildingId] = []
+        }
+
+        if(!countByBuildingIds[recipeId]) {
+            countByBuildingIds[recipeId] = []
+        }
+
+        const beaconCount = beacons.reduce((acc, beacon) => {
+            if (areasOverlap(beacon.position, BEACON_RANGE, building.position, getEntitySize(building))) {
+                return acc + 1
+            }
+            return acc
+        }, 0)
+
+        countByBuildingIds[buildingId].push(beaconCount)
+        countByBuildingIds[recipeId].push(beaconCount)
+    })
+
+
+    Object.entries(countByBuildingIds).forEach(([entityId, beaconCount]) => {
+        console.log({entityId, beaconCount})
+        counts[idChain("beacons_per", entityId)] = average(beaconCount)
+    })
+}
+
+function handleAverageBuildingsPerBeacon(counts, entities) {
+    const beacons = entities.filter(it => it.name == "beacon")
+    const buildings = entities.filter(it => isBuilding(it))
+
+    const affectedBuildingPerBeacon = []
+
+    beacons.forEach(beacon => {
+        const affectedBuildings = buildings.reduce((acc, building) => {
+            if (areasOverlap(beacon.position, BEACON_RANGE, building.position, getEntitySize(building))) {
+                return acc + 1
+            } else {
+                return acc
+            }
+        }, 0)
+        affectedBuildingPerBeacon.push(affectedBuildings)
+    })
+
+    if (affectedBuildingPerBeacon.length == 0) {
+        counts["average_buildings_per_beacon"] = 0
+        return
+    }
+
+    counts["average_buildings_per_beacon"] = affectedBuildingPerBeacon.reduce((acc, it) => acc + it, 0) / affectedBuildingPerBeacon.length
+}
+
+function handleEntityByRecipeCounts(counts, entities) {
+    entities.forEach(entity => {
+        if (entity.recipe) {
+            incrementCountForId(counts, idChain("recipe", entity.recipe))
+        }
+    })
 }
 
 
@@ -494,6 +609,8 @@ function countEntitiesFromBlueprint(bp) {
 
     const entities = bp.entities
 
+    const beacons = bp.entities.filter(it => it.name == "beacon")
+
     for (const entity of entities) {
         if (!entity.name) {
             continue;
@@ -509,6 +626,9 @@ function countEntitiesFromBlueprint(bp) {
     }
 
     handleCircuitNetworkCounts(counts, entities, bp.wires)
+    handleEntityByRecipeCounts(counts, entities)
+    handleAverageBuildingsPerBeacon(counts, entities)
+    handleAverageBeaconsPerBuildingType(counts, entities)
 
     return counts;
 }
@@ -583,14 +703,7 @@ function classifyInserter(inserter, entities) {
     const pickupEntity = pickupEntities[0]
     const dropEntity = dropEntities[0]
 
-    const buildingRecipeLabel = (ent) => {
-        const setRecipe = ent.control_behavior?.set_recipe ?? false
-        if (setRecipe) {
-            return "set_recipe"
-        }
 
-        return ent.recipe
-    }
 
     const labels = new Set([])
 
