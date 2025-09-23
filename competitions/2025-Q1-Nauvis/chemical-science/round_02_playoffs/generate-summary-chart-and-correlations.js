@@ -25,35 +25,35 @@ const keyEntities = new Map([
 ]);
 
 const designTags = [
-    { designName: "00_baseline", speed: 240, tags: "Belt Based, Basic Oil" },
-    { designName: "01_undertow", speed: 480, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
-    { designName: "03_swiftdeath007", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
-    { designName: "04_swiftdeath007", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
-    { designName: "05_derantrix", speed: 480, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
-    { designName: "06_imp", speed: 240, tags: "Direct Insertion, Basic Oil" },
-    { designName: "08_lady_meyneth", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil, Coal Direct Insertion Mining" },
-    { designName: "09_jobo", speed: 240, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil" },
-    { designName: "11_theflyingcurryfish154", speed: 960, tags: "Molten Fluid Bus, Basic Oil, Direct Insertion, Belt Based" },
-    { designName: "12_phlap", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
-    { designName: "13_phlap", speed: 240, tags: "Recipe Switching, Basic Oil" },
-    { designName: "14_abucnasty", speed: 240, tags: "Direct Insertion, Recipe Switching, Belt Based, Molten Fluid Bus, Basic Oil" },
-    { designName: "15_yuu", speed: 240, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Trains" },
-    { designName: "16_yuu", speed: 240, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Silo" },
-    { designName: "17_henryjk", speed: 240, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil" },
-    { designName: "18_lady_meyneth", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
-    { designName: "19_werezwolf", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
-    { designName: "20_toda1", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Advanced Oil" },
-    { designName: "22_mcmayhem57", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
-    { designName: "23_mcmayhem57", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
-    { designName: "26_mrcooki4", speed: 480, tags: "Direct Insertion, Basic Oil, Metal Ore Inputs" },
-    { designName: "27_geist", speed: 480, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil, Engine DI" },
-    { designName: "28_geist", speed: 480, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil" },
-    { designName: "29_geist", speed: 480, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil" },
-    { designName: "30_reja", speed: 240, tags: "Molten Fluid Bus, Basic Oil, belt based" },
-    { designName: "31_minebuilder", speed: 240, tags: "Basic Oil, Metal Ore Inputs" },
-    { designName: "32_reja", speed: 240, tags: "Molten Fluid Bus, Basic Oil, belt based" },
-    { designName: "34_osboz", speed: 480, tags: "Basic Oil, Metal Ore Inputs" },
-    { designName: "35_henryjk", speed: 240, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_00_baseline", speed: 240, tags: "Belt Based, Basic Oil" },
+    { designName: "design_01_undertow", speed: 480, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_03_swiftdeath007", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_04_swiftdeath007", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_05_derantrix", speed: 480, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_06_imp", speed: 240, tags: "Direct Insertion, Basic Oil" },
+    { designName: "design_08_lady_meyneth", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil, Coal Direct Insertion Mining" },
+    { designName: "design_09_jobo", speed: 240, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_11_theflyingcurryfish154", speed: 960, tags: "Molten Fluid Bus, Basic Oil, Direct Insertion, Belt Based" },
+    { designName: "design_12_phlap", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_13_phlap", speed: 240, tags: "Recipe Switching, Basic Oil" },
+    { designName: "design_14_abucnasty", speed: 240, tags: "Direct Insertion, Recipe Switching, Belt Based, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_15_yuu", speed: 240, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Trains" },
+    { designName: "design_16_yuu", speed: 240, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Silo" },
+    { designName: "design_17_henryjk", speed: 240, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_18_lady_meyneth", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_19_werezwolf", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_20_toda1", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Advanced Oil" },
+    { designName: "design_22_mcmayhem57", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_23_mcmayhem57", speed: 240, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_26_mrcooki4", speed: 480, tags: "Direct Insertion, Basic Oil, Metal Ore Inputs" },
+    { designName: "design_27_geist", speed: 480, tags: "Direct Insertion, Molten Fluid Bus, Basic Oil, Engine DI" },
+    { designName: "design_28_geist", speed: 480, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_29_geist", speed: 480, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil" },
+    { designName: "design_30_reja", speed: 240, tags: "Molten Fluid Bus, Basic Oil, belt based" },
+    { designName: "design_31_minebuilder", speed: 240, tags: "Basic Oil, Metal Ore Inputs" },
+    { designName: "design_32_reja", speed: 240, tags: "Molten Fluid Bus, Basic Oil, belt based" },
+    { designName: "design_34_osboz", speed: 480, tags: "Basic Oil, Metal Ore Inputs" },
+    { designName: "design_35_henryjk", speed: 240, tags: "Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil" },
 ].map(it => (
     {
         ...it,
@@ -63,7 +63,7 @@ const designTags = [
 
 const designDetails = [
     {
-        designName: "18_lady_meyneth",
+        designName: "design_18_lady_meyneth",
         science_assembler_beacons: 11,
         engine_unit_beacons: 5,
         output_inserter_enable_gate: 16,
@@ -71,7 +71,7 @@ const designDetails = [
         output_inserter_set_filter: true
     },
     {
-        designName: "14_abucnasty",
+        designName: "design_14_abucnasty",
         science_assembler_beacons: 12,
         engine_unit_beacons: 12,
         output_inserter_enable_gate: 16,
@@ -80,7 +80,7 @@ const designDetails = [
 
     },
     {
-        designName: "12_phlap",
+        designName: "design_12_phlap",
         science_assembler_beacons: 11,
         engine_unit_beacons: 3,
         output_inserter_enable_gate: 16,
@@ -89,7 +89,7 @@ const designDetails = [
 
     },
     {
-        designName: "08_lady_meyneth",
+        designName: "design_08_lady_meyneth",
         science_assembler_beacons: 11,
         engine_unit_beacons: 5,
         output_inserter_enable_gate: 16,
@@ -98,7 +98,7 @@ const designDetails = [
 
     },
     {
-        designName: "35_henryjk",
+        designName: "design_35_henryjk",
         science_assembler_beacons: 8,
         engine_unit_beacons: 7,
         output_inserter_enable_gate: 16,
@@ -107,7 +107,7 @@ const designDetails = [
 
     },
     {
-        designName: "28_geist",
+        designName: "design_28_geist",
         science_assembler_beacons: 10,
         engine_unit_beacons: 7,
         output_inserter_enable_gate: 16,
@@ -116,7 +116,7 @@ const designDetails = [
 
     },
     {
-        designName: "27_geist",
+        designName: "design_27_geist",
         science_assembler_beacons: 11,
         engine_unit_beacons: 8,
         output_inserter_enable_gate: 16,
@@ -125,7 +125,7 @@ const designDetails = [
 
     },
     {
-        designName: "01_undertow",
+        designName: "design_01_undertow",
         science_assembler_beacons: 11,
         engine_unit_beacons: 7,
         output_inserter_enable_gate: 0,
@@ -134,7 +134,7 @@ const designDetails = [
 
     },
     {
-        designName: "13_phlap",
+        designName: "design_13_phlap",
         science_assembler_beacons: 12,
         engine_unit_beacons: 12,
         output_inserter_enable_gate: 16,
@@ -142,7 +142,7 @@ const designDetails = [
         output_inserter_set_filter: true
     },
     {
-        designName: "09_jobo",
+        designName: "design_09_jobo",
         science_assembler_beacons: 10,
         engine_unit_beacons: 10,
         output_inserter_enable_gate: 8,
@@ -151,7 +151,7 @@ const designDetails = [
 
     },
     {
-        designName: "26_mrcooki4",
+        designName: "design_26_mrcooki4",
         science_assembler_beacons: 8,
         engine_unit_beacons: 6,
         output_inserter_enable_gate: 8,
@@ -160,7 +160,7 @@ const designDetails = [
 
     },
     {
-        designName: "32_reja",
+        designName: "design_32_reja",
         science_assembler_beacons: 11,
         engine_unit_beacons: 7,
         output_inserter_enable_gate: 8,
@@ -169,7 +169,7 @@ const designDetails = [
 
     },
     {
-        designName: "29_geist",
+        designName: "design_29_geist",
         science_assembler_beacons: 8,
         engine_unit_beacons: 12,
         output_inserter_enable_gate: 16,
@@ -178,7 +178,7 @@ const designDetails = [
 
     },
     {
-        designName: "30_reja",
+        designName: "design_30_reja",
         science_assembler_beacons: 11,
         engine_unit_beacons: 7,
         output_inserter_enable_gate: 8,
@@ -187,7 +187,7 @@ const designDetails = [
 
     },
     {
-        designName: "06_imp",
+        designName: "design_06_imp",
         science_assembler_beacons: 10,
         engine_unit_beacons: 3,
         output_inserter_enable_gate: 0,
@@ -195,7 +195,7 @@ const designDetails = [
         output_inserter_set_filter: false
     },
     {
-        designName: "23_mcmayhem57",
+        designName: "design_23_mcmayhem57",
         science_assembler_beacons: 7,
         engine_unit_beacons: 4,
         output_inserter_enable_gate: 8,
@@ -203,7 +203,7 @@ const designDetails = [
         output_inserter_set_filter: false
     },
     {
-        designName: "05_derantrix",
+        designName: "design_05_derantrix",
         science_assembler_beacons: 9,
         engine_unit_beacons: 8,
         output_inserter_enable_gate: 8,
@@ -211,7 +211,7 @@ const designDetails = [
         output_inserter_set_filter: false
     },
     {
-        designName: "22_mcmayhem57",
+        designName: "design_22_mcmayhem57",
         science_assembler_beacons: 9,
         engine_unit_beacons: 6,
         output_inserter_enable_gate: 8,
@@ -219,7 +219,7 @@ const designDetails = [
         output_inserter_set_filter: false
     },
     {
-        designName: "34_osboz",
+        designName: "design_34_osboz",
         science_assembler_beacons: 8,
         engine_unit_beacons: 7,
         output_inserter_enable_gate: 12,
@@ -227,7 +227,7 @@ const designDetails = [
         output_inserter_set_filter: false
     },
     {
-        designName: "11_theflyingcurryfish154",
+        designName: "design_11_theflyingcurryfish154",
         science_assembler_beacons: 11,
         engine_unit_beacons: 7,
         output_inserter_enable_gate: 8,
@@ -235,7 +235,7 @@ const designDetails = [
         output_inserter_set_filter: false
     },
     {
-        designName: "00_baseline",
+        designName: "design_00_baseline",
         science_assembler_beacons: 10,
         engine_unit_beacons: 10,
         output_inserter_enable_gate: 0,
@@ -269,9 +269,9 @@ async function getEntityCountsByDesign() {
 
     const designSpeedMultiplier = new Map()
 
-    const designNamesStripped = designs.map(it => it.replace("design_", ""))
+    const designNames = designs
 
-    designNamesStripped.forEach(design => {
+    designNames.forEach(design => {
         const designInfo = designTags.find(it => it.designName == design)
         if (!designInfo) {
             console.warn(`${design} not found`)
@@ -295,7 +295,7 @@ async function getEntityCountsByDesign() {
 
             allEntityTags.add(entityTag)
 
-            designNamesStripped.forEach((design, index) => {
+            designNames.forEach((design, index) => {
                 const counts = data.get(design) ?? {}
                 counts[entityTag] = numericValues[index] * designSpeedMultiplier.get(design)
                 data.set(design, counts)
