@@ -232,7 +232,7 @@ const toSnakeCase = (str) => {
 }
 
 function average(arr) {
-    if(arr.length == 0) {
+    if (arr.length == 0) {
         return 0
     }
     return arr.reduce((acc, it) => acc + it, 0) / arr.length
@@ -479,7 +479,18 @@ function handleInserterCounts(counts, bpEntities, entity) {
             ...entity,
             name: inserterTypeId
         })
+
+        const anyInserterId = idChain("inserter_all", type)
+        incrementCountForEntityTags(counts, {
+            name: "inserter_all"
+        }, type)
+        handleCircuitCounts(counts, {
+            ...entity,
+            name: anyInserterId
+        })
     });
+
+    incrementCountForId(counts, "inserter_all")
 }
 
 function handleRecipeCounts(counts, entity) {
@@ -517,13 +528,14 @@ function handleAverageBeaconsPerBuildingType(counts, entities) {
 
     buildings.forEach(building => {
         const buildingId = building.name
-        const recipeId = idChain(buildingRecipeLabel(building), "recipe")
+        const recipe = buildingRecipeLabel(building)
+        const recipeId = recipe && idChain(idChain(buildingId, recipe), "recipe")
 
-        if(!countByBuildingIds[buildingId]) {
+        if (!countByBuildingIds[buildingId]) {
             countByBuildingIds[buildingId] = []
         }
 
-        if(!countByBuildingIds[recipeId]) {
+        if (recipeId && !countByBuildingIds[recipeId]) {
             countByBuildingIds[recipeId] = []
         }
 
@@ -535,12 +547,14 @@ function handleAverageBeaconsPerBuildingType(counts, entities) {
         }, 0)
 
         countByBuildingIds[buildingId].push(beaconCount)
-        countByBuildingIds[recipeId].push(beaconCount)
+        if (recipeId) {
+            countByBuildingIds[recipeId].push(beaconCount)
+        }
+
     })
 
 
     Object.entries(countByBuildingIds).forEach(([entityId, beaconCount]) => {
-        console.log({entityId, beaconCount})
         counts[idChain("beacons_per", entityId)] = average(beaconCount)
     })
 }
@@ -578,6 +592,21 @@ function handleEntityByRecipeCounts(counts, entities) {
     })
 }
 
+function handleCountEnrichments(counts) {
+    const ratios = [
+        [counts["stack_inserter"], counts["stack_inserter_direct_insertion"] ?? 0, (a,b) => counts["stack_inserter_direction_insertion_percent"] = b / a * 100],
+        [counts["bulk_inserter"], counts["bulk_inserter_direct_insertion"] ?? 0, (a,b) => counts["bulk_inserter_direction_insertion_percent"] = b / a * 100],
+        [counts["inserter_all"], counts["inserter_all_direct_insertion"] ?? 0, (a,b) => counts["inserter_all_direction_insertion_percent"] = b / a * 100],
+    ]
+
+    ratios.forEach(it => {
+        const [a, b, f] = it
+
+        if(a !== undefined && b !== undefined) {
+            f(a,b)
+        }
+    })    
+}
 
 
 // Recursively walk through a directory to find .txt files
@@ -629,6 +658,8 @@ function countEntitiesFromBlueprint(bp) {
     handleEntityByRecipeCounts(counts, entities)
     handleAverageBuildingsPerBeacon(counts, entities)
     handleAverageBeaconsPerBuildingType(counts, entities)
+
+    handleCountEnrichments(counts)
 
     return counts;
 }
@@ -822,7 +853,6 @@ function writeAggregateMatrix(filePath, allCounts) {
                 return blueprintName
             }
         })
-        .map(it => it.replace("design_", ""))
 
     const rows = [["entity", ...designNames]];
 
@@ -901,6 +931,7 @@ function encodeBlueprintJSON(json) {
 
 // Main
 function generateCsvs(baseDir) {
+    console.log(`Searching for files in ${baseDir}`)
     const txtFiles = findTxtFiles(baseDir);
     const allCounts = {};
 
