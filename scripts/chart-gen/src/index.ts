@@ -74,7 +74,7 @@ program
       const aggregateResults: BenchmarkAggregateRunResult[] = []
       for (const file of files) {
         console.log(`Processing file: ${file}`);
-        let result: BenchmarkAggregateRunResult = await parseBenchmarkAggregatesPerRunResultFromCsv(file, removeFirstTicks);
+        let result: BenchmarkAggregateRunResult = await parseBenchmarkAggregatesPerRunResultFromCsv(file, removeFirstTicks, metrics);
 
         if (trimPrefix && result.fileName.startsWith(trimPrefix)) {
           result.fileName = result.fileName.slice(trimPrefix.length);
@@ -162,7 +162,7 @@ program
       const aggregateResults: BenchmarkAggregateRunResult[] = []
       for (const file of files) {
         console.log(`Processing file: ${file}`);
-        let result: BenchmarkAggregateRunResult = await parseBenchmarkAggregatesPerRunResultFromCsv(file, removeFirstTicks);
+        let result: BenchmarkAggregateRunResult = await parseBenchmarkAggregatesPerRunResultFromCsv(file, removeFirstTicks, metrics);
 
         if (trimPrefix && result.fileName.startsWith(trimPrefix)) {
           result.fileName = result.fileName.slice(trimPrefix.length);
@@ -189,7 +189,7 @@ program
       const aggregateResults: BenchmarkAggregateRunResult[] = []
       for (const file of files) {
         console.log(`Processing file: ${file}`);
-        let result: BenchmarkAggregateRunResult = await parseBenchmarkAggregatesPerRunResultFromCsv(file, removeFirstTicks);
+        let result: BenchmarkAggregateRunResult = await parseBenchmarkAggregatesPerRunResultFromCsv(file, removeFirstTicks, metrics);
 
         if (trimPrefix && result.fileName.startsWith(trimPrefix)) {
           result.fileName = result.fileName.slice(trimPrefix.length);

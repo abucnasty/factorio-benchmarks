@@ -33,9 +33,8 @@ export type RunValue = {
     run: number
 }
 
-export const parseBenchmarkAggregatesPerRunResultFromCsv = async (filePath: string, removeFirstTicks: number = 0): Promise<BenchmarkAggregateRunResult> => {
+export const parseBenchmarkAggregatesPerRunResultFromCsv = async (filePath: string, removeFirstTicks: number = 0, metrics: MetricEnum[]): Promise<BenchmarkAggregateRunResult> => {
     const baseName = path.basename(filePath, ".csv").replace("_verbose_metrics", "");
-    let metrics: MetricEnum[] = [];
     const runValuesPerMetric: Map<number, Partial<Record<MetricName, RunValue[]>>> = new Map()
 
     await new Promise<void>((resolve, reject) => {
