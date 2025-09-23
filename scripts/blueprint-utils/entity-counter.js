@@ -56,6 +56,169 @@ const INSERTER_SIZES = {
 
 const ENTITY_SIZES = { ...BUILDING_SIZES, ...CHEST_SIZES, ...BELT_SIZES, ...INSERTER_SIZES };
 
+
+// Entity Categories
+
+const ENTITY_CATEGORIES = {
+    ELECTRIC_INTERFACE: "electric_interface",
+    FLUID_INTERFACE: "fluid_interface",
+    CIRCUIT_NETWORK_CONNECTED: "circuit_network",
+}
+
+
+const createEntityMapByEntityNumber = (entities) => {
+    const entityMap = new Map()
+
+    entities.forEach(entity => {
+        entityMap.set(entity.entity_number, entity)
+    })
+
+    return entityMap
+}
+
+
+// Circuit Networks
+
+const WIRE_CODES = {
+    circuit_red: 1,
+    combinator_input_red: 1,
+    circuit_green: 2,
+    combinator_input_green: 2,
+    combinator_output_green: 4,
+    combinator_output_red: 3,
+    pole_copper: 5,
+    power_switch_left_copper: 5,
+    power_switch_right_copper: 6
+}
+
+const WIRE_COLOR = {
+    RED: "red",
+    GREEN: "green",
+    COPPER: "copper"
+}
+
+/**
+ * 
+ * @param {number} code 
+ * @returns {[string, string] | [string]} [color, description]
+ */
+const wireCodeColor = (code) => {
+    assert(typeof code == "number", "code must be a number")
+
+    switch (code) {
+        case WIRE_CODES.circuit_red:
+            return [WIRE_COLOR.RED]
+        case WIRE_CODES.combinator_input_red:
+            return [WIRE_COLOR.RED, "COMBINATOR_INPUT"]
+        case WIRE_CODES.circuit_green:
+            return [WIRE_COLOR.GREEN]
+        case WIRE_CODES.combinator_input_green:
+            return [WIRE_COLOR.GREEN, "COMBINATOR_INPUT"]
+        case WIRE_CODES.combinator_output_green:
+            return [WIRE_COLOR.GREEN, "COMBINATOR_OUTPUT"]
+        case WIRE_CODES.combinator_output_red:
+            return [WIRE_COLOR.RED, "COMBINATOR_OUTPUT"]
+        case WIRE_CODES.pole_copper:
+            return [WIRE_COLOR.COPPER]
+        case WIRE_CODES.power_switch_left_copper:
+            return [WIRE_COLOR.COPPER, "POWER_SWITCH_LEFT"]
+        case WIRE_CODES.power_switch_right_copper:
+            return [WIRE_COLOR.COPPER, "POWER_SWITCH_RIGHT"]
+        default:
+            throw new Error(`Wire code "${code}" not supported`)
+    }
+}
+
+/**
+ * 
+ * @param {[number, number, number, number]} wireArray 
+ * @returns 
+ */
+const wireArrayToStuct = (wireArray) => {
+    assert(Array.isArray(wireArray), "wire array must be an array")
+    assert(wireArray.length = 4, `wire array must have 4 items ${wireArray.join(",")}`)
+
+    const [
+        source_entity_number,
+        source_wire_code,
+        sink_entity_number,
+        sink_wire_code
+    ] = wireArray;
+
+
+    const [source_wire_color] = wireCodeColor(Number(source_wire_code))
+    const [sink_wire_color] = wireCodeColor(Number(sink_wire_code))
+
+    return {
+        source: {
+            entity_number: Number(source_entity_number),
+            color: source_wire_color
+        },
+        sink: {
+            entity_number: Number(sink_entity_number),
+            color: sink_wire_color
+        }
+    }
+}
+
+const buildCircuitNetworks = (entities, wires) => {
+    assert(Array.isArray(entities), "entities must be an array")
+    // Build adjacency list by color
+    const adjacency = { red: {}, green: {}, copper: {} };
+
+    for (const wire of wires) {
+        const { source, sink } = wireArrayToStuct(wire);
+        const { entity_number: sId, color: sColor } = source;
+        const { entity_number: tId, color: tColor } = sink;
+
+        // only connect if both ends have the same color
+        if (sColor === tColor) {
+            const color = sColor;
+            if (!adjacency[color][sId]) adjacency[color][sId] = [];
+            if (!adjacency[color][tId]) adjacency[color][tId] = [];
+            adjacency[color][sId].push(tId);
+            adjacency[color][tId].push(sId);
+        }
+    }
+
+    const findNetworks = (color) => {
+        const visited = new Set();
+        const networks = [];
+
+        for (const entity of entities) {
+            const id = entity.entity_number;
+            if (visited.has(id)) continue;
+
+            const stack = [id];
+            const component = new Set();
+
+            while (stack.length > 0) {
+                const current = stack.pop();
+                if (visited.has(current)) continue;
+                visited.add(current);
+                component.add(current);
+
+                const neighbors = adjacency[color][current] || [];
+                for (const next of neighbors) {
+                    if (!visited.has(next)) stack.push(next);
+                }
+            }
+
+            if (component.size > 1) {
+                networks.push([...component]);
+            }
+        }
+
+        return networks;
+    }
+
+    return {
+        red: findNetworks("red"),
+        green: findNetworks("green"),
+        copper: findNetworks("copper")
+    };
+}
+
 // General Utilities
 const toSnakeCase = (str) => {
     return str
@@ -290,6 +453,16 @@ function handleRecipeCounts(counts, entity) {
     }
 }
 
+function handleCircuitNetworkCounts(counts, entities, wires) {
+    const circuitNetworks = buildCircuitNetworks(entities, wires)
+    console.log(circuitNetworks)
+    
+    counts["total_circuit_networks"] = circuitNetworks.red.length + circuitNetworks.green.length
+    counts["total_electric_networks"] = circuitNetworks.copper.length
+
+    counts["total_power_poles"] = circuitNetworks.copper.reduce((acc, it) => acc + it.length, 0)
+}
+
 
 
 // Recursively walk through a directory to find .txt files
@@ -334,6 +507,9 @@ function countEntitiesFromBlueprint(bp) {
         handleRecipeCounts(counts, entity)
         handleCircuitCounts(counts, entity)
     }
+
+    handleCircuitNetworkCounts(counts, entities, bp.wires)
+
     return counts;
 }
 
@@ -346,7 +522,6 @@ function createDebugBlueprintFromPossibleEntities(entities, debugDescription) {
             label: "debug",
             version: 562949957746689
         },
-
     })
 }
 
