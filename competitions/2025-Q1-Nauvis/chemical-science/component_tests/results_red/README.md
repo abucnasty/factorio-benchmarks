@@ -26,8 +26,8 @@
 | henryjk      | 0.806    | 0.227    | 3.332    | 1241     | 145002              | 11.94%                  |
 | thaeln       | 0.767    | 0.221    | 3.247    | **1303** | 138115              | 17.52%                  |
 
-![summary_verbose_metrics_all_designs_table](../charts_red/summary_verbose_metrics_all_designs_table.png)
-![summary_run_distribution_all](../charts_red/summary_run_distribution_all.png)
+![summary_verbose_metrics_all_designs_table](charts/summary_verbose_metrics_all_designs_table.png)
+![summary_run_distribution_all](charts/summary_run_distribution_all.png)
 
 ## Reports
 - [metric_correlations](metric_correlations.csv)
