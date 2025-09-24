@@ -6,7 +6,7 @@
 ## Scenario
 * Each save was tested for 18000 tick(s) and 10 run(s)
 * 100 copies of 320 per second red chips
-* each blueprint by map name here [https://factoriobin.com/post/gdls7l](https://factoriobin.com/post/gdls7l)
+* each blueprint by map name here [https://factoriobin.com/post/0vlb3w](https://factoriobin.com/post/0vlb3w)
 
 ## Results
 | Metric            | Description                           |
@@ -16,11 +16,11 @@
 | **Mean Min (ms)** | Minimum frame time - lower is better  |
 | **Mean Max (ms)** | Maximum frame time - lower is better  |
 
-| Save | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) | % Difference from Worst |
-|------|----------|----------|----------|-----|---------------------| --- |
-| thaeln_geist | 0.829 | 0.244 | 2.845 | 1206 | 149289 | 0.00% |
-| thaeln_geist_abuc | 0.770 | 0.206 | 3.698 | 1299 | 138537 | 7.74% |
-| thaeln | 0.755 | 0.209 | 3.871 | **1325** | 135882 | 9.87% |
+| Save              | Avg (ms) | Min (ms) | Max (ms) | UPS      | Execution Time (ms) |
+| ----------------- | -------- | -------- | -------- | -------- | ------------------- |
+| thaeln_geist      | 0.829    | 0.244    | 2.845    | 1206     | 149289              |
+| thaeln            | 0.755    | 0.209    | 3.871    | 1325     | 135882              |
+| thaeln_geist_abuc | 0.748    | 0.197    | 3.633    | **1337** | 134580              |
 
 ![summary_verbose_metrics_all_designs_table](charts/summary_verbose_metrics_all_designs_table.png)
 ![summary_run_distribution_all](charts/summary_run_distribution_all.png)

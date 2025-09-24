@@ -138,7 +138,7 @@ stack_inserter_to_electromagnetic_plant_electronic_circuit_circuit_enabled,1
 stack_inserter_to_turbo_transport_belt,8
 stack_inserter_to_turbo_transport_belt_circuit_enabled,8
 straight_rail,16
-total_circuit_networks,7
+total_circuit_networks,3
 total_electric_networks,1
 total_power_poles,9
 turbo_splitter,1
