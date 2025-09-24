@@ -947,7 +947,7 @@ function generateCsvs(baseDir) {
     });
 
     // Write aggregate CSV at top level
-    const aggregatePath = path.join(baseDir, "aggregate.csv");
+    const aggregatePath = path.join(baseDir, "entity_counts.csv");
     writeAggregateMatrix(aggregatePath, allCounts);
 }
 

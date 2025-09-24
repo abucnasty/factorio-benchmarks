@@ -184,7 +184,7 @@ stack_inserter_to_turbo_underground_belt,2,2,0
 stack_inserter_to_turbo_underground_belt_circuit_enabled,2,2,0
 steel_chest,10,0,0
 straight_rail,8,16,16
-total_circuit_networks,3,7,7
+total_circuit_networks,3,7,3
 total_electric_networks,1,1,1
 total_power_poles,10,17,9
 turbo_splitter,2,1,1

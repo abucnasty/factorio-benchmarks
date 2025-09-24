@@ -10,7 +10,7 @@ belt benchmark maps `
 --runs $runs `
 --run-order random `
 --template-path ../../../../scripts/results.md.hbs `
---pattern "red_360_thaeln*" `
+--pattern "red_360_thaeln_geist_abuc*" `
 --output results_red_round_02 `
 --strip-prefix "red_360_" `
 --verbose-metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,electricNetworkUpdate,fluidFlowUpdate,entityUpdate,trains"

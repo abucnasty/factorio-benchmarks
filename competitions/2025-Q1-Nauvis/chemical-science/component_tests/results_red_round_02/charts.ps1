@@ -38,7 +38,7 @@ chart-gen "red_360_*.csv" `
     -o "charts/timeseries_7200/timeseries.png" `
     -a "average" `
     --max-ticks 18000  `
-    --max-update 3.5 `
+    --max-update 2.0 `
     --tick-window-aggregation 60 `
     --trim-prefix "red_360_"
 
@@ -58,6 +58,6 @@ chart-gen "red_360_*.csv" `
     -o "charts/timeseries_240/timeseries.png" `
     -a "average" `
     --max-ticks 720  `
-    --max-update 3.5 `
+    --max-update 2.0 `
     --tick-window-aggregation 0 `
     --trim-prefix "red_360_"
