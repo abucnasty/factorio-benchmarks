@@ -37,7 +37,7 @@ chart-gen "red_360_*.csv" `
     --remove-first-ticks 240 `
     -o "charts/timeseries_7200/timeseries.png" `
     -a "average" `
-    --max-ticks 18000  `
+    --max-ticks 7200  `
     --max-update 2.0 `
     --tick-window-aggregation 60 `
     --trim-prefix "red_360_"
