@@ -164,6 +164,7 @@ const wireArrayToStuct = (wireArray) => {
 
 const buildCircuitNetworks = (entities, wires) => {
     assert(Array.isArray(entities), "entities must be an array")
+    assert(Array.isArray(wires), "wries must be an array")
     // Build adjacency list by color
     const adjacency = { red: {}, green: {}, copper: {} };
 
@@ -210,13 +211,28 @@ const buildCircuitNetworks = (entities, wires) => {
             }
         }
 
+
+
         return networks;
     }
+
+
+    const networkCategories = {
+        red: findNetworks("red"),
+        green: findNetworks("green"),
+        copper: findNetworks("copper")
+    }
+
+    const circuitConnectedEntities = new Set()
+    networkCategories.red.forEach(entityIds => entityIds.forEach(entityId => circuitConnectedEntities.add(entityId)))
+    networkCategories.green.forEach(entityIds => entityIds.forEach(entityId => circuitConnectedEntities.add(entityId)))
+
 
     return {
         red: findNetworks("red"),
         green: findNetworks("green"),
-        copper: findNetworks("copper")
+        copper: findNetworks("copper"),
+        circuitConnectedEntities
     };
 }
 
@@ -442,9 +458,19 @@ function handleBaseEntityCounts(counts, entity) {
     incrementCountForId(counts, baseEntityId)
 }
 
-
-function handleCircuitCounts(counts, entity) {
+/**
+ * 
+ * @param {*} counts 
+ * @param {*} entity 
+ * @param {Set<number>} connectedIds 
+ * @returns 
+ */
+function handleCircuitCounts(counts, entity, connectedIds) {
     const controlBehavior = entity.control_behavior;
+
+    if (!connectedIds.has(entity.entity_number)) {
+        return
+    }
 
     if (!controlBehavior) {
         return
@@ -469,25 +495,30 @@ function handleCircuitCounts(counts, entity) {
     incrementCountForEntityTags(counts, entity, ...tags)
 }
 
-function handleInserterCounts(counts, bpEntities, entity) {
+function handleInserterCounts(counts, bpEntities, entity, circuitConnectedEntities) {
     assert(entity.name.includes("inserter"), `entity ${entity.name} is not an inserter`)
     const inserterTypes = classifyInserter(entity, bpEntities);
     inserterTypes.forEach(type => {
         const inserterTypeId = entityIdWithTag(entity, type)
         incrementCountForEntityTags(counts, entity, type)
-        handleCircuitCounts(counts, {
-            ...entity,
-            name: inserterTypeId
-        })
+        handleCircuitCounts(
+            counts, {
+                ...entity,
+                name: inserterTypeId
+            },
+            circuitConnectedEntities
+        )
 
         const anyInserterId = idChain("inserter_all", type)
         incrementCountForEntityTags(counts, {
             name: "inserter_all"
         }, type)
-        handleCircuitCounts(counts, {
-            ...entity,
-            name: anyInserterId
-        })
+        handleCircuitCounts(
+            counts, {
+                ...entity,
+                name: anyInserterId,
+            },
+            circuitConnectedEntities)
     });
 
     incrementCountForId(counts, "inserter_all")
@@ -511,8 +542,17 @@ function handleRecipeCounts(counts, entity) {
     }
 }
 
-function handleCircuitNetworkCounts(counts, entities, wires) {
-    const circuitNetworks = buildCircuitNetworks(entities, wires)
+function buildCircuitNetworksOrEmpty(entities, wires) {
+    if (!wires) {
+        return null
+    }
+    return buildCircuitNetworks(entities, wires)
+}
+
+function handleCircuitNetworkCounts(counts, circuitNetworks) {
+    if (circuitNetworks == null) {
+        return
+    }
 
     counts["total_circuit_networks"] = circuitNetworks.red.length + circuitNetworks.green.length
     counts["total_electric_networks"] = circuitNetworks.copper.length
@@ -594,18 +634,18 @@ function handleEntityByRecipeCounts(counts, entities) {
 
 function handleCountEnrichments(counts) {
     const ratios = [
-        [counts["stack_inserter"], counts["stack_inserter_direct_insertion"] ?? 0, (a,b) => counts["stack_inserter_direction_insertion_percent"] = b / a * 100],
-        [counts["bulk_inserter"], counts["bulk_inserter_direct_insertion"] ?? 0, (a,b) => counts["bulk_inserter_direction_insertion_percent"] = b / a * 100],
-        [counts["inserter_all"], counts["inserter_all_direct_insertion"] ?? 0, (a,b) => counts["inserter_all_direction_insertion_percent"] = b / a * 100],
+        [counts["stack_inserter"], counts["stack_inserter_direct_insertion"] ?? 0, (a, b) => counts["stack_inserter_direction_insertion_percent"] = b / a * 100],
+        [counts["bulk_inserter"], counts["bulk_inserter_direct_insertion"] ?? 0, (a, b) => counts["bulk_inserter_direction_insertion_percent"] = b / a * 100],
+        [counts["inserter_all"], counts["inserter_all_direct_insertion"] ?? 0, (a, b) => counts["inserter_all_direction_insertion_percent"] = b / a * 100],
     ]
 
     ratios.forEach(it => {
         const [a, b, f] = it
 
-        if(a !== undefined && b !== undefined) {
-            f(a,b)
+        if (a !== undefined && b !== undefined) {
+            f(a, b)
         }
-    })    
+    })
 }
 
 
@@ -638,7 +678,7 @@ function countEntitiesFromBlueprint(bp) {
 
     const entities = bp.entities
 
-    const beacons = bp.entities.filter(it => it.name == "beacon")
+    const circuitNetworks = buildCircuitNetworksOrEmpty(entities, bp.wires)
 
     for (const entity of entities) {
         if (!entity.name) {
@@ -646,15 +686,15 @@ function countEntitiesFromBlueprint(bp) {
         }
 
         if (entity.name.includes("inserter")) {
-            handleInserterCounts(counts, entities, entity)
+            handleInserterCounts(counts, entities, entity, circuitNetworks.circuitConnectedEntities)
         }
 
         handleBaseEntityCounts(counts, entity)
         handleRecipeCounts(counts, entity)
-        handleCircuitCounts(counts, entity)
+        handleCircuitCounts(counts, entity, circuitNetworks.circuitConnectedEntities)
     }
 
-    handleCircuitNetworkCounts(counts, entities, bp.wires)
+    handleCircuitNetworkCounts(counts, circuitNetworks)
     handleEntityByRecipeCounts(counts, entities)
     handleAverageBuildingsPerBeacon(counts, entities)
     handleAverageBeaconsPerBuildingType(counts, entities)
