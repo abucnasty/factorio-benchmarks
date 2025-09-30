@@ -22,7 +22,7 @@ beacons_per_oil_refinery_basic_oil_processing_recipe,16
 cargo_wagon,24
 constant_combinator,3
 cryogenic_plant,5
-cryogenic_plant_circuit_enabled,5
+cryogenic_plant_circuit_enabled,4
 decider_combinator,12
 electromagnetic_plant,9
 foundry,54

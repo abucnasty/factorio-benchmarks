@@ -1,0 +1,7 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+hybrid_06_abucnasty_one_clock,0,78253.127,1.087,0.389,4.587,920.0910271611256,0,72000,2.0.66,windows-x86_64
+hybrid_06_abucnasty_one_clock,1,78096.858,1.085,0.4,4.181,921.9320961670444,0,72000,2.0.66,windows-x86_64
+hybrid_06_abucnasty_one_clock,2,78608.173,1.092,0.404,4.139,915.935293395001,0,72000,2.0.66,windows-x86_64
+hybrid_06_abucnasty_one_clock,3,80202.901,1.114,0.405,4.332,897.72313846852,0,72000,2.0.66,windows-x86_64
+hybrid_06_abucnasty_one_clock,4,80492.835,1.118,0.417,4.323,894.4895530142527,0,72000,2.0.66,windows-x86_64
+hybrid_06_abucnasty_one_clock,5,80015.87,1.111,0.411,4.821,899.821497910352,0,72000,2.0.66,windows-x86_64

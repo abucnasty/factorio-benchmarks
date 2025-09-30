@@ -26,7 +26,6 @@ display_panel,1
 ee_infinity_loader,3
 electric_energy_interface,1
 electromagnetic_plant,32
-electromagnetic_plant_circuit_enabled,1
 foundry,23
 foundry_set_recipe,8
 infinity_pipe,4
