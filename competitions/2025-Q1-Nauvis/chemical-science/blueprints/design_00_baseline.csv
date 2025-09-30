@@ -24,7 +24,6 @@ cryogenic_plant,2
 ee_infinity_loader,1
 ee_infinity_pipe,4
 electromagnetic_plant,8
-electromagnetic_plant_circuit_enabled,6
 foundry,7
 infinity_chest,1
 inserter_all,147
@@ -72,7 +71,6 @@ inserter_all_to_electromagnetic_plant_electronic_circuit,6
 inserter_all_to_turbo_transport_belt,60
 medium_electric_pole,22
 oil_refinery,4
-oil_refinery_circuit_enabled,4
 pipe,154
 pipe_to_ground,77
 recipe_advanced_circuit,6

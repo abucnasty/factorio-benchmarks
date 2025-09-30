@@ -24,8 +24,25 @@
     - [Designs Moving on to Round 2](#designs-moving-on-to-round-2)
     - [Designs Eliminated](#designs-eliminated)
     - [Round 1: All Results and Charts](#round-1-all-results-and-charts)
+  - [Round 2: Playoffs](#round-2-playoffs)
+    - [Results](#results)
+    - [Analysis](#analysis)
+    - [Round 2 Designs moving on to Round 3 Finals](#round-2-designs-moving-on-to-round-3-finals)
+  - [Round 3: Finals](#round-3-finals)
+    - [Hybrid Design Development](#hybrid-design-development)
+      - [Red Circuit Testing: Round 01](#red-circuit-testing-round-01)
+      - [Red Circuit Testing: Round 02](#red-circuit-testing-round-02)
+      - [Hybrids](#hybrids)
+    - [Results](#results-1)
+    - [Analysis](#analysis-1)
+      - [Why the Hybrids Performed Better](#why-the-hybrids-performed-better)
+      - [Why Hybrid 03 \& 04 Underperformed vs. Design 14](#why-hybrid-03--04-underperformed-vs-design-14)
+  - [Key Takeaways](#key-takeaways)
 
 ## Chemical Science Entries
+
+For convenience, the following factoriobin book contains every design featured / submitted to this competition: [factoriobin](https://factoriobin.com/post/gvols7)
+
 ### Validation
 All designs must be able to pass my acceptance criteria which is as follows:
 
@@ -60,7 +77,7 @@ the final bracket. Therefore:
 | phlap                 | 12_phlap                 | 240/s              | Direct Insertion, Molten Fluid Bus, Basic Oil                                                                    | <a href="design_screenshot/12_phlap.png"><img src="design_screenshot/12_phlap.png" alt="12_phlap" height="50"/></a>                                                 | [design_12_phlap](blueprints/design_12_phlap.txt)                                 | [design_12_phlap.zip](maps/design_12_phlap.zip)                                 |
 | phlap                 | 13_phlap                 | 240/s              | Recipe Switching, Basic Oil                                                                                      | <a href="design_screenshot/13_phlap.png"><img src="design_screenshot/13_phlap.png" alt="13_phlap" height="50"/></a>                                                 | [design_13_phlap](blueprints/design_13_phlap.txt)                                 | [design_13_phlap.zip](maps/design_13_phlap.zip)                                 |
 | abucnasty             | 14_abucnasty             | 240/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil                                                  | <a href="design_screenshot/14_abucnasty.png"><img src="design_screenshot/14_abucnasty.png" alt="14_abucnasty" height="50"/></a>                                     | [design_14_abucnasty](blueprints/design_14_abucnasty.txt)                         | [design_14_abucnasty.zip](maps/design_14_abucnasty.zip)                         |
-| Yuu                   | 15_yuu                   | 240/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Trains                                            | <a href="design_screenshot/15_yuu.png"><img src="design_screenshot/15_yuu.png" alt="15_yuu" height="50"/></a>                                                       | [design_15_yuu](blueprints/design_15_yuu.txt)                                     | [design_15_yuu.zip](maps/design_15_yuu.zip)                                     |
+| Yuu                   | 15_yuu                   | 240/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Trains                                          | <a href="design_screenshot/15_yuu.png"><img src="design_screenshot/15_yuu.png" alt="15_yuu" height="50"/></a>                                                       | [design_15_yuu](blueprints/design_15_yuu.txt)                                     | [design_15_yuu.zip](maps/design_15_yuu.zip)                                     |
 | Yuu                   | 16_yuu                   | 240/s              | Direct Insertion, Recipe Switching, Molten Fluid Bus, Basic Oil, Silo                                            | <a href="design_screenshot/16_yuu.png"><img src="design_screenshot/16_yuu.png" alt="16_yuu" height="50"/></a>                                                       | [design_16_yuu](blueprints/design_16_yuu.txt)                                     | [design_16_yuu.zip](maps/design_16_yuu.zip)                                     |
 | HenryJk               | 17_henryjk               | 240/s              |                                                                                                                  | <a href="design_screenshot/17_henryjk.png"><img src="design_screenshot/17_henryjk.png" alt="17_henryjk" height="50"/></a>                                           | [design_17_henryjk](blueprints/design_17_henryjk.txt)                             | [design_17_henryjk.zip](maps/design_17_henryjk.zip)                             |
 | lady_meyneth          | 18_lady_meyneth          | 240/s              | Direct Insertion, Molten Fluid Bus, Basic Oil, CARGO WAGONS!!!, 11 Beacon Science                                | <a href="design_screenshot/18_lady_meyneth.png"><img src="design_screenshot/18_lady_meyneth.png" alt="18_lady_meyneth" height="50"/></a>                            | [design_18_lady_meyneth](blueprints/design_18_lady_meyneth.txt)                   | [design_18_lady_meyneth.zip](maps/design_18_lady_meyneth.zip)                   |
@@ -286,3 +303,242 @@ All results can be found under [round_01_qualifiers](round_01_qualifiers)
 - [charts_affinity_2](round_01_qualifiers/charts_affinity_2) (1 core, 2 thread performance)
 - [charts_affinity_8](round_01_qualifiers/charts_affinity_8) (4 core, 8 thread performance)
 - [charts_affinity_16](round_01_qualifiers/charts_affinity_16) (8 core, 16 thread performance)
+
+
+## Round 2: Playoffs
+In this round the following designs were compared:
+- 01_undertow
+- 05_derantrix
+- 06_imp
+- 08_lady_meyneth
+- 09_jobo
+- 11_theflyingcurryfish154
+- 12_phlap
+- 13_phlap
+- 14_abucnasty
+- 18_lady_meyneth
+- 22_mcmayhem57
+- 23_mcmayhem57
+- 26_mrcooki4
+- 27_geist
+- 28_geist
+- 29_geist
+- 30_reja
+- 32_reja
+- 34_osboz
+- 35_henryjk
+
+All were tested for 10 runs at 36k ticks
+
+### Results
+The following shows the average whole update time in microseconds across all designs
+
+![](round_02_playoffs/charts/summary_verbose_metrics_all_designs.png)
+
+The next graph highlights the whole udpate time distribution across runs for each design to showcase the variation in results per run
+
+![](round_02_playoffs/charts/summary_run_distribution_all.png)
+
+
+### Analysis
+
+A few correlations became prevalant from this round:
+1. Inserter conditions (e.g., swinging less often, higher stack size) and stack inserters dropping to belts significantly impact entity update time
+2. Recipe switching frequency and the number of circuit-enabled inserters heavily influence control behavior update time
+3. Picking up items from a non-moving belt is less costly than dropping items onto a belt
+4. Direct insertion for high-flow-rate items (like advanced circuits) is beneficial, but less so for low-flow-rate items like chemical science ingredients
+5. Designs where inserters picked up from a building at half stack sizes (8) performed worse than inserters that picked up at the full stack size every time
+6. over beaconed designs had additional electric network overhead for no real entity update time gains
+
+### Round 2 Designs moving on to Round 3 Finals
+- 00_baseline
+- 01_undertow
+- 08_lady_meyneth
+- 12_phlap
+- 14_abucnasty
+- 18_lady_meyneth
+- 27_geist_fixed
+- 35_henryjk
+
+## Round 3: Finals
+In addition to the designs that moved on from Round 2, five additional hybrid designs were created:
+
+| Author            | Design Index               | Science Per Second | Design Tags | Screenshot                                                                                                                                                                | Blueprint                                                                             | Save File                                                                           |
+| ----------------- | -------------------------- | ------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| abucnasty         | hybrid_01_abucnasty        | 240/s              |             | <a href="design_screenshot/hybrid_01_abucnasty.png"><img src="design_screenshot/hybrid_01_abucnasty.png" alt="hybrid_01_abucnasty" height="50"/></a>                      | [design_hybrid_01_abucnasty](blueprints/design_hybrid_01_abucnasty.txt)               | [design_hybrid_01_abucnasty.zip](maps/design_hybrid_01_abucnasty.zip)               |
+| abucnasty, thaeln | hybrid_03_thaeln_abucnasty | 240/s              |             | <a href="design_screenshot/hybrid_03_thaeln_abucnasty.png"><img src="design_screenshot/hybrid_03_thaeln_abucnasty.png" alt="hybrid_03_thaeln_abucnasty" height="50"/></a> | [design_hybrid_03_thaeln_abucnasty](blueprints/design_hybrid_03_thaeln_abucnasty.txt) | [design_hybrid_03_thaeln_abucnasty.zip](maps/design_hybrid_03_thaeln_abucnasty.zip) |
+| abucnasty, thaeln | hybrid_04_thaeln_abucnasty | 240/s              |             | <a href="design_screenshot/hybrid_04_thaeln_abucnasty.png"><img src="design_screenshot/hybrid_04_thaeln_abucnasty.png" alt="hybrid_04_thaeln_abucnasty" height="50"/></a> | [design_hybrid_04_thaeln_abucnasty](blueprints/design_hybrid_04_thaeln_abucnasty.txt) | [design_hybrid_04_thaeln_abucnasty.zip](maps/design_hybrid_04_thaeln_abucnasty.zip) |
+| abucnasty, thaeln | hybrid_05_thaeln_abucnasty | 240/s              |             | <a href="design_screenshot/hybrid_05_thaeln_abucnasty.png"><img src="design_screenshot/hybrid_05_thaeln_abucnasty.png" alt="hybrid_05_thaeln_abucnasty" height="50"/></a> | [design_hybrid_05_thaeln_abucnasty](blueprints/design_hybrid_05_thaeln_abucnasty.txt) | [design_hybrid_05_thaeln_abucnasty.zip](maps/design_hybrid_05_thaeln_abucnasty.zip) |
+| abucnasty         | hybrid_06_abucnasty        | 240/s              |             | <a href="design_screenshot/hybrid_06_abucnasty.png"><img src="design_screenshot/hybrid_06_abucnasty.png" alt="hybrid_06_abucnasty" height="50"/></a>                      | [design_hybrid_06_abucnasty](blueprints/design_hybrid_06_abucnasty.txt)               | [design_hybrid_06_abucnasty.zip](maps/design_hybrid_06_abucnasty.zip)               |
+
+
+### Hybrid Design Development
+
+
+#### Red Circuit Testing: Round 01
+The hybrids were inspired by clocking strategies developed while experimenting with different red circuit builds pulled from many of the original submissions and two new submissions by Thaeln and Henryjk.
+
+
+The following seven designs were compared:
+* Each save was tested for 18000 tick(s) and 10 run(s)
+* 100 copies of 320 per second red chips
+* each blueprint by map name here [https://factoriobin.com/post/o7l03j](https://factoriobin.com/post/o7l03j)
+
+| Save                                                  | Avg (ms) | Min (ms) | Max (ms) | UPS      | Execution Time (ms) | % Difference from Worst |
+| ----------------------------------------------------- | -------- | -------- | -------- | -------- | ------------------- | ----------------------- |
+| [undertow](https://factoriobin.com/post/o7l03j/7)     | 0.902    | 0.362    | 2.368    | 1109     | 162315              | 0.00%                   |
+| [phlap](https://factoriobin.com/post/o7l03j/4)        | 0.872    | 0.220    | 5.061    | 1147     | 156928              | 3.44%                   |
+| [lady_meyneth](https://factoriobin.com/post/o7l03j/1) | 0.866    | 0.290    | 26.989   | 1155     | 155828              | 4.14%                   |
+| [abucnasty](https://factoriobin.com/post/o7l03j/2)    | 0.838    | 0.197    | 4.263    | 1193     | 150855              | 7.61%                   |
+| [geist](https://factoriobin.com/post/o7l03j/3)        | 0.829    | 0.280    | 3.523    | 1206     | 149223              | 8.79%                   |
+| [henryjk](https://factoriobin.com/post/o7l03j/6)      | 0.806    | 0.227    | 3.332    | 1241     | 145002              | 11.94%                  |
+| [thaeln](https://factoriobin.com/post/o7l03j/5)       | 0.767    | 0.221    | 3.247    | **1303** | 138115              | 17.52%                  |
+
+![alt text](component_tests/results_red/charts/summary_verbose_metrics_all_designs_table.png)
+
+What stood out from these designs was that inserter control seemed to matter the most, specifically Thaeln's design introduced the concept of
+having longer back to back swings over just in time swings that would happen from lead follower controls used in many of the other designs.
+
+This concept used a clock to only have the inserters fill up to the automated insertion limit during the crafting cycle and then wait half the clock period while the machine would output the red circuits onto a belt.
+
+
+#### Red Circuit Testing: Round 02
+
+Thaelns design was iterated on to create a few new layouts / clocking methods to test against for comparison.
+
+* Each save was tested for 18000 tick(s) and 10 run(s)
+* 100 copies of 320 per second red chips
+* each blueprint by map name here [https://factoriobin.com/post/8nws1g](https://factoriobin.com/post/8nws1g)
+
+![summary_verbose_metrics_all_designs_table](component_tests/results_red_round_02/charts/summary_verbose_metrics_all_designs_table.png)
+
+The main differences between these designs was that:
+1. `thaeln_geist_abuc` had a change to the layout to utilize cargo wagons to span 6 tiles instead of 3 chests
+   1. Geist came up with the layout (same layout as `thaeln_geist`)
+   2. Clocking was created by Thaeln (same as `thaeln`)
+   3. Layout changes and clocking implementation made by abucnasty
+2. The design called `syvkal` is the same layout as `thaeln_geist_abuc` but uses a latched lead follower combinator instead of a clock
+
+The interesting comparison here is that the latched lead follower (LLF) controller seemed to be on par with the clocked version since both are effectively doing the same task of latching all insertions to the beginning of the crafting cycle and then waiting to insert once the machine runs out.
+
+
+#### Hybrids
+
+- `hybrid_01_abucnasty`
+  - engine to chemical science DI build inspired by design `01_undertow`
+  - clocking created by reverse engineering Thaeln's clocking method
+    - engines still use lead follower
+  - The clocking method is not exactly the same as it is based on the crafting machine of the chemical science assembly machine instead of the produciton output
+- `hybrid_02_abucnasty` (omitted due to instability)
+- `hybrid_03_thaeln_abucnasty`
+  - Inspired by design 14 by abuc, science clocking by thaeln
+  - changes:
+    - extended science block up a few tiles for space
+    - changed belt routing (engine+sulfur outside, red chips inside)
+    - removed lead-follow combinators for science block
+    - replaced it with my clocking setup
+    - removed "set-filter" conditions from engine outserters
+    - reduced engine output trigger to >=8 on both sides
+- `hybrid_04_thaeln_abucnasty`
+  - design 14 by abuc, science clocking and science layout by thaeln
+  - changes:
+    - replaced science assembler block with a more compact layout
+    - added my clocking setup to it
+    - changed belt routing (engine+sulfur outside, red chips inside)
+    - removed "set-filter" conditions from engine outserters
+    - reduced engine output trigger to >=8 on both sides
+- `hybrid_05_thaeln_abucnasty`
+  - red circuits by thaeln, engine switching absurdity by abucnasty
+  - new science layout based on red circuit design submitted by Thaeln
+  - clocked double swing inserters introduced by Thaeln for both engines and chemical science
+- `hybrid_06_abucnasty`
+  - same as `hybrid_01_abucnasty` but the engine assembler inserters use a clock based on the main clock for chemical science assembler
+
+### Results
+When benchmarked against the previous top designs:
+
+- The top four original designs remained very close (within 1%).
+- Three hybrids outperformed all previous entries, showing up to ~5–10% better whole-update times.
+- phlaps’s original design edged out lady_meyneths’s by <1%, but the best hybrid surpassed both.
+
+Overall update time improved from 1.67 ms (baseline) to about 1.1 ms in the best builds — roughly a 50% performance gain.
+
+
+| Save                       | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) |
+| -------------------------- | -------- | -------- | -------- | --- | ------------------- |
+| 00_baseline                | 1.672    | 0.988    | 5.345    | 598 | 722277              |
+| 01_undertow                | 1.267    | 0.820    | 3.925    | 789 | 547201              |
+| hybrid_03_thaeln_abucnasty | 1.227    | 0.652    | 6.568    | 814 | 530129              |
+| hybrid_04_thaeln_abucnasty | 1.226    | 0.645    | 5.149    | 815 | 529561              |
+| 27_geist_fixed             | 1.206    | 0.599    | 6.468    | 829 | 520887              |
+| 35_henryjk                 | 1.196    | 0.409    | 9.753    | 836 | 516599              |
+| 14_abucnasty               | 1.187    | 0.481    | 5.874    | 842 | 512707              |
+| 18_lady_meyneth            | 1.187    | 0.507    | 21.252   | 842 | 512752              |
+| 08_lady_meyneth            | 1.183    | 0.490    | 9.786    | 845 | 510917              |
+| 12_phlap                   | 1.177    | 0.582    | 6.274    | 849 | 508584              |
+| hybrid_01_abucnasty        | 1.117    | 0.375    | 7.378    | 895 | 482599              |
+| hybrid_05_thaeln_abucnasty | 1.108    | 0.415    | 6.139    | 902 | 478542              |
+| hybrid_06_abucnasty        | 1.102    | 0.399    | 4.807    | 907 | 476209              |
+
+![summary_verbose_metrics_all_designs_table](round_03_finals/charts/summary_verbose_metrics_all_designs_table.png)
+
+![summary_verbose_metrics_all_designs](round_03_finals/charts/summary_verbose_metrics_all_designs.png)
+
+![summary_run_distribution_all](round_03_finals/charts/summary_run_distribution_all.png)
+
+### Analysis
+
+#### Why the Hybrids Performed Better
+The top three hybrids performed better for the following reasons:
+1. **Better Inserter Control**
+   - Used **clocking strategies** (tick-based or latched) instead of simple lead-follower.
+   - Reduced the number of times inserters had to “think” or scan belts, lowering CPU overhead.
+
+2. **Double-Swinging Inserters**
+   - Inserters batched items (e.g. 12–16 at once) instead of inserting one at a time.
+   - Minimized expensive pickup/drop operations.
+   - Kept inserters active for longer, steadier cycles.
+
+3. **Less Belt Scanning**
+   - Syncing inserters with the crafting cycle kept belts often **stopped** during pickup.
+   - Scanning a stopped belt is much cheaper than scanning a moving one.
+
+4. **Beacon Sharing & Layout Efficiency**
+   - Designs ensured nearly every beacon boosted multiple machines.
+   - Improved entity efficiency without extra update cost.
+
+#### Why Hybrid 03 & 04 Underperformed vs. Design 14
+![clocking_method_comparison](round_03_finals/charts/clocking_method_comparison.png)
+1. **Output at 8 Items Instead of 16**
+   - These hybrids forced inserters to **pick up/drop every 8 items** for engines
+   - Design 14 used full **16-item swings**, halving activation frequency.
+
+2. **Extra Scanning Overhead**
+   - More frequent activations meant more **belt/machine scans**.
+   - Increased entity update costs.
+
+3. **No Layout Advantage**
+   - Hybrid 04’s **compact layout** reduced size but kept the 8-item cycle issue.
+   - Net effect: still slower than Design 14.
+
+
+## Key Takeaways
+- Control logic matters more than entity counts.
+  - less of an impact on direct insertion
+  - large impact on belt pickups / drop offs
+  - main focus is to reduce belt scans
+- Inserter scanning from moving belts is the most expensive operation; minimizing scans is critical.
+- Double-swing insertion and latching consistently improve performance.
+- Beacon sharing and compact layouts give electric network reductions but also entity update time if they aren't saving more than they cost every 120 ticks to update their distribution
+- Direct insertion isn’t always superior — belt-fed with optimized control with back pressure can be just as good or better.
+- Latching seems to be always good
+  - This is not buffering
+  - Specifically, latching for longer sustatained bursts of production or inserter swings
+- Recipe switching can be good, but be mindful of rapidly switching between recipes
+  - better to craft more than necessary for short bursts instead of quick recipe switches
+
+New Clocking Methods:
+- Traditional lead-follower (LF) control: insert when below a limit on lead machine
+- Double Swing Clocks: batch insertions on fixed tick cycles to match desired output production
+- Latched Lead-Follower (LLF): hybrid of the two.
+
