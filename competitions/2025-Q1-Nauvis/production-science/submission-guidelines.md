@@ -71,7 +71,7 @@ The save file must produce 960/s purple science. If your design creates 240/s th
 
 ## Where to Submit
 
-Submit your designs at the following link [todo](todo)
+Submit your designs at the following link https://tally.so/r/mBMGNe
 
 You must provide:
 1. discord name
