@@ -9,7 +9,7 @@ belt-charts "bm_*.csv" `
 
 
 belt-charts "bm_*.csv" `
-    -w 1200 `
+    -w 1350 `
     -h 800 `
     --type "summary" `
     --remove-first-ticks 1 `

@@ -16,9 +16,7 @@
 
 | Save | Avg (ms) | Min (ms) | Max (ms) | UPS | Execution Time (ms) | % Difference from Worst |
 |------|----------|----------|----------|-----|---------------------| --- |
-| bm_ore_voider_J | 7.757 | 3.255 | 16.397 | 128 | 167545 | 0.00% |
-| bm_ore_voider_H | 7.735 | 3.682 | 20.902 | **129** | 167084 | 0.27% |
-| bm_ore_voider_I | 7.725 | 3.274 | 17.029 | **129** | 166856 | 0.41% |
+| bm_ore_voider_L | 7.681 | 2.869 | 17.044 | **130** | 165902 | 0.00% |
 
 ![result_0_chart.svg](result_0_chart.svg)
 

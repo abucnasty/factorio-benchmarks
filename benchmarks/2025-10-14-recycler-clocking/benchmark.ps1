@@ -9,6 +9,6 @@ param (
     --runs $runs `
     --run-order sequential `
     --template-path ../../scripts/results.md.hbs `
-    --pattern "*[HIJ]*" `
+    --pattern "*L*" `
     --output . `
     --verbose-metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,electricNetworkUpdate,fluidFlowUpdate,entityUpdate,trains"
