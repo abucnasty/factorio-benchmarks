@@ -56,10 +56,11 @@ Variations of lab configurations conform to the following naming conventions:
 | q3_research_prod             | 2.211    | 1.832    | 20.792   | 452  | 79584               |
 | q4_research_prod             | 2.176    | 1.832    | 16.813   | 459  | 78326               |
 | q5_research_prod             | 2.148    | 1.829    | 16.842   | 466  | 77311               |
-| bm_labs_q1_railgun           | 1.867    | 1.316    | 13.203   | 535  | 67205               |
-| bm_labs_q1_explosives        | 1.814    | 1.323    | 10.946   | 551  | 65305               |
+| q1_railgun                   | 1.867    | 1.316    | 13.203   | 535  | 67205               |
+| q1_flammables                | 1.831    | 1.324    | 11.395   | 546  | 65937               |
+| q1_explosives                | 1.814    | 1.323    | 10.946   | 551  | 65305               |
 | q1_robo_speed                | 1.656    | 1.202    | 11.732   | 603  | 59615               |
-| bm_labs_q1_lasers            | 1.521    | 1.103    | 11.272   | 657  | 54763               |
+| q1_lasers                    | 1.521    | 1.103    | 11.272   | 657  | 54763               |
 | q1_mining_prod               | 1.227    | 0.923    | 8.073    | 815  | 44165               |
 | q1_mining_prod_desync        | 1.211    | 0.923    | 7.486    | 825  | 43611               |
 | q1_mining_prod_required_only | 1.208    | 0.904    | 7.081    | 827  | 43500               |
