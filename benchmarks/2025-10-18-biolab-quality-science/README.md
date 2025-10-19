@@ -16,10 +16,11 @@
 
 
 ## Scenario
-* Each save was tested for 3600 tick(s) and 10 run(s)
 
-
-10_000 labs are preloaded with 256 science
+- Each save was tested for 3600 tick(s) and 10 runs
+- 10_000 labs are preloaded with 256 science of each pack
+- inserters and startup combinators removed before cloning
+- all beacons are shared as much as possible when cloned
 
 ![alt text](images/bio_lab_preloader.png)
 
