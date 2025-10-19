@@ -22,7 +22,8 @@
 | Military Science (240/s)   | 2              | [factoriobin](https://factoriobin.com/post/z6tbrf) | [youtube](https://youtu.be/uKT3MZw8agg) |
 | Automation Science (480/s) | 4              | [factoriobin](https://factoriobin.com/post/s0xzia) | [youtube](https://youtu.be/yVhEDCcWE7s) |
 | Logistics Science (480/s)  | 2              | [factoriobin](https://factoriobin.com/post/sujyge) | [youtube](https://youtu.be/Qnk71RHKV0s) |
-| Ore Voiding Miners         | 2              | [factoriobin](https://factoriobin.com/post/go8gwi) | [youtube](https://youtu.be/SccsA0Dr54k) |
+| Ore Voiding Miners         | 2.1            | [factoriobin](https://factoriobin.com/post/ws0wfg) | [youtube](https://youtu.be/_F9jxoc7iMc) |
+| Ore Voiding Miners         | 2 (deprecated) | [factoriobin](https://factoriobin.com/post/go8gwi) | [youtube](https://youtu.be/SccsA0Dr54k) |
 | Chemical Science (240/s)   | 2 (deprecated) | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4) |
 | Chemical Science (240/s)   | 3              | [factoriobin](https://factoriobin.com/post/vkepfz) | [youtube](https://youtu.be/t5vnuGI59MY) |
 | Production Science (240/s) | 2.5            | [factoriobin](https://factoriobin.com/post/3noug4) | [youtube](https://youtu.be/hYOpCNZCWkY) |
