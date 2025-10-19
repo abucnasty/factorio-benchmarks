@@ -99,5 +99,21 @@ All Designs: https://factoriobin.com/post/nv7lg3
 ### Design L
 ![alt text](timeseries_voider_L.png)
 
+
+### Recycler Profiler Analysis
+@Yuu6883 ran a profiler to analyze what the hot code paths of the recyler. 1.5k samples out of 10k are spent calculating the production statistics while voiding ore.
+
+![alt text](images/recycler-profiler.png)
+
+This explains one reason batching these statistic updates per tick as much as possible has a benefit to recycler time.
+
+One note from the above profile is that the quality roll is a very low impact compared to the actual inventory updates and statistic updates.
+
 ## Conclusion
-TODO
+- Overbeaconed recyclers
+  - improve per tick voiding
+  - suffer when not clocked due to inserters not having backpressure when inserting into the recyclers
+  - start / stops are very frequent on recyclers allowing them to not void as much per tick as they possibly could if not clocked
+- Constant production on recyclers
+  - having constant production on recyclers is better than overbeaconed and no clocking due to backpressure on inserters
+- Clocked recyclers with overbeaconed gains the benefit of per tick ore voiding reduction while 
