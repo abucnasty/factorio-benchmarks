@@ -21,6 +21,7 @@ test without any hiccups.
 - [ ] Test: run until belts are backed up then release into infinity loaders
 - [ ] Test: remove one input and add it back
 - [ ] Test: cut off all inputs and add it back
+- [ ] Clone: clone all designs, baseline must be at least 2ms of update time the rest will follow the same number of clones
 
 ### Designs
 
