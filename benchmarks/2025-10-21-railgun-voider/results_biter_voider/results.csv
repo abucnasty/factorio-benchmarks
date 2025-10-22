@@ -1,0 +1,3 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+bm_biter_voider_40,0,20484.475,0.569,0.26,7.484,1757.428491577158,0,36000,2.0.71,windows-x86_64
+bm_recycler_40,0,13556.682,0.377,0.163,0.735,2655.517035805664,51.102423144542286,36000,2.0.71,windows-x86_64
