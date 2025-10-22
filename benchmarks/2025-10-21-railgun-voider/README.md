@@ -27,8 +27,8 @@
 ![alt text](images/biter_voider.png)
 
 Chunks with active particles:
-![alt text](images/active_particle_chunks.png)
 
+![alt text](images/active_particle_chunks.png)
 
 Particle counts per chunk:
 
