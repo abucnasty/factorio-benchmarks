@@ -36,19 +36,31 @@ const CHEST_SIZES = {
     "car": [3, 3],
 };
 
-const BELT_SIZES = {
-    "turbo-splitter": [2, 1],
+const STRAIGHT_BELT_SIZES = {
     "turbo-transport-belt": [1, 1],
-    "turbo-underground-belt": [1, 1],
-    "express-splitter": [2, 1],
     "express-transport-belt": [1, 1],
-    "express-underground-belt": [1, 1],
-    "fast-splitter": [2, 1],
     "fast-transport-belt": [1, 1],
-    "fast-underground-belt": [1, 1],
-    "splitter": [2, 1],
     "transport-belt": [1, 1],
+}
+
+const UNDERGROUND_BELT_SIZES = {
+    "turbo-underground-belt": [1, 1],
+    "express-underground-belt": [1, 1],
+    "fast-underground-belt": [1, 1],
     "underground-belt": [1, 1]
+}
+
+const SPLITTER_BELT_SIZES = {
+    "turbo-splitter": [2, 1],
+    "express-splitter": [2, 1],
+    "fast-splitter": [2, 1],
+    "splitter": [2, 1],
+}
+
+const BELT_SIZES = {
+    ...STRAIGHT_BELT_SIZES,
+    ...SPLITTER_BELT_SIZES,
+    ...UNDERGROUND_BELT_SIZES
 };
 
 const INSERTER_SIZES = {
@@ -271,6 +283,11 @@ const isAnyTrackedEntity = (entity) => {
 const isBelt = (entity) => {
     assertEntityExists(entity)
     return BELT_SIZES[entity.name] !== undefined;
+}
+
+const isUndergroundBelt = (entity) => {
+    assertEntityExists(entity)
+    return isBelt(entity) && entity.name.includes("underground");
 }
 
 const isChest = (entity) => {
@@ -815,6 +832,14 @@ function classifyInserter(inserter, entities) {
             labels.add("from_belt")
         }
 
+        if (isUndergroundBelt(pickupEntity)) {
+            const type = pickupEntity.type
+            if (type !== undefined) {
+                from_label = `from_underground_${type}`
+                labels.add(`from_underground_${type}`)
+            }
+        }
+
         if (isCar(pickupEntity)) {
             labels.add("from_car")
         }
@@ -845,6 +870,15 @@ function classifyInserter(inserter, entities) {
             to_label = `to_${dropEntity.name}`
             labels.add("to_belt")
         }
+
+        if (isUndergroundBelt(dropEntity)) {
+            const type = dropEntity.type
+            if (type !== undefined) {
+                to_label = `to_underground_${type}`
+                labels.add(`to_underground_${type}`)
+            }
+        }
+
         if (isCar(dropEntity)) {
             labels.add("to_car")
         }
