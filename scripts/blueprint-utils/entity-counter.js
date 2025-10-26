@@ -645,9 +645,9 @@ function handleEntityByRecipeCounts(counts, entities) {
 
 function handleCountEnrichments(counts) {
     const ratios = [
-        [counts["stack_inserter"], counts["stack_inserter_direct_insertion"] ?? 0, (a, b) => counts["stack_inserter_direction_insertion_percent"] = b / a * 100],
-        [counts["bulk_inserter"], counts["bulk_inserter_direct_insertion"] ?? 0, (a, b) => counts["bulk_inserter_direction_insertion_percent"] = b / a * 100],
-        [counts["inserter_all"], counts["inserter_all_direct_insertion"] ?? 0, (a, b) => counts["inserter_all_direction_insertion_percent"] = b / a * 100],
+        [counts["stack_inserter"], counts["stack_inserter_direct_insertion"] ?? 0, (a, b) => counts["stack_inserter_direct_insertion_percent"] = b / a * 100],
+        [counts["bulk_inserter"], counts["bulk_inserter_direct_insertion"] ?? 0, (a, b) => counts["bulk_inserter_direct_insertion_percent"] = b / a * 100],
+        [counts["inserter_all"], counts["inserter_all_direct_insertion"] ?? 0, (a, b) => counts["inserter_all_direct_insertion_percent"] = b / a * 100],
     ]
 
     ratios.forEach(it => {
@@ -778,7 +778,7 @@ function classifyInserter(inserter, entities) {
             pickupEntities = pickupEntities.filter(e => e.name != "car")
         } else {
             const debugMessage = `multiple pickup entities found [${pickupEntities.map(it => it.name).join(",")}]`
-            console.warn(`${debugMessage} possible entities \n---\n${createDebugBlueprintFromPossibleEntities([inserter, ...pickupEntities], debugMessage)}\n---\n`)
+            console.warn(`${debugMessage} possible entities \n ---\n${createDebugBlueprintFromPossibleEntities([inserter, ...pickupEntities], debugMessage)}\n---\n`)
         }
     }
 
@@ -825,7 +825,7 @@ function classifyInserter(inserter, entities) {
     } else {
         const possibleMissedEntities = entities.filter(e => pointInArea(pickupPos, e.position, [20, 20]))
         const debugMessage = `missing pickup entity for ${inserter.name} at ${JSON.stringify(inserter.position)}`
-        console.warn(`${debugMessage} possible entities \n---\n${createDebugBlueprintFromPossibleEntities(possibleMissedEntities, debugMessage)}\n---\n`)
+        console.warn(`${debugMessage} possible entities \n ---\n${createDebugBlueprintFromPossibleEntities(possibleMissedEntities, debugMessage)}\n---\n`)
     }
 
     let to_label = null
@@ -855,7 +855,7 @@ function classifyInserter(inserter, entities) {
     } else {
         const possibleMissedEntities = entities.filter(e => pointInArea(dropPos, e.position, [20, 20]))
         const debugMessage = `missing drop entity for ${inserter.name} at ${JSON.stringify(inserter.position)} `
-        console.warn(`${debugMessage} possible entities \n---\n${createDebugBlueprintFromPossibleEntities(possibleMissedEntities, debugMessage)}\n---\n`)
+        console.warn(`${debugMessage} possible entities \n ---\n${createDebugBlueprintFromPossibleEntities(possibleMissedEntities, debugMessage)}\n---\n`)
     }
 
 
