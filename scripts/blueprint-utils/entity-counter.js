@@ -33,6 +33,7 @@ const CHEST_SIZES = {
     "logistic-chest_storage": [1, 1],
     "cargo-wagon": [6, 2],
     "infinity-chest": [1, 1],
+    "car": [3, 3],
 };
 
 const BELT_SIZES = {
@@ -281,6 +282,16 @@ const isBuilding = (entity) => {
     return BUILDING_SIZES[entity.name] !== undefined;
 }
 
+const isCar = (entity) => {
+    assertEntityExists(entity)
+    return entity.name == "car";
+}
+
+const isCargoWagon = (entity) => {
+    assertEntityExists(entity)
+    return entity.name == "cargo-wagon";
+}
+
 const buildingRecipeLabel = (ent) => {
     assertEntityExists(ent)
     assert(isBuilding(ent), `entity ${ent.name} is not a building`)
@@ -503,9 +514,9 @@ function handleInserterCounts(counts, bpEntities, entity, circuitConnectedEntiti
         incrementCountForEntityTags(counts, entity, type)
         handleCircuitCounts(
             counts, {
-                ...entity,
-                name: inserterTypeId
-            },
+            ...entity,
+            name: inserterTypeId
+        },
             circuitConnectedEntities
         )
 
@@ -515,9 +526,9 @@ function handleInserterCounts(counts, bpEntities, entity, circuitConnectedEntiti
         }, type)
         handleCircuitCounts(
             counts, {
-                ...entity,
-                name: anyInserterId,
-            },
+            ...entity,
+            name: anyInserterId,
+        },
             circuitConnectedEntities)
     });
 
@@ -763,8 +774,12 @@ function classifyInserter(inserter, entities) {
 
 
     if (pickupEntities.length > 1) {
-        console.warn(`multiple pickup entities found [${pickupEntities.map(it => it.name).join(",")}]`)
-
+        if (pickupEntities.some(e => e.name == "car")) {
+            pickupEntities = pickupEntities.filter(e => e.name != "car")
+        } else {
+            const debugMessage = `multiple pickup entities found [${pickupEntities.map(it => it.name).join(",")}]`
+            console.warn(`${debugMessage} possible entities \n ---\n${createDebugBlueprintFromPossibleEntities([inserter, ...pickupEntities], debugMessage)}\n---\n`)
+        }
     }
 
     if (dropEntities.length > 1) {
@@ -799,6 +814,14 @@ function classifyInserter(inserter, entities) {
             from_label = `from_${pickupEntity.name}`
             labels.add("from_belt")
         }
+
+        if (isCar(pickupEntity)) {
+            labels.add("from_car")
+        }
+
+        if (isCargoWagon(pickupEntity)) {
+            labels.add("from_cargo_wagon")
+        }
     } else {
         const possibleMissedEntities = entities.filter(e => pointInArea(pickupPos, e.position, [20, 20]))
         const debugMessage = `missing pickup entity for ${inserter.name} at ${JSON.stringify(inserter.position)}`
@@ -821,6 +844,13 @@ function classifyInserter(inserter, entities) {
         if (isBelt(dropEntity)) {
             to_label = `to_${dropEntity.name}`
             labels.add("to_belt")
+        }
+        if (isCar(dropEntity)) {
+            labels.add("to_car")
+        }
+
+        if (isCargoWagon(dropEntity)) {
+            labels.add("to_cargo_wagon")
         }
     } else {
         const possibleMissedEntities = entities.filter(e => pointInArea(dropPos, e.position, [20, 20]))
@@ -910,14 +940,19 @@ function writeAggregateMatrix(filePath, allCounts) {
     console.log(`Created aggregate CSV: ${filePath}`);
 }
 
+function sanitizeFileName(name) {
+    return name.replace(/[^a-z0-9_\-\.]/gi, "_");
+}
+
 // Handle blueprint or blueprint book
 function processBlueprintJson(jsonData, jsonFile, allCounts) {
-    const baseName = path.basename(jsonFile, ".txt");
+    const directory = path.dirname(jsonFile);
+    const baseName = sanitizeFileName(path.basename(jsonFile, ".txt"))
 
     if (jsonData.blueprint) {
         const counts = countEntitiesFromBlueprint(jsonData.blueprint);
-        const csvPath = jsonFile.replace(/\.txt$/, ".csv");
-        writeCsv(csvPath, counts);
+        const csvPath = `${baseName}.csv`
+        writeCsv(path.join(directory, csvPath), counts);
         allCounts[baseName] = counts;
 
     } else if (jsonData.blueprint_book) {
@@ -928,8 +963,10 @@ function processBlueprintJson(jsonData, jsonFile, allCounts) {
                 const suffix = item.blueprint.label
                     ? `_${item.blueprint.label.replace(/\s+/g, "_")}`
                     : `_${idx + 1}`;
-                const csvPath = jsonFile.replace(/\.txt$/, `${suffix}.csv`);
-                writeCsv(csvPath, counts);
+                const csvPath = sanitizeFileName(`${baseName}_${suffix}.csv`);
+
+                console.log({ baseName, csvPath, jsonFile, suffix })
+                writeCsv(path.join(directory, csvPath), counts);
 
                 const bpName = `${baseName}${suffix}`;
                 allCounts[bpName] = counts;
