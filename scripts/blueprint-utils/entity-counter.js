@@ -818,7 +818,10 @@ function classifyInserter(inserter, entities) {
 
     if (pickupEntity) {
         if (isBuilding(pickupEntity)) {
-            from_label = `from_${pickupEntity.name}_${buildingRecipeLabel(pickupEntity)}`
+            from_label = `from_${pickupEntity.name}`
+            if (buildingRecipeLabel(pickupEntity)) {
+                from_label = `${from_label}_${buildingRecipeLabel(pickupEntity)}`
+            }
             labels.add("from_building")
         }
 
@@ -857,7 +860,10 @@ function classifyInserter(inserter, entities) {
 
     if (dropEntity) {
         if (isBuilding(dropEntity)) {
-            to_label = `to_${dropEntity.name}_${buildingRecipeLabel(dropEntity)}`
+            to_label = `to_${dropEntity.name}`
+            if (buildingRecipeLabel(dropEntity)) {
+                to_label = `${to_label}_${buildingRecipeLabel(dropEntity)}`
+            }
             labels.add("to_building")
         }
 
