@@ -80,7 +80,6 @@ end
 ![alt text](images/18_inputs.png)
 
 ## Results
-![alt text](charts/summary_verbose_metrics_chests_table.png)
 
 ### All
 ![alt text](charts/summary_run_distribution_all.png)
