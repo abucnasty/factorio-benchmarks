@@ -9,6 +9,6 @@ param (
     --runs $runs `
     --run-order random `
     --template-path ../../scripts/results.md.hbs `
-    --pattern "*bm_wagon_8_input*" `
+    --pattern "*" `
     --output results `
     --verbose-metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,electricNetworkUpdate,fluidFlowUpdate,entityUpdate,trains"
