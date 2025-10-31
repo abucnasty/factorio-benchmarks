@@ -26,9 +26,9 @@
 
 
 ## Scenario
-- Each save was tested for 60 tick(s) and 10 run(s)
+- Each save was tested for 30 tick(s) and 50 run(s)
 - Each save is paused before the transfer takes place
-- 40000 inserters transfer 16 items each over a 14 tick window
+- 80000 inserters transfer 16 items each over a 14 tick window (40k inputs, 40k outputs)
 
 Example of the transfer process:
 
@@ -86,6 +86,7 @@ end
 ![alt text](charts/summary_verbose_metrics_all_table.png)
 
 ### Chests
+![alt text](charts/summary_run_distribution_chests.png)
 ![alt text](charts/summary_verbose_metrics_chests_table.png)
 
 ### Cars
@@ -103,7 +104,7 @@ end
 This chart compares the best performing 1:1 chest transfer which is a wooden chest that is limited to all other chest containers with their maximum amount of inserters per type.
 
 ### Timeseries Explanation
-![alt text](charts/timeseries_ticks_car_5_input_disabled.png)
+![alt text](charts/timeseries_ticks_wood_chest_q1.png)
 
 | Tick  | Description                                                            |
 | ----- | ---------------------------------------------------------------------- |
@@ -121,11 +122,8 @@ This chart compares the best performing 1:1 chest transfer which is a wooden che
 
 ## Conclusion
 
-- 1:1 transfers
-  - wooden chests with their input slot limited to 1 is the best
-  - larger slot capacity inventory, even when limited or filtered is worse than smaller inventories
+- batching inventory transfers into a single container is better than separate containers
 - limiting slots is better than filtered slots
 - multiple transfers from one container
-  - cars are the best option and can outperform wooden chests
-  - second best option is a cargo wagon
+  - cars are the best option and can outperform multiple chests when batched at the same time (clocking)
 - tanks are the worst option due to their electric network update time constantly updating (as of 2.0.72) due to most likely their equipment grid, but this can be reduced by maximizing the inserters transferring items in and out of the tank
