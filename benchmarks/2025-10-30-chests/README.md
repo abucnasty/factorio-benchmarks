@@ -110,15 +110,15 @@ This chart compares the best performing 1:1 chest transfer which is a wooden che
 | ----- | ---------------------------------------------------------------------- |
 | 0     | Loading the save file and initializing power to all entities (omitted) |
 | 1     | pickup from chest (omitted)                                            |
-| 2-4   | input inserter swing                                                   |
-| 5     | transfer into container                                                |
-| 7-8   | input / output inserters swinging                                      |
-| 6     | pickup from container                                                  |
-| 9     | input inserter return to input chest (inventory scan)                  |
-| 10    | output inserter transfer to chest                                      |
-| 11-13 | output inserter swinging back                                          |
-| 14    | output inserter returns to empty chest and performs an inventory scan  |
-| 15-59 | nothing                                                                |
+| 2-3   | input inserter swing                                                   |
+| 4     | transfer into container                                                |
+| 5     | pickup from container                                                  |
+| 6-7   | input / output inserters swinging                                      |
+| 8     | input inserter return to input chest (inventory scan)                  |
+| 9     | output inserter transfer to chest                                      |
+| 10-12 | output inserter swinging back                                          |
+| 13    | output inserter returns to empty chest and performs an inventory scan  |
+| 14-59 | nothing                                                                |
 
 ## Conclusion
 
