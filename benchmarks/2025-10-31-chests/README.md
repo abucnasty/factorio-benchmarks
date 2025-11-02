@@ -19,6 +19,9 @@
     - [7 Tile Results Analysis](#7-tile-results-analysis)
   - [9 Tiles](#9-tiles)
     - [9 Tile Results All](#9-tile-results-all)
+  - [5 Tiles Backpressure](#5-tiles-backpressure)
+    - [5 Tile Backpressure Results](#5-tile-backpressure-results)
+    - [5 Tiles Backpressure Results Analysis](#5-tiles-backpressure-results-analysis)
 
 ## Scenario
 - Each save was tested for 8020 tick(s) and 3 run(s)
@@ -159,3 +162,41 @@ This test focuses on a 9 tile gap of transfer, which is ideal for a cargo wagon.
 - setting a limit of 1 slot is about the same as no limit on cargo wagons
 - wagons take up transport line update time
 - order matters for filters, like other chests
+
+## 5 Tiles Backpressure
+<a href="images/backpressure.png"><img src="images/backpressure.png" alt="backpressure" height="300"/></a>
+
+In this scenario, 3200 electronic circuits are transferred over the course of 1601 ticks. The center container contains items already inside it. All cars are disabled in this test.
+
+### 5 Tile Backpressure Results
+![alt text](5_tiles_backpressure/charts/summary_run_distribution_all.png)
+![alt text](5_tiles_backpressure/charts/summary_verbose_metrics_all_table.png)
+
+| Save File                             | Entity Update | Electric/Heat/Fluid Circuit Update | Control Behavior Update | Transport Lines Update | Other | Whole Update | % Decrease from Previous | % Decrease from Best |
+| ------------------------------------- | ------------- | ---------------------------------- | ----------------------- | ---------------------- | ----- | ------------ | ------------------------ | -------------------- |
+| iron_full                             | 1735          | 70                                 | 37                      | 33                     | 17    | 1892         |                          |                      |
+| steel_limited                         | 1743          | 70                                 | 37                      | 33                     | 17    | 1900         | -0.42%                   | -0.42%               |
+| steel_full                            | 1748          | 70                                 | 37                      | 33                     | 17    | 1905         | -0.26%                   | -0.68%               |
+| wood                                  | 1751          | 70                                 | 37                      | 33                     | 17    | 1909         | -0.21%                   | -0.9%                |
+| iron_limited                          | 1754          | 70                                 | 37                      | 33                     | 17    | 1911         | -0.1%                    | -1%                  |
+| steel_q5_limited                      | 1755          | 70                                 | 37                      | 33                     | 17    | 1913         | -0.1%                    | -1.11%               |
+| steel                                 | 1755          | 70                                 | 37                      | 33                     | 17    | 1913         | 0%                       | -1.11%               |
+| steel_q5                              | 1772          | 70                                 | 37                      | 33                     | 17    | 1930         | -0.89%                   | -2.01%               |
+| wood_limited                          | 1763          | 72                                 | 40                      | 37                     | 18    | 1931         | -0.05%                   | -2.06%               |
+| wood_full                             | 1766          | 72                                 | 41                      | 37                     | 18    | 1934         | -0.16%                   | -2.22%               |
+| iron                                  | 1777          | 72                                 | 40                      | 37                     | 19    | 1945         | -0.57%                   | -2.8%                |
+| steel_q5_full                         | 1805          | 70                                 | 37                      | 33                     | 17    | 1963         | -0.93%                   | -3.75%               |
+| car_filtered_first_electronic_circuit | 2004          | 70                                 | 37                      | 34                     | 19    | 2165         | -10.29%                  | -14.43%              |
+| car_full                              | 2014          | 72                                 | 40                      | 36                     | 21    | 2184         | -0.88%                   | -15.43%              |
+| car_default                           | 2038          | 70                                 | 37                      | 33                     | 20    | 2198         | -0.64%                   | -16.17%              |
+| car_filtered_first_empty              | 2958          | 71                                 | 38                      | 34                     | 25    | 3126         | -42.22%                  | -65.22%              |
+| car_filtered_last_empty               | 3786          | 72                                 | 42                      | 35                     | 28    | 3963         | -26.78%                  | -109.45%             |
+
+### 5 Tiles Backpressure Results Analysis
+
+- no detectable difference between wood, iron, steel chests
+  - amount full or limiting made no detectable difference (less than 0.5% relative difference between save files)
+- filters in cars
+  - same behavior as above tests
+  - setting the filter of the electronic circuit was better than leaving it unfiltered
+  - order matters
