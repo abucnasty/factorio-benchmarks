@@ -1,0 +1,4 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+bm_5_tiles_car_filtered_first_coin_disabled,0,17217.052,2.147,0.124,10.501,465.81726070177405,0,8020,2.0.72,windows-x86_64
+bm_5_tiles_car_filtered_first_coin_disabled,1,17771.766,2.216,0.125,9.137,451.277605163156,0,8020,2.0.72,windows-x86_64
+bm_5_tiles_car_filtered_first_coin_disabled,2,17224.438,2.148,0.129,10.259,465.6175139066947,0,8020,2.0.72,windows-x86_64
