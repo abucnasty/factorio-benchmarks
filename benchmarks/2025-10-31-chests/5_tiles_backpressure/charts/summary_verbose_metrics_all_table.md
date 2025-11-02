@@ -1,0 +1,19 @@
+|Save File|Entity Update|Electric/Heat/Fluid Circuit Update|Control Behavior Update|Transport Lines Update|Trains|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|---|
+|iron_full|1735|70|37|33|0|17|1892|||
+|steel_limited|1743|70|37|33|0|17|1900|-0.42%|-0.42%|
+|steel_full|1748|70|37|33|0|17|1905|-0.26%|-0.68%|
+|wood|1751|70|37|33|0|17|1909|-0.21%|-0.9%|
+|iron_limited|1754|70|37|33|0|17|1911|-0.1%|-1%|
+|steel_q5_limited|1755|70|37|33|0|17|1913|-0.1%|-1.11%|
+|steel|1755|70|37|33|0|17|1913|0%|-1.11%|
+|steel_q5|1772|70|37|33|0|17|1930|-0.89%|-2.01%|
+|wood_limited|1763|72|40|37|0|18|1931|-0.05%|-2.06%|
+|wood_full|1766|72|41|37|0|18|1934|-0.16%|-2.22%|
+|iron|1777|72|40|37|0|19|1945|-0.57%|-2.8%|
+|steel_q5_full|1805|70|37|33|0|17|1963|-0.93%|-3.75%|
+|car_filtered_first_electronic_circuit|2004|70|37|34|0|19|2165|-10.29%|-14.43%|
+|car_full|2014|72|40|36|0|21|2184|-0.88%|-15.43%|
+|car_default|2038|70|37|33|0|20|2198|-0.64%|-16.17%|
+|car_filtered_first_empty|2958|71|38|34|0|25|3126|-42.22%|-65.22%|
+|car_filtered_last_empty|3786|72|42|35|0|28|3963|-26.78%|-109.45%|
