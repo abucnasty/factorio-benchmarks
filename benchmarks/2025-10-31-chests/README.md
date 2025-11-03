@@ -77,19 +77,20 @@ This test compares different chest types, focusing mainly on how that type of ch
 
 | Save File                         | Entity Update | Electric/Heat/Fluid Circuit Update | Control Behavior Update | Transport Lines Update | Trains | Other | Whole Update | % Decrease from Previous | % Decrease from Best |
 | --------------------------------- | ------------- | ---------------------------------- | ----------------------- | ---------------------- | ------ | ----- | ------------ | ------------------------ | -------------------- |
-| iron_chest_limited                | 1695          | 79                                 | 44                      | 40                     | 0      | 20    | 1878         |                          |                      |
-| iron_chest                        | 1704          | 79                                 | 44                      | 40                     | 0      | 19    | 1887         | -0.48%                   | -0.48%               |
-| steel_chest                       | 1717          | 79                                 | 44                      | 40                     | 0      | 20    | 1901         | -0.74%                   | -1.23%               |
-| wood_chest_limited                | 1713          | 81                                 | 47                      | 43                     | 0      | 21    | 1906         | -0.26%                   | -1.5%                |
-| wood_chest                        | 1729          | 81                                 | 48                      | 43                     | 0      | 21    | 1922         | -0.84%                   | -2.35%               |
-| steel_q5_chest_limited            | 1729          | 81                                 | 47                      | 43                     | 0      | 21    | 1923         | -0.05%                   | -2.4%                |
-| steel_chest_limited               | 1733          | 81                                 | 48                      | 43                     | 0      | 21    | 1926         | -0.16%                   | -2.56%               |
-| steel_q5_chest                    | 1761          | 81                                 | 48                      | 43                     | 0      | 21    | 1954         | -1.45%                   | -4.05%               |
-| car_disabled                      | 1948          | 79                                 | 45                      | 40                     | 0      | 22    | 2134         | -9.21%                   | -13.64%              |
-| car_filtered_first_coin_disabled  | 2000          | 75                                 | 38                      | 34                     | 0      | 20    | 2168         | -1.59%                   | -15.45%              |
-| car                               | 2796          | 80                                 | 48                      | 42                     | 0      | 24    | 2990         | -37.92%                  | -59.22%              |
-| car_filtered_first_empty_disabled | 2806          | 80                                 | 46                      | 41                     | 0      | 26    | 2999         | -0.3%                    | -59.7%               |
-| car_filtered_last_empty_disabled  | 4074          | 80                                 | 49                      | 42                     | 0      | 30    | 4275         | -42.55%                  | -127.65%             |
+| wood_chest_limited                | 1710          | 81                                 | 47                      | 43                     | 0      | 21    | 1902         |                          |                      |
+| steel_chest_limited               | 1724          | 79                                 | 44                      | 40                     | 0      | 20    | 1908         | -0.32%                   | -0.3%                |
+| iron_chest_limited                | 1725          | 79                                 | 44                      | 40                     | 0      | 20    | 1909         | -0.05%                   | -0.35%               |
+| wood_chest                        | 1725          | 81                                 | 48                      | 43                     | 0      | 21    | 1919         | -0.52%                   | -0.88%               |
+| steel_chest                       | 1736          | 79                                 | 44                      | 40                     | 0      | 20    | 1920         | -0.05%                   | -0.93%               |
+| iron_chest                        | 1747          | 79                                 | 44                      | 40                     | 0      | 20    | 1930         | -0.52%                   | -1.46%               |
+| steel_q5_chest_limited            | 1752          | 81                                 | 48                      | 44                     | 0      | 21    | 1946         | -0.83%                   | -2.3%                |
+| steel_q5_chest                    | 1782          | 80                                 | 46                      | 42                     | 0      | 21    | 1972         | -1.34%                   | -3.66%               |
+| car_disabled                      | 1937          | 79                                 | 45                      | 40                     | 0      | 22    | 2123         | -7.66%                   | -11.6%               |
+| car_filtered_first_coin_disabled  | 2020          | 79                                 | 45                      | 40                     | 0      | 22    | 2206         | -3.91%                   | -15.97%              |
+| car_filtered_first_empty_disabled | 2835          | 80                                 | 46                      | 41                     | 0      | 27    | 3028         | -37.26%                  | -59.18%              |
+| car                               | 2939          | 81                                 | 48                      | 43                     | 0      | 24    | 3135         | -3.53%                   | -64.8%               |
+| car_filtered_last_coin_disabled   | 3881          | 80                                 | 48                      | 42                     | 0      | 29    | 4080         | -30.14%                  | -114.48%             |
+| car_filtered_last_empty_disabled  | 4103          | 80                                 | 49                      | 42                     | 0      | 29    | 4304         | -5.49%                   | -126.25%             |
 
 ### 5 Tile Results Analysis
 - the difference between chest container sizes is such a small impact that it registers as noise
@@ -174,23 +175,24 @@ In this scenario, 3200 electronic circuits are transferred over the course of 16
 
 | Save File                             | Entity Update | Electric/Heat/Fluid Circuit Update | Control Behavior Update | Transport Lines Update | Other | Whole Update | % Decrease from Previous | % Decrease from Best |
 | ------------------------------------- | ------------- | ---------------------------------- | ----------------------- | ---------------------- | ----- | ------------ | ------------------------ | -------------------- |
-| iron_full                             | 1735          | 70                                 | 37                      | 33                     | 17    | 1892         |                          |                      |
-| steel_limited                         | 1743          | 70                                 | 37                      | 33                     | 17    | 1900         | -0.42%                   | -0.42%               |
-| steel_full                            | 1748          | 70                                 | 37                      | 33                     | 17    | 1905         | -0.26%                   | -0.68%               |
-| wood                                  | 1751          | 70                                 | 37                      | 33                     | 17    | 1909         | -0.21%                   | -0.9%                |
-| iron_limited                          | 1754          | 70                                 | 37                      | 33                     | 17    | 1911         | -0.1%                    | -1%                  |
-| steel_q5_limited                      | 1755          | 70                                 | 37                      | 33                     | 17    | 1913         | -0.1%                    | -1.11%               |
-| steel                                 | 1755          | 70                                 | 37                      | 33                     | 17    | 1913         | 0%                       | -1.11%               |
-| steel_q5                              | 1772          | 70                                 | 37                      | 33                     | 17    | 1930         | -0.89%                   | -2.01%               |
-| wood_limited                          | 1763          | 72                                 | 40                      | 37                     | 18    | 1931         | -0.05%                   | -2.06%               |
-| wood_full                             | 1766          | 72                                 | 41                      | 37                     | 18    | 1934         | -0.16%                   | -2.22%               |
-| iron                                  | 1777          | 72                                 | 40                      | 37                     | 19    | 1945         | -0.57%                   | -2.8%                |
-| steel_q5_full                         | 1805          | 70                                 | 37                      | 33                     | 17    | 1963         | -0.93%                   | -3.75%               |
-| car_filtered_first_electronic_circuit | 2004          | 70                                 | 37                      | 34                     | 19    | 2165         | -10.29%                  | -14.43%              |
-| car_full                              | 2014          | 72                                 | 40                      | 36                     | 21    | 2184         | -0.88%                   | -15.43%              |
-| car_default                           | 2038          | 70                                 | 37                      | 33                     | 20    | 2198         | -0.64%                   | -16.17%              |
-| car_filtered_first_empty              | 2958          | 71                                 | 38                      | 34                     | 25    | 3126         | -42.22%                  | -65.22%              |
-| car_filtered_last_empty               | 3786          | 72                                 | 42                      | 35                     | 28    | 3963         | -26.78%                  | -109.45%             |
+| steel_limited                         | 1744          | 70                                 | 36                      | 33                     | 17    | 1900         |                          |                      |
+| wood                                  | 1748          | 70                                 | 36                      | 33                     | 17    | 1905         | -0.26%                   | -0.25%               |
+| iron_full                             | 1751          | 70                                 | 36                      | 33                     | 17    | 1908         | -0.16%                   | -0.41%               |
+| wood_full                             | 1751          | 70                                 | 36                      | 34                     | 18    | 1908         | 0%                       | -0.41%               |
+| steel_full                            | 1750          | 70                                 | 37                      | 34                     | 17    | 1909         | -0.05%                   | -0.46%               |
+| steel_q5_full                         | 1759          | 70                                 | 37                      | 33                     | 17    | 1916         | -0.37%                   | -0.83%               |
+| iron                                  | 1764          | 70                                 | 36                      | 33                     | 17    | 1921         | -0.26%                   | -1.09%               |
+| iron_limited                          | 1766          | 70                                 | 38                      | 34                     | 18    | 1925         | -0.21%                   | -1.3%                |
+| wood_limited                          | 1770          | 70                                 | 36                      | 33                     | 17    | 1927         | -0.1%                    | -1.41%               |
+| steel_q5_limited                      | 1771          | 70                                 | 37                      | 33                     | 17    | 1928         | -0.05%                   | -1.46%               |
+| steel_q5                              | 1789          | 70                                 | 36                      | 33                     | 18    | 1947         | -0.99%                   | -2.46%               |
+| steel                                 | 1797          | 72                                 | 40                      | 36                     | 19    | 1964         | -0.87%                   | -3.36%               |
+| car_full                              | 2006          | 70                                 | 36                      | 33                     | 19    | 2165         | -10.23%                  | -13.93%              |
+| car_default                           | 2044          | 70                                 | 37                      | 33                     | 20    | 2203         | -1.76%                   | -15.93%              |
+| car_filtered_first_electronic_circuit | 2070          | 70                                 | 37                      | 34                     | 20    | 2230         | -1.23%                   | -17.35%              |
+| car_filtered_first_empty              | 2951          | 71                                 | 38                      | 34                     | 25    | 3119         | -39.87%                  | -64.14%              |
+| car_filtered_last_electronic_circuit  | 3599          | 72                                 | 39                      | 34                     | 27    | 3771         | -20.9%                   | -98.45%              |
+| car_filtered_last_empty               | 3724          | 71                                 | 39                      | 34                     | 26    | 3894         | -3.26%                   | -104.92%             |
 
 ### 5 Tiles Backpressure Results Analysis
 
