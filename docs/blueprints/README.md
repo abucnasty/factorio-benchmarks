@@ -10,6 +10,7 @@
     - [Modules](#modules)
   - [General](#general)
     - [Circuits](#circuits)
+    - [Cars / Tanks](#cars--tanks)
     - [Miscelaneous](#miscelaneous)
 
 
@@ -62,6 +63,12 @@ Deprecated:
 | Description          | Link                                               | Video                                   |
 | -------------------- | -------------------------------------------------- | --------------------------------------- |
 | Packed RGB Dashboard | [factoriobin](https://factoriobin.com/post/2fs995) | [youtube](https://youtu.be/XbROdpgXeXQ) |
+
+### Cars / Tanks
+| Description       | Link                                |
+| ----------------- | ----------------------------------- |
+| Car Orientations  | https://factoriobin.com/post/jtoq53 |
+| Tank Orientations | https://factoriobin.com/post/vbniuv |
 
 ### Miscelaneous
 | Description       | Link                                               | Video                                   |
