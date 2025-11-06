@@ -48,3 +48,8 @@ When looking at a cpu profiler we can see the following:
 - `MiningDrill::clearStorageBuffer` (draining its storage buffer onto the belt) consumes 13.98% of cpu time but has 1240 samples.
 
 ![alt text](image-1.png)
+
+
+### Conclusion
+- Mining drills entity time is directly proportional to throughput
+- With higher levels of research productivity, the entity time update spikes will increase in amplitude and decrease in frequency
