@@ -1,0 +1,5 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+bm_particles_editor_open_primary_surface,0,9980.272,0.277,0.11,0.73,3607.1161186789295,0,36000,2.0.72,windows-x86_64
+bm_particles_editor_closed_other_surface,0,7906.729,0.22,0.106,1.817,4553.083835300286,26.225041986389066,36000,2.0.72,windows-x86_64
+bm_particles_editor_closed_primary_surface,0,7849.257,0.218,0.103,0.55,4586.421364468,27.149257566671615,36000,2.0.72,windows-x86_64
+bm_particles_editor_open_other_surface,0,7627.939,0.212,0.112,0.563,4719.492381887165,30.838382425449396,36000,2.0.72,windows-x86_64
