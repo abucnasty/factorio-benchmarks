@@ -52,4 +52,4 @@ When looking at a cpu profiler we can see the following:
 
 ### Conclusion
 - Mining drills entity time is directly proportional to throughput
-- With higher levels of research productivity, the entity time update spikes will increase in amplitude and decrease in frequency
+- With higher levels of research productivity, the entity time update spikes will increase in amplitude and decrease in frequency, however their update time spent is on average the same
