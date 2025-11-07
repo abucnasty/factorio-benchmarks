@@ -1,14 +1,14 @@
 param (
     # number of ticks to run per save file
-    [int]$ticks = 7200,
+    [int]$ticks = 36000,
     # number of runs
-    [int]$runs = 3
+    [int]$runs = 1
 )
  belt benchmark maps `
     --ticks $ticks `
     --runs $runs `
-    --run-order sequential `
+    --run-order random `
     --template-path ../../scripts/results.md.hbs `
-    --pattern "*bm_1_lane_2_miners*" `
+    --pattern "*" `
     --output results `
-    --verbose-metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,electricNetworkUpdate,fluidFlowUpdate,entityUpdate,trains"
+    --verbose-metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,electricNetworkUpdate,fluidFlowUpdate,entityUpdate"
