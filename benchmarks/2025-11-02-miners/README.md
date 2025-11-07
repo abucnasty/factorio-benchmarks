@@ -124,4 +124,4 @@ Quality seems to add an additional few smaller entity update time spikes per min
 - Mining drills entity time is directly proportional to throughput
 - With higher levels of research productivity, the entity time update spikes will increase in amplitude and decrease in frequency, however their update time spent is on average the same
 - modules
-  - quality increases the 
+  - Quality seems to add an additional few smaller entity update time spikes per miner which is presumably when the internal inventory switches slots on what is being outputted between quality ore that is mined.
