@@ -1,0 +1,7 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+bm_mining_drill_unclocked,0,10209.156,1.063,0.192,30.261,940.3323839894306,0,9600,2.0.72,windows-x86_64
+bm_mining_drill_unclocked,1,10200.832,1.063,0.195,31.229,941.0997063768916,0,9600,2.0.72,windows-x86_64
+bm_mining_drill_unclocked,2,10204.226,1.063,0.197,30.672,940.7866897499134,0,9600,2.0.72,windows-x86_64
+bm_mining_drill_clocked,0,8382.117,0.873,0.202,31.107,1145.2953949461694,22.25697482180549,9600,2.0.72,windows-x86_64
+bm_mining_drill_clocked,1,8313.336,0.866,0.201,30.712,1154.771081067817,22.25697482180549,9600,2.0.72,windows-x86_64
+bm_mining_drill_clocked,2,8345.701,0.869,0.197,30.711,1150.2928274089859,22.25697482180549,9600,2.0.72,windows-x86_64
