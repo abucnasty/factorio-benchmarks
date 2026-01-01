@@ -53,10 +53,10 @@ One thing that should be noted is that the copper wire clock was not exactly acc
 
 ## Blue Science Results
 ![alt text](charts/summary_blue.png)
-| Save File       | Entity Update | Control Behavior Update | Electric/Heat/Fluid Circuit Update | Transport Lines Update | Other | Whole Update | % Decrease from Previous | % Decrease from Best |
-| --------------- | ------------- | ----------------------- | ---------------------------------- | ---------------------- | ----- | ------------ | ------------------------ | -------------------- |
-| blue_gen_clocks | 760           | 111                     | 88                                 | 88                     | 31    | 1078         |                          | 0%                   |
-| blue_old_clocks | 772           | 112                     | 89                                 | 94                     | 30    | 1096         | -1.7%                    | -1.7%                |
+| Save File       | Entity Update | Control Behavior Update | Transport Lines Update | Electric/Heat/Fluid Circuit Update | Other | Whole Update | % Decrease from Previous | % Decrease from Best |
+| --------------- | ------------- | ----------------------- | ---------------------- | ---------------------------------- | ----- | ------------ | ------------------------ | -------------------- |
+| blue_gen_clocks | 758           | 108                     | 85                     | 82                                 | 28    | 1062         |                          | 0%                   |
+| blue_old_clocks | 771           | 108                     | 91                     | 84                                 | 28    | 1083         | -1.95%                   | -1.95%               |
 
 ## Verbose Timeseries Charts
 ![alt text](charts/timeseries_red_gen_clocks.png) 
