@@ -1,0 +1,2 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+dmb_main_research_prod,0,3309427.232,15.321,9.745,84.756,65.26809168408995,0,216000,2.0.73,windows-x86_64
