@@ -1,0 +1,4 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+dmb_research_prod_linux_mimalloc,0,2842017.165,13.157,8.952,66.925,76.00235588302648,0,216000,2.0.73,linux-x86_64
+dmb_research_prod_linux_vanilla,0,2847638.148,13.184,9.009,66.342,75.85233403046826,0,216000,2.0.73,linux-x86_64
+dmb_research_prod_windows,0,3309427.232,15.321,9.745,84.756,65.26809168408995,0,216000,2.0.73,windows-x86_64
