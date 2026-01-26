@@ -25,27 +25,27 @@ benchmark maps \
 --output results_linux_standalone_mimalloc \
 --verbose-metrics "all"
 
-# ## steam
-# belt --factorio-path "/home/abucnasty/.local/bin/factorio-steam" \
-# benchmark maps \
-# --ticks $ticks \
-# --runs $runs \
-# --run-order sequential \
-# --template-path ../../../scripts/results.md.hbs \
-# --pattern "*dmb_main*" \
-# --output results_linux_steam \
-# --verbose-metrics "all"
+## steam
+belt --factorio-path "/home/abucnasty/.local/bin/factorio-steam" \
+benchmark maps \
+--ticks $ticks \
+--runs $runs \
+--run-order sequential \
+--template-path ../../../scripts/results.md.hbs \
+--pattern "*dmb_main*" \
+--output results_linux_steam \
+--verbose-metrics "all"
 
-# ## steam + mimalloc
-# belt --factorio-path "/home/abucnasty/.local/bin/factorio-steam-mimalloc" \
-# benchmark maps \
-# --ticks $ticks \
-# --runs $runs \
-# --run-order sequential \
-# --template-path ../../../scripts/results.md.hbs \
-# --pattern "*dmb_main*" \
-# --output results_linux_steam_mimalloc \
-# --verbose-metrics "all"
+## steam + mimalloc
+belt --factorio-path "/home/abucnasty/.local/bin/factorio-steam-mimalloc" \
+benchmark maps \
+--ticks $ticks \
+--runs $runs \
+--run-order sequential \
+--template-path ../../../scripts/results.md.hbs \
+--pattern "*dmb_main*" \
+--output results_linux_steam_mimalloc \
+--verbose-metrics "all"
 
 ## steam + mimalloc (variance)
 belt --factorio-path "/home/abucnasty/.local/bin/factorio-steam-mimalloc" \
