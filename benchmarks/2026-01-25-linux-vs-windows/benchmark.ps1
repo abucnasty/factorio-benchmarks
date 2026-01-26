@@ -6,7 +6,7 @@ param (
 )
 
 # windows (vanilla)
-belt --verbose `
+belt --factorio-path "C:\Program Files\Factorio\bin\x64\factorio.exe" --verbose `
 benchmark maps `
 --ticks $ticks `
 --runs $runs `
@@ -17,7 +17,7 @@ benchmark maps `
 --verbose-metrics "all"
 
 # windows (injector) 
-belt --factorio-path "C:\Program Files (x86)\Steam\steamapps\common\Factorio\bin\x64\Injector.exe" --verbose `
+belt --factorio-path "C:\Program Files\Factorio\bin\x64\Injector.exe" --verbose `
 benchmark maps `
 --ticks $ticks `
 --runs $runs `
@@ -28,7 +28,7 @@ benchmark maps `
 --verbose-metrics "all"
 
 ## windows (vanilla) multi run
-belt --verbose `
+belt --factorio-path "C:\Program Files\Factorio\bin\x64\factorio.exe" --verbose `
 benchmark maps `
 --ticks 18000 `
 --runs 10 `
