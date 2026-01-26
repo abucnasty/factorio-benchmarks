@@ -1,6 +1,10 @@
 # Questions
 
-- in a vanilla setup (steam version) which operating without any tweaking performs better?
+- operating system (windows vs linux) steam
+- linux flavors of factorio
+  - steam
+  - steam + mimalloc
+  - 
 - improvement from injecting mimalloc
 - improvement from hugepages (large pages)
 - run variance
