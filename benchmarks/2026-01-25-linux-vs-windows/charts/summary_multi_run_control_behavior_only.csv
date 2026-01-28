@@ -1,0 +1,10 @@
+Save File,Control Behavior Update,% Decrease from Previous,% Decrease from Best
+linux_standalone_mimalloc_huge_pages_8GB,868,,0%
+linux_standalone_mimalloc_huge_pages_4GB,896,-3.14%,-3.14%
+linux_standalone_mimalloc_huge_pages_2GB,911,-1.74%,-4.94%
+linux_standalone_mimalloc_large_pages,917,-0.67%,-5.65%
+linux_steam_mimalloc,941,-2.6%,-8.4%
+windows_standalone,941,-0.01%,-8.41%
+linux_standalone_mimalloc,946,-0.52%,-8.98%
+linux_steam,1073,-13.37%,-23.55%
+linux_standalone,1080,-0.65%,-24.35%

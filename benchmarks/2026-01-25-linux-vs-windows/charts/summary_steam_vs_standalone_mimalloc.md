@@ -1,0 +1,4 @@
+|Save File|Entity Update|Space Platforms|Control Behavior Update|Electric/Heat/Fluid Circuit Update|Transport Lines Update|Trains|Particle Update|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|linux_standalone_mimalloc|8746|1512|946|671|438|114|97|1121|13646||0%|
+|linux_steam_mimalloc|8919|1517|941|665|436|116|98|1135|13828|-1.33%|-1.33%|
