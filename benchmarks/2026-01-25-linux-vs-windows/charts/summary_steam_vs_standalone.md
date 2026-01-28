@@ -1,0 +1,4 @@
+|Save File|Entity Update|Space Platforms|Control Behavior Update|Electric/Heat/Fluid Circuit Update|Transport Lines Update|Trains|Particle Update|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|linux_steam|9237|1549|1073|640|458|142|101|1275|14474||0%|
+|linux_standalone|9285|1547|1080|649|461|140|102|1285|14549|-0.51%|-0.51%|
