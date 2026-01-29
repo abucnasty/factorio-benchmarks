@@ -403,4 +403,4 @@ Because they are beautiful. Ordered descending by performance.
 
 ## Credits
 
-A special thank you to @florishafkenscheid and @jfroy in the help configuring and setting up huge pages and general linux stuff.
+A special thank you to [@florishafkenscheid](https://github.com/florishafkenscheid) and [@jfroy](https://github.com/jfroy) in the help configuring and setting up huge pages and general linux stuff.
