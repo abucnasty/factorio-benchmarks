@@ -22,6 +22,7 @@
     - [Huge Pages Memory Size](#huge-pages-memory-size)
     - [Steam vs Standalone Distributions](#steam-vs-standalone-distributions)
     - [Timeseries Graphs](#timeseries-graphs)
+  - [Credits](#credits)
 
 
 ## Overview
@@ -119,7 +120,6 @@ On linux, [execgame](https://github.com/FeralInteractive/gamemode) was used in a
 
 The following launcher was used to inject the `libmimalloc.so` dynamic library at runtime for each benchmark:
 ```sh
-```sh
 #!/usr/bin/env bash
 LD_PRELOAD="${HOME}/dev/temp/mimalloc/out/release/libmimalloc.so" \
 exec gamemoderun ${HOME}/Games/factorio/bin/x64/factorio "$@"
@@ -176,14 +176,17 @@ Below is the launcher that was used to let `mimalloc` know which pages to use.
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Path to Factorio
 FACTORIO_BIN="${HOME}/Games/factorio/bin/x64/factorio"
+# Path to mimalloc library
 MIMALLOC_SO="${HOME}/dev/temp/mimalloc/out/release/libmimalloc.so"
 
-NR_1G_PATH="/sys/kernel/mm/hugepages/hugepages-1048576kB/nr_hugepages"
-TARGET_RUNTIME_PAGES=8
-
-export MIMALLOC_RESERVE_HUGE_OS_PAGES=$((TARGET_RUNTIME_PAGES))
+# MIMALLOC_RESERVE_HUGE_OS_PAGES=N: where N is the number of 1GiB huge OS pages.
+export MIMALLOC_RESERVE_HUGE_OS_PAGES=8
+# MIMALLOC_PURGE_DELAY=N: the delay in N milli-seconds (by default 10) after which mimalloc will purge OS pages that are not in use.
+# Setting to -1 disables purging.
 export MIMALLOC_PURGE_DELAY=-1
+# Shows stats on program termination
 export MIMALLOC_SHOW_STATS=1
 
 FACTORIO_FLAGS=(
@@ -396,3 +399,8 @@ Because they are beautiful. Ordered descending by performance.
 ![linux_steam](charts/timeseries_linux_steam.png)
 ![linux_standalone](charts/timeseries_linux_standalone.png)
 ![windows_standalone](charts/timeseries_windows_standalone.png)
+
+
+## Credits
+
+A special thank you to @florishafkenscheid and @jfroy in the help configuring and setting up huge pages and general linux stuff.
