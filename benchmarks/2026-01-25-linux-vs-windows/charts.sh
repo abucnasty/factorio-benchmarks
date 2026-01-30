@@ -86,7 +86,7 @@ belt-charts "results_multi_run/dmb_*.csv" \
     --summary-table-file true \
     --title-override "Entity Update Time Averages"
 
-belt-charts "results_multi_run/dmb_*huge_pages*.csv" \
+belt-charts "results_multi_run/dmb_*linux*huge_pages*.csv" \
     -w 1000 \
     -h 600 \
     --type "summary" \

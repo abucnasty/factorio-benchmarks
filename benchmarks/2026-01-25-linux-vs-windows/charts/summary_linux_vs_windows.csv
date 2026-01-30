@@ -1,3 +1,3 @@
-Save File,Entity Update,% Decrease from Previous,% Decrease from Best
-linux_standalone,9285,,0%
-windows_standalone,11093,-19.48%,-19.48%
+Save File,Entity Update,Space Platforms,Control Behavior Update,Electric/Heat/Fluid Circuit Update,Transport Lines Update,Trains,Particle Update,Other,Whole Update,% Decrease from Previous,% Decrease from Best
+linux_standalone,9285,1547,1080,649,461,140,102,1285,14549,,0%
+windows_standalone,11093,2167,941,672,547,149,124,1337,17031,-17.06%,-17.06%

@@ -205,21 +205,66 @@ env LD_PRELOAD="${MIMALLOC_SO}" \
   "$@"
 ```
 
+**Windows Mimalloc / Huge Pages**
+
+To get mimalloc injected and to enable huge pages the injector here was used: https://github.com/KeinNiemand/LargePageInjectorMods
+
+In order to get it work with the benchmarking tool [belt](https://github.com/florishafkenscheid/belt) a few changes needed to be made in order to get the injector to exit gracefully. These changes are documented in the following merge request but have impact to the performance:
+https://github.com/KeinNiemand/LargePageInjectorMods/pull/15
+
+
+The following configuration was used where `MIMALLOC_RESERVE_HUGE_OS_PAGES` was set to 0 for the mimalloc only test.
+
+```toml
+# Path to the game/application executable to launch
+LaunchPath = "Factorio.exe"  # For Factorio
+
+# Modules (DLLs or EXEs) to patch with mimalloc
+ModulesToPatch = [
+    "Factorio.exe",  # The main executable
+    # Add other modules if needed
+    # "example.dll",
+]
+
+# Verbosity level (0-4)
+Verbosity = 1  # 0 = Silent, 1 = Errors, 2 = Warnings, 3 = Info, 4 = Debug
+
+# Redirect console output to Injector (true/false) Required to see console output
+RedirectConsoleOutput = true
+
+# Enable beep sound after injection (true/false)
+EnableBeep = true  # Set to false to disable
+
+# Environment variables to set
+[Environment]
+#Amount of RAM in GB allocated to Large Pages set to 0 to disable huge pages
+#See readme for recommended values for your ram size 
+MIMALLOC_RESERVE_HUGE_OS_PAGES = "8"
+#Various Mimalloc Env vars which may boost performance. Comment these out if you don't want them
+MIMALLOC_ARENA_EAGER_COMMIT = "1"
+#Thse two should do the same things but some mimalloc docs say one or the other so I set both)
+MIMALLOC_PURGE_DELAY = "10000"
+MIMALLOC_RESET_DELAY = "10000"
+# Add Any other environment variables here
+```
+
 ## Naming Conventions
 
 The following naming conventions are used throughout the results and references to describe configuration combinations across operatings systems, dynamically injected libraries, and distribution verisions of Factorio.
 
-| Short Hand Name                          | Operating System | Factorio Distribution | Memory Allocator | Flags                            |
-| ---------------------------------------- | ---------------- | --------------------- | ---------------- | -------------------------------- |
-| windows_standalone                       | Windows          | standalone            | malloc           |                                  |
-| linux_standalone                         | Linux            | standalone            | malloc           |                                  |
-| linux_steam                              | Linux            | steam                 | malloc           |                                  |
-| linux_standalone_mimalloc                | Linux            | standalone            | mimalloc         |                                  |
-| linux_steam_mimalloc                     | Linux            | steam                 | mimalloc         |                                  |
-| linux_standalone_mimalloc_large_pages    | Linux            | standalone            | mimalloc         | MIMALLOC_ALLOW_LARGE_OS_PAGES=1  |
-| linux_standalone_mimalloc_huge_pages_2GB | Linux            | standalone            | mimalloc         | MIMALLOC_RESERVE_HUGE_OS_PAGES=2 |
-| linux_standalone_mimalloc_huge_pages_4GB | Linux            | standalone            | mimalloc         | MIMALLOC_RESERVE_HUGE_OS_PAGES=4 |
-| linux_standalone_mimalloc_huge_pages_8GB | Linux            | standalone            | mimalloc         | MIMALLOC_RESERVE_HUGE_OS_PAGES=8 |
+| Short Hand Name                            | Operating System | Factorio Distribution | Memory Allocator | Flags                            |
+| ------------------------------------------ | ---------------- | --------------------- | ---------------- | -------------------------------- |
+| windows_standalone                         | Windows          | standalone            | malloc           |                                  |
+| windows_standalone_mimalloc                | Windows          | standalone            | mimalloc         |                                  |
+| windows_standalone_mimalloc_huge_pages_8GB | Windows          | standalone            | mimalloc         | MIMALLOC_RESERVE_HUGE_OS_PAGES=8 |
+| linux_standalone                           | Linux            | standalone            | malloc           |                                  |
+| linux_steam                                | Linux            | steam                 | malloc           |                                  |
+| linux_standalone_mimalloc                  | Linux            | standalone            | mimalloc         |                                  |
+| linux_steam_mimalloc                       | Linux            | steam                 | mimalloc         |                                  |
+| linux_standalone_mimalloc_large_pages      | Linux            | standalone            | mimalloc         | MIMALLOC_ALLOW_LARGE_OS_PAGES=1  |
+| linux_standalone_mimalloc_huge_pages_2GB   | Linux            | standalone            | mimalloc         | MIMALLOC_RESERVE_HUGE_OS_PAGES=2 |
+| linux_standalone_mimalloc_huge_pages_4GB   | Linux            | standalone            | mimalloc         | MIMALLOC_RESERVE_HUGE_OS_PAGES=4 |
+| linux_standalone_mimalloc_huge_pages_8GB   | Linux            | standalone            | mimalloc         | MIMALLOC_RESERVE_HUGE_OS_PAGES=8 |
 
 > Note: malloc is the default memory allocator
 
@@ -234,60 +279,66 @@ The following naming conventions are used throughout the results and references 
 ### Run Variance
 ![](charts/run_boxplot.png)
 
-| Configuration                            | Execution Time Range (ms) | Spread (ms) | Effective UPS |
-| ---------------------------------------- | ------------------------- | ----------- | ------------- |
-| linux_steam                              | 260_100 ... 260_763       | ~663        | ~69.1         |
-| linux_standalone_mimalloc_huge_pages_4GB | 234_561 ... 235_319       | ~758        | ~76.6         |
-| linux_steam_mimalloc                     | 248_240 ... 249_334       | ~1,094      | ~72.3         |
-| linux_standalone_mimalloc                | 245_038 ... 246_363       | ~1,325      | ~73.3         |
-| linux_standalone                         | 261_376 ... 263_096       | ~1,720      | ~68.7         |
-| linux_standalone_mimalloc_huge_pages_8GB | 226_706 ... 228_459       | ~1,753      | ~79.2         |
-| linux_standalone_mimalloc_huge_pages_2GB | 238_913 ... 241_397       | ~2,484      | ~75.1         |
-| linux_standalone_mimalloc_large_pages    | 243_149 ... 245_659       | ~2,510      | ~73.9         |
-| windows_standalone                       | 299_286 ... 314_209       | ~14,923     | ~58.5         |
+| Configuration                              | Execution Time Range (ms) | Spread (ms) | Effective UPS |
+| ------------------------------------------ | ------------------------- | ----------- | ------------- |
+| linux_steam                                | 260_100 ... 260_763       | ~663        | ~69.1         |
+| linux_standalone_mimalloc_huge_pages_4GB   | 234_561 ... 235_319       | ~758        | ~76.6         |
+| linux_steam_mimalloc                       | 248_240 ... 249_334       | ~1,094      | ~72.3         |
+| linux_standalone_mimalloc                  | 245_038 ... 246_363       | ~1,325      | ~73.3         |
+| linux_standalone                           | 261_376 ... 263_096       | ~1,720      | ~68.7         |
+| linux_standalone_mimalloc_huge_pages_8GB   | 226_706 ... 228_459       | ~1,753      | ~79.2         |
+| linux_standalone_mimalloc_huge_pages_2GB   | 238_913 ... 241_397       | ~2,484      | ~75.1         |
+| linux_standalone_mimalloc_large_pages      | 243_149 ... 245_659       | ~2,510      | ~73.9         |
+| windows_standalone_mimalloc                | 282_077 ... 290_735       | ~8,658      | ~62.0         |
+| windows_standalone_mimalloc_huge_pages_8GB | 275_016 ... 287_316       | ~12,300     | ~64.3         |
+| windows_standalone                         | 299_286 ... 314_209       | ~14,923     | ~58.5         |
 
 **Observations**
 
 1. **Most stable**: `linux_steam` (no mimalloc) has the tightest variance at only ~663ms spread across 10 runs
 2. **Best performance + low variance**: `huge_pages_8GB` achieves the fastest times (~79 UPS) with reasonable variance
 3. **Unexpected**: `linux_standalone_mimalloc_huge_pages_2GB` and `linux_standalone_mimalloc_large_pages` have higher variance than expected compared to 4GB/8GB configurations
-4. **Windows warm-up effect**: Windows shows a pattern where run 0 is faster, then runs 1-2 are slower before stabilizing. Linux configurations don't exhibit this pattern as strongly.
 
 In summary though, Linux reduces the run variance by an order of magnitude and in some cases two orders of magnitude making Linux the clear favorite for benchmark consistency.
 
 ### All Metrics
 ![summary_multi_run](charts/summary_multi_run.png)
 
-| Save File                                | Entity Update | Space Platforms | Control Behavior Update | Electric/Heat/Fluid Circuit Update | Transport Lines Update | Trains | Particle Update | Other | Whole Update | % Decrease from Previous | % Decrease from Best |
-| ---------------------------------------- | ------------- | --------------- | ----------------------- | ---------------------------------- | ---------------------- | ------ | --------------- | ----- | ------------ | ------------------------ | -------------------- |
-| linux_standalone_mimalloc_huge_pages_8GB | 8082          | 1470            | 868                     | 652                                | 400                    | 104    | 86              | 975   | 12637        |                          | 0%                   |
-| linux_standalone_mimalloc_huge_pages_4GB | 8383          | 1484            | 896                     | 657                                | 423                    | 107    | 89              | 1008  | 13047        | -3.24%                   | -3.24%               |
-| linux_standalone_mimalloc_huge_pages_2GB | 8576          | 1502            | 911                     | 657                                | 434                    | 111    | 93              | 1036  | 13321        | -2.1%                    | -5.41%               |
-| linux_standalone_mimalloc_large_pages    | 8714          | 1509            | 917                     | 666                                | 435                    | 112    | 98              | 1087  | 13539        | -1.63%                   | -7.13%               |
-| linux_standalone_mimalloc                | 8746          | 1512            | 946                     | 671                                | 438                    | 114    | 97              | 1121  | 13646        | -0.79%                   | -7.98%               |
-| linux_steam_mimalloc                     | 8919          | 1517            | 941                     | 665                                | 436                    | 116    | 98              | 1135  | 13828        | -1.33%                   | -9.42%               |
-| linux_steam                              | 9237          | 1549            | 1073                    | 640                                | 458                    | 142    | 101             | 1275  | 14474        | -4.68%                   | -14.54%              |
-| linux_standalone                         | 9285          | 1547            | 1080                    | 649                                | 461                    | 140    | 102             | 1285  | 14549        | -0.51%                   | -15.13%              |
-| windows_standalone                       | 11093         | 2167            | 941                     | 672                                | 547                    | 149    | 124             | 1337  | 17031        | -17.06%                  | -34.77%              |
+| Save File                                  | Entity Update | Space Platforms | Control Behavior Update | Electric/Heat/Fluid Circuit Update | Transport Lines Update | Trains | Particle Update | Other | Whole Update | % Decrease from Previous | % Decrease from Best |
+| ------------------------------------------ | ------------- | --------------- | ----------------------- | ---------------------------------- | ---------------------- | ------ | --------------- | ----- | ------------ | ------------------------ | -------------------- |
+| linux_standalone_mimalloc_huge_pages_8GB   | 8082          | 1470            | 868                     | 652                                | 400                    | 104    | 86              | 975   | 12637        |                          | 0%                   |
+| linux_standalone_mimalloc_huge_pages_4GB   | 8383          | 1484            | 896                     | 657                                | 423                    | 107    | 89              | 1008  | 13047        | -3.24%                   | -3.24%               |
+| linux_standalone_mimalloc_huge_pages_2GB   | 8576          | 1502            | 911                     | 657                                | 434                    | 111    | 93              | 1036  | 13321        | -2.1%                    | -5.41%               |
+| linux_standalone_mimalloc_large_pages      | 8714          | 1509            | 917                     | 666                                | 435                    | 112    | 98              | 1087  | 13539        | -1.63%                   | -7.13%               |
+| linux_standalone_mimalloc                  | 8746          | 1512            | 946                     | 671                                | 438                    | 114    | 97              | 1121  | 13646        | -0.79%                   | -7.98%               |
+| linux_steam_mimalloc                       | 8919          | 1517            | 941                     | 665                                | 436                    | 116    | 98              | 1135  | 13828        | -1.33%                   | -9.42%               |
+| linux_steam                                | 9237          | 1549            | 1073                    | 640                                | 458                    | 142    | 101             | 1275  | 14474        | -4.68%                   | -14.54%              |
+| linux_standalone                           | 9285          | 1547            | 1080                    | 649                                | 461                    | 140    | 102             | 1285  | 14549        | -0.51%                   | -15.13%              |
+| windows_standalone_mimalloc_huge_pages_8GB | 9852          | 2115            | 967                     | 673                                | 473                    | 126    | 114             | 1175  | 15496        | -6.51%                   | -22.62%              |
+| windows_standalone_mimalloc                | 10313         | 2122            | 983                     | 649                                | 493                    | 131    | 118             | 1251  | 16059        | -3.63%                   | -27.08%              |
+| windows_standalone                         | 11093         | 2167            | 941                     | 672                                | 547                    | 149    | 124             | 1337  | 17031        | -6.05%                   | -34.77%              |
 
 **Observations**
-- The "Whole Update" time is lowest for `linux_standalone_mimalloc_huge_pages_8GB` (12.637 ms), and highest for Windows (17.031 ms), a 34.8% difference.
+- The "Whole Update" time is lowest for `linux_standalone_mimalloc_huge_pages_8GB` (12.637 ms), and highest for `windows_standalone` (17.031 ms), a 34.8% difference.
 - All Linux configs outperform Windows by a large margin
+- Enabling mimalloc and huge pages both improve performance in windows but cannot keep up with Linux
 
 ### Entity Update Time
 ![summary_multi_run_entity_only](charts/summary_multi_run_entity_only.png)
 
-| Save File                                | Entity Update | % Decrease from Previous | % Decrease from Best |
-| ---------------------------------------- | ------------- | ------------------------ | -------------------- |
-| linux_standalone_mimalloc_huge_pages_8GB | 8082          |                          | 0%                   |
-| linux_standalone_mimalloc_huge_pages_4GB | 8383          | -3.73%                   | -3.73%               |
-| linux_standalone_mimalloc_huge_pages_2GB | 8576          | -2.3%                    | -6.12%               |
-| linux_standalone_mimalloc_large_pages    | 8714          | -1.6%                    | -7.82%               |
-| linux_standalone_mimalloc                | 8746          | -0.36%                   | -8.21%               |
-| linux_steam_mimalloc                     | 8919          | -1.99%                   | -10.36%              |
-| linux_steam                              | 9237          | -3.57%                   | -14.3%               |
-| linux_standalone                         | 9285          | -0.51%                   | -14.89%              |
-| windows_standalone                       | 11093         | -19.48%                  | -37.27%              |
+| Save File                                  | Entity Update | % Decrease from Previous | % Decrease from Best |
+| ------------------------------------------ | ------------- | ------------------------ | -------------------- |
+| linux_standalone_mimalloc_huge_pages_8GB   | 8082          |                          | 0%                   |
+| linux_standalone_mimalloc_huge_pages_4GB   | 8383          | -3.73%                   | -3.73%               |
+| linux_standalone_mimalloc_huge_pages_2GB   | 8576          | -2.3%                    | -6.12%               |
+| linux_standalone_mimalloc_large_pages      | 8714          | -1.6%                    | -7.82%               |
+| linux_standalone_mimalloc                  | 8746          | -0.36%                   | -8.21%               |
+| linux_steam_mimalloc                       | 8919          | -1.99%                   | -10.36%              |
+| linux_steam                                | 9237          | -3.57%                   | -14.3%               |
+| linux_standalone                           | 9285          | -0.51%                   | -14.89%              |
+| windows_standalone_mimalloc_huge_pages_8GB | 9852          | -6.11%                   | -21.91%              |
+| windows_standalone_mimalloc                | 10313         | -4.67%                   | -27.61%              |
+| windows_standalone                         | 11093         | -7.57%                   | -37.27%              |
 
 This metric shows the largest improvement for Linux over Windows. Comparing only the standalone versions results in a 19.48% improvement of Linux over Windows.
 
@@ -299,17 +350,19 @@ For the standalone version only in Linux, there is a clear improvement that come
 
 ### Multi Threaded Metrics
 ![](charts/summary_multi_run_mt_only.png)
-| Save File                                | Control Behavior Update | Electric/Heat/Fluid Circuit Update | Transport Lines Update | % Decrease from Previous | % Decrease from Best |
-| ---------------------------------------- | ----------------------- | ---------------------------------- | ---------------------- | ------------------------ | -------------------- |
-| linux_standalone_mimalloc_huge_pages_8GB | 868                     | 652                                | 400                    |                          | 0%                   |
-| linux_standalone_mimalloc_huge_pages_4GB | 896                     | 657                                | 423                    | -2.92%                   | -2.92%               |
-| linux_standalone_mimalloc_huge_pages_2GB | 911                     | 657                                | 434                    | -1.34%                   | -4.3%                |
-| linux_standalone_mimalloc_large_pages    | 917                     | 666                                | 435                    | -0.83%                   | -5.16%               |
-| linux_steam_mimalloc                     | 941                     | 665                                | 436                    | -1.16%                   | -6.38%               |
-| linux_standalone_mimalloc                | 946                     | 671                                | 438                    | -0.67%                   | -7.09%               |
-| windows_standalone                       | 941                     | 672                                | 547                    | -5.06%                   | -12.51%              |
-| linux_steam                              | 1073                    | 640                                | 458                    | -0.51%                   | -13.09%              |
-| linux_standalone                         | 1080                    | 649                                | 461                    | -0.86%                   | -14.07%              |
+| Save File                                  | Control Behavior Update | Electric/Heat/Fluid Circuit Update | Transport Lines Update | % Decrease from Previous | % Decrease from Best |
+| ------------------------------------------ | ----------------------- | ---------------------------------- | ---------------------- | ------------------------ | -------------------- |
+| linux_standalone_mimalloc_huge_pages_8GB   | 868                     | 652                                | 400                    |                          | 0%                   |
+| linux_standalone_mimalloc_huge_pages_4GB   | 896                     | 657                                | 423                    | -2.92%                   | -2.92%               |
+| linux_standalone_mimalloc_huge_pages_2GB   | 911                     | 657                                | 434                    | -1.34%                   | -4.3%                |
+| linux_standalone_mimalloc_large_pages      | 917                     | 666                                | 435                    | -0.83%                   | -5.16%               |
+| linux_steam_mimalloc                       | 941                     | 665                                | 436                    | -1.16%                   | -6.38%               |
+| linux_standalone_mimalloc                  | 946                     | 671                                | 438                    | -0.67%                   | -7.09%               |
+| windows_standalone_mimalloc_huge_pages_8GB | 967                     | 673                                | 473                    | -2.8%                    | -10.09%              |
+| windows_standalone_mimalloc                | 983                     | 649                                | 493                    | -0.51%                   | -10.66%              |
+| windows_standalone                         | 941                     | 672                                | 547                    | -1.68%                   | -12.51%              |
+| linux_steam                                | 1073                    | 640                                | 458                    | -0.51%                   | -13.09%              |
+| linux_standalone                           | 1080                    | 649                                | 461                    | -0.86%                   | -14.07%              |
 
 The results from these metrics were unexpected as the multi threaded performance in Linux was worse than windows using `malloc` as the memory allocator. Once `mimalloc` was introduced however, linux pulls ahead.
 
@@ -318,45 +371,51 @@ The following sections demonstrate this pattern as well in the breakdowns by ind
 
 #### Control Behavior Update Time
 ![](charts/summary_multi_run_control_behavior_only.png)
-| Save File                                | Control Behavior Update | % Decrease from Previous | % Decrease from Best |
-| ---------------------------------------- | ----------------------- | ------------------------ | -------------------- |
-| linux_standalone_mimalloc_huge_pages_8GB | 868                     |                          | 0%                   |
-| linux_standalone_mimalloc_huge_pages_4GB | 896                     | -3.14%                   | -3.14%               |
-| linux_standalone_mimalloc_huge_pages_2GB | 911                     | -1.74%                   | -4.94%               |
-| linux_standalone_mimalloc_large_pages    | 917                     | -0.67%                   | -5.65%               |
-| linux_steam_mimalloc                     | 941                     | -2.6%                    | -8.4%                |
-| windows_standalone                       | 941                     | -0.01%                   | -8.41%               |
-| linux_standalone_mimalloc                | 946                     | -0.52%                   | -8.98%               |
-| linux_steam                              | 1073                    | -13.37%                  | -23.55%              |
-| linux_standalone                         | 1080                    | -0.65%                   | -24.35%              |
+| Save File                                  | Control Behavior Update | % Decrease from Previous | % Decrease from Best |
+| ------------------------------------------ | ----------------------- | ------------------------ | -------------------- |
+| linux_standalone_mimalloc_huge_pages_8GB   | 868                     |                          | 0%                   |
+| linux_standalone_mimalloc_huge_pages_4GB   | 896                     | -3.14%                   | -3.14%               |
+| linux_standalone_mimalloc_huge_pages_2GB   | 911                     | -1.74%                   | -4.94%               |
+| linux_standalone_mimalloc_large_pages      | 917                     | -0.67%                   | -5.65%               |
+| linux_steam_mimalloc                       | 941                     | -2.6%                    | -8.4%                |
+| windows_standalone                         | 941                     | -0.01%                   | -8.41%               |
+| linux_standalone_mimalloc                  | 946                     | -0.52%                   | -8.98%               |
+| windows_standalone_mimalloc_huge_pages_8GB | 967                     | -2.18%                   | -11.36%              |
+| windows_standalone_mimalloc                | 983                     | -1.64%                   | -13.18%              |
+| linux_steam                                | 1073                    | -9.16%                   | -23.55%              |
+| linux_standalone                           | 1080                    | -0.65%                   | -24.35%              |
 
 #### Electric / Heat / Fluid / Circuit Update Time
 ![](charts/summary_multi_run_electric_heat_fluid_circuit_only.png)
-| Save File                                | Electric/Heat/Fluid Circuit Update | % Decrease from Previous | % Decrease from Best |
-| ---------------------------------------- | ---------------------------------- | ------------------------ | -------------------- |
-| linux_steam                              | 640                                |                          | 0%                   |
-| linux_standalone                         | 649                                | -1.36%                   | -1.36%               |
-| linux_standalone_mimalloc_huge_pages_8GB | 652                                | -0.47%                   | -1.83%               |
-| linux_standalone_mimalloc_huge_pages_2GB | 657                                | -0.82%                   | -2.67%               |
-| linux_standalone_mimalloc_huge_pages_4GB | 657                                | -0.02%                   | -2.68%               |
-| linux_steam_mimalloc                     | 665                                | -1.19%                   | -3.91%               |
-| linux_standalone_mimalloc_large_pages    | 666                                | -0.19%                   | -4.11%               |
-| linux_standalone_mimalloc                | 671                                | -0.74%                   | -4.88%               |
-| windows_standalone                       | 672                                | -0.08%                   | -4.97%               |
+| Save File                                  | Electric/Heat/Fluid Circuit Update | % Decrease from Previous | % Decrease from Best |
+| ------------------------------------------ | ---------------------------------- | ------------------------ | -------------------- |
+| linux_steam                                | 640                                |                          | 0%                   |
+| linux_standalone                           | 649                                | -1.36%                   | -1.36%               |
+| windows_standalone_mimalloc                | 649                                | -0.02%                   | -1.37%               |
+| linux_standalone_mimalloc_huge_pages_8GB   | 652                                | -0.45%                   | -1.83%               |
+| linux_standalone_mimalloc_huge_pages_2GB   | 657                                | -0.82%                   | -2.67%               |
+| linux_standalone_mimalloc_huge_pages_4GB   | 657                                | -0.02%                   | -2.68%               |
+| linux_steam_mimalloc                       | 665                                | -1.19%                   | -3.91%               |
+| linux_standalone_mimalloc_large_pages      | 666                                | -0.19%                   | -4.11%               |
+| linux_standalone_mimalloc                  | 671                                | -0.74%                   | -4.88%               |
+| windows_standalone                         | 672                                | -0.08%                   | -4.97%               |
+| windows_standalone_mimalloc_huge_pages_8GB | 673                                | -0.2%                    | -5.18%               |
 
 #### Transport Line Update Time
 ![](charts/summary_multi_run_transport_lines_only.png)
-| Save File                                | Transport Lines Update | % Decrease from Previous | % Decrease from Best |
-| ---------------------------------------- | ---------------------- | ------------------------ | -------------------- |
-| linux_standalone_mimalloc_huge_pages_8GB | 400                    |                          | 0%                   |
-| linux_standalone_mimalloc_huge_pages_4GB | 423                    | -5.82%                   | -5.82%               |
-| linux_standalone_mimalloc_huge_pages_2GB | 434                    | -2.59%                   | -8.56%               |
-| linux_standalone_mimalloc_large_pages    | 435                    | -0.3%                    | -8.88%               |
-| linux_steam_mimalloc                     | 436                    | -0.19%                   | -9.09%               |
-| linux_standalone_mimalloc                | 438                    | -0.54%                   | -9.68%               |
-| linux_steam                              | 458                    | -4.53%                   | -14.66%              |
-| linux_standalone                         | 461                    | -0.67%                   | -15.43%              |
-| windows_standalone                       | 547                    | -18.53%                  | -36.82%              |
+| Save File                                  | Transport Lines Update | % Decrease from Previous | % Decrease from Best |
+| ------------------------------------------ | ---------------------- | ------------------------ | -------------------- |
+| linux_standalone_mimalloc_huge_pages_8GB   | 400                    |                          | 0%                   |
+| linux_standalone_mimalloc_huge_pages_4GB   | 423                    | -5.82%                   | -5.82%               |
+| linux_standalone_mimalloc_huge_pages_2GB   | 434                    | -2.59%                   | -8.56%               |
+| linux_standalone_mimalloc_large_pages      | 435                    | -0.3%                    | -8.88%               |
+| linux_steam_mimalloc                       | 436                    | -0.19%                   | -9.09%               |
+| linux_standalone_mimalloc                  | 438                    | -0.54%                   | -9.68%               |
+| linux_steam                                | 458                    | -4.53%                   | -14.66%              |
+| linux_standalone                           | 461                    | -0.67%                   | -15.43%              |
+| windows_standalone_mimalloc_huge_pages_8GB | 473                    | -2.62%                   | -18.45%              |
+| windows_standalone_mimalloc                | 493                    | -4.08%                   | -23.28%              |
+| windows_standalone                         | 547                    | -10.98%                  | -36.82%              |
 
 
 ### Huge Pages Memory Size
@@ -380,9 +439,19 @@ There are most likely diminishing returns for smaller save files which won't ref
 
 ![summary_steam_vs_standalone](charts/summary_steam_vs_standalone.png)
 
+| Save File        | Entity Update | Space Platforms | Control Behavior Update | Electric/Heat/Fluid Circuit Update | Transport Lines Update | Trains | Particle Update | Other | Whole Update | % Decrease from Previous | % Decrease from Best |
+| ---------------- | ------------- | --------------- | ----------------------- | ---------------------------------- | ---------------------- | ------ | --------------- | ----- | ------------ | ------------------------ | -------------------- |
+| linux_steam      | 9237          | 1549            | 1073                    | 640                                | 458                    | 142    | 101             | 1275  | 14474        |                          | 0%                   |
+| linux_standalone | 9285          | 1547            | 1080                    | 649                                | 461                    | 140    | 102             | 1285  | 14549        | -0.51%                   | -0.51%               |
+
 Both versions perform almost identically with no noticeable difference between the versions using `malloc`.
 
 ![summary_steam_vs_standalone_mimalloc](charts/summary_steam_vs_standalone_mimalloc.png)
+
+| Save File                 | Entity Update | Space Platforms | Control Behavior Update | Electric/Heat/Fluid Circuit Update | Transport Lines Update | Trains | Particle Update | Other | Whole Update | % Decrease from Previous | % Decrease from Best |
+| ------------------------- | ------------- | --------------- | ----------------------- | ---------------------------------- | ---------------------- | ------ | --------------- | ----- | ------------ | ------------------------ | -------------------- |
+| linux_standalone_mimalloc | 8746          | 1512            | 946                     | 671                                | 438                    | 114    | 97              | 1121  | 13646        |                          | 0%                   |
+| linux_steam_mimalloc      | 8919          | 1517            | 941                     | 665                                | 436                    | 116    | 98              | 1135  | 13828        | -1.33%                   | -1.33%               |
 
 Once `mimalloc` is applied however, the `standalone` version performs better.
 
@@ -394,12 +463,13 @@ Because they are beautiful. Ordered descending by performance.
 ![linux_standalone_mimalloc_huge_pages_4GB](charts/timeseries_linux_standalone_mimalloc_huge_pages_4GB.png)
 ![linux_standalone_mimalloc_huge_pages_2GB](charts/timeseries_linux_standalone_mimalloc_huge_pages_2GB.png)
 ![linux_standalone_mimalloc_large_pages](charts/timeseries_linux_standalone_mimalloc_large_pages.png)
-![linux_steam_mimalloc](charts/timeseries_linux_steam_mimalloc.png)
 ![linux_standalone_mimalloc](charts/timeseries_linux_standalone_mimalloc.png)
+![linux_steam_mimalloc](charts/timeseries_linux_steam_mimalloc.png)
 ![linux_steam](charts/timeseries_linux_steam.png)
 ![linux_standalone](charts/timeseries_linux_standalone.png)
+![windows_standalone_mimalloc_huge_pages_8GB](charts/timeseries_windows_standalone_mimalloc_huge_pages_8GB.png)
+![windows_standalone_mimalloc](charts/timeseries_windows_standalone_mimalloc.png)
 ![windows_standalone](charts/timeseries_windows_standalone.png)
-
 
 ## Credits
 
