@@ -6,5 +6,7 @@ linux_standalone_mimalloc_large_pages,917,-0.67%,-5.65%
 linux_steam_mimalloc,941,-2.6%,-8.4%
 windows_standalone,941,-0.01%,-8.41%
 linux_standalone_mimalloc,946,-0.52%,-8.98%
-linux_steam,1073,-13.37%,-23.55%
+windows_standalone_mimalloc_huge_pages_8GB,967,-2.18%,-11.36%
+windows_standalone_mimalloc,983,-1.64%,-13.18%
+linux_steam,1073,-9.16%,-23.55%
 linux_standalone,1080,-0.65%,-24.35%

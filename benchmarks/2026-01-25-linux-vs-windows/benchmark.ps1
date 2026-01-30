@@ -5,29 +5,29 @@ param (
     [int]$runs = 1
 )
 
-# windows (vanilla)
-belt --factorio-path "C:\Program Files\Factorio\bin\x64\factorio.exe" --verbose `
-benchmark maps `
---ticks $ticks `
---runs $runs `
---run-order sequential `
---template-path ../../../scripts/results.md.hbs `
---pattern "*dmb_main*" `
---output results_windows_vanilla `
---verbose-metrics "all"
+# # windows (vanilla)
+# belt --factorio-path "C:\Program Files\Factorio\bin\x64\factorio.exe" --verbose `
+# benchmark maps `
+# --ticks $ticks `
+# --runs $runs `
+# --run-order sequential `
+# --template-path ../../../scripts/results.md.hbs `
+# --pattern "*dmb_main*" `
+# --output results_windows_vanilla `
+# --verbose-metrics "all"
 
-# windows (injector) 
-belt --factorio-path "C:\Program Files\Factorio\bin\x64\Injector.exe" --verbose `
-benchmark maps `
---ticks $ticks `
---runs $runs `
---run-order sequential `
---template-path ../../../scripts/results.md.hbs `
---pattern "*dmb_main*" `
---output results_windows_injector `
---verbose-metrics "all"
+# # windows (injector) 
+# belt --factorio-path "C:\Program Files\Factorio\bin\x64\Injector.exe" --verbose `
+# benchmark maps `
+# --ticks $ticks `
+# --runs $runs `
+# --run-order sequential `
+# --template-path ../../../scripts/results.md.hbs `
+# --pattern "*dmb_main*" `
+# --output results_windows_injector `
+# --verbose-metrics "all"
 
-## windows (vanilla) multi run
+# ## windows (vanilla) multi run
 belt --factorio-path "C:\Program Files\Factorio\bin\x64\factorio.exe" --verbose `
 benchmark maps `
 --ticks 18000 `
@@ -36,4 +36,15 @@ benchmark maps `
 --template-path ../../../scripts/results.md.hbs `
 --pattern "*dmb_main*" `
 --output results_windows_vanilla_multi_run `
+--verbose-metrics "all"
+
+## windows (injector) multi run
+belt --factorio-path "C:\Program Files\Factorio\bin\x64\Injector.exe" --verbose `
+benchmark "C:\Users\abucz\abucnasty\factorio\benchmarks\2026-01-25-linux-vs-windows\maps" `
+--ticks 18000 `
+--runs 10 `
+--run-order sequential `
+--template-path ../../../scripts/results.md.hbs `
+--pattern "*dmb_main*" `
+--output results_windows_injector_mimalloc_multi_run `
 --verbose-metrics "all"

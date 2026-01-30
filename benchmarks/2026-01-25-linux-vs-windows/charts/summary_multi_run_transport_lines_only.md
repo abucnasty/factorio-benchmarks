@@ -8,4 +8,6 @@
 |linux_standalone_mimalloc|438|-0.54%|-9.68%|
 |linux_steam|458|-4.53%|-14.66%|
 |linux_standalone|461|-0.67%|-15.43%|
-|windows_standalone|547|-18.53%|-36.82%|
+|windows_standalone_mimalloc_huge_pages_8GB|473|-2.62%|-18.45%|
+|windows_standalone_mimalloc|493|-4.08%|-23.28%|
+|windows_standalone|547|-10.98%|-36.82%|
