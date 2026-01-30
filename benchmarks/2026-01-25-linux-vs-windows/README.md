@@ -209,7 +209,7 @@ env LD_PRELOAD="${MIMALLOC_SO}" \
 
 To get mimalloc injected and to enable huge pages the injector here was used: https://github.com/KeinNiemand/LargePageInjectorMods
 
-In order to get it work with the benchmarking tool [belt](https://github.com/florishafkenscheid/belt) a few changes needed to be made in order to get the injector to exit gracefully. These changes are documented in the following merge request but have impact to the performance:
+In order to get it work with the benchmarking tool [belt](https://github.com/florishafkenscheid/belt) a few changes needed to be made in order to get the injector to exit gracefully. These changes are documented in the following merge request but have no impact to the performance:
 https://github.com/KeinNiemand/LargePageInjectorMods/pull/15
 
 
