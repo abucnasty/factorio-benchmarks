@@ -36,15 +36,25 @@ Deprecated:
 | Automation Science (480/s) | 3       | [factoriobin](https://factoriobin.com/post/2szm4a) | [youtube](https://youtu.be/dEM4GHz7N8E) |
 
 ### Common Quality Science
-| Description                | Author                   | Link                                                  | Video                                                  |
-| -------------------------- | ------------------------ | ----------------------------------------------------- | ------------------------------------------------------ |
-| Automation Science (240/s) | Syvkal, phlap            | [factoriobin](https://factoriobin.com/post/d26fun/12) | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
-| Automation Science (480/s) | The End                  | [factoriobin](https://factoriobin.com/post/d26fun/16) | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
-| Automation Science (480/s) | Syvkal, phlap, abucnasty | [factoriobin](https://factoriobin.com/post/za8jg5)    | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
-| Logistics Science (480/s)  | The End                  | [factoriobin](https://factoriobin.com/post/bmvzi0)    | [youtube](https://www.youtube.com/watch?v=2ENY4AjjdqE) |
-| Logistics Science (240/s)  | Syvkal                   | [factoriobin](https://factoriobin.com/post/gyv13q)    | [youtube](https://www.youtube.com/watch?v=2ENY4AjjdqE) |
-| Chemical Science (240/s)   | abucnasty                | [factoriobin](https://factoriobin.com/post/57izdy)    | [youtube](https://youtu.be/ueV6b7eCEGY)                |
-| Chemical Science (480/s)   | Thaeln, abucnasty        | [factoriobin](https://factoriobin.com/post/q9xxwq)    | [youtube](https://youtu.be/ueV6b7eCEGY)                |
+
+**Latest**
+
+| Description                | Author                   | Version | Link                                               | Video                                                       |
+| -------------------------- | ------------------------ | ------- | -------------------------------------------------- | ----------------------------------------------------------- |
+| Automation Science (480/s) | Syvkal, phlap, abucnasty | 1.2     | [factoriobin](https://factoriobin.com/post/cgy91k) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Logistics Science (240/s)  | Syvkal, abucnasty        | 1.2     | [factoriobin](https://factoriobin.com/post/fn0xtt) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Chemical Science (240/s)   | abucnasty                | 1.2     | [factoriobin](https://factoriobin.com/post/mlnthd) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+
+**Previous**
+| Description                | Author                   | Version | Link                                                  | Video                                                  |
+| -------------------------- | ------------------------ | ------- | ----------------------------------------------------- | ------------------------------------------------------ |
+| Automation Science (240/s) | Syvkal, phlap            |         | [factoriobin](https://factoriobin.com/post/d26fun/12) | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
+| Automation Science (480/s) | The End                  |         | [factoriobin](https://factoriobin.com/post/d26fun/16) | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
+| Automation Science (480/s) | Syvkal, phlap, abucnasty | 1.0     | [factoriobin](https://factoriobin.com/post/za8jg5)    | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
+| Logistics Science (480/s)  | The End                  |         | [factoriobin](https://factoriobin.com/post/bmvzi0)    | [youtube](https://www.youtube.com/watch?v=2ENY4AjjdqE) |
+| Logistics Science (240/s)  | Syvkal                   | 1.0     | [factoriobin](https://factoriobin.com/post/gyv13q)    | [youtube](https://www.youtube.com/watch?v=2ENY4AjjdqE) |
+| Chemical Science (240/s)   | abucnasty                | 1.0     | [factoriobin](https://factoriobin.com/post/57izdy)    | [youtube](https://youtu.be/ueV6b7eCEGY)                |
+| Chemical Science (480/s)   | Thaeln, abucnasty        |         | [factoriobin](https://factoriobin.com/post/q9xxwq)    | [youtube](https://youtu.be/ueV6b7eCEGY)                |
 
 
 ### Generic Space Age
