@@ -7,7 +7,7 @@
 Does setting the stack size, or use of fast (blue) vs bulk (green) inserters for use in picking up asteroids, influence UPS in a measurable way?
 
 ## Conclusion
-The results all fall within a single percent of eachother, not following the expected order, from which I conclude it all falls within the margin of error.
+The results all fall within a single percent of each other, not following the expected order. This leads to the conclusion that the difference of results is within the margin of error and no meaningful difference can be observed.
 
 ## Scenario
 * Each save was tested for 60000 tick(s) and 16 run(s)
