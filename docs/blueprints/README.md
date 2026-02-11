@@ -58,10 +58,11 @@ Deprecated:
 
 
 ### Generic Space Age
-| Description                | Version | Link                                               | Video                                   |
-| -------------------------- | ------- | -------------------------------------------------- | --------------------------------------- |
-| Stack 16 Labs (deprecated) | 1       | [factoriobin](https://factoriobin.com/post/pfvnyt) | [youtube](https://youtu.be/BUbxS0Onr5E) |
-| Stack 16 Labs              | 1.13    | [factoriobin](https://factoriobin.com/post/1op71h) | [youtube](https://youtu.be/GhdUm3fSGlw) |
+| Description            | Version | Link                                               | Video                                   |
+| ---------------------- | ------- | -------------------------------------------------- | --------------------------------------- |
+| Stack 16 Labs          | 1.13    | [factoriobin](https://factoriobin.com/post/1op71h) | [youtube](https://youtu.be/GhdUm3fSGlw) |
+| Quantum Blade 6600/min | 1.1     | [factoriobin](https://factoriobin.com/post/tca2zr) | N/A                                     |
+
 
 ### Modules
 | Description            | Version | Link                                               | Video                                   |
