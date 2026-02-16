@@ -1,0 +1,4 @@
+|Save File|Entity Update|Space Platforms|Control Behavior Update|Electric/Heat/Fluid Circuit Update|Transport Lines Update|Trains|Particle Update|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|linux_9800X3D|7221|1272|778|506|317|101|78|864|11136||0%|
+|linux_7800X3D|8082|1470|868|652|400|104|86|975|12637|-13.48%|-13.48%|
