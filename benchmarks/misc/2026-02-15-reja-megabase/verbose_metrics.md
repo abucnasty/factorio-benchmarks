@@ -1,0 +1,3 @@
+|Save File|Entity Update|Space Platforms|Control Behavior Update|Electric/Heat/Fluid Circuit Update|Transport Lines Update|Particle Update|Trains|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|reja|6983|688|596|426|315|134|103|NaN|10108||0%|
