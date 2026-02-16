@@ -1,0 +1,5 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+dmb_abuc_islands_bm,0,1002565.91,9.283,6.774,111.236,107.72359096071798,0,108000,2.0.72,windows-x86_64
+dmb_abuc_islands_bm,1,975056.444,9.028,6.786,113.813,110.76281856766028,0,108000,2.0.72,windows-x86_64
+dmb_clux_islands_bm,0,889439.457,8.236,6.424,156.65,121.42479080506993,11.508896722376141,108000,2.0.72,windows-x86_64
+dmb_clux_islands_bm,1,883746.474,8.183,6.377,89.077,122.20699394835718,11.508896722376141,108000,2.0.72,windows-x86_64
