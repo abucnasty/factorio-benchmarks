@@ -18,23 +18,24 @@
 ### Uncommon Science
 ![alt text](../icons/quality-uncommon.png)
 
-| Description                | Version        | Link                                               | Video                                           |
-| -------------------------- | -------------- | -------------------------------------------------- | ----------------------------------------------- |
-| Military Science (240/s)   | 3              | [factoriobin](https://factoriobin.com/post/90pg6z) | [youtube](https://youtu.be/vD_zzN8VT68?&t=2745) |
-| Automation Science (480/s) | 4              | [factoriobin](https://factoriobin.com/post/s0xzia) | [youtube](https://youtu.be/yVhEDCcWE7s)         |
-| Logistics Science (480/s)  | 2              | [factoriobin](https://factoriobin.com/post/sujyge) | [youtube](https://youtu.be/Qnk71RHKV0s)         |
-| Ore Voiding Miners         | 2.1            | [factoriobin](https://factoriobin.com/post/ws0wfg) | [youtube](https://youtu.be/_F9jxoc7iMc)         |
-| Chemical Science (240/s)   | 3              | [factoriobin](https://factoriobin.com/post/vkepfz) | [youtube](https://youtu.be/t5vnuGI59MY)         |
-| Production Science (240/s) | 2.5            | [factoriobin](https://factoriobin.com/post/3noug4) | [youtube](https://youtu.be/hYOpCNZCWkY)         |
+| Description                | Version | Link                                               | Video                                           |
+| -------------------------- | ------- | -------------------------------------------------- | ----------------------------------------------- |
+| Military Science (240/s)   | 3       | [factoriobin](https://factoriobin.com/post/90pg6z) | [youtube](https://youtu.be/vD_zzN8VT68?&t=2745) |
+| Automation Science (480/s) | 4       | [factoriobin](https://factoriobin.com/post/s0xzia) | [youtube](https://youtu.be/yVhEDCcWE7s)         |
+| Logistics Science (480/s)  | 2       | [factoriobin](https://factoriobin.com/post/sujyge) | [youtube](https://youtu.be/Qnk71RHKV0s)         |
+| Ore Voiding Miners         | 2.1     | [factoriobin](https://factoriobin.com/post/ws0wfg) | [youtube](https://youtu.be/_F9jxoc7iMc)         |
+| Chemical Science (240/s)   | 3       | [factoriobin](https://factoriobin.com/post/vkepfz) | [youtube](https://youtu.be/t5vnuGI59MY)         |
+| Production Science (240/s) | 2.5     | [factoriobin](https://factoriobin.com/post/3noug4) | [youtube](https://youtu.be/hYOpCNZCWkY)         |
+| Cryogenic Science (240/s)  | 3.0     | [factoriobin](https://factoriobin.com/post/3u0eht) |                                                 |
 
 Deprecated:
 
-| Description                | Version | Link                                               | Video                                   |
-| -------------------------- | ------- | -------------------------------------------------- | --------------------------------------- |
-| Automation Science (480/s) | 3       | [factoriobin](https://factoriobin.com/post/2szm4a) | [youtube](https://youtu.be/dEM4GHz7N8E) |
-| Military Science (240/s)   | 2       | [factoriobin](https://factoriobin.com/post/z6tbrf) | [youtube](https://youtu.be/uKT3MZw8agg) |
-| Ore Voiding Miners         | 2 (deprecated) | [factoriobin](https://factoriobin.com/post/go8gwi) | [youtube](https://youtu.be/SccsA0Dr54k)         |
-| Chemical Science (240/s)   | 2 (deprecated) | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4)         |
+| Description                | Version        | Link                                               | Video                                   |
+| -------------------------- | -------------- | -------------------------------------------------- | --------------------------------------- |
+| Automation Science (480/s) | 3              | [factoriobin](https://factoriobin.com/post/2szm4a) | [youtube](https://youtu.be/dEM4GHz7N8E) |
+| Military Science (240/s)   | 2              | [factoriobin](https://factoriobin.com/post/z6tbrf) | [youtube](https://youtu.be/uKT3MZw8agg) |
+| Ore Voiding Miners         | 2 (deprecated) | [factoriobin](https://factoriobin.com/post/go8gwi) | [youtube](https://youtu.be/SccsA0Dr54k) |
+| Chemical Science (240/s)   | 2 (deprecated) | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4) |
 
 ### Common Quality Science
 
