@@ -6,6 +6,7 @@
   - [Megabasing](#megabasing)
     - [Uncommon Science](#uncommon-science)
     - [Common Quality Science](#common-quality-science)
+    - [Legendary Quality Science](#legendary-quality-science)
     - [Generic Space Age](#generic-space-age)
     - [Modules](#modules)
   - [General](#general)
@@ -41,11 +42,23 @@ Deprecated:
 
 **Latest**
 
-| Description                | Author                   | Version | Link                                               | Video                                                       |
-| -------------------------- | ------------------------ | ------- | -------------------------------------------------- | ----------------------------------------------------------- |
-| Automation Science (480/s) | Syvkal, phlap, abucnasty | 1.2     | [factoriobin](https://factoriobin.com/post/cgy91k) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
-| Logistics Science (240/s)  | Syvkal, abucnasty        | 1.2     | [factoriobin](https://factoriobin.com/post/fn0xtt) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
-| Chemical Science (240/s)   | abucnasty                | 1.2     | [factoriobin](https://factoriobin.com/post/mlnthd) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Description                         | Author                   | Version | Link                                               | Video                                                       |
+| ----------------------------------- | ------------------------ | ------- | -------------------------------------------------- | ----------------------------------------------------------- |
+| Automation Science (480/s)          | Syvkal, phlap, abucnasty | 1.2     | [factoriobin](https://factoriobin.com/post/cgy91k) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Logistics Science (240/s)           | Syvkal, abucnasty        | 1.2     | [factoriobin](https://factoriobin.com/post/fn0xtt) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Chemical Science (240/s)            | abucnasty                | 1.2     | [factoriobin](https://factoriobin.com/post/mlnthd) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| The Iron Maden (20k/min promethium) | abucnasty                | MK3     | [factoriobin](https://factoriobin.com/post/7lnqsx) |                                                             |
+
+### Legendary Quality Science
+
+**Latest**
+
+| Description                         | Author                   | Version | Link                                               | Video                                                       |
+| ----------------------------------- | ------------------------ | ------- | -------------------------------------------------- | ----------------------------------------------------------- |
+| Forester (Space Science Q5 640 SPS) | abucnasty                | MK3     | [factoriobin](https://factoriobin.com/post/dgs4hx) |                                                             |
+
+
+
 
 **Previous**
 | Description                | Author                   | Version | Link                                                  | Video                                                  |
