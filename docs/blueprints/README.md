@@ -53,9 +53,9 @@ Deprecated:
 
 **Latest**
 
-| Description                         | Author                   | Version | Link                                               | Video                                                       |
-| ----------------------------------- | ------------------------ | ------- | -------------------------------------------------- | ----------------------------------------------------------- |
-| Forester (Space Science Q5 640 SPS) | abucnasty                | MK3     | [factoriobin](https://factoriobin.com/post/dgs4hx) |                                                             |
+| Description                         | Author    | Version | Link                                               | Video |
+| ----------------------------------- | --------- | ------- | -------------------------------------------------- | ----- |
+| Forester (Space Science Q5 640 SPS) | abucnasty | MK3     | [factoriobin](https://factoriobin.com/post/dgs4hx) |       |
 
 
 
@@ -77,6 +77,7 @@ Deprecated:
 | ---------------------- | ------- | -------------------------------------------------- | --------------------------------------- |
 | Stack 16 Labs          | 1.13    | [factoriobin](https://factoriobin.com/post/1op71h) | [youtube](https://youtu.be/GhdUm3fSGlw) |
 | Quantum Blade 6600/min | 1.1     | [factoriobin](https://factoriobin.com/post/tca2zr) | N/A                                     |
+| Q5 Space Casino        | MK3     | [factoriobin](https://factoriobin.com/post/x54s7m) | N/A                                     |
 
 
 ### Modules
