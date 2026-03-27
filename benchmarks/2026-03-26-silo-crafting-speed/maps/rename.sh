@@ -1,0 +1,11 @@
+#!/bin/bash
+mv silo_q5_speed_beacon_02.zip silo_q5_beacon_02.zip
+mv silo_q5_speed_beacon_02_empty.zip silo_q5_beacon_02_empty.zip
+mv silo_q5_speed_beacon_04.zip silo_q5_beacon_04.zip
+mv silo_q5_speed_beacon_04_empty.zip silo_q5_beacon_04_empty.zip
+mv silo_q5_speed_beacon_06.zip silo_q5_beacon_06.zip
+mv silo_q5_speed_beacon_06_empty.zip silo_q5_beacon_06_empty.zip
+mv silo_q5_speed_beacon_08.zip silo_q5_beacon_08.zip
+mv silo_q5_speed_beacon_08_empty.zip silo_q5_beacon_08_empty.zip
+mv silo_q5_speed_beacon_10.zip silo_q5_beacon_10.zip
+mv silo_q5_speed_beacon_10_empty.zip silo_q5_beacon_10_empty.zip

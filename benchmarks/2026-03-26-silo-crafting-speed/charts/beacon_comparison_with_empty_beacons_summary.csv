@@ -1,0 +1,11 @@
+Save File,Entity Update,Electric/Heat/Fluid Circuit Update,Control Behavior Update,Transport Lines Update,Other,Whole Update,% Decrease from Previous,% Decrease from Best
+02,346,24,20,19,67,475,,0%
+02_empty,346,24,20,19,67,477,-0.22%,-0.22%
+04,346,27,20,19,67,478,-0.38%,-0.6%
+06,345,29,20,19,67,481,-0.53%,-1.14%
+04_empty,350,26,20,19,67,482,-0.22%,-1.35%
+06_empty,350,29,20,19,67,485,-0.69%,-2.05%
+08,349,32,20,19,67,487,-0.34%,-2.4%
+10,349,35,20,19,67,490,-0.61%,-3.02%
+08_empty,353,32,20,20,67,492,-0.35%,-3.38%
+10_empty,353,35,20,19,67,494,-0.53%,-3.93%
