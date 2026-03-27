@@ -6,6 +6,8 @@
 
 **Date:** 2026-03-26
 
+Coauthored with Konage
+
 ## The Question
 Does crafting speed have an impact to rocket silos. Is there any benefit to overbeaconing rocket silos.
 
