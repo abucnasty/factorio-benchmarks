@@ -2,7 +2,9 @@
 
 **Platform:** linux-x86_64
 
-**Factorio Version:** 2.0.73
+**Factorio Version:** 2.0.76
+
+**Date:** 2026-03-23
 
 Special thanks to Yuu and Clux for the help refining Walt
 
