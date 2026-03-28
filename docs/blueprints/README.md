@@ -6,7 +6,7 @@
   - [Megabasing](#megabasing)
     - [Uncommon Science](#uncommon-science)
     - [Common Quality Science](#common-quality-science)
-    - [Legendary Quality Science](#legendary-quality-science)
+    - [Space Science](#space-science)
     - [Generic Space Age](#generic-space-age)
     - [Modules](#modules)
   - [General](#general)
@@ -49,15 +49,14 @@ Deprecated:
 | Chemical Science (240/s)            | abucnasty                | 1.2     | [factoriobin](https://factoriobin.com/post/mlnthd) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
 | The Iron Maden (20k/min promethium) | abucnasty                | MK3     | [factoriobin](https://factoriobin.com/post/7lnqsx) |                                                             |
 
-### Legendary Quality Science
+### Space Science
 
 **Latest**
 
-| Description                         | Author    | Version | Link                                               | Video |
-| ----------------------------------- | --------- | ------- | -------------------------------------------------- | ----- |
-| Forester (Space Science Q5 640 SPS) | abucnasty | MK3     | [factoriobin](https://factoriobin.com/post/dgs4hx) |       |
-
-
+| Description     | Author               | Version | Link                                   | Video |
+| --------------- | -------------------- | ------- | -------------------------------------- | ----- |
+| Walt MK4 (Q5)   | abucnasty, yuu, clux | MK4     | https://factoriobin.com/post/o2k88b/24 |       |
+| The Fring MK2.2 | abucnasty            | MK2.2   | https://factoriobin.com/post/o2k88b/12 |       |
 
 
 **Previous**
