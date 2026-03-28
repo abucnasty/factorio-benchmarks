@@ -1,0 +1,6 @@
+save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
+space_science_lab_sim_Q1_7680SPS_Heisenberg_MK2,0,86615.964,0.267,0.136,10.826,3740.6499337697146,0,324000,2.0.76,linux-x86_64
+space_science_lab_sim_Q4_1920SPS_Skylar,0,72594.357,0.224,0.141,3.735,4463.156826363239,19.315009567479187,324000,2.0.76,linux-x86_64
+space_science_lab_sim_Q2_3840SPS_Saul,0,70244.393,0.217,0.131,2.87,4612.4677879983965,23.306587616181716,324000,2.0.76,linux-x86_64
+space_science_lab_sim_Q5_1280SPS_Walt_MK2.7,0,67916.754,0.21,0.12,3.951,4770.5460128439,27.53254373729345,324000,2.0.76,linux-x86_64
+space_science_lab_sim_Q3_2560SPS_Jesse_MK2,0,63244.208,0.195,0.11,4.205,5122.998773263158,36.954776949693176,324000,2.0.76,linux-x86_64
