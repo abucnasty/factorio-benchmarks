@@ -1,0 +1,7 @@
+|Save File|Entity Update|Electric/Heat/Fluid Circuit Update|Control Behavior Update|Transport Lines Update|Space Platforms|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|---|
+|Q3_2560SPS_Jesse_MK2|84|19|19|17|11|39|189||0%|
+|Q5_1280SPS_Walt_MK4|87|19|20|19|12|40|197|-4.18%|-4.18%|
+|Q2_3840SPS_Saul|109|19|18|16|13|42|216|-9.78%|-14.37%|
+|Q4_1920SPS_Skylar|104|19|20|17|14|42|216|-0.18%|-14.57%|
+|Q1_7680SPS_Heisenberg_MK2|139|19|20|16|8|63|265|-22.48%|-40.33%|
