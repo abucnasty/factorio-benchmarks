@@ -123,7 +123,7 @@ echo 10 > /sys/kernel/mm/hugepages/hugepages-1048576kB/nr_hugepages
 
 Test that the pages are allocated:
 ```sh
-grep -R . /sys/kernel/mm/hugepages/hugepages-/nr_hugepages && grep -R . /sys/kernel/mm/hugepages/hugepages-/free_hugepages
+grep -R . /sys/kernel/mm/hugepages/hugepages-*/nr_hugepages && grep -R . /sys/kernel/mm/hugepages/hugepages-*/free_hugepages
 ```
 
 You should see a print out like the following:
