@@ -1,4 +1,4 @@
-# Factorio Benchmark Results
+# Production Science Q1 vs Q2
 
 **Platform:** linux-x86_64
 
