@@ -1,4 +1,4 @@
 |Save File|Entity Update|Electric/Heat/Fluid Circuit Update|Control Behavior Update|Transport Lines Update|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
 |---|---|---|---|---|---|---|---|---|
-|q1_mining_prod|1803|346|316|122|550|3137||0%|
-|q2_mining_prod|2069|348|337|139|570|3463|-10.36%|-10.36%|
+|q1_idle|945|319|257|75|483|2078||0%|
+|q2_idle|993|323|261|75|533|2185|-5.13%|-5.13%|
