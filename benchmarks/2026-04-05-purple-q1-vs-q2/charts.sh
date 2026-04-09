@@ -4,7 +4,45 @@ belt-charts boxplot "results/dmb_*.csv" \
   --remove-first-ticks 30 \
   -o "charts/run_distribution.png" \
   --max-update 6 \
-  --min-update 0
+  --min-update 0 \
+  --trim-prefix "dmb_purple_"
+
+belt-charts summary "results/dmb_*idle*.csv" \
+  -w 1200 \
+  -h 800 \
+  --remove-first-ticks 30 \
+  -o "charts/summary_idle.png" \
+  --aggregate-strategy average \
+  --metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,entityUpdate" \
+  --summary-table true \
+  --summary-table-file true \
+  --title-override "Idle Save Files" \
+  --trim-prefix "dmb_purple_"
+
+
+belt-charts summary "results/dmb_*q1*.csv" \
+  -w 1200 \
+  -h 800 \
+  --remove-first-ticks 30 \
+  -o "charts/summary_q1.png" \
+  --aggregate-strategy average \
+  --metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,entityUpdate" \
+  --summary-table true \
+  --summary-table-file true \
+  --title-override "Q1 Save Files" \
+  --trim-prefix "dmb_purple_"
+
+belt-charts summary "results/dmb_*q2*.csv" \
+  -w 1200 \
+  -h 800 \
+  --remove-first-ticks 30 \
+  -o "charts/summary_q2.png" \
+  --aggregate-strategy average \
+  --metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,entityUpdate" \
+  --summary-table true \
+  --summary-table-file true \
+  --title-override "Q2 Save Files" \
+  --trim-prefix "dmb_purple_"
 
 belt-charts summary "results/dmb_*mining_prod*.csv" \
   -w 1200 \
