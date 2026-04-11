@@ -1,0 +1,4 @@
+|Save File|Entity Update|Control Behavior Update|Electric/Heat/Fluid Circuit Update|Transport Lines Update|Trains|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|---|
+|11_thaeln|528|43|40|30|0|11|653||0%|
+|27_theflyingcurryfish154|505|65|45|27|0|11|654|-0.16%|-0.16%|

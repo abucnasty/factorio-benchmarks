@@ -1,0 +1,7 @@
+|Save File|Entity Update|Control Behavior Update|Electric/Heat/Fluid Circuit Update|Transport Lines Update|Trains|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|---|
+|35_composite_04|485|43|36|27|0|10|602||0%|
+|36_composite_05|518|53|41|25|0|11|647|-7.6%|-7.6%|
+|34_composite_03|572|40|36|40|0|10|698|-7.86%|-16.05%|
+|33_composite_02|616|41|37|45|0|10|749|-7.31%|-24.54%|
+|32_composite_01|614|44|37|45|0|10|750|-0.06%|-24.62%|

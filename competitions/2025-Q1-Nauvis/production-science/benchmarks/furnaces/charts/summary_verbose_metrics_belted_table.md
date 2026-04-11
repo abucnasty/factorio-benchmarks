@@ -1,0 +1,21 @@
+|Save File|Entity Update|Transport Lines Update|Control Behavior Update|Electric/Heat/Fluid Circuit Update|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|
+|80_belted_warbaque_11b_mirrorable_steel_unclocked_4_slot_buffer|486|36|28|28|13|591||0%|
+|80_belted_warbaque_11b|485|35|30|28|13|591|-0.04%|-0.04%|
+|80_belted_warbaque_11b_mirrorable_steel_unclocked|490|36|28|28|13|596|-0.76%|-0.81%|
+|80_belted_warbaque_11b_mirrorable|491|36|30|28|13|598|-0.33%|-1.15%|
+|80_belted_warbaque_11b_mirrorable_clocked_stone|489|34|36|28|13|600|-0.4%|-1.55%|
+|80_belted_23_warbaque|497|34|40|29|13|613|-2.08%|-3.66%|
+|160_belted_21_em|506|37|38|26|13|620|-1.13%|-4.83%|
+|40_belted_abuc_v1.0|506|42|33|30|13|624|-0.63%|-5.5%|
+|160_belted_abuc_3_furnace_v1.0|517|34|35|26|13|625|-0.17%|-5.68%|
+|40_belted_abuc_v1.2|501|42|40|30|13|626|-0.24%|-5.94%|
+|80_belted_abuc_v1.2|508|41|37|28|13|627|-0.1%|-6.05%|
+|80_belted_24_syvkal|511|43|31|29|13|627|-0.08%|-6.13%|
+|160_belted_abuc_3_furnace_v1.2|521|34|37|26|13|631|-0.55%|-6.71%|
+|40_belted_abuc_v1.1|509|41|37|31|13|631|-0.04%|-6.76%|
+|80_belted_abuc_v1.1|516|42|34|28|13|634|-0.46%|-7.25%|
+|160_belted_abuc_3_furnace_v1.3|531|36|30|26|13|636|-0.33%|-7.61%|
+|160_belted_abuc_3_furnace_v1.4|534|36|28|26|13|637|-0.17%|-7.79%|
+|40_belted_08_derantrix|530|37|35|32|13|647|-1.52%|-9.43%|
+|40_belted_17_akaravortex|507|60|44|37|13|661|-2.27%|-11.91%|
