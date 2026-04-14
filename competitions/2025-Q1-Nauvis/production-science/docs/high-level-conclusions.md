@@ -12,7 +12,7 @@ This document summarizes the key design decisions for UPS-optimized production s
   - [What inserters should be clocked for furnace production?](#what-inserters-should-be-clocked-for-furnace-production)
 - [Stone Patch Size](#stone-patch-size)
   - [Does patch size matter for on-patch designs?](#does-patch-size-matter-for-on-patch-designs)
-  - [10_thaeln vs 11_thaeln: Why the smaller patch design won](#10_thaeln-vs-11_thaeln-why-the-smaller-patch-design-won)
+  - [10\_thaeln vs 11\_thaeln: Why the smaller patch design won](#10_thaeln-vs-11_thaeln-why-the-smaller-patch-design-won)
 - [Advanced Circuits for Electric Furnaces](#advanced-circuits-for-electric-furnaces)
   - [Should you direct insert red circuits into electric furnace assemblers?](#should-you-direct-insert-red-circuits-into-electric-furnace-assemblers)
   - [Does the red circuit block layout matter?](#does-the-red-circuit-block-layout-matter)
@@ -110,9 +110,7 @@ Interestingly, in the composite designs benchmark, **11_thaeln (200% patches) na
 
 Both designs by Thaeln use the same core approach—on-patch production with DI stone. The 200% design requires two patches (21-brush + 23-brush circles) while the 600% design fits on a single 34-brush patch.
 
-**The takeaway:** Patch size choice should be driven by **map generation availability and placement flexibility**, not performance. Choose:
-- **600%** for simpler placement (single patch)
-- **200%** for more patch options and flexibility
+This may be an artifact from running the tests for round_02 independently from the composite comparisons. However it does show the diminishing returns that patches sizes beyond 200% bring to the table.
 
 ---
 
