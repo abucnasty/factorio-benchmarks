@@ -10,18 +10,22 @@ This document summarizes the key design decisions for UPS-optimized production s
 - [Electric Furnace Production](#electric-furnace-production)
   - [Should you produce furnaces on-patch or belt stone bricks?](#should-you-produce-furnaces-on-patch-or-belt-stone-bricks)
   - [What inserters should be clocked for furnace production?](#what-inserters-should-be-clocked-for-furnace-production)
+- [Stone Patch Size](#stone-patch-size)
+  - [Does patch size matter for on-patch designs?](#does-patch-size-matter-for-on-patch-designs)
+  - [10_thaeln vs 11_thaeln: Why the smaller patch design won](#10_thaeln-vs-11_thaeln-why-the-smaller-patch-design-won)
 - [Advanced Circuits for Electric Furnaces](#advanced-circuits-for-electric-furnaces)
   - [Should you direct insert red circuits into electric furnace assemblers?](#should-you-direct-insert-red-circuits-into-electric-furnace-assemblers)
   - [Does the red circuit block layout matter?](#does-the-red-circuit-block-layout-matter)
 - [Steel Handling](#steel-handling)
   - [Should you direct insert steel or belt it?](#should-you-direct-insert-steel-or-belt-it)
-  - [Should you clock steel inserters from foundries?](#should-you-clock-steel-inserters-from-foundries)
+  - [Should you clock steel inserters from foundries for electric furnace production?](#should-you-clock-steel-inserters-from-foundries-for-electric-furnace-production)
 - [Productivity Module Production](#productivity-module-production)
   - [Should you use inserter chains or direct insertion?](#should-you-use-inserter-chains-or-direct-insertion)
   - [Should you use cars as buffers?](#should-you-use-cars-as-buffers)
 - [Rail Production](#rail-production)
   - [Should you direct insert stone into rail assemblers?](#should-you-direct-insert-stone-into-rail-assemblers)
 - [Inserter Clocking Guidelines](#inserter-clocking-guidelines)
+  - [The 80% Uptime Rule](#the-80-uptime-rule)
   - [When to clock inserters](#when-to-clock-inserters)
   - [Clocking principle](#clocking-principle)
 - [Belt Design Principles](#belt-design-principles)
@@ -32,14 +36,14 @@ This document summarizes the key design decisions for UPS-optimized production s
 
 ### Should you direct insert stone from mining drills or belt it?
 
-**Direct insert mining drills dramatically outperform belted stone.**
+**Direct insert mining drills outperform belted stone.**
 
-Testing composite designs showed that using electric mining drills to directly insert stone into rail assemblers (composite_04) achieved **16% better performance** than belting stone to the same assemblers (composite_03).
+Testing composite designs showed that using electric mining drills to directly insert stone into rail assemblers (composite_04) achieved **9% better performance** than belting stone to the same assemblers (composite_03).
 
-| Design | Stone Method | UPS |
-|--------|--------------|-----|
-| composite_04 | Direct insert mining | 1660 |
-| composite_03 | Belted stone | 1431 |
+| Design | Stone Method | Whole Update (µs) |
+|--------|--------------|-------------------|
+| composite_04 | Direct insert mining | 633 |
+| composite_03 | Belted stone | 698 |
 
 ![Direct insert mining comparison](screenshots/35_composite_04_purple_block_comparison.png)
 
@@ -55,18 +59,18 @@ The key insight is that direct insertion eliminates the intermediate belt transf
 
 ### Should you produce furnaces on-patch or belt stone bricks?
 
-**On-patch furnace production is dramatically better (30-47% improvement).**
+**On-patch furnace production is better (~7% improvement).**
 
 Moving furnace production onto the stone patch eliminates belt transportation overhead entirely.
 
-| Approach | Best UPS | Improvement |
-|----------|----------|-------------|
-| On-patch 200%+ | 2224 | +47% |
-| Belted bricks | 1508 | baseline |
+| Composite Design | Furnace Method | Whole Update (µs) |
+|------------------|----------------|-------------------|
+| composite_03 | On-patch (200%) | 698 |
+| composite_01/02 | Belted bricks (100%) | ~750 |
 
 ![On-patch furnace production](screenshots/35_composite_04.png)
 
-The best on-patch design (Thaeln's 80/s block) achieved 2224 UPS compared to 1508 UPS for the best belted brick design.
+Composite_03 (on-patch furnaces) achieved 698µs compared to ~750µs for composite_01/02 (belted bricks)—a 7% improvement with everything else held constant.
 
 ### What inserters should be clocked for furnace production?
 
@@ -79,20 +83,53 @@ The best on-patch design (Thaeln's 80/s block) achieved 2224 UPS compared to 150
 
 ---
 
+## Stone Patch Size
+
+### Does patch size matter for on-patch designs?
+
+**Patch size has minimal impact on performance (~1-3%).**
+
+Comparing the top on-patch designs across patch size categories:
+
+| Design | Patch Size | Whole Update (µs) | % from Best |
+|--------|------------|-------------------|-------------|
+| 10_thaeln | 600% (single 34-brush patch) | 622 | baseline |
+| 11_thaeln | 200% (two patches: 21+23 brush) | 630 | -1.3% |
+| 19_akaravortex | 100% (two small patches) | 640 | -2.9% |
+
+The performance difference between 600% and 100% patch sizes is only ~3%. This is negligible compared to the ~20%+ difference between on-patch and off-patch designs.
+
+### 10_thaeln vs 11_thaeln: Why the smaller patch design won
+
+Interestingly, in the composite designs benchmark, **11_thaeln (200% patches) narrowly beat 10_thaeln (600% patch)** with 626µs vs 628µs.
+
+| Design | Patch Size | Whole Update (µs) |
+|--------|------------|-------------------|
+| 11_thaeln | 200% | 626 |
+| 10_thaeln | 600% | 628 |
+
+Both designs by Thaeln use the same core approach—on-patch production with DI stone. The 200% design requires two patches (21-brush + 23-brush circles) while the 600% design fits on a single 34-brush patch.
+
+**The takeaway:** Patch size choice should be driven by **map generation availability and placement flexibility**, not performance. Choose:
+- **600%** for simpler placement (single patch)
+- **200%** for more patch options and flexibility
+
+---
+
 ## Advanced Circuits for Electric Furnaces
 
 ### Should you direct insert red circuits into electric furnace assemblers?
 
 **No. Belting red circuits is superior.**
 
-This was a surprising finding. Direct insertion of red circuits for electric furnace production performed **7% worse** than belting them.
+Direct insertion of red circuits for electric furnace production performed **2% worse** than belting them.
 
-| Design | Red Circuit Method | UPS |
-|--------|-------------------|-----|
-| composite_04 | Belted | 1660 |
-| composite_05 | Direct insert | 1543 |
+| Design | Red Circuit Method | Whole Update (µs) |
+|--------|-------------------|-------------------|
+| composite_04 | Belted | 633 |
+| composite_05 | Direct insert | 647 |
 
-The increased complexity and entity count from direct insertion outweighs the belt elimination benefits for this specific use case.
+The increased complexity and control behavior overhead from direct insertion outweighs the belt elimination benefits for this specific use case. Not worth the added complexity.
 
 ### Does the red circuit block layout matter?
 
@@ -106,14 +143,16 @@ The increased complexity and entity count from direct insertion outweighs the be
 
 **Direct insert steel from foundries** performs better than belting. The baseline design which belted steel performed worst in the competition.
 
-### Should you clock steel inserters from foundries?
+### Should you clock steel inserters from foundries for electric furnace production?
 
-**No.** Testing showed that unclocked steel inserters with a 4-slot buffer performed slightly better than clocked versions.
+**No.** Testing showed that unclocked steel inserters with a 4-slot buffer performed slightly better than clocked versions when inserting steel into electric furnace assemblers.
 
 | Variant | Whole Update (µs) |
 |---------|------------------|
 | Unclocked + 4 slot buffer | 591 |
 | Clocked steel | 598 |
+
+> **Note:** This data is specifically for **steel → electric furnace assemblers** where inserter uptime exceeds 80%. For steel → rail assemblers (~66% uptime), the same principle likely applies but was not explicitly tested.
 
 ---
 
@@ -132,7 +171,7 @@ Designs using chest buffers for plastic and copper wire performed measurably wor
 
 ### Should you use cars as buffers?
 
-If you must use cars in a chest chain, **clock the inputs to the car** rather than relying on wakelists. Unclocked cars constantly check if they're moving every tick.
+If you must use cars in a chest chain, **clock the inputs to the car** rather than relying on wakelists. Unclocked inserters inputting into a car seem to constantly check if they're moving every tick.
 
 | Car Method | Whole Update (µs) |
 |------------|------------------|
@@ -146,15 +185,31 @@ If you must use cars in a chest chain, **clock the inputs to the car** rather th
 
 ### Should you direct insert stone into rail assemblers?
 
-**Yes, absolutely.** The best performing design (composite_04) uses direct insert mining drills for stone in the production science blocks.
+**Yes.** Using direct insert mining drills for stone in production science blocks (composite_04) achieved 9% better performance than belting stone (composite_03).
 
-This single change—swapping a belt-fed stack inserter with a direct insert mining drill—was the key differentiator that made composite_04 the fastest design at **1660 UPS**, surpassing all round 2 competition entries.
+This change—swapping a belt-fed stack inserter with a direct insert mining drill—is a meaningful optimization, though the existing 11_thaeln design still narrowly outperforms composite_04 overall.
 
 ![Rail block comparison](screenshots/35_composite_04_purple_block_comparison.png)
 
 ---
 
 ## Inserter Clocking Guidelines
+
+### The 80% Uptime Rule
+
+**If an inserter is running more than ~80% of the time, don't bother clocking it.**
+
+This is a general principle that applies across any design, not just production science. Examples:
+
+| Inserter | Approximate Uptime | Clock? |
+|----------|-------------------|--------|
+| Steel → Electric Furnace assembler | >83% (5/6) | **No** |
+| Steel → Rail assembler | ~66% (2/3) | **Probably No** |
+| Stone from belt | High | **No** |
+| Brick output from furnaces | Varies | **Yes** |
+| Red circuit input | Varies | **Yes** |
+
+The overhead of circuit network signals and control behavior updates outweighs the wake list reduction when inserters are already running most of the time anyway.
 
 ### When to clock inserters
 
@@ -164,16 +219,18 @@ This single change—swapping a belt-fed stack inserter with a direct insert min
 | Inputs to high craft rate buildings | **Yes** | Reduces wake events |
 | Mining drills (DI into furnaces) | **Yes** | Reduces intermediate transfer |
 | Brick output from furnaces | **Yes** | Worth the overhead |
-| Red circuit input | **Yes** | Worth the overhead |
-| Stone input from belt | **No** | Overhead exceeds benefit |
-| Steel from foundry | **No** | Overhead exceeds benefit |
+| Red circuit input to furnace assemblers | **Yes** | Worth the overhead |
+| Inserters with >80% uptime | **No** | Already running constantly |
+| Stone input from belt | **No** | High uptime, overhead exceeds benefit |
+| Steel from foundry → furnaces | **No** | >80% uptime |
 | Green circuit inputs | **No** | Craft rate too low |
 
 ### Clocking principle
 
 The benefit of clocking comes from reducing **wake list events**. Buildings with high craft rates (like advanced circuits at 45+/s or prod modules at 15/s) trigger many wake events per second. Clocking the inserters feeding these buildings reduces entity updates significantly.
 
-Low craft rate items don't trigger enough wake events to justify the additional circuit network overhead from clocking.
+However, if an inserter is already running almost constantly (>80% uptime), the wake list events are minimal compared to the circuit network overhead from clocking. In these cases, simply let the inserter run unclocked.
+
 
 ---
 
@@ -187,14 +244,14 @@ Pulling from undergrounds for constantly moving belts is worse than pulling from
 
 ## Summary: The Optimal Design
 
-The winning design (composite_04 at **1660 UPS**) incorporated:
+The winning design is **11_thaeln** at **626µs**, narrowly beating composite_04 (633µs) by ~1%. The key design principles are:
 
 1. **On-patch furnace production** (80/s block)
 2. **Belted red circuits** (not direct insert)
 3. **Direct insert mining drills for stone** in production science blocks
-4. **Properly clocked** high-craft-rate building inputs
+4. **Clock inserters with low uptime** (<80%), leave high-uptime inserters unclocked
 5. **200% stone patch size** (balance between patch availability and design fit)
 
-![Best design](screenshots/35_composite_04.png)
+![Best design](screenshots/11_thaeln.png)
 
-This design achieved 4% better performance than the best round 2 competition entry and 26% better than off-patch belted designs.
+The composite designs incorporating direct insertion optimizations did not surpass the existing Thaeln designs, though they came within 1%. The key takeaway is that integrated on-patch designs with proper clocking principles outperform off-patch belted designs by **20%+**.

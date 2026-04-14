@@ -27,18 +27,16 @@ Quick Facts:
 
 ## Best Design
 
-If you are only here to see what the best design looks like, here you go:
+If you are only here to see what the best designs look like, here are the [winners](docs/winners.md)
 
-![best](docs/screenshots/35_composite_04.png)
-
-Refer to the public blueprint page for the latest book of purple science blueprints: [public blueprint page](../../../docs/blueprints/README.md)
+Refer to the public blueprint page for the latest book of purple science blueprints which includes specific modules that abucnasty has tested in his own save file: [public blueprint page](../../../docs/blueprints/README.md)
 
 ## Document Index
 
 > Note: The High Level Conclusion and Composite Design documents are the most useful to understand the trade offs between different design choices.
 
 - [High Level Conclusions](docs/high-level-conclusions.md)
-- [Design Submissions](docs/sumissions.md)
+- [Design Submissions](docs/submissions.md)
 - [Round 01 Qualifiers](docs/round-01.md)
 - [Round 02 Stress Test](docs/round-02.md)
 - [Furnace Production Designs](docs/furnace-designs.md)

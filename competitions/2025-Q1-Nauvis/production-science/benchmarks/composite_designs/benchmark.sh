@@ -7,10 +7,10 @@ ticks="108000"
 runs="3"
 
 # best designs plus composite designs
-designs_glob_pattern="36"
+designs_glob_pattern="35"
 
 belt --factorio-path "$factorio_path" \
-benchmark ../maps \
+benchmark ../../maps \
 --ticks $ticks \
 --runs $runs \
 --run-order sequential \

@@ -14,6 +14,7 @@
 - [Results](#results)
   - [Run Distribution](#run-distribution)
   - [Metrics](#metrics)
+  - [Composite Design Metrics](#composite-design-metrics)
 - [Conclusions](#conclusions)
 
 
@@ -152,15 +153,19 @@ Same as composite_04 but incorporates direct insert red circuits for electric fu
 
 | Save File       | Entity Update | Control Behavior Update | Electric/Heat/Fluid Circuit Update | Transport Lines Update | Trains | Other | Whole Update | % Decrease from Previous | % Decrease from Best |
 | --------------- | ------------- | ----------------------- | ---------------------------------- | ---------------------- | ------ | ----- | ------------ | ------------------------ | -------------------- |
-| 35_composite_04 | 485           | 43                      | 36                                 | 27                     | 0      | 10    | 602          |                          | 0%                   |
-| 11_thaeln       | 513           | 38                      | 37                                 | 27                     | 0      | 10    | 626          | -3.96%                   | -3.96%               |
-| 10_thaeln       | 517           | 39                      | 36                                 | 26                     | 0      | 11    | 628          | -0.33%                   | -4.31%               |
-| 19_akaravortex  | 522           | 38                      | 40                                 | 26                     | 0      | 11    | 636          | -1.34%                   | -5.71%               |
-| 36_composite_05 | 518           | 53                      | 41                                 | 25                     | 0      | 11    | 647          | -1.79%                   | -7.6%                |
-| 34_composite_03 | 572           | 40                      | 36                                 | 40                     | 0      | 10    | 698          | -7.86%                   | -16.05%              |
-| 33_composite_02 | 616           | 41                      | 37                                 | 45                     | 0      | 10    | 749          | -7.31%                   | -24.54%              |
-| 32_composite_01 | 614           | 44                      | 37                                 | 45                     | 0      | 10    | 750          | -0.06%                   | -24.62%              |
-| 17_akaravortex  | 615           | 43                      | 42                                 | 51                     | 0      | 11    | 761          | -1.55%                   | -26.55%              |
+| 11_thaeln       | 513           | 38                      | 37                                 | 27                     | 0      | 10    | 626          |                          | 0%                   |
+| 10_thaeln       | 517           | 39                      | 36                                 | 26                     | 0      | 11    | 628          | -0.33%                   | -0.33%               |
+| 35_composite_04 | 516           | 42                      | 37                                 | 27                     | 0      | 10    | 633          | -0.8%                    | -1.13%               |
+| 19_akaravortex  | 522           | 38                      | 40                                 | 26                     | 0      | 11    | 636          | -0.54%                   | -1.68%               |
+| 36_composite_05 | 518           | 53                      | 41                                 | 25                     | 0      | 11    | 647          | -1.79%                   | -3.5%                |
+| 34_composite_03 | 572           | 40                      | 36                                 | 40                     | 0      | 10    | 698          | -7.86%                   | -11.63%              |
+| 33_composite_02 | 616           | 41                      | 37                                 | 45                     | 0      | 10    | 749          | -7.31%                   | -19.79%              |
+| 32_composite_01 | 614           | 44                      | 37                                 | 45                     | 0      | 10    | 750          | -0.06%                   | -19.86%              |
+| 17_akaravortex  | 615           | 43                      | 42                                 | 51                     | 0      | 11    | 761          | -1.55%                   | -21.73%              |
+
+### Composite Design Metrics
+
+![metric_summary](../benchmarks/composite_designs/charts/metric_summary_composites.png)
 
 ## Conclusions
 
@@ -168,12 +173,12 @@ The benchmark results provide clear answers to the original questions:
 
 1. **Belting stone bricks vs stone ore**: On-patch furnace production (stone ore) outperforms belted bricks. Moving furnaces on-patch (composite_03) improved performance by ~7% compared to belted brick designs (composite_01/02).
 
-2. **Direct insert red circuits for electric furnaces**: Belting red circuits is superior. composite_05 with DI red circuits achieved only 1543 UPS compared to composite_04's 1660 UPS with belted circuits—a 7% performance loss. Therefore, its not worth it.
+2. **Direct insert red circuits for electric furnaces**: Belting red circuits is superior. composite_05 with DI red circuits achieved 647µs compared to composite_04's 633µs with belted circuits—a 2% performance loss. Not worth the added complexity.
 
-3. **Belted stone bricks vs on-patch furnaces with belted red circuits**: On-patch furnace production wins decisively. The 200% patch designs (composite_03/04) achieved 1431-1660 UPS vs ~1333 UPS for the 100% belted brick designs.
+3. **Belted stone bricks vs on-patch furnaces with belted red circuits**: On-patch furnace production wins decisively. The 200% patch designs (composite_03/04) achieved 633-698µs vs ~750µs for the 100% belted brick designs.
 
-4. **Belted stone vs direct insert stone for rails**: Direct insert mining drills for stone dramatically outperform belted stone. composite_04 (DI stone) achieved 1660 UPS vs composite_03's 1431 UPS (belted stone)—a **16% improvement**.
+4. **Belted stone vs direct insert stone for rails**: Direct insert mining drills for stone outperform belted stone. composite_04 (DI stone) achieved 633µs vs composite_03's 698µs (belted stone)—a **9% improvement**.
 
-**Overall Winner**: composite_04 at **1660 UPS** is the fastest design tested, surpassing all previous round 2 competition entries including 11_thaeln (1597 UPS) by 4%. The key differentiator is the electric mining drill direct insertion for stone in the production science blocks, which reduced Entity Update time to 485µs—the lowest of any design.
+**Overall Winner**: 11_thaeln remains the fastest design at **626µs**, narrowly beating composite_04 (633µs) by ~1%. The composite designs failed to surpass the existing Thaeln designs despite incorporating direct insertion optimizations. The 11_thaeln design's efficiency comes from its integrated 200% patch approach without the overhead introduced by direct insert mining drills.
 
-The red circuit layout (abucnasty vs Thaeln) showed no meaningful performance difference when both are properly clocked to 200/s.
+The red circuit layout (abucnasty vs Thaeln) showed no meaningful performance difference when both are properly clocked to 200/s (composite_01 vs composite_02).
