@@ -42,12 +42,16 @@ Deprecated:
 
 **Latest**
 
-| Description                         | Author                   | Version | Link                                               | Video                                                       |
-| ----------------------------------- | ------------------------ | ------- | -------------------------------------------------- | ----------------------------------------------------------- |
-| Automation Science (480/s)          | Syvkal, phlap, abucnasty | 1.2     | [factoriobin](https://factoriobin.com/post/cgy91k) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
-| Logistics Science (240/s)           | Syvkal, abucnasty        | 1.2     | [factoriobin](https://factoriobin.com/post/fn0xtt) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
-| Chemical Science (240/s)            | abucnasty                | 1.2     | [factoriobin](https://factoriobin.com/post/mlnthd) | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
-| The Iron Maden (20k/min promethium) | abucnasty                | MK3     | [factoriobin](https://factoriobin.com/post/7lnqsx) |                                                             |
+| Description                            | Author                   | Version | Link                                                                            | Video                                                       |
+| -------------------------------------- | ------------------------ | ------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Automation Science (480/s)             | Syvkal, phlap, abucnasty | 1.2     | [factoriobin](https://factoriobin.com/post/cgy91k)                              | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Logistics Science (240/s)              | Syvkal, abucnasty        | 1.2     | [factoriobin](https://factoriobin.com/post/fn0xtt)                              | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Chemical Science (240/s)               | abucnasty                | 1.2     | [factoriobin](https://factoriobin.com/post/mlnthd)                              | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Production Science Book                | abucnasty and community  | 1.0     | [purple-science-book](purple-science.txt)                                       |                                                             |
+| Production Science Competition Winners | community                |         | [winners](../../competitions/2025-Q1-Nauvis/production-science/docs/winners.md) |                                                             |
+| The Iron Maden (20k/min promethium)    | abucnasty                | MK3     | [factoriobin](https://factoriobin.com/post/7lnqsx)                              |                                                             |
+
+
 
 ### Space Science
 
