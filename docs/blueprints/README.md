@@ -19,37 +19,28 @@
 ### Uncommon Science
 ![alt text](../icons/quality-uncommon.png)
 
-| Description                | Version | Link                                               | Video                                           |
-| -------------------------- | ------- | -------------------------------------------------- | ----------------------------------------------- |
-| Military Science (240/s)   | 3       | [factoriobin](https://factoriobin.com/post/90pg6z) | [youtube](https://youtu.be/vD_zzN8VT68?&t=2745) |
-| Automation Science (480/s) | 4       | [factoriobin](https://factoriobin.com/post/s0xzia) | [youtube](https://youtu.be/yVhEDCcWE7s)         |
-| Logistics Science (480/s)  | 2       | [factoriobin](https://factoriobin.com/post/sujyge) | [youtube](https://youtu.be/Qnk71RHKV0s)         |
-| Ore Voiding Miners         | 2.1     | [factoriobin](https://factoriobin.com/post/ws0wfg) | [youtube](https://youtu.be/_F9jxoc7iMc)         |
-| Chemical Science (240/s)   | 3       | [factoriobin](https://factoriobin.com/post/vkepfz) | [youtube](https://youtu.be/t5vnuGI59MY)         |
-| Production Science (240/s) | 2.5     | [factoriobin](https://factoriobin.com/post/3noug4) | [youtube](https://youtu.be/hYOpCNZCWkY)         |
-| Cryogenic Science (240/s)  | 3.0     | [factoriobin](https://factoriobin.com/post/3u0eht) |                                                 |
-
-Deprecated:
-
-| Description                | Version        | Link                                               | Video                                   |
-| -------------------------- | -------------- | -------------------------------------------------- | --------------------------------------- |
-| Automation Science (480/s) | 3              | [factoriobin](https://factoriobin.com/post/2szm4a) | [youtube](https://youtu.be/dEM4GHz7N8E) |
-| Military Science (240/s)   | 2              | [factoriobin](https://factoriobin.com/post/z6tbrf) | [youtube](https://youtu.be/uKT3MZw8agg) |
-| Ore Voiding Miners         | 2 (deprecated) | [factoriobin](https://factoriobin.com/post/go8gwi) | [youtube](https://youtu.be/SccsA0Dr54k) |
-| Chemical Science (240/s)   | 2 (deprecated) | [factoriobin](https://factoriobin.com/post/fcfxjt) | [youtube](https://youtu.be/zpRFx-pS5K4) |
+| Description                | Version | Link                                               | Posted     | Video                                           |
+| -------------------------- | ------- | -------------------------------------------------- | ---------- | ----------------------------------------------- |
+| Military Science (240/s)   | 3       | [factoriobin](https://factoriobin.com/post/90pg6z) | 2026-03-10 | [youtube](https://youtu.be/vD_zzN8VT68?&t=2745) |
+| Automation Science (480/s) | 4       | [factoriobin](https://factoriobin.com/post/s0xzia) | 2025-08-23 | [youtube](https://youtu.be/yVhEDCcWE7s)         |
+| Logistics Science (480/s)  | 2       | [factoriobin](https://factoriobin.com/post/sujyge) | 2025-06-10 | [youtube](https://youtu.be/Qnk71RHKV0s)         |
+| Ore Voiding Miners         | 2.2     | [factoriobin](https://factoriobin.com/post/20fc6p) | 2026-04-13 | [youtube](https://youtu.be/_F9jxoc7iMc)         |
+| Chemical Science (240/s)   | 3       | [factoriobin](https://factoriobin.com/post/vkepfz) | 2025-10-14 | [youtube](https://youtu.be/t5vnuGI59MY)         |
+| Production Science (240/s) | 2.5     | [factoriobin](https://factoriobin.com/post/3noug4) | 2025-07-03 | [youtube](https://youtu.be/hYOpCNZCWkY)         |
+| Cryogenic Science (240/s)  | 3.0     | [factoriobin](https://factoriobin.com/post/3u0eht) | 2026-03-13 |                                                 |
 
 ### Common Quality Science
 
 **Latest**
 
-| Description                            | Author                   | Version | Link                                                                            | Video                                                       |
-| -------------------------------------- | ------------------------ | ------- | ------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| Automation Science (480/s)             | Syvkal, phlap, abucnasty | 1.2     | [factoriobin](https://factoriobin.com/post/cgy91k)                              | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
-| Logistics Science (240/s)              | Syvkal, abucnasty        | 1.2     | [factoriobin](https://factoriobin.com/post/fn0xtt)                              | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
-| Chemical Science (240/s)               | abucnasty                | 1.2     | [factoriobin](https://factoriobin.com/post/mlnthd)                              | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
-| Production Science Book                | abucnasty and community  | 1.0     | [purple-science-book](purple-science.txt)                                       |                                                             |
-| Production Science Competition Winners | community                |         | [winners](../../competitions/2025-Q1-Nauvis/production-science/docs/winners.md) |                                                             |
-| The Iron Maden (20k/min promethium)    | abucnasty                | MK3     | [factoriobin](https://factoriobin.com/post/7lnqsx)                              |                                                             |
+| Description                            | Author                   | Version | Link                                                                            | Posted     | Video                                                       |
+| -------------------------------------- | ------------------------ | ------- | ------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------------- |
+| Automation Science (480/s)             | Syvkal, phlap, abucnasty | 1.2     | [factoriobin](https://factoriobin.com/post/cgy91k)                              | 2026-02-03 | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Logistics Science (240/s)              | Syvkal, abucnasty        | 1.2     | [factoriobin](https://factoriobin.com/post/fn0xtt)                              | 2026-02-03 | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Chemical Science (240/s)               | abucnasty                | 1.2     | [factoriobin](https://factoriobin.com/post/mlnthd)                              | 2026-02-03 | [youtube](https://youtu.be/hhn6a_TgCOQ?si=SlqM6WQm3oSEydDW) |
+| Production Science Book                | abucnasty and community  | 1.0     | [purple-science-book](purple-science.txt)                                       | 2026-04-10 |                                                             |
+| Production Science Competition Winners | community                |         | [winners](../../competitions/2025-Q1-Nauvis/production-science/docs/winners.md) | 2026-04-10 |                                                             |
+| The Iron Maden (20k/min promethium)    | abucnasty                | MK3     | [factoriobin](https://factoriobin.com/post/7lnqsx)                              | 2026-03-16 |                                                             |
 
 
 
@@ -57,10 +48,10 @@ Deprecated:
 
 **Latest**
 
-| Description     | Author               | Version | Link                                   | Video |
-| --------------- | -------------------- | ------- | -------------------------------------- | ----- |
-| Walt MK4 (Q5)   | abucnasty, yuu, clux | MK4     | https://factoriobin.com/post/o2k88b/24 |       |
-| The Fring MK2.2 | abucnasty            | MK2.2   | https://factoriobin.com/post/o2k88b/12 |       |
+| Description     | Author               | Version | Link                                   | Posted     | Video                                                  |
+| --------------- | -------------------- | ------- | -------------------------------------- | ---------- | ------------------------------------------------------ |
+| Walt MK4 (Q5)   | abucnasty, yuu, clux | MK4     | https://factoriobin.com/post/o2k88b/24 | 2026-03-28 | [youtube](https://www.youtube.com/watch?v=4qNDC_NEq5E) |
+| The Fring MK2.2 | abucnasty            | MK2.2   | https://factoriobin.com/post/o2k88b/12 | 2026-03-28 | [youtube](https://www.youtube.com/watch?v=4qNDC_NEq5E) |
 
 
 **Previous**
