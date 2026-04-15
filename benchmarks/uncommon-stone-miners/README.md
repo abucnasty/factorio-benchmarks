@@ -51,6 +51,8 @@ The benefit of clocking is that we can disable the silos by executing the follow
     v.active = false
 end
 ```
+Alternatively, a mod like the following can be used to highlight over the silos and disable them https://mods.factorio.com/mod/disable-entity-cursor 
+
 Disabling silos will also disable their circuit network updates so we can no longer read their contents, hence an external clock is used.
 
 For the tests with the postfix of `space_platform_request`, a space platform is present over Nauvis that requests biter eggs from the surface to simulate a ship hovering over the planet. As of 2.0.73, when a ship has an unfulfilled request from the surface it is orbitting, space platform time is increased while it scans for available silos that can fulfill its request. By disabling the silos, it can skip this check.
