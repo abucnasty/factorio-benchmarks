@@ -1,0 +1,4 @@
+|Save File|Entity Update|Control Behavior Update|Electric/Heat/Fluid Circuit Update|Space Platforms|Transport Lines Update|Trains|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|---|---|
+|gleba_throttle|2678|372|357|147|146|80|418|4199||0%|
+|nauvis_void|3060|391|360|152|161|113|464|4702|-11.99%|-11.99%|
