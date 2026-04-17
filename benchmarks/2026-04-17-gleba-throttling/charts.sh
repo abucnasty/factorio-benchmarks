@@ -13,7 +13,6 @@ belt-charts summary "results/dmb_main_*.csv" \
     --aggregate-strategy "average" \
     --metrics "wholeUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate,entityUpdate,trains,spacePlatforms" \
     --trim-prefix "dmb_main_" \
-    --title-override "Landfill Voiding Improvements" \
     --summary-table true
 
 

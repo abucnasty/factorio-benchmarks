@@ -10,7 +10,7 @@
 * Each save was tested for 108000 tick(s) and 1 run(s)
 
 
-![alt text](Screenshot_20260417_014705.png)
+![alt text](images/Screenshot_20260417_014705.png)
 
 A new research control combinator was created to use a lab to monitor which sciences are actively being researched with on Gleba. This is used to throttle the production rate on gleba when not using agriculture science.
 
