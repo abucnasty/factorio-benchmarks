@@ -7,6 +7,7 @@
     - [Uncommon Science](#uncommon-science)
     - [Common Quality Science](#common-quality-science)
     - [Space Science](#space-science)
+    - [Deprecated](#deprecated)
     - [Generic Space Age](#generic-space-age)
     - [Modules](#modules)
   - [General](#general)
@@ -54,7 +55,7 @@
 | The Fring MK2.2 | abucnasty            | MK2.2   | https://factoriobin.com/post/o2k88b/12 | 2026-03-28 | [youtube](https://www.youtube.com/watch?v=4qNDC_NEq5E) |
 
 
-**Previous**
+### Deprecated
 | Description                | Author                   | Version | Link                                                  | Video                                                  |
 | -------------------------- | ------------------------ | ------- | ----------------------------------------------------- | ------------------------------------------------------ |
 | Automation Science (240/s) | Syvkal, phlap            |         | [factoriobin](https://factoriobin.com/post/d26fun/12) | [youtube](https://www.youtube.com/watch?v=HdMcEn3b55c) |
