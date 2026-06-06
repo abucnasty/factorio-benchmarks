@@ -1,0 +1,61 @@
+﻿submission_id,respondent_id,submitted_at,discord_name,save_file_link,blueprint_file_link,science_quality,production_rate,designer_notes
+gbGKrM4,PdRJagx,2026-05-12 16:22:20,Thaeln,https://discord.com/channels/1381752136450441266/1424111172906651729/1503794220396450055,https://factoriobin.com/post/b9pzq5,Q1 - Normal,960/s,"The blueprint book also contains a smaller 480 version, but the 960 version is used for benchmarking."
+yX9x7a4,5BX0qP6,2026-05-15 03:27:34,Azhrei,https://cdn.discordapp.com/attachments/1424111172906651729/1504684897699233964/utility_science_azhrei_q1.zip?ex=6a07e283&is=6a069103&hm=b7e6baa26549020d1f0b7b6d443fdaeac1b57fe53ff79ee128458a81a6574a8f&,https://factoriobin.com/post/4pe9q9,Q1 - Normal,480/s,"I made this around the time of the purple science submissions, so it likely won't compete as well with the newer builds using more advanced clocking techniques. 
+
+
+Cold start is a little fussy, however once it is started it's stable and passes all tests.
+
+To start:
+1. Run until science belts are filled and factory is idle
+2. Turn on science consumption, wait for instability to appear
+3. Stop consumption, wait for science belts to refill and factory to idle
+4. Turn on consumption again, should now be stable.
+
+Primarily uses manually computed clocks with some LLF. Blueprint book includes lead/follower blueprints so you can reuse the clocks for additional stacks (this is done in the save).
+
+Had some issues with low copper pipe fullness leading to LDS not producing as they should, so I had to separate the copper pipe into 2 sections in the save.
+
+There are some mildly cursed car placements for electrical engines that are fussy about whether they're placed first or the beacons they're overlapping."
+J16jyr7,yPdPVy6,2026-05-25 15:10:55,atlan,https://discord.com/channels/1381752136450441266/1424111172906651729/1508487154957811824,https://factoriobin.com/post/j8z0cg,Q2 - Uncommon,5760/s,I included biolabs to see if they are worth it and because I can and like them. I tried to simulate some roboport distance for bot delivered bioflux.
+0VxRV5y,obk9N51,2026-05-25 18:32:48,abucnasty,https://discord.com/channels/1381752136450441266/1424111172906651729/1508538194117918811,https://factoriobin.com/post/cgedl1,Q1 - Normal,240/s,
+ArdepeW,obk9N51,2026-05-25 18:53:36,abucnasty,https://discord.com/channels/1381752136450441266/1424111172906651729/1508543349517455603,https://factoriobin.com/post/y3v9lz,Q1 - Normal,480/s,always be clocking
+q5dlok9,obk9N51,2026-05-26 00:15:56,abucnasty,https://discord.com/channels/1381752136450441266/1424111172906651729/1508624478987485291,https://factoriobin.com/post/xotsbr,Q2 - Uncommon,480/s,used in my current megabase
+OQzvX4p,obkeJWx,2026-05-26 14:34:40,Cy27,https://discord.com/channels/1381752136450441266/1424111172906651729/1508839605032718417,https://factoriobin.com/post/ddthg1,Q1 - Normal,480/s,
+xVpKNx9,PdRJagx,2026-05-26 15:18:16,Thaeln,https://discord.com/channels/1381752136450441266/1424111172906651729/1508851574456189009,https://factoriobin.com/post/3ngx1q,Q2 - Uncommon,960/s,"The blueprintbook also contains a 480/s build, but the 960/s build is used for benchmarking.
+Recyclers are used for ore voiding.
+(My previous 2 uncommon submissions from 20th May can be deleted.)"
+aO6VjxZ,PdRJagx,2026-05-26 15:23:44,Thaeln,https://discord.com/channels/1381752136450441266/1424111172906651729/1508853073458499794,https://factoriobin.com/post/3ngx1q,Q2 - Uncommon,960/s,Same q2 build but with railgun voiding for uncommon iron ore.
+PRApOGx,PdRJagx,2026-05-27 17:49:24,Thaeln,https://discord.com/channels/1381752136450441266/1424111172906651729/1509251632863379496,https://factoriobin.com/post/8lcopa,Q3 - Rare,960/s,My q2 build converted to rare quality with ores via train voiding. This build really benefits from a mod that removes car particles. The iron ore build can probably be improved (fewer trains) and getting all q3 steel via LDS shuffle would probably be better too.
+4a2BAx5,lbMNWPp,2026-05-27 22:52:40,Dorrian,https://cdn.discordapp.com/attachments/1424111172906651729/1509325689965514864/utility_science_Dorrian_Q1_480.zip?ex=6a18c496&is=6a177316&hm=59b3aff1ee7864c0b9e2461c7e2c01ced160b0c1cf1b5f54c724806377571a06&,https://factoriobin.com/post/os6nlk,Q1 - Normal,480/s,"I clocked only some basic things. Spent 10 hours on the design and then 20 hours on the clocking, but couldn't get it to work. 
+
+I honestly think the clocking requirement is too big of an entry hurdle for anyone who has never done it.
+
+So I am fine to compete in the ""unclocked"" category."
+bZlk571,yPdE6V8,2026-05-29 06:41:24,crag666,https://discord.com/channels/1381752136450441266/1424111172906651729/1509807466735730768,https://factoriobin.com/post/8b7hmf,Q1 - Normal,2880/s,2 beers and a DI dream 
+BEGBaWe,5BpGWlP,2026-05-29 10:49:19,tou,https://discord.com/channels/1381752136450441266/1424111172906651729/1509871038446571600,https://factoriobin.com/post/h6owte,Q2 - Uncommon,2880/s,
+laNRqDB,5BpGWlP,2026-05-29 10:50:12,tou,https://discord.com/channels/1381752136450441266/1424111172906651729/1509871038446571600,https://factoriobin.com/post/uwicd3,Q2 - Uncommon,2880/s,
+dbYQ9Ro,2EDl8Dg,2026-05-30 11:14:12,Poochuggah,https://discord.com/channels/1381752136450441266/1424111172906651729/1510237587766513664,https://factoriobin.com/post/5zi9rh,Q5 - Legendary,240/s,"Design creates 240/sec q5 utility science. copied 2x in save file. SR latch in blue circuit upcycling section as it slightly overproduces. As such segments of the build shut down occasionally and run off of stored items until more is needed. This may skew UPS results in benchmarking. 
+
+Sadly, I don't have time to improve this build any further due to exams. I just wanted to submit this as more of a proof of concept. I am confident that yourself and others can improve upon this design/ concept a lot if it piques your interest. 
+
+Anyways, thanks a ton for all the great YouTube content. My crappy laptop that I play on is screaming at all times for even the slightest UPS savings. Without your content, my ""mega""-base would run at about 2 UPS. Now i got a whopping 17 UPS on average, just by learning from your videos! Thanks again! Keep up the good work and I look forward to the upcoming utility science video!"
+Z9dP46V,44aAyVo,2026-05-30 14:07:17,goirelandbrad,https://cdn.discordapp.com/attachments/1424111172906651729/1510283018642788413/utility_science_goirelandbrad_q1_480.zip?ex=6a1c402b&is=6a1aeeab&hm=7fd8056062d7d267c264ec703c9f5b34b032b1ececde5c6ac274031da02e412d&,https://factoriobin.com/post/3nzz35,Q1 - Normal,480/s,"Designed this a long time ago, after I did purple science. I make all relevant oils on site and I did all the clocking by hand, so this is not going to be a top performer. It also looks visually kinda bad. However it was great fun to design, I especially enjoyed trying to put together the fluid and oil blocks. Slightly rearranged the molten metals to not hit fluid pipe length limits. Uses quite a bit of direct insertion."
+aOBle8v,q45qWl7,2026-05-31 15:02:02,DerAntrix,https://discord.com/channels/1381752136450441266/1424111172906651729/1510659058720440491,https://factoriobin.com/post/qd3ali,Q1 - Normal,480/s,Slightly modified than the BP (some Splitters removed for the LDS)
+VpZx2Dl,xXl6lY9,2026-05-31 18:05:44,TheFlyingCurryFish154,https://cdn.discordapp.com/attachments/1424111172906651729/1510705594317799424/1920sps_q1_utility_science_TheFlyingCurryFish154.zip?ex=6a1dc9b9&is=6a1c7839&hm=448365609a1315316e8a296e3492c5e68a7a91102d013c5573d72cc62d509fe1&,https://factoriobin.com/post/uhx3p8,Q1 - Normal,960/s,
+1WrO4PO,KYaRy1A,2026-05-31 18:54:01,Flexime,https://discord.com/channels/1381752136450441266/1424111172906651729/1510716027141361814,https://factoriobin.com/post/x7cb2f,Q1 - Normal,480/s,Attemtped clocking but  failed Stability Tests.Has DI LDS .DI FRF. Attemted to clock the fractionless blue circuit but failed the Stability.Non-moving belt becomes moving overtime.
+Gerkoxz,WOjZ7gv,2026-05-31 19:57:41,ANdyMannn,https://discord.com/channels/1381752136450441266/1424111172906651729/1510733709622382842,https://factoriobin.com/post/3k15ae,Q1 - Normal,240/s,"Everything except plastic is direct inserted, noice
+Red & green circiut inputs, batteries and LDS are not clocked fully
+After belt backs up and restarts there will be a hickup, but it should™ catch up again when things sync
+only 6 stamps fit within pipe limits :/ havent checked how many pumps are actually needed, just placed enough to keep pressure high enough. Added more buffer tanks on liquid metals to deal with consumption being synced"
+jeBpZ21,LZ6VbQ1,2026-05-31 22:59:25,MRX8024,https://discord.com/channels/1381752136450441266/1424111172906651729/1510779738430509220,https://factoriobin.com/post/hyhe4z,Q2 - Uncommon,1440/s,"The last belt with science is read for content and turns off all 6 belts if it is full. You can delete this 1 combinator if for some reason it bothers you. If you find any problems, I can fix them promptly."
+peLM66b,gDkgOWJ,2026-06-01 01:54:18,StupidFatHobbit,https://discord.com/channels/1381752136450441266/1424111172906651729/1510818463051022347,https://factoriobin.com/post/lr4dyi,Q1 - Normal,240/s,not sure if you wanted cross connected clocking for the 12 version but I'm a bit late so I'm just sending it
+jeBpXRR,68DodDe,2026-06-01 02:02:52,Yuu,https://cdn.discordapp.com/attachments/1424111172906651729/1510825149908254781/q5util_yuu_480sps_2.zip?ex=6a1e3911&is=6a1ce791&hm=cd5f2a7af34acec735261669d51a6a659e4da4c0efe5d839e87014d5604bf6e5&,https://factoriobin.com/post/z9ose8,Q5 - Legendary,480/s,
+0VElzX0,KYaOOVV,2026-06-01 02:03:25,MCMayhem57,https://discordapp.com/channels/1381752136450441266/1424111172906651729/1510471800604065853,https://factoriobin.com/post/uluqfp,Q1 - Normal,960/s,"It is unclocked as is not intended to win. I only submitted it to show the significant reduction in resource requirements when you build for max productivity. It also uses biochambers which require bioflux, and that is handled with an infinity chest. Spoilage is just burnt in a heating tower. Also, the initial nutrients are crafted with spoilage with is autoloaded a single time with an infinity chest (it reads if the system as 0 spoilage and loads a single inserter's worth to simulate manual loading all at once, but if anything fails, the system stores spoilage before sending it to be burnt, so this should only fire once).
+
+Also, I did not include biter coal. I didn't really want to portray industrial animal abuse, and it's a silly idea anyway."
+Arl0Y4W,A7rBxQD,2026-06-01 02:07:55,Swiftdeath007,https://discord.com/channels/1381752136450441266/1424111172906651729/1509064613227008081,https://factoriobin.com/post/mfz1rg,Q1 - Normal,2880/s,Took 100 hours to create. RS latched all liquids and protected the signals. Clocked all parts except for blue chips
+zEzxAJa,QKObE4p,2026-06-03 18:19:39,princle#6408,https://discord.com/channels/1381752136450441266/1424111172906651729/1508915495431045281,https://factoriobin.com/post/3y8idicq5sn1-EXPIRES,Q1 - Normal,2880/s,"not clocked, so very stable
+i tried building sharing across a tileable design instead of sharing beacons, which probably makes it hard to clock 
+i tried to do lots of DI, but therefore there are way too many buildings, so clocking would be beneficial I suppose
+
+does not cold start, because coal liquefaction although I used your template. if you want me to I will add an oil unbarreler and make a new submission. or you add it."
