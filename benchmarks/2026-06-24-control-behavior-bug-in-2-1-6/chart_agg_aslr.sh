@@ -15,5 +15,5 @@ belt-charts boxplot "results_aslr_off/loop_*.csv" \
   -h 800 \
   --remove-first-ticks 1 \
   --trim-prefix "loop_" \
-  -o "charts/aslr_distribution.svg" \
+  -o "charts/aslr_distribution.png" \
   --min-update 0

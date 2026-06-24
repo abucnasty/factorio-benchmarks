@@ -15,5 +15,5 @@ belt-charts boxplot "results_pin_*/loop_*.csv" \
   -h 800 \
   --remove-first-ticks 1 \
   --trim-prefix "loop_" \
-  -o "charts/pinning_distribution.svg" \
+  -o "charts/pinning_distribution.png" \
   --min-update 0

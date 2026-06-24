@@ -14,5 +14,5 @@ belt-charts boxplot "results_mimalloc_hp_aslr_off/loop_*.csv" \
   -h 800 \
   --remove-first-ticks 1 \
   --trim-prefix "loop_" \
-  -o "charts/mimalloc_hp_aslr_distribution.svg" \
+  -o "charts/mimalloc_hp_aslr_distribution.png" \
   --min-update 0

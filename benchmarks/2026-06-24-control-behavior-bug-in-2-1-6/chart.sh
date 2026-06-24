@@ -10,7 +10,7 @@ belt-charts table "results_${prefix}/loop_*.csv" \
 
 belt-charts summary "results_${prefix}/loop_*.csv" \
     --remove-first-ticks 1 \
-    -o results_${prefix}/charts/metrics_all.svg \
+    -o results_${prefix}/charts/metrics_all.png \
     -w 1000 \
     -h 800 \
     --trim-prefix "loop_" \
@@ -23,5 +23,5 @@ belt-charts boxplot "results_${prefix}/loop_*.csv" \
     -h 800 \
     --remove-first-ticks 1 \
     --trim-prefix "loop_" \
-    -o "results_${prefix}/charts/run_distribution.svg" \
+    -o "results_${prefix}/charts/run_distribution.png" \
     --min-update 0
