@@ -1,0 +1,5 @@
+#!/bin/bash
+# Pin to 4 physical cores using both SMT siblings each (8 hw threads, 4 physical cores)
+# Forces maximum SMT contention on every logical CPU.
+FACTORIO_BIN="${HOME}/Games/factorio/bin/x64/factorio"
+exec taskset -c 0,8,1,9,2,10,3,11 gamemoderun "${FACTORIO_BIN}" "$@" --cache-sprite-atlas=true

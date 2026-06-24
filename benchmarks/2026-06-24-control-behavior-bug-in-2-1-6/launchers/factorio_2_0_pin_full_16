@@ -1,0 +1,4 @@
+#!/bin/bash
+# Explicit pin to all 16 hardware threads (mirrors default behavior)
+FACTORIO_BIN="${HOME}/Games/factorio/bin/x64/factorio"
+exec taskset -c 0-15 gamemoderun "${FACTORIO_BIN}" "$@" --cache-sprite-atlas=true

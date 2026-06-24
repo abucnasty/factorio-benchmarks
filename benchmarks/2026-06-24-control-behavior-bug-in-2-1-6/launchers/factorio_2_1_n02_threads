@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Factorio 2_1 with update-runner-threads-count=2 (via local config).
+# Stack: mimalloc + 4 GiB huge pages + ASLR off + gamemoderun + taskset -c 0-7 (one SMT sibling per physical core).
+set -euo pipefail
+
+FACTORIO_BIN="${HOME}/Games/factorio_beta/bin/x64/factorio"
+MIMALLOC_SO="${HOME}/dev/temp/mimalloc/out/release/libmimalloc.so"
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+CONFIG_PATH="${SCRIPT_DIR}/../configs/n_thread_sweep/config_2_1_n02.ini"
+
+export MIMALLOC_RESERVE_HUGE_OS_PAGES=4
+export MIMALLOC_PURGE_DELAY=-1
+export MIMALLOC_SHOW_STATS=1
+
+FACTORIO_FLAGS=(
+  "--cache-sprite-atlas=true"
+  "-c" "${CONFIG_PATH}"
+)
+
+RUNNER=()
+if command -v gamemoderun >/dev/null 2>&1; then
+  RUNNER=(gamemoderun)
+fi
+
+env LD_PRELOAD="${MIMALLOC_SO}" \
+  setarch "$(uname -m)" -R \
+  taskset -c 0-7 \
+  "${RUNNER[@]}" \
+  "${FACTORIO_BIN}" \
+  "${FACTORIO_FLAGS[@]}" \
+  "$@"

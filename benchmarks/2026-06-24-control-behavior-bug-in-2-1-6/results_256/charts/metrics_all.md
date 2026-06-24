@@ -1,0 +1,4 @@
+|Save File|Control Behavior Update|Transport Lines Update|Entity Update|Electric/Heat/Fluid Circuit Update|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|
+|256_circuit_no_condition_2_0_77|20|18|18|17|5|78||0%|
+|256_circuit_no_condition_2_1_6|28|18|20|17|5|89|-14.19%|-14.19%|
