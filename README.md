@@ -35,3 +35,28 @@ A comprehensive competition series covering vanilla plus space age Nauvis scienc
 [simulators](/simulators)
 
 WIP simulator for calculating quality ratios for use in designs
+
+## Contributing
+
+### Git LFS (Large File Storage)
+
+This repository uses [Git LFS](https://git-lfs.com/) to store Factorio save files (`.zip`). You must have Git LFS installed before cloning or contributing, otherwise zip files will appear as small pointer text files instead of actual saves.
+
+**Setup:**
+
+1. Install Git LFS: https://git-lfs.com/
+2. Enable it for your git installation (one-time, per machine):
+   ```
+   git lfs install
+   ```
+3. Clone the repo normally — LFS files will be fetched automatically:
+   ```
+   git clone <repo-url>
+   ```
+
+If you already cloned without LFS, fetch the actual files with:
+```
+git lfs pull
+```
+
+When adding new benchmark save files, simply `git add` the `.zip` as normal — the `.gitattributes` rule will route them through LFS automatically.
