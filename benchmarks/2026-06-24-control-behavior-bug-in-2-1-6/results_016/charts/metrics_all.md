@@ -1,0 +1,10 @@
+|Save File|Transport Lines Update|Electric/Heat/Fluid Circuit Update|Control Behavior Update|Entity Update|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|
+|16_circuit_no_condition_2_1_6|18|18|18|2|4|60||0%|
+|16_circuit_enabled_if_one_2_0_77|18|18|18|2|4|60|-0.38%|-0.38%|
+|16_circuit_enabled_zero_2_0_77|18|18|18|2|4|60|0%|-0.38%|
+|16_circuit_enabled_if_one_2_1_6|18|18|18|2|4|60|-0.01%|-0.38%|
+|16_circuit_enabled_zero_2_1_6|18|18|18|2|4|60|-0.13%|-0.51%|
+|16_circuit_no_condition_2_0_77|18|18|18|2|4|60|-0.06%|-0.58%|
+|16_no_circuit_2_0_77|18|18|18|2|4|60|-0.28%|-0.86%|
+|16_no_circuit_2_1_6|18|18|19|2|4|61|-0.58%|-1.44%|

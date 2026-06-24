@@ -1,0 +1,7 @@
+#!/bin/bash
+# ASLR disabled + pin to one SMT sibling per physical core.
+# setarch -R disables address space layout randomization for the child process.
+# Pinning is retained because the pinning experiment showed it neither helps nor
+# hurts; this isolates ASLR as the only variable changing from the default run.
+FACTORIO_BIN="${HOME}/Games/factorio_beta/bin/x64/factorio"
+exec setarch "$(uname -m)" -R taskset -c 0-7 gamemoderun "${FACTORIO_BIN}" "$@" --cache-sprite-atlas=true
