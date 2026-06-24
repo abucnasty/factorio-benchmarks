@@ -16,5 +16,5 @@ belt-charts boxplot "results_n*_threads/loop_*.csv" \
   -h 900 \
   --remove-first-ticks 1 \
   --trim-prefix "loop_" \
-  -o "charts/n_thread_sweep_distribution.svg" \
+  -o "charts/n_thread_sweep_distribution.png" \
   --min-update 0

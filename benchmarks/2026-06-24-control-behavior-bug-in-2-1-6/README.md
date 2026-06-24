@@ -42,9 +42,9 @@ Almost every experiment below targets `loop_2056_circuit_no_condition` (32,896 i
 
 50 runs × 11 `loop_N_circuit_no_condition` saves × 2 versions, default config (N=16 workers).
 
-![Baseline run distribution](charts/run_distribution.svg)
+![Baseline run distribution](charts/run_distribution.png)
 
-![Baseline scaling across loop sizes](charts/metrics_all.svg)
+![Baseline scaling across loop sizes](charts/metrics_all.png)
 
 **Result:** 2.0.77 is unimodal at every workload size; max/min variance stays under 1.30×. 2.1.6 is bimodal from `loop_128` upward; the slow/fast ratio grows monotonically with workload, asymptoting at ~2.6× by `loop_2056`. When 2.1.6 lands in its fast mode it matches 2.0.77 to within 2%.
 
@@ -52,7 +52,7 @@ Almost every experiment below targets `loop_2056_circuit_no_condition` (32,896 i
 
 50 runs × 3 pinning strategies × 2 versions on `loop_2056_circuit_no_condition`, default N. Strategies: `physical_8` (`taskset -c 0-7`, one HW thread per physical core), `smt_8` (forced SMT sibling contention), `full_16` (default).
 
-![Pinning distribution](charts/pinning_distribution.svg)
+![Pinning distribution](charts/pinning_distribution.png)
 
 **Result:** The bimodal split is unaffected by CPU mask. `physical_8` (where SMT contention is mechanically impossible) still produces the same ~50/50 split with the same fast and slow cluster means. **Falsifies the SMT-sibling-placement hypothesis.**
 
@@ -60,7 +60,7 @@ Almost every experiment below targets `loop_2056_circuit_no_condition` (32,896 i
 
 50 runs × 2 versions, `setarch -R` + physical pinning, on `loop_2056_circuit_no_condition`.
 
-![ASLR-off distribution](charts/aslr_distribution.svg)
+![ASLR-off distribution](charts/aslr_distribution.png)
 
 **Result:** With process layout deterministic across launches, 2.1.6 still produces a 21/29 fast/slow split with cluster means within 1% of the pinning experiment. 2.0.77 collapses to its cleanest baseline yet (stdev 603 µs, n=50, zero slow). **Falsifies the address-layout / cache-aliasing hypothesis.**
 
@@ -68,7 +68,7 @@ Almost every experiment below targets `loop_2056_circuit_no_condition` (32,896 i
 
 50 runs × 2 versions, `LD_PRELOAD=libmimalloc.so` + `MIMALLOC_RESERVE_HUGE_OS_PAGES=4` on top of the ASLR-off + pinning stack.
 
-![mimalloc + huge pages + ASLR-off distribution](charts/mimalloc_hp_aslr_distribution.svg)
+![mimalloc + huge pages + ASLR-off distribution](charts/mimalloc_hp_aslr_distribution.png)
 
 **Result:** 2.1.6 stays bimodal (30/20 split). Both versions get faster across the board (cb_update −18% on 2.0.77 baseline); the slow/fast ratio actually *widens* slightly (2.71×), which is the signature of a per-batch cache effect rather than a fixed-cost regression. **Falsifies the glibc-arena / allocator-implementation hypothesis.** Side observation: 2.1.6 `entityUpdate` is steadily +18% vs 2.0.77 in every run regardless of mode — a separate, unimodal finding worth flagging independently.
 
@@ -76,7 +76,7 @@ Almost every experiment below targets `loop_2056_circuit_no_condition` (32,896 i
 
 50 runs × 2 versions, isolated `config.ini` with `update-runner-threads-count=1`, stacked on top of the mimalloc + huge pages + ASLR-off + pinning stack.
 
-![Single-worker-thread distribution](charts/single_worker_thread_distribution.svg)
+![Single-worker-thread distribution](charts/single_worker_thread_distribution.png)
 
 **Result:** Both versions collapse to tight unimodal distributions (2.1.6 cv 0.51%, 2.0.77 cv 0.84%). No bimodal, no flips, no intermediates. 2.1.6 median is 2% *below* 2.0.77 in this config. This is the first experiment to actually remove the effect — placing the cause inside the parallel code path active when `update-runner-threads-count ≥ 2`.
 
@@ -84,7 +84,7 @@ Almost every experiment below targets `loop_2056_circuit_no_condition` (32,896 i
 
 50 runs × 2 versions × 5 N values on `loop_2056_circuit_no_condition`, same stack as experiment 5.
 
-![N-thread sweep distribution](charts/n_thread_sweep_distribution.svg)
+![N-thread sweep distribution](charts/n_thread_sweep_distribution.png)
 
 **Result:** 2.1.6 is bimodal at every N ∈ {2, 4, 8, 16}, with a stable ~58/42 split and a slow/fast ratio that grows with N (1.27× → 2.71×). **2.0.77 also bifurcates** at N=2 (4/50 slow) and starkly at N=4 (47/50 slow, only 1.50× speedup over N=1) — but is unimodal at N=8 and N=16. The earlier "2.0.77 never enters slow mode" framing in this document was a property of the chosen N, not of the version. At every N, 2.1.6's fast cluster matches 2.0.77 to within 1%; the slow cluster's absolute cb_update is approximately N-invariant for 2.1.6 at N ≥ 4 (~178–198k µs vs N=1's 195k µs — the pool barely parallelizes in slow mode regardless of worker count).
 
