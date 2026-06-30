@@ -1,0 +1,9 @@
+Save File,Entity Update,Electric/Heat/Fluid Circuit Update,Control Behavior Update,Transport Lines Update,Particle Update,Trains,Other,Whole Update,% Decrease from Previous,% Decrease from Best
+thaeln_q2_960_railgun_offset,922,59,55,50,1,0,36,1123,,0%
+tou_q2_2880_railgun_1_offset,921,71,59,54,0,2,19,1126,-0.29%,-0.29%
+tou_q2_2880_railgun_2_offset,905,83,76,53,0,5,20,1141,-1.36%,-1.65%
+thaeln_q2_960,1004,58,57,49,0,1,14,1183,-3.67%,-5.38%
+atlan_q2_2880,1049,71,98,67,0,2,20,1307,-10.46%,-16.4%
+atlan_q2_2880_LDS_DI,1051,71,106,63,0,2,22,1315,-0.59%,-17.09%
+mrx8024_q2_1440_v1.1,1228,66,74,72,0,3,15,1457,-10.85%,-29.8%
+abuc_q2_480,1488,88,91,71,0,4,19,1762,-20.9%,-56.93%
