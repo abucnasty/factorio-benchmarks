@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# True single update-runner thread (via Factorio config) + mimalloc +
+# 4 GB huge pages + ASLR off + physical-core pinning.
+# Uses a benchmark-local config.ini under configs/single_worker_thread/.
+set -euo pipefail
+
+FACTORIO_BIN="${HOME}/Games/factorio_beta/bin/x64/factorio"
+MIMALLOC_SO="${HOME}/dev/temp/mimalloc/out/release/libmimalloc.so"
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+CONFIG_PATH="${SCRIPT_DIR}/../configs/single_worker_thread/config_2_1.ini"
+
+export MIMALLOC_RESERVE_HUGE_OS_PAGES=4
+export MIMALLOC_PURGE_DELAY=-1
+export MIMALLOC_SHOW_STATS=1
+
+FACTORIO_FLAGS=(
+  "--cache-sprite-atlas=true"
+  "-c" "${CONFIG_PATH}"
+)
+
+RUNNER=()
+if command -v gamemoderun >/dev/null 2>&1; then
+  RUNNER=(gamemoderun)
+fi
+
+env LD_PRELOAD="${MIMALLOC_SO}" \
+  setarch "$(uname -m)" -R \
+  taskset -c 0-7 \
+  "${RUNNER[@]}" \
+  "${FACTORIO_BIN}" \
+  "${FACTORIO_FLAGS[@]}" \
+  "$@"

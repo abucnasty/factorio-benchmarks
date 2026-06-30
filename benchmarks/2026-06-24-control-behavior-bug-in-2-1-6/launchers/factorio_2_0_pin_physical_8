@@ -1,0 +1,4 @@
+#!/bin/bash
+# Pin to one SMT sibling per physical core (8 hw threads, 8 physical cores)
+FACTORIO_BIN="${HOME}/Games/factorio/bin/x64/factorio"
+exec taskset -c 0-7 gamemoderun "${FACTORIO_BIN}" "$@" --cache-sprite-atlas=true
