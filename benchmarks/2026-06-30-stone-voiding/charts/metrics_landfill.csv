@@ -1,0 +1,4 @@
+Save File,Entity Update,Electric/Heat/Fluid Circuit Update,Transport Lines Update,Control Behavior Update,Particle Update,Other,Whole Update,% Decrease from Previous,% Decrease from Best
+landfill_lava,1617,285,38,23,0,10,1973,,0%
+landfill_recycler_kiss,1666,284,39,23,0,10,2021,-2.46%,-2.46%
+landfill_recycler_lava,1706,284,39,23,0,11,2063,-2.05%,-4.56%
