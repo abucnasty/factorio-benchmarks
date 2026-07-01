@@ -1,0 +1,8 @@
+|Save File|Entity Update|Electric/Heat/Fluid Circuit Update|Transport Lines Update|Control Behavior Update|Particle Update|Other|Whole Update|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|---|
+|landfill_lava|1617|285|38|23|0|10|1973||0%|
+|landfill_recycler_kiss|1666|284|39|23|0|10|2021|-2.46%|-2.46%|
+|landfill_recycler_lava|1706|284|39|23|0|11|2063|-2.05%|-4.56%|
+|lava|1774|283|40|23|0|10|2131|-3.32%|-8.03%|
+|recycler_kiss|4996|327|45|27|0|13|5408|-153.76%|-174.14%|
+|recycler_lava|6170|329|49|29|0|46|6623|-22.46%|-235.7%|

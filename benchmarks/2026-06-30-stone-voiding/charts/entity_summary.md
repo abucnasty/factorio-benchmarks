@@ -1,0 +1,8 @@
+|Save File|Furnace|Inserter|Assembly Machine|Offshore Pump|Other Entity Update|Entity Update Total|% Decrease from Previous|% Decrease from Best|
+|---|---|---|---|---|---|---|---|---|
+|landfill_lava|0|854.31|465.76|206.36|90.74|1617.17||0%|
+|landfill_recycler_kiss|73.51|838.65|478.51|204.8|70.41|1665.87|-3.01%|-3.01%|
+|landfill_recycler_lava|83.66|839.52|479.61|201.92|101.44|1706.15|-2.42%|-5.5%|
+|lava|0|1011.12|373.55|198.04|191.68|1774.39|-4%|-9.72%|
+|recycler_kiss|3299.77|943.62|425.48|253.18|74.34|4996.39|-181.58%|-208.96%|
+|recycler_lava|4025.13|968.89|418.85|231.59|525.88|6170.35|-23.5%|-281.55%|
