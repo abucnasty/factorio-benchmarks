@@ -1,4 +1,4 @@
-# Factorio Benchmark Results
+# Stone Voiding on Vulcanus
 
 **Platform:** linux-x86_64
 
