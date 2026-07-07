@@ -40,7 +40,7 @@ WIP simulator for calculating quality ratios for use in designs
 
 ### Git LFS (Large File Storage)
 
-This repository uses [Git LFS](https://git-lfs.com/) to store Factorio save files (`.zip`). You must have Git LFS installed before cloning or contributing, otherwise zip files will appear as small pointer text files instead of actual saves.
+This repository uses [Git LFS](https://git-lfs.com/) to store Factorio save files (`.zip`). Save files are served from Cloudflare R2. You must have Git LFS installed before cloning or contributing, otherwise zip files will appear as small pointer text files instead of actual saves.
 
 **Setup:**
 
@@ -49,14 +49,47 @@ This repository uses [Git LFS](https://git-lfs.com/) to store Factorio save file
    ```
    git lfs install
    ```
-3. Clone the repo normally — LFS files will be fetched automatically:
-   ```
-   git clone <repo-url>
-   ```
 
-If you already cloned without LFS, fetch the actual files with:
-```
-git lfs pull
+#### Cloning — download only what you need
+
+There are hundreds of benchmark save files in this repo. To avoid downloading all of them at once, clone with LFS smudging disabled and then pull only the saves you need:
+
+```sh
+GIT_LFS_SKIP_SMUDGE=1 git clone <repo-url>
+cd factorio-benchmarks
+
+# Pull saves for a specific benchmark
+git lfs pull --include="benchmarks/2026-07-03-mining-drill-performance-2.1.9/*.zip"
+
+# Or pull everything from a top-level folder
+git lfs pull --include="benchmarks/**"
 ```
 
-When adding new benchmark save files, simply `git add` the `.zip` as normal — the `.gitattributes` rule will route them through LFS automatically.
+To download everything at once (not recommended on metered connections):
+```sh
+git clone <repo-url>
+```
+
+If you already cloned without LFS, fetch specific files with:
+```sh
+git lfs pull --include="<path/to/benchmark>/*.zip"
+```
+
+#### Adding new benchmark save files
+
+Simply `git add` the `.zip` as normal — the `.gitattributes` rule routes it through LFS automatically:
+
+```sh
+git add benchmarks/my-new-benchmark/save.zip
+git commit -m "add save file"
+git push
+```
+
+Uploading requires an `Authorization` token configured for the LFS endpoint. Set it once per machine:
+```sh
+git config --local \
+  lfs.https://<worker-url>/.Authorization \
+  "Bearer <your-upload-token>"
+```
+
+Contact @abucnasty for an upload token.
