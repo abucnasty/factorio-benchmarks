@@ -1,0 +1,4 @@
+# Local dev secrets — copy this to .dev.vars and fill in real values.
+# .dev.vars is gitignored and must never be committed.
+
+LFS_UPLOAD_TOKEN=replace-with-a-strong-random-token

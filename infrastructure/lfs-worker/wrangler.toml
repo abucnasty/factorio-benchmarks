@@ -1,0 +1,14 @@
+name = "factorio-lfs"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# R2 bucket binding — create the bucket first with:
+#   wrangler r2 bucket create factorio-benchmarks-lfs
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "factorio-benchmarks-lfs"
+
+# Secrets (never commit these — set them once via CLI):
+#   wrangler secret put LFS_UPLOAD_TOKEN
+#
+# Local dev — copy .dev.vars.example to .dev.vars and fill in values.
