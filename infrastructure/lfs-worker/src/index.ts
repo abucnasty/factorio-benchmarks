@@ -59,19 +59,24 @@ export default {
       return handleBatch(request, env, url);
     }
 
-    // /objects/:oid  and  /objects/:oid/verify
+    // /objects/:oid            — download/upload
+    // /objects/:oid/:filename   — download with filename hint (Content-Disposition)
+    // /objects/:oid/verify      — post-upload verify
     const oidMatch = pathname.match(
-      /^\/objects\/([0-9a-f]{64})(\/verify)?$/
+      /^\/objects\/([0-9a-f]{64})(\/verify|\/[^/]+)?$/
     );
     if (oidMatch) {
       const oid = oidMatch[1];
-      const isVerify = !!oidMatch[2];
+      const suffix = oidMatch[2] ?? "";
+      const isVerify = suffix === "/verify";
+      // Decode the filename from the URL, ignoring the leading slash
+      const filename = !isVerify && suffix ? decodeURIComponent(suffix.slice(1)) : null;
 
       if (isVerify && method === "POST") {
         return handleVerify(request, oid, env);
       }
       if (!isVerify && (method === "GET" || method === "HEAD")) {
-        return handleDownload(method, oid, env);
+        return handleDownload(method, oid, filename, env);
       }
       if (!isVerify && method === "PUT") {
         return handleUpload(request, oid, env);
@@ -192,6 +197,7 @@ async function buildObjectResponse(
 async function handleDownload(
   method: string,
   oid: string,
+  filename: string | null,
   env: Env
 ): Promise<Response> {
   const object = await env.R2_BUCKET.get(r2Key(oid));
@@ -204,6 +210,12 @@ async function handleDownload(
     "Content-Length": object.size.toString(),
     "X-Content-Type-Options": "nosniff",
   });
+
+  if (filename) {
+    // Sanitise: strip any path separators so only the bare filename is used
+    const safe = filename.replace(/[\\/]/g, "");
+    headers.set("Content-Disposition", `attachment; filename="${safe}"`);
+  }
 
   // HEAD — return metadata only
   if (method === "HEAD") {
