@@ -45,7 +45,19 @@ function unauthorized(message = "Credentials required"): Response {
 
 function extractToken(request: Request): string {
   const auth = request.headers.get("Authorization") ?? "";
-  return auth.startsWith("Bearer ") ? auth.slice(7) : auth;
+  if (auth.startsWith("Bearer ")) return auth.slice(7);
+  // git LFS with access=basic sends: Authorization: Basic base64(username:token)
+  // Accept this too — the token is the password part
+  if (auth.startsWith("Basic ")) {
+    try {
+      const decoded = atob(auth.slice(6));
+      const colon = decoded.indexOf(":");
+      return colon >= 0 ? decoded.slice(colon + 1) : decoded;
+    } catch {
+      return "";
+    }
+  }
+  return auth;
 }
 
 export default {
