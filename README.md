@@ -85,11 +85,63 @@ git commit -m "add save file"
 git push
 ```
 
-Uploading requires an `Authorization` token configured for the LFS endpoint. Set it once per machine:
+Uploading requires an upload token. Set it once per clone using `git-credential-store`:
+
 ```sh
+# 1. Tell git to use the credential store for the LFS server
 git config --local \
-  lfs.https://<worker-url>/.Authorization \
-  "Bearer <your-upload-token>"
+  'credential.https://factorio-lfs.abucnasty.workers.dev.helper' \
+  store
+
+# 2. Write the credentials to ~/.git-credentials
+printf 'https://lfs:<your-upload-token>@factorio-lfs.abucnasty.workers.dev\n' \
+  >> ~/.git-credentials
+chmod 600 ~/.git-credentials
 ```
 
 Contact @abucnasty for an upload token.
+
+> **Note:** Do not use `lfs.<url>.Authorization` — git-lfs ignores it once
+> `access=basic` is cached in `.git/config` (which happens automatically on the
+> first auth negotiation). The credential-store approach works reliably.
+
+#### Troubleshooting
+
+**VS Code shows a username/password dialog for `factorio-lfs.abucnasty.workers.dev`**
+
+This happens because git-lfs cached `access=basic` in `.git/config` and VS Code's
+credential helper is intercepting the request. Fix:
+
+```sh
+# 1. Remove the cached access type
+git config --local --unset 'lfs.https://factorio-lfs.abucnasty.workers.dev.access'
+
+# 2. Make sure credentials are stored (see upload setup above)
+printf 'protocol=https\nhost=factorio-lfs.abucnasty.workers.dev\n' | git credential fill
+# Should print: username=lfs  password=<token>
+# If empty, re-run the credential-store setup above.
+```
+
+**`git push` hangs at "Uploading LFS objects: 0% (0/1)"**
+
+The LFS pre-push hook is stuck waiting for credentials. Root cause: `access=basic` is
+set and the credential dialog is waiting for input. Cancel the push, run the troubleshooting
+steps above, then push again. If the push is already hung for a long time, cancel it and use:
+```sh
+git push origin master --no-verify  # skips LFS pre-push hook (safe if objects are in R2)
+```
+
+**`remote: fatal: pack exceeds maximum allowed size (2.00 GiB)`**
+
+GitHub limits each push to 2 GiB. If force-pushing a large rewritten history, push
+in batches of ~25 commits:
+
+```sh
+# get all commits oldest-first
+git rev-list master | tac > /tmp/commits.txt
+# push up to commit N
+git push origin "$(sed -n '25p' /tmp/commits.txt):refs/heads/master" --force
+git push origin "$(sed -n '50p' /tmp/commits.txt):refs/heads/master"
+# ... continue in steps of 25 until done
+git push origin master --no-verify
+```
