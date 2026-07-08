@@ -122,26 +122,3 @@ printf 'protocol=https\nhost=factorio-lfs.abucnasty.workers.dev\n' | git credent
 # If empty, re-run the credential-store setup above.
 ```
 
-**`git push` hangs at "Uploading LFS objects: 0% (0/1)"**
-
-The LFS pre-push hook is stuck waiting for credentials. Root cause: `access=basic` is
-set and the credential dialog is waiting for input. Cancel the push, run the troubleshooting
-steps above, then push again. If the push is already hung for a long time, cancel it and use:
-```sh
-git push origin master --no-verify  # skips LFS pre-push hook (safe if objects are in R2)
-```
-
-**`remote: fatal: pack exceeds maximum allowed size (2.00 GiB)`**
-
-GitHub limits each push to 2 GiB. If force-pushing a large rewritten history, push
-in batches of ~25 commits:
-
-```sh
-# get all commits oldest-first
-git rev-list master | tac > /tmp/commits.txt
-# push up to commit N
-git push origin "$(sed -n '25p' /tmp/commits.txt):refs/heads/master" --force
-git push origin "$(sed -n '50p' /tmp/commits.txt):refs/heads/master"
-# ... continue in steps of 25 until done
-git push origin master --no-verify
-```
