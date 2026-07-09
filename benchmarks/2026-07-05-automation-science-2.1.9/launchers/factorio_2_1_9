@@ -1,0 +1,3 @@
+#!/bin/bash
+FACTORIO_BIN="${HOME}/Games/factorio_locked_versions/2_1_9/bin/x64/factorio"
+exec gamemoderun "${FACTORIO_BIN}" "$@" --cache-sprite-atlas=true
