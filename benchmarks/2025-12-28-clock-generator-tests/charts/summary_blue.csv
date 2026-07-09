@@ -1,3 +1,3 @@
-Save File,Entity Update,Control Behavior Update,Transport Lines Update,Electric/Heat/Fluid Circuit Update,Other,Whole Update,% Decrease from Previous,% Decrease from Best
-blue_gen_clocks,758,108,85,82,28,1062,,0%
-blue_old_clocks,771,108,91,84,28,1083,-1.95%,-1.95%
+version https://git-lfs.github.com/spec/v1
+oid sha256:8abe574b86deba4dc4814e90b0ef03e2c496acb189db93da4af7a275174f1ad1
+size 264

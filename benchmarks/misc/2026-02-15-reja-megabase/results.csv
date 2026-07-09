@@ -1,2 +1,3 @@
-save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
-reja,0,361374.462,10.038,7.246,60.867,99.61965713006029,0,36000,2.0.75,linux-x86_64
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e7f12de138064d1a8805a4eefd1199993b4ccec730766b851a98acd94487471
+size 212

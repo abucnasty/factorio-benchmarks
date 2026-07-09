@@ -1,6 +1,3 @@
-Save File,Entity Update,Control Behavior Update,Electric/Heat/Fluid Circuit Update,Transport Lines Update,Trains,Other,Whole Update,% Decrease from Previous,% Decrease from Best
-35_composite_04,516,42,37,27,0,10,633,,0%
-36_composite_05,518,53,41,25,0,11,647,-2.34%,-2.34%
-34_composite_03,572,40,36,40,0,10,698,-7.86%,-10.38%
-33_composite_02,616,41,37,45,0,10,749,-7.31%,-18.45%
-32_composite_01,614,44,37,45,0,10,750,-0.06%,-18.52%
+version https://git-lfs.github.com/spec/v1
+oid sha256:27b23125d1ae4e92902b2c4076730b72d1e3ebe91e4b78eb6bacff54f5077acd
+size 430

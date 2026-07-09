@@ -1,18 +1,3 @@
-Save File,Entity Update,Electric/Heat/Fluid Circuit Update,Control Behavior Update,Transport Lines Update,Trains,Other,Whole Update,% Decrease from Previous,% Decrease from Best
-160_akaravortex_v7,464,48,42,22,0,14,591,,0%
-160_akaravortex,465,49,44,22,0,14,594,-0.63%,-0.63%
-80_thaeln_cars,465,47,49,22,0,14,597,-0.53%,-1.16%
-160_thaeln_akarra,477,46,45,22,0,14,605,-1.2%,-2.38%
-160_teaz_akara_clocks_v6,480,44,44,23,0,14,606,-0.28%,-2.67%
-160_theflyingcuryfish154_v2,469,44,56,23,0,15,607,-0.11%,-2.78%
-160_teaz,456,46,67,28,0,14,611,-0.65%,-3.45%
-160_theflyingcuryfish154,463,48,67,23,0,15,615,-0.66%,-4.13%
-80_thaeln,484,49,46,22,0,14,615,-0.04%,-4.17%
-80_theend,484,56,43,22,0,14,620,-0.76%,-4.96%
-160_warbaque,497,41,51,22,0,16,627,-1.22%,-6.24%
-80_swiftdeath007,503,44,52,23,0,14,635,-1.26%,-7.57%
-80_geist,476,54,68,25,0,15,637,-0.27%,-7.87%
-160_abuc,525,44,61,23,0,15,668,-4.81%,-13.05%
-80_mcmayhem57,529,51,50,23,24,15,690,-3.38%,-16.87%
-160_azhrei,576,53,53,32,12,14,741,-7.37%,-25.49%
-40_teaz,637,45,25,25,0,14,746,-0.64%,-26.3%
+version https://git-lfs.github.com/spec/v1
+oid sha256:01720c0a90b812bdfbc1777d8b43287ca2c51f34bb7dd3b4b85fdb0a78c71494
+size 1039

@@ -1,3 +1,3 @@
-Save File,Entity Update,Electric/Heat/Fluid Circuit Update,Control Behavior Update,Transport Lines Update,Other,Whole Update,% Decrease from Previous,% Decrease from Best
-q1_idle,945,319,257,75,483,2078,,0%
-q2_idle,993,323,261,75,533,2185,-5.13%,-5.13%
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb9e1b484303e53ac67cadc6ab6bc4e9666c960cf66b9b93c775a29516fae1c4
+size 252

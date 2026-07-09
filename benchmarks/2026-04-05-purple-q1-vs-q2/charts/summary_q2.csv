@@ -1,4 +1,3 @@
-Save File,Entity Update,Electric/Heat/Fluid Circuit Update,Control Behavior Update,Transport Lines Update,Other,Whole Update,% Decrease from Previous,% Decrease from Best
-q2_idle,993,323,261,75,533,2185,,0%
-q2_mining_prod,2069,348,337,139,570,3463,-58.46%,-58.46%
-q2_worker_robot_speed,3366,360,401,175,775,5078,-46.64%,-132.38%
+version https://git-lfs.github.com/spec/v1
+oid sha256:8036631290c7470fe49e1d89b8e802b71c44ed8ba8a8ef159684c034b9bbe22e
+size 328

@@ -1,3 +1,3 @@
-Save File,Entity Update,Control Behavior Update,Transport Lines Update,Electric/Heat/Fluid Circuit Update,Other,Whole Update,% Decrease from Previous,% Decrease from Best
-clocked,663,75,66,44,17,863,,0%
-unclocked,855,70,69,45,17,1056,-22.25%,-22.25%
+version https://git-lfs.github.com/spec/v1
+oid sha256:11310f51cbe94fd3093e324478c72d45804f17c7170228868a478388a5608b62
+size 249

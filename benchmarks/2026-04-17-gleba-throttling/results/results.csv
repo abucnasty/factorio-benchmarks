@@ -1,3 +1,3 @@
-save_name,run_index,execution_time_ms,avg_ms,min_ms,max_ms,effective_ups,percentage_improvement,ticks,factorio_version,platform
-dmb_main_nauvis_void,0,508030.757,4.704,3.488,24.457,212.58555414588807,0,108000,2.0.76,linux-x86_64
-dmb_main_gleba_throttle,0,453707.017,4.201,3.182,24.565,238.03907798058148,11.973308316719294,108000,2.0.76,linux-x86_64
+version https://git-lfs.github.com/spec/v1
+oid sha256:72210d63da24fb01eb3fee5c6c6a91ce1fbefc26c3326ea78ef8f0632e212d60
+size 350

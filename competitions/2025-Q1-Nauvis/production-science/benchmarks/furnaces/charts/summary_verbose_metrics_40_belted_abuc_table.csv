@@ -1,4 +1,3 @@
-Save File,Entity Update,Transport Lines Update,Control Behavior Update,Electric/Heat/Fluid Circuit Update,Other,Whole Update,% Decrease from Previous,% Decrease from Best
-40_belted_abuc_v1.0,506,42,33,30,13,624,,0%
-40_belted_abuc_v1.2,501,42,40,30,13,626,-0.42%,-0.42%
-40_belted_abuc_v1.1,509,41,37,31,13,631,-0.77%,-1.19%
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd830e5336f69dca3c24094fbee30b6292ada2877a8e0c392d202906ccdf1fad
+size 322

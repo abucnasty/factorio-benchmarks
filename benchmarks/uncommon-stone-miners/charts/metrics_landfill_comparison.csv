@@ -1,3 +1,3 @@
-Save File,Entity Update,Transport Lines Update,Control Behavior Update,Electric/Heat/Fluid Circuit Update,Trains,Space Platforms,Other,Whole Update,% Decrease from Previous,% Decrease from Best
-landfill_wagon_480,1854,90,64,46,18,0,13,2085,,0%
-recycler_wagon_1920,2884,52,41,37,12,0,11,3037,-45.66%,-45.66%
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ecdf221ece1442fa5211926fbdc5cb140cbafb02f92bec4235a8e93aaba0179
+size 306

@@ -1,4 +1,3 @@
-Save File,Entity Update,Space Platforms,Control Behavior Update,Electric/Heat/Fluid Circuit Update,Transport Lines Update,Trains,Particle Update,Other,Whole Update,% Decrease from Previous,% Decrease from Best
-linux_9800X3D,7221,1272,778,506,317,101,78,864,11136,,0%
-linux_7800X3D,8082,1470,868,652,400,104,86,975,12637,-13.48%,-13.48%
-linux_9700X,8252,1278,1074,679,460,115,82,1066,13006,-2.92%,-16.79%
+version https://git-lfs.github.com/spec/v1
+oid sha256:27635f05a6965b9f7f0f82fe9f420a86f9b72285da6f1ebb0b9147239c746a3b
+size 403
