@@ -40,7 +40,12 @@ WIP simulator for calculating quality ratios for use in designs
 
 ### Git LFS (Large File Storage)
 
-This repository uses [Git LFS](https://git-lfs.com/) to store Factorio save files (`.zip`). Save files are served from Cloudflare R2. You must have Git LFS installed before cloning or contributing, otherwise zip files will appear as small pointer text files instead of actual saves.
+This repository uses [Git LFS](https://git-lfs.com/) to store large files. The following are tracked via LFS and served from Cloudflare R2:
+
+- **`.zip`** — Factorio save files (all directories)
+- **`.csv`** — Benchmark result data (`benchmarks/` and `competitions/`)
+
+You must have Git LFS installed before cloning or contributing, otherwise these files will appear as small pointer text files instead of their actual contents.
 
 **Setup:**
 
@@ -52,16 +57,16 @@ This repository uses [Git LFS](https://git-lfs.com/) to store Factorio save file
 
 #### Cloning — download only what you need
 
-There are hundreds of benchmark save files in this repo. To avoid downloading all of them at once, clone with LFS smudging disabled and then pull only the saves you need:
+There are hundreds of benchmark save files and result CSVs in this repo. To avoid downloading all of them at once, clone with LFS smudging disabled and then pull only what you need:
 
 ```sh
 GIT_LFS_SKIP_SMUDGE=1 git clone <repo-url>
 cd factorio-benchmarks
 
-# Pull saves for a specific benchmark
-git lfs pull --include="benchmarks/2026-07-03-mining-drill-performance-2.1.9/*.zip"
+# Pull saves and results for a specific benchmark
+git lfs pull --include="benchmarks/2026-07-03-mining-drill-performance-2.1.9/**"
 
-# Or pull everything from a top-level folder
+# Or pull everything from a top-level folder (saves + CSVs)
 git lfs pull --include="benchmarks/**"
 ```
 
@@ -72,7 +77,7 @@ git clone <repo-url>
 
 If you already cloned without LFS, fetch specific files with:
 ```sh
-git lfs pull --include="<path/to/benchmark>/*.zip"
+git lfs pull --include="<path/to/benchmark>/**"
 ```
 
 #### Adding new benchmark save files
