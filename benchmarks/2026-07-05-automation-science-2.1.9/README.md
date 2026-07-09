@@ -30,11 +30,11 @@ All four variants target the same effective science output. Uncommon (Q2) packs 
 ![alt text](images/save_file_screenshot_q1.jpg)
 
 
-**Q2 LDS shuffle 24-belt** — Uncommon-quality, 24 belts/clone. Copper plates recovered from an LDS recycling loop (ore → molten iron/copper in foundries → LDS → recycled to copper plates; steel byproduct voided via infinity-recycled steel chests). Iron plates: normal-quality iron ore voided in recyclers, remainder smelted in standard furnaces → gear assembler. Foundries used only for the LDS subassembly, so a small dual-fluid network per clone.
+**Q2 LDS shuffle 24-belt** — Uncommon-quality, 24 belts/clone. Copper plates recovered from an LDS recycling loop (ore → molten iron/copper in foundries → LDS → recycled to copper plates; steel byproduct voided via infinity-recycled steel chests). Iron plates: normal-quality iron ore voided in recyclers, remainder smelted in standard furnaces → gear assembler. Foundries used only for the LDS subassembly, so a small dual-fluid network per clone. Inserters clocked via circuit networks.
 ![alt text](images/save_file_screenshot_q2_lds.jpg)
 
 
-**Q2 copper ore voiding 24-belt** — Uncommon-quality, 24 belts/clone. Copper and iron ore smelted in standard furnaces. Normal-quality **copper ore is voided** in recyclers (to obtain uncommon copper), and normal-quality **iron ore is also voided** in recyclers before the remainder is smelted into iron plates for the gear assembler. No foundries, no fluids. (Voided ore appears as furnaces in entity stats.)
+**Q2 copper ore voiding 24-belt** — Uncommon-quality, 24 belts/clone. Copper and iron ore smelted in standard furnaces. Normal-quality **copper ore is voided** in recyclers (to obtain uncommon copper), and normal-quality **iron ore is also voided** in recyclers before the remainder is smelted into iron plates for the gear assembler. No foundries, no fluids. Inserters clocked via circuit networks. (Voided ore appears as furnaces in entity stats.)
 
 ![alt text](images/save_file_screenshot_q2.jpg)
 
