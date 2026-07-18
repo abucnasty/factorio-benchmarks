@@ -73,7 +73,7 @@
 | Description            | Version | Link                                               | Posted     | Video                                   |
 | ---------------------- | ------- | -------------------------------------------------- | ---------- | --------------------------------------- |
 | Stack 16 Labs          | 1.13    | [factoriobin](https://factoriobin.com/post/1op71h) |            | [youtube](https://youtu.be/GhdUm3fSGlw) |
-| Quantum Blade 6600/min | 1.2     | [factoriobin](https://factoriobin.com/post/dclk02) | 2026-07-18 | N/A                                     |
+| Quantum Blade 6600/min | 1.3     | [factoriobin](https://factoriobin.com/post/jtmegd) | 2026-07-18 | N/A                                     |
 | Q5 Space Casino        | MK3     | [factoriobin](https://factoriobin.com/post/x54s7m) |            | N/A                                     |
 
 
