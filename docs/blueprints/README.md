@@ -53,6 +53,8 @@
 | --------------- | -------------------- | ------- | -------------------------------------- | ---------- | ------------------------------------------------------ |
 | Walt MK4 (Q5)   | abucnasty, yuu, clux | MK4     | https://factoriobin.com/post/o2k88b/24 | 2026-03-28 | [youtube](https://www.youtube.com/watch?v=4qNDC_NEq5E) |
 | The Fring MK2.2 | abucnasty            | MK2.2   | https://factoriobin.com/post/o2k88b/12 | 2026-03-28 | [youtube](https://www.youtube.com/watch?v=4qNDC_NEq5E) |
+| Heisenberg MK3A | abucnasty            | MK3A    | https://factoriobin.com/post/akka5t    | 2026-07-18 | [youtube](https://www.youtube.com/watch?v=zJIqhbVPFn0) |
+| Heisenberg MK3B | abucnasty            | MK3B    | https://factoriobin.com/post/qhj8lm    | 2026-07-18 | [youtube](https://www.youtube.com/watch?v=zJIqhbVPFn0) |
 
 
 ### Deprecated
@@ -68,11 +70,11 @@
 
 
 ### Generic Space Age
-| Description            | Version | Link                                               | Video                                   |
-| ---------------------- | ------- | -------------------------------------------------- | --------------------------------------- |
-| Stack 16 Labs          | 1.13    | [factoriobin](https://factoriobin.com/post/1op71h) | [youtube](https://youtu.be/GhdUm3fSGlw) |
-| Quantum Blade 6600/min | 1.1     | [factoriobin](https://factoriobin.com/post/tca2zr) | N/A                                     |
-| Q5 Space Casino        | MK3     | [factoriobin](https://factoriobin.com/post/x54s7m) | N/A                                     |
+| Description            | Version | Link                                               | Posted     | Video                                   |
+| ---------------------- | ------- | -------------------------------------------------- | ---------- | --------------------------------------- |
+| Stack 16 Labs          | 1.13    | [factoriobin](https://factoriobin.com/post/1op71h) |            | [youtube](https://youtu.be/GhdUm3fSGlw) |
+| Quantum Blade 6600/min | 1.2     | [factoriobin](https://factoriobin.com/post/dclk02) | 2026-07-18 | N/A                                     |
+| Q5 Space Casino        | MK3     | [factoriobin](https://factoriobin.com/post/x54s7m) |            | N/A                                     |
 
 
 ### Modules
