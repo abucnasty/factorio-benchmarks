@@ -8,7 +8,7 @@
 
 **CPU:** Ryzen 9800X3D
 
-**Coauthor:** Tappi
+**Coauthor:** tappi
 
 ## The Question
 Does chunk alignment of a space platform matter for space platform update time?
