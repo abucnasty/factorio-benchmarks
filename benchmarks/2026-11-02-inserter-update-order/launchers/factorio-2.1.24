@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Factorio 2.1.24 with glibc malloc, the system allocator. On the test machine its memory sits on 4 KB pages.
+set -euo pipefail
+FACTORIO_BIN="${FACTORIO_BIN:-$HOME/Games/factorio_locked_versions/2_1_24/bin/x64/factorio}"
+exec "$FACTORIO_BIN" "$@"

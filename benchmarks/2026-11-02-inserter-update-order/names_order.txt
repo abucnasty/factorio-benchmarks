@@ -1,0 +1,13 @@
+# save file base name=order, for charts grouped by build
+3i-2to1-as-saved=As Saved
+3i-2to1-memory-forward=Memory Forward
+3i-2to1-memory-backward=Memory Backward
+3i-2to1-shuffled=Shuffled
+3i-3to1-as-saved=As Saved
+3i-3to1-memory-forward=Memory Forward
+3i-3to1-memory-backward=Memory Backward
+3i-3to1-shuffled=Shuffled
+4i-as-saved=As Saved
+4i-memory-forward=Memory Forward
+4i-memory-backward=Memory Backward
+4i-shuffled=Shuffled

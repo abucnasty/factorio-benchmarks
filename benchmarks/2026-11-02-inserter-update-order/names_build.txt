@@ -1,0 +1,13 @@
+# save file base name=build, for charts grouped by order or showing one order
+3i-2to1-as-saved=3 Inserters 2:1
+3i-3to1-as-saved=3 Inserters 3:1
+4i-as-saved=4 Inserters
+3i-2to1-memory-forward=3 Inserters 2:1
+3i-3to1-memory-forward=3 Inserters 3:1
+4i-memory-forward=4 Inserters
+3i-2to1-memory-backward=3 Inserters 2:1
+3i-3to1-memory-backward=3 Inserters 3:1
+4i-memory-backward=4 Inserters
+3i-2to1-shuffled=3 Inserters 2:1
+3i-3to1-shuffled=3 Inserters 3:1
+4i-shuffled=4 Inserters

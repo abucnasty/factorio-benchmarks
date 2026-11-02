@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Factorio 2.1.24 with mimalloc v3.6.1 preloaded and large OS pages allowed. With no huge pages reserved, mimalloc uses
+# transparent 2 MB pages; on the test machine 99.7% of the game's memory was on them.
+# mimalloc is the official prebuilt release https://github.com/microsoft/mimalloc/releases/tag/v3.6.1
+# (mimalloc-v3.6.1-linux-x64.tar.gz, lib/libmimalloc.so). Set MIMALLOC_SO if it is installed elsewhere.
+set -euo pipefail
+FACTORIO_BIN="${FACTORIO_BIN:-$HOME/Games/factorio_locked_versions/2_1_24/bin/x64/factorio}"
+MIMALLOC_SO="${MIMALLOC_SO:-$HOME/.local/lib/mimalloc/v3.6.1/lib/libmimalloc.so}"
+[ -f "$MIMALLOC_SO" ] || { echo "mimalloc not found at $MIMALLOC_SO (set MIMALLOC_SO)" >&2; exit 1; }
+# allow large OS pages
+export MIMALLOC_ALLOW_LARGE_OS_PAGES=1
+# never return unused pages to the OS
+export MIMALLOC_PURGE_DELAY=-1
+export LD_PRELOAD="$MIMALLOC_SO${LD_PRELOAD:+:$LD_PRELOAD}"
+exec "$FACTORIO_BIN" "$@"

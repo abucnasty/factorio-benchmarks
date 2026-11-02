@@ -1,0 +1,226 @@
+{
+  "defaults": {
+    "width": 1400,
+    "scale": 2,
+    "fontScale": 1.4,
+    "removeFirstTicks": 1500,
+    "aggregateStrategy": "average",
+    "sort": "input",
+    "valueLabels": true,
+    "summaryTable": false,
+    "subtitle": "13,500 ticks measured, 10 runs, Factorio 2.1.24"
+  },
+  "charts": [
+    {
+      "command": "summary",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "include": [
+        "*-as-saved"
+      ],
+      "errorBars": "ci95",
+      "height": 500,
+      "metrics": "wholeUpdate,entityUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate",
+      "output": "charts_story/1-as-saved.png",
+      "titleOverride": "1. The Three Builds As Saved, malloc",
+      "namesFile": "names_build.txt"
+    },
+    {
+      "command": "entity-summary",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "include": [
+        "*-as-saved"
+      ],
+      "topN": 4,
+      "height": 500,
+      "output": "charts_story/1-as-saved-entities.png",
+      "titleOverride": "1. The Three Builds As Saved, malloc: Entity Update",
+      "namesFile": "names_build.txt"
+    },
+    {
+      "command": "entity-summary",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "groupBy": "3i-2to1=3 Inserters 2:1,3i-3to1=3 Inserters 3:1,4i=4 Inserters",
+      "baselinePerGroup": "3i-2to1=3i-2to1-as-saved,3i-3to1=3i-3to1-as-saved,4i=4i-as-saved",
+      "topN": 4,
+      "height": 1000,
+      "output": "charts_story/2-orders-malloc.png",
+      "titleOverride": "2. Every Order Against As Saved, malloc",
+      "namesFile": "names_order.txt"
+    },
+    {
+      "command": "entity-summary",
+      "input": "results_mimalloc/*_verbose_metrics.csv.zst",
+      "groupBy": "3i-2to1=3 Inserters 2:1,3i-3to1=3 Inserters 3:1,4i=4 Inserters",
+      "baselinePerGroup": "3i-2to1=3i-2to1-as-saved,3i-3to1=3i-3to1-as-saved,4i=4i-as-saved",
+      "topN": 4,
+      "height": 1000,
+      "output": "charts_story/3-orders-mimalloc.png",
+      "titleOverride": "3. Every Order Against As Saved, mimalloc Large Pages",
+      "namesFile": "names_order.txt"
+    },
+    {
+      "command": "ups",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "groupBy": "as-saved=As Saved,memory-forward=Memory Forward,memory-backward=Memory Backward,shuffled=Shuffled",
+      "titleOverride": "Inserter Update Order: Grouped By Order, malloc",
+      "height": 1150,
+      "errorBars": "ci95",
+      "output": "charts_plain/by-order/ups.png",
+      "namesFile": "names_build.txt"
+    },
+    {
+      "command": "boxplot",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "groupBy": "as-saved=As Saved,memory-forward=Memory Forward,memory-backward=Memory Backward,shuffled=Shuffled",
+      "titleOverride": "Inserter Update Order: Grouped By Order, malloc",
+      "height": 600,
+      "output": "charts_plain/by-order/run_distribution.png",
+      "namesFile": "names_full.txt"
+    },
+    {
+      "command": "summary",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "groupBy": "as-saved=As Saved,memory-forward=Memory Forward,memory-backward=Memory Backward,shuffled=Shuffled",
+      "titleOverride": "Inserter Update Order: Grouped By Order, malloc",
+      "height": 1150,
+      "valueLabels": false,
+      "summaryTable": true,
+      "metrics": "wholeUpdate,entityUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate",
+      "output": "charts_plain/by-order/metrics.png",
+      "namesFile": "names_build.txt"
+    },
+    {
+      "command": "entity-summary",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "groupBy": "as-saved=As Saved,memory-forward=Memory Forward,memory-backward=Memory Backward,shuffled=Shuffled",
+      "titleOverride": "Inserter Update Order: Grouped By Order, malloc",
+      "height": 1150,
+      "topN": 4,
+      "output": "charts_plain/by-order/entity_summary.png",
+      "namesFile": "names_build.txt"
+    },
+    {
+      "command": "ups",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "groupBy": "3i-2to1=3 Inserters 2:1,3i-3to1=3 Inserters 3:1,4i=4 Inserters",
+      "titleOverride": "Inserter Update Order: Grouped By Build, malloc",
+      "height": 1150,
+      "errorBars": "ci95",
+      "output": "charts_plain/by-build/ups.png",
+      "namesFile": "names_order.txt"
+    },
+    {
+      "command": "boxplot",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "groupBy": "3i-2to1=3 Inserters 2:1,3i-3to1=3 Inserters 3:1,4i=4 Inserters",
+      "titleOverride": "Inserter Update Order: Grouped By Build, malloc",
+      "height": 600,
+      "output": "charts_plain/by-build/run_distribution.png",
+      "namesFile": "names_full.txt"
+    },
+    {
+      "command": "summary",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "groupBy": "3i-2to1=3 Inserters 2:1,3i-3to1=3 Inserters 3:1,4i=4 Inserters",
+      "titleOverride": "Inserter Update Order: Grouped By Build, malloc",
+      "height": 1150,
+      "valueLabels": false,
+      "summaryTable": true,
+      "metrics": "wholeUpdate,entityUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate",
+      "output": "charts_plain/by-build/metrics.png",
+      "namesFile": "names_order.txt"
+    },
+    {
+      "command": "entity-summary",
+      "input": "results_plain/*_verbose_metrics.csv.zst",
+      "groupBy": "3i-2to1=3 Inserters 2:1,3i-3to1=3 Inserters 3:1,4i=4 Inserters",
+      "titleOverride": "Inserter Update Order: Grouped By Build, malloc",
+      "height": 1150,
+      "topN": 4,
+      "output": "charts_plain/by-build/entity_summary.png",
+      "namesFile": "names_order.txt"
+    },
+    {
+      "command": "ups",
+      "input": "results_mimalloc/*_verbose_metrics.csv.zst",
+      "groupBy": "as-saved=As Saved,memory-forward=Memory Forward,memory-backward=Memory Backward,shuffled=Shuffled",
+      "titleOverride": "Inserter Update Order: Grouped By Order, mimalloc Large Pages",
+      "height": 1150,
+      "errorBars": "ci95",
+      "output": "charts_mimalloc/by-order/ups.png",
+      "namesFile": "names_build.txt"
+    },
+    {
+      "command": "boxplot",
+      "input": "results_mimalloc/*_verbose_metrics.csv.zst",
+      "groupBy": "as-saved=As Saved,memory-forward=Memory Forward,memory-backward=Memory Backward,shuffled=Shuffled",
+      "titleOverride": "Inserter Update Order: Grouped By Order, mimalloc Large Pages",
+      "height": 600,
+      "output": "charts_mimalloc/by-order/run_distribution.png",
+      "namesFile": "names_full.txt"
+    },
+    {
+      "command": "summary",
+      "input": "results_mimalloc/*_verbose_metrics.csv.zst",
+      "groupBy": "as-saved=As Saved,memory-forward=Memory Forward,memory-backward=Memory Backward,shuffled=Shuffled",
+      "titleOverride": "Inserter Update Order: Grouped By Order, mimalloc Large Pages",
+      "height": 1150,
+      "valueLabels": false,
+      "summaryTable": true,
+      "metrics": "wholeUpdate,entityUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate",
+      "output": "charts_mimalloc/by-order/metrics.png",
+      "namesFile": "names_build.txt"
+    },
+    {
+      "command": "entity-summary",
+      "input": "results_mimalloc/*_verbose_metrics.csv.zst",
+      "groupBy": "as-saved=As Saved,memory-forward=Memory Forward,memory-backward=Memory Backward,shuffled=Shuffled",
+      "titleOverride": "Inserter Update Order: Grouped By Order, mimalloc Large Pages",
+      "height": 1150,
+      "topN": 4,
+      "output": "charts_mimalloc/by-order/entity_summary.png",
+      "namesFile": "names_build.txt"
+    },
+    {
+      "command": "ups",
+      "input": "results_mimalloc/*_verbose_metrics.csv.zst",
+      "groupBy": "3i-2to1=3 Inserters 2:1,3i-3to1=3 Inserters 3:1,4i=4 Inserters",
+      "titleOverride": "Inserter Update Order: Grouped By Build, mimalloc Large Pages",
+      "height": 1150,
+      "errorBars": "ci95",
+      "output": "charts_mimalloc/by-build/ups.png",
+      "namesFile": "names_order.txt"
+    },
+    {
+      "command": "boxplot",
+      "input": "results_mimalloc/*_verbose_metrics.csv.zst",
+      "groupBy": "3i-2to1=3 Inserters 2:1,3i-3to1=3 Inserters 3:1,4i=4 Inserters",
+      "titleOverride": "Inserter Update Order: Grouped By Build, mimalloc Large Pages",
+      "height": 600,
+      "output": "charts_mimalloc/by-build/run_distribution.png",
+      "namesFile": "names_full.txt"
+    },
+    {
+      "command": "summary",
+      "input": "results_mimalloc/*_verbose_metrics.csv.zst",
+      "groupBy": "3i-2to1=3 Inserters 2:1,3i-3to1=3 Inserters 3:1,4i=4 Inserters",
+      "titleOverride": "Inserter Update Order: Grouped By Build, mimalloc Large Pages",
+      "height": 1150,
+      "valueLabels": false,
+      "summaryTable": true,
+      "metrics": "wholeUpdate,entityUpdate,controlBehaviorUpdate,transportLinesUpdate,electricHeatFluidCircuitUpdate",
+      "output": "charts_mimalloc/by-build/metrics.png",
+      "namesFile": "names_order.txt"
+    },
+    {
+      "command": "entity-summary",
+      "input": "results_mimalloc/*_verbose_metrics.csv.zst",
+      "groupBy": "3i-2to1=3 Inserters 2:1,3i-3to1=3 Inserters 3:1,4i=4 Inserters",
+      "titleOverride": "Inserter Update Order: Grouped By Build, mimalloc Large Pages",
+      "height": 1150,
+      "topN": 4,
+      "output": "charts_mimalloc/by-build/entity_summary.png",
+      "namesFile": "names_order.txt"
+    }
+  ]
+}

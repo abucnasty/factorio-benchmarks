@@ -1,0 +1,13 @@
+# save file base name=build and order, for charts with no groups
+3i-2to1-as-saved=3 Inserters 2:1, As Saved
+3i-2to1-memory-forward=3 Inserters 2:1, Memory Forward
+3i-2to1-memory-backward=3 Inserters 2:1, Memory Backward
+3i-2to1-shuffled=3 Inserters 2:1, Shuffled
+3i-3to1-as-saved=3 Inserters 3:1, As Saved
+3i-3to1-memory-forward=3 Inserters 3:1, Memory Forward
+3i-3to1-memory-backward=3 Inserters 3:1, Memory Backward
+3i-3to1-shuffled=3 Inserters 3:1, Shuffled
+4i-as-saved=4 Inserters, As Saved
+4i-memory-forward=4 Inserters, Memory Forward
+4i-memory-backward=4 Inserters, Memory Backward
+4i-shuffled=4 Inserters, Shuffled
