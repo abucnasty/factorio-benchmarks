@@ -43,7 +43,7 @@ WIP simulator for calculating quality ratios for use in designs
 This repository uses [Git LFS](https://git-lfs.com/) to store large files. The following are tracked via LFS and served from Cloudflare R2:
 
 - **`.zip`** — Factorio save files (all directories)
-- **`.csv`** — Benchmark result data (`benchmarks/` and `competitions/`)
+- **`.csv`** and **`.csv.zst`** — Benchmark result data, plain or zstd-compressed (`benchmarks/` and `competitions/`)
 
 You must have Git LFS installed before cloning or contributing, otherwise these files will appear as small pointer text files instead of their actual contents.
 

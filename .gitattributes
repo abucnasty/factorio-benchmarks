@@ -1,3 +1,5 @@
 *.zip filter=lfs diff=lfs merge=lfs -text
 benchmarks/**/*.csv filter=lfs diff=lfs merge=lfs -text
 competitions/**/*.csv filter=lfs diff=lfs merge=lfs -text
+benchmarks/**/*.csv.zst filter=lfs diff=lfs merge=lfs -text
+competitions/**/*.csv.zst filter=lfs diff=lfs merge=lfs -text
