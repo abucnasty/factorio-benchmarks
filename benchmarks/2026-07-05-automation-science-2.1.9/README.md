@@ -1,3 +1,11 @@
+---
+publish: true
+slug: 2026-07-09-automation-science-2.1.9
+title: Automation Science Q1 vs Q2 in 2.1.9
+topic: science
+date: 2026-07-09
+---
+
 # Automation Science Q1 vs Q2 in 2.1.9 
 
 **Platform:** linux-x86_64

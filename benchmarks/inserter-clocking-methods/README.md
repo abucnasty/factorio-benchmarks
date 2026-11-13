@@ -1,3 +1,10 @@
+---
+publish: true
+slug: inserter-clocking-methods
+title: Inserter Clocking Methods
+topic: inserters
+---
+
 ## Overview
 
 ## Test Scenario

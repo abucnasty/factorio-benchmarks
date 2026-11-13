@@ -1,3 +1,11 @@
+---
+publish: true
+slug: uncommon-purple
+title: Uncommon Purple
+topic: science
+date: 2025-07-02
+---
+
 # Factorio Benchmark Results
 
 **Platform:** windows-x86_64  

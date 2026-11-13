@@ -1,3 +1,11 @@
+---
+publish: true
+slug: benchmark-variances
+title: Benchmark Variances
+topic: engine
+date: 2025-09-01
+---
+
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Overview](#overview)

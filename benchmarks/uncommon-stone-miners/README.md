@@ -1,3 +1,11 @@
+---
+publish: true
+slug: uncommon-stone-miners
+title: Uncommon Stone Miners
+topic: mining
+date: 2026-04-15
+---
+
 # Q2 Stone Washing Methods
 
 **Platform:** linux-x86_64

@@ -1,3 +1,11 @@
+---
+publish: true
+slug: 2026-06-30-vulcanus-stone-voiding
+title: Vulcanus Stone Voiding
+topic: mining
+date: 2026-06-30
+---
+
 # Stone Voiding on Vulcanus
 
 **Platform:** linux-x86_64

@@ -1,3 +1,10 @@
+---
+publish: true
+slug: uncommon-red-science-v3
+title: Uncommon Red Science V3
+topic: science
+---
+
 ## Test Scenario
 - comparing new automation science build v3 verse v2
 - 1.4 million uncommon automation science produced per minute in each map

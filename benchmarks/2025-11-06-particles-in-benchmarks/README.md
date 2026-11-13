@@ -1,3 +1,17 @@
+---
+publish: true
+slug: particles-in-benchmarks
+title: Particles in Benchmarks
+topic: engine
+date: 2025-11-06
+chart:
+  scenarios:
+    - { name: Editor closed · primary surface, csv: results/bm_particles_editor_closed_primary_surface_verbose_metrics.csv }
+    - { name: Editor closed · other surface, csv: results/bm_particles_editor_closed_other_surface_verbose_metrics.csv }
+    - { name: Editor open · primary surface, csv: results/bm_particles_editor_open_primary_surface_verbose_metrics.csv }
+    - { name: Editor open · other surface, csv: results/bm_particles_editor_open_other_surface_verbose_metrics.csv }
+---
+
 # Particles in Benchmarks
 
 **Platform:** windows-x86_64

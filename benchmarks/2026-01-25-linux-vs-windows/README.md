@@ -1,3 +1,19 @@
+---
+publish: true
+slug: 2026-01-25-linux-vs-windows
+title: Linux vs Windows Performance
+topic: engine
+date: 2026-01-25
+featured: 1
+chart:
+  scenarios:
+    - { name: Linux standalone, csv: results_multi_run/dmb_main_research_prod_linux_standalone_verbose_metrics.csv }
+    - { name: Linux + mimalloc, csv: results_multi_run/dmb_main_research_prod_linux_standalone_mimalloc_verbose_metrics.csv }
+    - { name: Linux + mimalloc + huge_pages 8GB, csv: results_multi_run/dmb_main_research_prod_linux_standalone_mimalloc_huge_pages_8GB_verbose_metrics.csv }
+    - { name: Windows standalone, csv: results_multi_run/dmb_main_research_prod_windows_standalone_verbose_metrics.csv }
+    - { name: Windows + mimalloc, csv: results_multi_run/dmb_main_research_prod_windows_standalone_mimalloc_verbose_metrics.csv }
+---
+
 # Windows 11 vs Linux (Fedora) Results
 
 ## Table of Contents

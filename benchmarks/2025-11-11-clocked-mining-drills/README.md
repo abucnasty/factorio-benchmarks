@@ -1,3 +1,16 @@
+---
+publish: true
+slug: clocked-mining-drills
+title: Clocked Mining Drills
+topic: mining
+date: 2025-11-11
+featured: 3
+chart:
+  scenarios:
+    - { name: Clocked, csv: results/bm_mining_drill_clocked_verbose_metrics.csv }
+    - { name: Unclocked, csv: results/bm_mining_drill_unclocked_verbose_metrics.csv }
+---
+
 # Factorio Benchmark Results
 
 **Platform:** windows-x86_64

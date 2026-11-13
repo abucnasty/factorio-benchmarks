@@ -1,3 +1,11 @@
+---
+publish: true
+slug: vehicle-fuel
+title: Cars / Tanks Equipment Grid and Fuel Impact
+topic: vehicles
+date: 2025-11-03
+---
+
 # Cars / Tanks Equipment Grid and Fuel Impact
 
 **Platform:** windows-x86_64

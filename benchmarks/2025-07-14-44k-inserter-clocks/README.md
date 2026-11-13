@@ -1,3 +1,11 @@
+---
+publish: true
+slug: 44k-inserter-clocks
+title: 44k Inserter Clocks
+topic: inserters
+date: 2025-07-14
+---
+
 # Factorio Benchmark Results
 
 **Platform:** windows-x86_64  

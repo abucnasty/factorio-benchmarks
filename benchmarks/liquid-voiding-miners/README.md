@@ -1,3 +1,10 @@
+---
+publish: true
+slug: liquid-voiding-miners
+title: Liquid Voiding Miners
+topic: mining
+---
+
 # Factorio Benchmark Results
 
 **Platform:** windows-x86_64  

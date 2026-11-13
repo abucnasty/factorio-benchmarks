@@ -1,3 +1,11 @@
+---
+publish: true
+slug: beacons
+title: Beacon Entity Update Time
+topic: engine
+date: 2025-09-12
+---
+
 # Beacon Entity Update Time
 
 **Platform:** windows-x86_64

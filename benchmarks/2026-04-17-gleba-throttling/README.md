@@ -1,3 +1,15 @@
+---
+publish: true
+slug: 2026-04-17-gleba-throttling
+title: Gleba Throttling
+topic: science
+date: 2026-04-17
+chart:
+  scenarios:
+    - { name: Gleba throttle, csv: results/dmb_main_gleba_throttle_verbose_metrics.csv }
+    - { name: Nauvis void, csv: results/dmb_main_nauvis_void_verbose_metrics.csv }
+---
+
 # Throttling Science Production on Gleba vs Voiding on Nauvis
 
 **Platform:** linux-x86_64

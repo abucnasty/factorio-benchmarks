@@ -1,3 +1,10 @@
+---
+publish: true
+slug: uncommon-chemical-science-v2
+title: Uncommon Chemical Science V2
+topic: science
+---
+
 ## Test Scenario
 - comparing new chemical science build v2 verse my original v1 in my uncommon 4million espm base
 - 940k/min chemical science produced in each map

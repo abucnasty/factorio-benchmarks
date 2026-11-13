@@ -1,3 +1,56 @@
+---
+publish: true
+slug: chests
+title: Chest Transfer
+topic: vehicles
+date: 2025-10-31
+chart:
+  groups:
+    - name: 5 tiles
+      scenarios:
+        - { name: Iron chest, csv: 5_tiles/results/bm_5_tiles_iron_chest_verbose_metrics.csv }
+        - { name: Iron chest (limited), csv: 5_tiles/results/bm_5_tiles_iron_chest_limited_verbose_metrics.csv }
+        - { name: Steel chest, csv: 5_tiles/results/bm_5_tiles_steel_chest_verbose_metrics.csv }
+        - { name: Steel chest (limited), csv: 5_tiles/results/bm_5_tiles_steel_chest_limited_verbose_metrics.csv }
+        - { name: Steel Q5 chest, csv: 5_tiles/results/bm_5_tiles_steel_q5_chest_verbose_metrics.csv }
+        - { name: Steel Q5 chest (limited), csv: 5_tiles/results/bm_5_tiles_steel_q5_chest_limited_verbose_metrics.csv }
+        - { name: Wood chest, csv: 5_tiles/results/bm_5_tiles_wood_chest_verbose_metrics.csv }
+        - { name: Wood chest (limited), csv: 5_tiles/results/bm_5_tiles_wood_chest_limited_verbose_metrics.csv }
+        - { name: Car, csv: 5_tiles/results/bm_5_tiles_car_verbose_metrics.csv }
+        - { name: Car (disabled), csv: 5_tiles/results/bm_5_tiles_car_disabled_verbose_metrics.csv }
+    - name: 5 tiles (backpressure)
+      scenarios:
+        - { name: Iron chest, csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_iron_verbose_metrics.csv }
+        - { name: Iron chest (limited), csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_iron_limited_verbose_metrics.csv }
+        - { name: Iron chest (full), csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_iron_full_verbose_metrics.csv }
+        - { name: Steel chest, csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_steel_verbose_metrics.csv }
+        - { name: Steel chest (limited), csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_steel_limited_verbose_metrics.csv }
+        - { name: Steel chest (full), csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_steel_full_verbose_metrics.csv }
+        - { name: Steel Q5 chest, csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_steel_q5_verbose_metrics.csv }
+        - { name: Steel Q5 chest (limited), csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_steel_q5_limited_verbose_metrics.csv }
+        - { name: Steel Q5 chest (full), csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_steel_q5_full_verbose_metrics.csv }
+        - { name: Car (default), csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_car_default_verbose_metrics.csv }
+        - { name: Car (full), csv: 5_tiles_backpressure/results/bm_5_tiles_backpressure_car_full_verbose_metrics.csv }
+    - name: 7 tiles
+      scenarios:
+        - { name: 3 inserter, csv: 7_tiles/results/bm_7_tiles_3_inserter_verbose_metrics.csv }
+        - { name: 3 inserter (limited), csv: 7_tiles/results/bm_7_tiles_3_inserter_limited_verbose_metrics.csv }
+        - { name: Car, csv: 7_tiles/results/bm_7_tiles_car_verbose_metrics.csv }
+        - { name: Car (disabled), csv: 7_tiles/results/bm_7_tiles_car_disabled_verbose_metrics.csv }
+        - { name: Tank, csv: 7_tiles/results/bm_7_tiles_tank_verbose_metrics.csv }
+        - { name: Tank (disabled), csv: 7_tiles/results/bm_7_tiles_tank_disabled_verbose_metrics.csv }
+    - name: 9 tiles
+      scenarios:
+        - { name: 3 inserter (default), csv: 9_tiles/results/bm_9_tiles_3_inserter_default_verbose_metrics.csv }
+        - { name: 3 inserter (limited), csv: 9_tiles/results/bm_9_tiles_3_inserter_limited_verbose_metrics.csv }
+        - { name: Wagon (default), csv: 9_tiles/results/bm_9_tiles_wagon_default_verbose_metrics.csv }
+        - { name: Wagon (limited empty), csv: 9_tiles/results/bm_9_tiles_wagon_limited_empty_verbose_metrics.csv }
+        - { name: Wagon filtered first coin, csv: 9_tiles/results/bm_9_tiles_wagon_filtered_first_coin_verbose_metrics.csv }
+        - { name: Wagon filtered first empty, csv: 9_tiles/results/bm_9_tiles_wagon_filtered_first_empty_verbose_metrics.csv }
+        - { name: Wagon filtered last coin, csv: 9_tiles/results/bm_9_tiles_wagon_filtered_last_coin_verbose_metrics.csv }
+        - { name: Wagon filtered last empty, csv: 9_tiles/results/bm_9_tiles_wagon_filtered_last_empty_verbose_metrics.csv }
+---
+
 # Chest Transfer
 
 **Platform:** windows-x86_64

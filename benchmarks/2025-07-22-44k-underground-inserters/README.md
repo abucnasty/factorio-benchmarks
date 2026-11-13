@@ -1,3 +1,11 @@
+---
+publish: true
+slug: 44k-underground-inserters
+title: 44k Underground Inserters
+topic: inserters
+date: 2025-07-22
+---
+
 ## Scenario
 - 30 legendary stack inserters pick up items off a stacked turbo belt in a 240 tick cycle
 - the objectives to be tested:

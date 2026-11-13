@@ -1,3 +1,10 @@
+---
+publish: true
+slug: pollution-control
+title: Pollution Control
+topic: engine
+---
+
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Utilities Used](#utilities-used)

@@ -1,3 +1,11 @@
+---
+publish: true
+slug: recycler-clocking
+title: Recycler Clocking
+topic: inserters
+date: 2025-10-14
+---
+
 # Factorio Benchmark Results
 
 **Platform:** windows-x86_64
