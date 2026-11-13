@@ -1,3 +1,11 @@
+---
+publish: true
+slug: tile-pollution
+title: Impact of Pollution
+topic: engine
+date: 2025-11-06
+---
+
 # Impact of Pollution
 
 **Platform:** windows-x86_64

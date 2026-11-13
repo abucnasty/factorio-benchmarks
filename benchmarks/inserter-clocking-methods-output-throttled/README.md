@@ -1,3 +1,10 @@
+---
+publish: true
+slug: inserter-clocking-methods-output-throttled
+title: Inserter Clocking Methods Output Throttled
+topic: inserters
+---
+
 ## Overview
 
 ## Test Scenario

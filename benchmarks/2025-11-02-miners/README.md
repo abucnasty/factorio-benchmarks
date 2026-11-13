@@ -1,3 +1,11 @@
+---
+publish: true
+slug: miners
+title: Miners
+topic: mining
+date: 2025-11-02
+---
+
 ## Miners
 
 **Platform:** windows-x86_64

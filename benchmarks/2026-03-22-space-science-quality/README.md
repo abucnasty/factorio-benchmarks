@@ -1,3 +1,21 @@
+---
+publish: true
+slug: 2026-03-22-space-science-quality
+title: Space Science Quality
+topic: science
+date: 2026-03-22
+featured: 2
+chart:
+  maxTicks: 54000
+  window: 60
+  scenarios:
+    - { name: Q1 7680 SPS, csv: results_three_hour/space_science_Q1_7680SPS_Heisenberg_MK2_verbose_metrics.csv }
+    - { name: Q2 3840 SPS, csv: results_three_hour/space_science_Q2_3840SPS_Saul_verbose_metrics.csv }
+    - { name: Q3 2560 SPS, csv: results_three_hour/space_science_Q3_2560SPS_Jesse_MK2_verbose_metrics.csv }
+    - { name: Q4 1920 SPS, csv: results_three_hour/space_science_Q4_1920SPS_Skylar_verbose_metrics.csv }
+    - { name: Q5 1280 SPS, csv: results_three_hour/space_science_Q5_1280SPS_Walt_MK2.8_verbose_metrics.csv }
+---
+
 # Space Science Quality Comparison
 
 **Platform:** linux-x86_64

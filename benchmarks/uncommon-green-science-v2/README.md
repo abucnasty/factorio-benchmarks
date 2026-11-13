@@ -1,3 +1,10 @@
+---
+publish: true
+slug: uncommon-green-science-v2
+title: Uncommon Green Science V2
+topic: science
+---
+
 ## Test Scenario
 - comparing new logistic science build v2 verse my original v1 in my uncommon 4million espm base
 - 1.8 million uncommon logistic science produced per minute in each map

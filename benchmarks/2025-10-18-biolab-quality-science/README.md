@@ -1,3 +1,11 @@
+---
+publish: true
+slug: biolab-quality-science
+title: Space Age Biolabs Impact by Science Quality & Research Type
+topic: science
+date: 2025-10-18
+---
+
 # Space Age Biolabs Impact by Science Quality & Research Type
 
 - **Platform:** windows-x86_64

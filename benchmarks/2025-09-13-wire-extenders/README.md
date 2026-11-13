@@ -1,3 +1,11 @@
+---
+publish: true
+slug: wire-extenders
+title: Wire Extenders
+topic: inserters
+date: 2025-09-13
+---
+
 # Factorio Benchmark Results
 
 **Platform:** windows-x86_64

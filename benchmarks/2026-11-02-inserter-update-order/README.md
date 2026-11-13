@@ -1,3 +1,11 @@
+---
+publish: true
+slug: 2026-11-02-inserter-update-order
+title: Inserter Update Order
+topic: inserters
+date: 2026-11-02
+---
+
 # Inserter Update Order
 
 **Platform:** linux-x86_64

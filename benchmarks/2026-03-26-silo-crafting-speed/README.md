@@ -1,3 +1,20 @@
+---
+publish: true
+slug: 2026-03-26-silo-crafting-speed
+title: Silo Crafting Speed
+topic: science
+date: 2026-03-26
+chart:
+  scenarios:
+    - { name: Q3 baseline, csv: results/silo_q3_verbose_metrics.csv }
+    - { name: Q5 (no beacons), csv: results/silo_q5_verbose_metrics.csv }
+    - { name: Q5 + 2 beacons, csv: results/silo_q5_beacon_02_verbose_metrics.csv }
+    - { name: Q5 + 4 beacons, csv: results/silo_q5_beacon_04_verbose_metrics.csv }
+    - { name: Q5 + 6 beacons, csv: results/silo_q5_beacon_06_verbose_metrics.csv }
+    - { name: Q5 + 8 beacons, csv: results/silo_q5_beacon_08_verbose_metrics.csv }
+    - { name: Q5 + 10 beacons, csv: results/silo_q5_beacon_10_verbose_metrics.csv }
+---
+
 # Rocket Silo Crafting Speed
 
 **Platform:** linux-x86_64

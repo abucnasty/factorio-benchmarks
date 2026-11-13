@@ -1,3 +1,11 @@
+---
+publish: true
+slug: uncommon-red-science-v4
+title: Uncommon Red Science V4
+topic: science
+date: 2025-08-18
+---
+
 # Factorio Benchmark Results
 
 **Platform:** windows-x86_64  

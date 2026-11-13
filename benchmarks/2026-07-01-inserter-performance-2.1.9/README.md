@@ -1,3 +1,11 @@
+---
+publish: true
+slug: 2026-07-01-inserter-performance-2.1.9
+title: Inserter Performance 2.0 vs 2.1
+topic: inserters
+date: 2026-07-01
+---
+
 # Inserter Performance Between Factorio Versions
 
 **Platform:** linux-x86_64

@@ -1,3 +1,10 @@
+---
+publish: true
+slug: iron-smelter-inserter-throttle
+title: Iron Smelter Inserter Throttle
+topic: inserters
+---
+
 ## Test Scenario
 - smelting iron ore into steel (240/s per design)
 - 256 smelters per test file

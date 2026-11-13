@@ -1,3 +1,10 @@
+---
+publish: true
+slug: uncommon-military-science
+title: Uncommon Military Science
+topic: science
+---
+
 ### Data
 ![screenshots](https://i.imgur.com/9ipZwOj.jpeg)
 

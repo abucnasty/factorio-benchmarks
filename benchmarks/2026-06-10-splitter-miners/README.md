@@ -1,3 +1,11 @@
+---
+publish: true
+slug: 2026-06-10-splitter-miners
+title: Splitter Miners
+topic: mining
+date: 2026-06-11
+---
+
 # Factorio Benchmark Results
 
 **Platform:** linux-x86_64

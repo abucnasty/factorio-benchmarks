@@ -1,3 +1,11 @@
+---
+publish: true
+slug: 2026-09-11-disabled-collectors
+title: Disabled Collectors
+topic: space
+date: 2026-09-11
+---
+
 # Disabled Collectors
 
 **Platform:** linux-x86_64

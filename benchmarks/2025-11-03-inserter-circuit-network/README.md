@@ -1,3 +1,11 @@
+---
+publish: true
+slug: inserter-circuit-network
+title: Circuit Network Cost on Inserters without Pickups
+topic: inserters
+date: 2025-11-03
+---
+
 # Circuit Network Cost on Inserters without Pickups
 
 **Platform:** windows-x86_64

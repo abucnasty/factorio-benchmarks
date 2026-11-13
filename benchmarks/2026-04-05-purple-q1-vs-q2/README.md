@@ -1,3 +1,32 @@
+---
+publish: true
+slug: 2026-04-05-purple-q1-vs-q2
+title: Purple Science Q1 vs Q2
+topic: science
+date: 2026-04-05
+chart:
+  maxTicks: 36000
+  groups:
+    - name: Mining Productivity
+      scenarios:
+        - { name: Q1, csv: results/dmb_purple_q1_mining_prod_verbose_metrics.csv }
+        - { name: Q2, csv: results/dmb_purple_q2_mining_prod_verbose_metrics.csv }
+    - name: Worker Robot Speed
+      scenarios:
+        - { name: Q1, csv: results/dmb_purple_q1_worker_robot_speed_verbose_metrics.csv }
+        - { name: Q2, csv: results/dmb_purple_q2_worker_robot_speed_verbose_metrics.csv }
+    - name: Q1 Science
+      scenarios:
+        - { name: Q1 idle, csv: results/dmb_purple_q1_idle_verbose_metrics.csv }
+        - { name: Q1 mining prod, csv: results/dmb_purple_q1_mining_prod_verbose_metrics.csv }
+        - { name: Q1 worker robot speed, csv: results/dmb_purple_q1_worker_robot_speed_verbose_metrics.csv }
+    - name: Q2 Science
+      scenarios:
+        - { name: Q2 idle, csv: results/dmb_purple_q2_idle_verbose_metrics.csv }
+        - { name: Q2 mining prod, csv: results/dmb_purple_q2_mining_prod_verbose_metrics.csv }
+        - { name: Q2 worker robot speed, csv: results/dmb_purple_q2_worker_robot_speed_verbose_metrics.csv }
+---
+
 <h1>Production Science Q1 vs Q2</h1>
 
 **Platform:** linux-x86_64

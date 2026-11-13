@@ -1,3 +1,11 @@
+---
+publish: true
+slug: railgun-voider
+title: Railgun Voider
+topic: vehicles
+date: 2025-10-21
+---
+
 # Railgun Voider
 
 **Platform:** windows-x86_64
