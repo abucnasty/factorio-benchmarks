@@ -5,7 +5,7 @@ This is a project space for factorio related discovery.
 ## Blueprints
 Blueprints that have been made publically available.
 
-[blueprints](./docs/blueprints/README.md)
+[blueprints](https://abucnasty.github.io/blueprints)
 
 ## Factorio Benchmarks
 [benchmarks](/benchmarks)
