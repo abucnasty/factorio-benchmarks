@@ -1,0 +1,37 @@
+name: Rebuild abucnasty.dev
+
+# abucnasty.dev builds its benchmark pages and save browser from this repository's master,
+# so a push here asks it to build and deploy again. The paths are everything that build reads:
+# the benchmark folders, every save file, and the READMEs of folders that hold saves.
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'benchmarks/**'
+      - '**.zip'
+      - '**/README.md'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ask abucnasty/abucnasty.dev to deploy
+        env:
+          # Fine-grained token with access to abucnasty/abucnasty.dev only, Contents: read and write.
+          TOKEN: ${{ secrets.SITE_DISPATCH_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${TOKEN}" ]; then
+            echo "::error::The SITE_DISPATCH_TOKEN secret is not set, so the site was not asked to rebuild."
+            exit 1
+          fi
+          curl --fail-with-body -sS -X POST \
+            -H "Authorization: Bearer ${TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/abucnasty/abucnasty.dev/dispatches \
+            -d '{"event_type":"benchmarks-updated"}'
