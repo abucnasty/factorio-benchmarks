@@ -2,6 +2,14 @@ name = "factorio-lfs"
 main = "src/index.ts"
 compatibility_date = "2025-01-01"
 
+# Public address for save downloads. A custom domain: wrangler deploy creates the
+# DNS record and certificate on the abucnasty.dev zone (same Cloudflare account).
+routes = [{ pattern = "saves.abucnasty.dev", custom_domain = true }]
+
+# Keep factorio-lfs.abucnasty.workers.dev too: .lfsconfig, existing clones and
+# old download links still use it. Adding routes would otherwise turn it off.
+workers_dev = true
+
 # R2 bucket binding — create the bucket first with:
 #   wrangler r2 bucket create factorio-benchmarks-lfs
 [[r2_buckets]]
