@@ -29,7 +29,7 @@ Quick Facts:
 
 If you are only here to see what the best designs look like, here are the [winners](docs/winners.md)
 
-Refer to the public blueprint page for the latest book of purple science blueprints which includes specific modules that abucnasty has tested in his own save file: [public blueprint page](https://abucnasty.github.io/blueprints)
+Refer to the public blueprint page for the latest book of purple science blueprints which includes specific modules that abucnasty has tested in his own save file: [public blueprint page](https://abucnasty.dev/blueprints)
 
 ## Document Index
 
