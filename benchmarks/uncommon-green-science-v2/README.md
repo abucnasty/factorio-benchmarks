@@ -4,6 +4,7 @@ slug: uncommon-green-science-v2
 title: Uncommon Green Science V2
 topic: science
 published_date: 2025-06-09
+platform: "windows-x86_64"
 authors: [abucnasty]
 ---
 
