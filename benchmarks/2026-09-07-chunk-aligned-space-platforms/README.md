@@ -4,8 +4,8 @@ slug: 2026-09-07-chunk-aligned-space-platforms
 title: Chunk Aligned Space Platforms
 topic: space
 published_date: 2026-09-11
-factorioVersion: "2.1.17"
-platform: "linux-x86_64"
+factorioVersion: ["2.1.17"]
+platform: ["linux-x86_64"]
 cpu: "Ryzen 9800X3D"
 authors: [abucnasty, tappi]
 ---

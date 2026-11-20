@@ -4,8 +4,8 @@ slug: 2026-03-22-space-science-quality
 title: Space Science Quality
 topic: science
 published_date: 2026-03-27
-factorioVersion: "2.0.76"
-platform: "linux-x86_64"
+factorioVersion: ["2.0.76"]
+platform: ["linux-x86_64"]
 authors: [abucnasty]
 featured: 2
 chart:

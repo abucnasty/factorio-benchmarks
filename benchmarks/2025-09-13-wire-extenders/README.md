@@ -4,8 +4,8 @@ slug: wire-extenders
 title: Wire Extenders
 topic: inserters
 published_date: 2025-09-17
-factorioVersion: "2.0.66"
-platform: "windows-x86_64"
+factorioVersion: ["2.0.66"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 

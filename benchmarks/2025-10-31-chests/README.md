@@ -4,8 +4,8 @@ slug: chests
 title: Chest Transfer
 topic: vehicles
 published_date: 2025-11-01
-factorioVersion: "2.0.72"
-platform: "windows-x86_64"
+factorioVersion: ["2.0.72"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 chart:
   groups:

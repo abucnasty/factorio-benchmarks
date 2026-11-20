@@ -4,10 +4,10 @@ slug: 2026-11-02-inserter-update-order
 title: Inserter Update Order
 topic: inserters
 published_date: 2026-11-02
-factorioVersion: "2.1.24"
-platform: "linux-x86_64"
+factorioVersion: ["2.1.24"]
+platform: ["linux-x86_64"]
 cpu: "Ryzen 9800X3D"
-authors: [abucnasty, atlan, Thaeln]
+authors: [abucnasty, Atlan, Thaeln]
 ---
 
 # Inserter Update Order
@@ -21,7 +21,7 @@ The answer depends on more than the build. Factorio updates active inserters in 
 On Factorio's default memory allocator the three builds are within about 1% of each other as saved, 569 to 576 UPS, far less than the 5% each build's own saved order costs it. Give them all the same order and the 4-inserter build goes from slightly behind to 6% ahead, depending on which order. With mimalloc on large pages the saved order costs at most 1.6%, so the builds compare the same in any of these orders and the 4-inserter build leads by 3 to 5%. A scrambled order still costs up to 14% even then.
 
 ## Scenario
-There are three community builds from members of abucnasty's discord, atlan and Thaeln, who contributed the save files. All make molten copper from lava on Vulcanus in 50 blocks, at equal output within 0.04%, with stone from each foundry carried by legendary stack inserters:
+There are three community builds from members of abucnasty's discord, Atlan and Thaeln, who contributed the save files. All make molten copper from lava on Vulcanus in 50 blocks, at equal output within 0.04%, with stone from each foundry carried by legendary stack inserters:
 
 | Build | Foundries | Beacons a foundry | Stone inserters a foundry | Foundries an assembler |
 |---|---|---|---|---|

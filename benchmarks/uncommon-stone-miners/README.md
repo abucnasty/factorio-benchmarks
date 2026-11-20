@@ -4,8 +4,8 @@ slug: uncommon-stone-miners
 title: Uncommon Stone Miners
 topic: mining
 published_date: 2025-06-27
-factorioVersion: "2.0.76"
-platform: "linux-x86_64"
+factorioVersion: ["2.0.76"]
+platform: ["linux-x86_64"]
 authors: [abucnasty]
 ---
 

@@ -4,8 +4,8 @@ slug: stack-inserter-labs
 title: Stack Inserter Labs
 topic: inserters
 published_date: 2025-07-19
-factorioVersion: "2.0.60"
-platform: "windows-x86_64"
+factorioVersion: ["2.0.60"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 

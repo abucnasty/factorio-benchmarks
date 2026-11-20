@@ -4,8 +4,8 @@ slug: uncommon-red-science-v4
 title: Uncommon Red Science V4
 topic: science
 published_date: 2025-08-22
-factorioVersion: "2.0.64"
-platform: "windows-x86_64"
+factorioVersion: ["2.0.64"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 

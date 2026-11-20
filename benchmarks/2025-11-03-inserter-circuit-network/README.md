@@ -4,8 +4,8 @@ slug: inserter-circuit-network
 title: Circuit Network Cost on Inserters without Pickups
 topic: inserters
 published_date: 2025-11-06
-factorioVersion: "2.0.72"
-platform: "windows-x86_64"
+factorioVersion: ["2.0.72"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 

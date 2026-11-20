@@ -4,7 +4,8 @@ slug: iron-smelter-inserter-throttle
 title: Iron Smelter Inserter Throttle
 topic: inserters
 published_date: 2025-05-28
-platform: "windows-x86_64"
+factorioVersion: ["2.0.47"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 

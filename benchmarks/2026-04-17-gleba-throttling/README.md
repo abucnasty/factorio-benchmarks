@@ -4,8 +4,8 @@ slug: 2026-04-17-gleba-throttling
 title: Gleba Throttling
 topic: science
 published_date: 2026-04-17
-factorioVersion: "2.0.76"
-platform: "linux-x86_64"
+factorioVersion: ["2.0.76"]
+platform: ["linux-x86_64"]
 authors: [abucnasty]
 chart:
   scenarios:

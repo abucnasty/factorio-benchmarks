@@ -4,8 +4,8 @@ slug: clocked-mining-drills
 title: Clocked Mining Drills
 topic: mining
 published_date: 2025-11-11
-factorioVersion: "2.0.72"
-platform: "windows-x86_64"
+factorioVersion: ["2.0.72"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 featured: 3
 chart:

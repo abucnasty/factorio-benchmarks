@@ -4,8 +4,8 @@ slug: railgun-voider
 title: Railgun Voider
 topic: vehicles
 published_date: 2025-10-21
-factorioVersion: "2.0.71"
-platform: "windows-x86_64"
+factorioVersion: ["2.0.71"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 
