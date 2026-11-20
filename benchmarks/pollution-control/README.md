@@ -3,6 +3,8 @@ publish: true
 slug: pollution-control
 title: Pollution Control
 topic: engine
+published_date: 2025-06-21
+authors: [abucnasty]
 ---
 
 ## Table of Contents

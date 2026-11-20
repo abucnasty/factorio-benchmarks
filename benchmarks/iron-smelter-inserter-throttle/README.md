@@ -3,6 +3,8 @@ publish: true
 slug: iron-smelter-inserter-throttle
 title: Iron Smelter Inserter Throttle
 topic: inserters
+published_date: 2025-05-28
+authors: [abucnasty]
 ---
 
 ## Test Scenario

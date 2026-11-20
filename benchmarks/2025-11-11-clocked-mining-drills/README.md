@@ -3,7 +3,10 @@ publish: true
 slug: clocked-mining-drills
 title: Clocked Mining Drills
 topic: mining
-date: 2025-11-11
+published_date: 2025-11-11
+factorioVersion: "2.0.72"
+platform: "windows-x86_64"
+authors: [abucnasty]
 featured: 3
 chart:
   scenarios:
@@ -12,10 +15,6 @@ chart:
 ---
 
 # Factorio Benchmark Results
-
-**Platform:** windows-x86_64
-
-**Factorio Version:** 2.0.72
 
 ## The Question
 - is it worth to clock mining drills when directly mining into a furnace?

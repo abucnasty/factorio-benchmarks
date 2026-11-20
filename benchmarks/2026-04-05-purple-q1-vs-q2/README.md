@@ -3,7 +3,10 @@ publish: true
 slug: 2026-04-05-purple-q1-vs-q2
 title: Purple Science Q1 vs Q2
 topic: science
-date: 2026-04-05
+published_date: 2026-04-08
+factorioVersion: "2.0.76"
+platform: "linux-x86_64"
+authors: [abucnasty]
 chart:
   maxTicks: 36000
   groups:
@@ -28,12 +31,6 @@ chart:
 ---
 
 <h1>Production Science Q1 vs Q2</h1>
-
-**Platform:** linux-x86_64
-
-**Factorio Version:** 2.0.76
-
-**Date:** 2026-04-07
 
 <h2>Table Of Contents</h2>
 

@@ -3,14 +3,13 @@ publish: true
 slug: railgun-voider
 title: Railgun Voider
 topic: vehicles
-date: 2025-10-21
+published_date: 2025-10-21
+factorioVersion: "2.0.71"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Railgun Voider
-
-**Platform:** windows-x86_64
-
-**Factorio Version:** 2.0.71
 
 ## Scenario
 * Each save was tested for 36000 tick(s) and 1 run(s)

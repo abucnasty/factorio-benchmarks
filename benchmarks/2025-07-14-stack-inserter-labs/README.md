@@ -3,13 +3,13 @@ publish: true
 slug: stack-inserter-labs
 title: Stack Inserter Labs
 topic: inserters
-date: 2025-07-14
+published_date: 2025-07-19
+factorioVersion: "2.0.60"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Factorio Benchmark Results
-
-**Platform:** windows-x86_64
-**Factorio Version:** 2.0.60
 
 ## Scenario
 - 4096 bio labs are controlled with varying control methods

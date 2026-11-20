@@ -3,16 +3,13 @@ publish: true
 slug: 2026-06-10-splitter-miners
 title: Splitter Miners
 topic: mining
-date: 2026-06-11
+published_date: 2026-06-11
+factorioVersion: "2.0.77"
+platform: "linux-x86_64"
+authors: [abucnasty]
 ---
 
 # Factorio Benchmark Results
-
-**Platform:** linux-x86_64
-
-**Factorio Version:** 2.0.77
-
-**Date:** 2026-06-10
 
 ## The Question
 

@@ -3,7 +3,10 @@ publish: true
 slug: 2026-03-22-space-science-quality
 title: Space Science Quality
 topic: science
-date: 2026-03-22
+published_date: 2026-03-27
+factorioVersion: "2.0.76"
+platform: "linux-x86_64"
+authors: [abucnasty]
 featured: 2
 chart:
   maxTicks: 54000
@@ -17,12 +20,6 @@ chart:
 ---
 
 # Space Science Quality Comparison
-
-**Platform:** linux-x86_64
-
-**Factorio Version:** 2.0.76
-
-**Date:** 2026-03-23
 
 Special thanks to Yuu and Clux for the help refining Walt
 

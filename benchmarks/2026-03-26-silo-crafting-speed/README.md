@@ -3,7 +3,10 @@ publish: true
 slug: 2026-03-26-silo-crafting-speed
 title: Silo Crafting Speed
 topic: science
-date: 2026-03-26
+published_date: 2026-03-26
+factorioVersion: "2.0.76"
+platform: "linux-x86_64"
+authors: [abucnasty]
 chart:
   scenarios:
     - { name: Q3 baseline, csv: results/silo_q3_verbose_metrics.csv }
@@ -16,12 +19,6 @@ chart:
 ---
 
 # Rocket Silo Crafting Speed
-
-**Platform:** linux-x86_64
-
-**Factorio Version:** 2.0.76
-
-**Date:** 2026-03-26
 
 Coauthored with Konage
 

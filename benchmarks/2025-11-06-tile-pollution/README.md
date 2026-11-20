@@ -3,14 +3,13 @@ publish: true
 slug: tile-pollution
 title: Impact of Pollution
 topic: engine
-date: 2025-11-06
+published_date: 2025-11-06
+factorioVersion: "2.0.72"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Impact of Pollution
-
-**Platform:** windows-x86_64
-
-**Factorio Version:** 2.0.72
 
 ## Scenario
 * Each save was tested for 18000 tick(s) and 6 run(s)

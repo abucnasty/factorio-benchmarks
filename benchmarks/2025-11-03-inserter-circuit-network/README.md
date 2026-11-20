@@ -3,14 +3,13 @@ publish: true
 slug: inserter-circuit-network
 title: Circuit Network Cost on Inserters without Pickups
 topic: inserters
-date: 2025-11-03
+published_date: 2025-11-06
+factorioVersion: "2.0.72"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Circuit Network Cost on Inserters without Pickups
-
-**Platform:** windows-x86_64
-
-**Factorio Version:** 2.0.72
 
 ## The Question
 - does activating / deactivating inserters incur entity time if no action is able to take place

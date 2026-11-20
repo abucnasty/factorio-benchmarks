@@ -3,16 +3,13 @@ publish: true
 slug: uncommon-stone-miners
 title: Uncommon Stone Miners
 topic: mining
-date: 2026-04-15
+published_date: 2025-06-27
+factorioVersion: "2.0.76"
+platform: "linux-x86_64"
+authors: [abucnasty]
 ---
 
 # Q2 Stone Washing Methods
-
-**Platform:** linux-x86_64
-
-**Factorio Version:** 2.0.76
-
-**Date:** 2026-04-15
 
 ## Scenario
 * Each save was tested for 18000 tick(s) and 3 run(s)

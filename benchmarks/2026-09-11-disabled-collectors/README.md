@@ -3,20 +3,14 @@ publish: true
 slug: 2026-09-11-disabled-collectors
 title: Disabled Collectors
 topic: space
-date: 2026-09-11
+published_date: 2026-09-11
+factorioVersion: "2.1.17"
+platform: "linux-x86_64"
+cpu: "Ryzen 9800X3D"
+authors: [abucnasty, Atlan]
 ---
 
 # Disabled Collectors
-
-**Platform:** linux-x86_64
-
-**Factorio Version:** 2.1.17
-
-**Date:** 2026-09-11
-
-**CPU:** Ryzen 9800X3D
-
-**Coauthor:** Atlan
 
 ## The Question
 Do asteroid collectors consume update time when disabled?

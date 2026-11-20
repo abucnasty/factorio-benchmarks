@@ -3,7 +3,8 @@ publish: true
 slug: 2026-01-25-linux-vs-windows
 title: Linux vs Windows Performance
 topic: engine
-date: 2026-01-25
+published_date: 2026-01-25
+authors: [abucnasty]
 featured: 1
 chart:
   scenarios:

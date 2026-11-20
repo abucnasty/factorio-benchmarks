@@ -3,6 +3,8 @@ publish: true
 slug: uncommon-military-science
 title: Uncommon Military Science
 topic: science
+published_date: 2025-05-27
+authors: [abucnasty]
 ---
 
 ### Data

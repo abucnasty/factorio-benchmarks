@@ -3,14 +3,13 @@ publish: true
 slug: wire-extenders
 title: Wire Extenders
 topic: inserters
-date: 2025-09-13
+published_date: 2025-09-17
+factorioVersion: "2.0.66"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Factorio Benchmark Results
-
-**Platform:** windows-x86_64
-
-**Factorio Version:** 2.0.66
 
 ## Scenario
 * Each save was tested for 3600 tick(s) and 5 run(s)

@@ -3,16 +3,13 @@ publish: true
 slug: 2026-06-30-vulcanus-stone-voiding
 title: Vulcanus Stone Voiding
 topic: mining
-date: 2026-06-30
+published_date: 2026-07-01
+factorioVersion: "2.1.9"
+platform: "linux-x86_64"
+authors: [abucnasty]
 ---
 
 # Stone Voiding on Vulcanus
-
-**Platform:** linux-x86_64
-
-**Factorio Version:** 2.1.9
-
-**Date:** 2026-07-01
 
 ## The Question
 

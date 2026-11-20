@@ -3,13 +3,13 @@ publish: true
 slug: recycler-clocking
 title: Recycler Clocking
 topic: inserters
-date: 2025-10-14
+published_date: 2025-10-15
+factorioVersion: "2.0.69"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Factorio Benchmark Results
-
-**Platform:** windows-x86_64
-**Factorio Version:** 2.0.69
 
 ## Scenario
 * Each save was tested for 3600 tick(s) and 3 run(s)

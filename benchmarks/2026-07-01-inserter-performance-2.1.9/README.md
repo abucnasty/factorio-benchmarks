@@ -3,18 +3,14 @@ publish: true
 slug: 2026-07-01-inserter-performance-2.1.9
 title: Inserter Performance 2.0 vs 2.1
 topic: inserters
-date: 2026-07-01
+published_date: 2026-07-01
+factorioVersion: "2.1.9"
+platform: "linux-x86_64"
+cpu: "Ryzen 9800X3D"
+authors: [abucnasty]
 ---
 
 # Inserter Performance Between Factorio Versions
-
-**Platform:** linux-x86_64
-
-**Factorio Version:** 2.1.9
-
-**CPU:** Ryzen 9800X3D
-
-**Date:** 2026-07-01
 
 ## The Question
 
