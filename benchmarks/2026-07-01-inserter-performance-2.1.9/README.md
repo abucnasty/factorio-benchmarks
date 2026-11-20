@@ -4,7 +4,7 @@ slug: 2026-07-01-inserter-performance-2.1.9
 title: Inserter Performance 2.0 vs 2.1
 topic: inserters
 published_date: 2026-07-01
-factorioVersion: ["2.1.9"]
+factorioVersion: ["2.0.77", "2.1.7", "2.1.9"]
 platform: ["linux-x86_64"]
 cpu: "Ryzen 9800X3D"
 authors: [abucnasty]
