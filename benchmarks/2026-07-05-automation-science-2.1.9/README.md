@@ -4,14 +4,13 @@ slug: 2026-07-09-automation-science-2.1.9
 title: Automation Science Q1 vs Q2 in 2.1.9
 topic: science
 published_date: 2026-07-09
+factorioVersion: "2.1.9"
 platform: "linux-x86_64"
 cpu: "Ryzen 9800X3D"
 authors: [abucnasty]
 ---
 
 # Automation Science Q1 vs Q2 in 2.1.9 
-
-**Factorio:** 2.1.9
 
 ## The Question
 

@@ -4,13 +4,12 @@ slug: liquid-voiding-miners
 title: Liquid Voiding Miners
 topic: mining
 published_date: 2025-06-27
+factorioVersion: "2.0.55"
 platform: "windows-x86_64"
 authors: [abucnasty]
 ---
 
 # Factorio Benchmark Results
-
-**Factorio Version:** unknown  
 
 ## Scenario
 Experiment using liquid to void materials instead of only recyclers.
