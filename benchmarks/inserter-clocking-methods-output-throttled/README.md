@@ -3,6 +3,9 @@ publish: true
 slug: inserter-clocking-methods-output-throttled
 title: Inserter Clocking Methods Output Throttled
 topic: inserters
+published_date: 2025-05-29
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 ## Overview

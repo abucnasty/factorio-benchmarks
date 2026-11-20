@@ -3,7 +3,9 @@ publish: true
 slug: 44k-underground-inserters
 title: 44k Underground Inserters
 topic: inserters
-date: 2025-07-22
+published_date: 2025-07-22
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 ## Scenario

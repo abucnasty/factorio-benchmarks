@@ -3,13 +3,13 @@ publish: true
 slug: uncommon-purple
 title: Uncommon Purple
 topic: science
-date: 2025-07-02
+published_date: 2025-07-01
+factorioVersion: "2.0.55"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Factorio Benchmark Results
-
-**Platform:** windows-x86_64  
-**Factorio Version:** 2.0.55  
 
 ## Scenario
 - test scenario of 24 purple science blades making 3.45 million uncommon science per minute (240/s each)

@@ -3,6 +3,9 @@ publish: true
 slug: uncommon-chemical-science-v2
 title: Uncommon Chemical Science V2
 topic: science
+published_date: 2025-06-15
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 ## Test Scenario

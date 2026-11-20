@@ -3,6 +3,9 @@ publish: true
 slug: uncommon-military-science
 title: Uncommon Military Science
 topic: science
+published_date: 2025-05-27
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 ### Data

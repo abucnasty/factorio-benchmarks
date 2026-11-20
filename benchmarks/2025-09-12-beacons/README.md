@@ -3,14 +3,13 @@ publish: true
 slug: beacons
 title: Beacon Entity Update Time
 topic: engine
-date: 2025-09-12
+published_date: 2025-09-17
+factorioVersion: "2.0.66"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Beacon Entity Update Time
-
-**Platform:** windows-x86_64
-
-**Factorio Version:** 2.0.66
 
 ## Scenario
 * Each save was tested for 3600 tick(s) and 3 run(s)

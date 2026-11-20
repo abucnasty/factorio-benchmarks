@@ -3,13 +3,13 @@ publish: true
 slug: uncommon-red-science-v4
 title: Uncommon Red Science V4
 topic: science
-date: 2025-08-18
+published_date: 2025-08-22
+factorioVersion: "2.0.64"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Factorio Benchmark Results
-
-**Platform:** windows-x86_64  
-**Factorio Version:** 2.0.64  
 
 ## Scenario
 * Each save was tested for 36000 tick(s) and 3 run(s)

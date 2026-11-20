@@ -3,14 +3,13 @@ publish: true
 slug: vehicle-fuel
 title: Cars / Tanks Equipment Grid and Fuel Impact
 topic: vehicles
-date: 2025-11-03
+published_date: 2025-11-03
+factorioVersion: "2.0.72"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Cars / Tanks Equipment Grid and Fuel Impact
-
-**Platform:** windows-x86_64
-
-**Factorio Version:** 2.0.72
 
 ## Scenario
 - Each save was tested for 8010 tick(s) and 3 run(s)

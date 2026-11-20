@@ -3,7 +3,9 @@ publish: true
 slug: benchmark-variances
 title: Benchmark Variances
 topic: engine
-date: 2025-09-01
+published_date: 2025-09-02
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 ## Table of Contents

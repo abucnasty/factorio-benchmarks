@@ -3,13 +3,13 @@ publish: true
 slug: 44k-inserter-clocks
 title: 44k Inserter Clocks
 topic: inserters
-date: 2025-07-14
+published_date: 2025-07-14
+factorioVersion: "2.0.55"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Factorio Benchmark Results
-
-**Platform:** windows-x86_64  
-**Factorio Version:** 2.0.55  
 
 ## Scenario
 A belt fed with stacked stack inserters will be picked up every 120 ticks by 15 legendary stack inserters.

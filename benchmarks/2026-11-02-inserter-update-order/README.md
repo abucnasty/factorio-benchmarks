@@ -3,20 +3,14 @@ publish: true
 slug: 2026-11-02-inserter-update-order
 title: Inserter Update Order
 topic: inserters
-date: 2026-11-02
+published_date: 2026-11-02
+factorioVersion: "2.1.24"
+platform: "linux-x86_64"
+cpu: "Ryzen 9800X3D"
+authors: [abucnasty, atlan, Thaeln]
 ---
 
 # Inserter Update Order
-
-**Platform:** linux-x86_64
-
-**Factorio Version:** 2.1.24
-
-**Date:** 2026-11-02
-
-**CPU:** Ryzen 9800X3D
-
-**Coauthors:** atlan, Thaeln
 
 ## The Question
 Which of three molten copper builds runs fastest? And can we even tell, when two copies of the same build can run at different speeds?

@@ -3,6 +3,9 @@ publish: true
 slug: uncommon-red-science-v3
 title: Uncommon Red Science V3
 topic: science
+published_date: 2025-06-01
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 ## Test Scenario

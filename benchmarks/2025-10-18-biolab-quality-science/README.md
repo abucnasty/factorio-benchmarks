@@ -3,13 +3,13 @@ publish: true
 slug: biolab-quality-science
 title: Space Age Biolabs Impact by Science Quality & Research Type
 topic: science
-date: 2025-10-18
+published_date: 2025-10-19
+factorioVersion: "2.0.71"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 # Space Age Biolabs Impact by Science Quality & Research Type
-
-- **Platform:** windows-x86_64
-- **Factorio Version:** 2.0.71
 
 ## Table of Contents
 - [Space Age Biolabs Impact by Science Quality \& Research Type](#space-age-biolabs-impact-by-science-quality--research-type)

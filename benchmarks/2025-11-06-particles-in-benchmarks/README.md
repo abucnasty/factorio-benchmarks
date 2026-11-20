@@ -3,7 +3,10 @@ publish: true
 slug: particles-in-benchmarks
 title: Particles in Benchmarks
 topic: engine
-date: 2025-11-06
+published_date: 2025-11-06
+factorioVersion: "2.0.72"
+platform: "windows-x86_64"
+authors: [abucnasty]
 chart:
   scenarios:
     - { name: Editor closed · primary surface, csv: results/bm_particles_editor_closed_primary_surface_verbose_metrics.csv }
@@ -13,10 +16,6 @@ chart:
 ---
 
 # Particles in Benchmarks
-
-**Platform:** windows-x86_64
-
-**Factorio Version:** 2.0.72
 
 ## The Question
 - does the characters location in a benchmark impact the particle update time?

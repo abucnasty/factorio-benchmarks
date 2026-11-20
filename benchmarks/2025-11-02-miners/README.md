@@ -3,14 +3,13 @@ publish: true
 slug: miners
 title: Miners
 topic: mining
-date: 2025-11-02
+published_date: 2025-11-06
+factorioVersion: "2.0.72"
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 ## Miners
-
-**Platform:** windows-x86_64
-
-**Factorio Version:** 2.0.72  
 
 ## Table of Contents
 - [Miners](#miners)

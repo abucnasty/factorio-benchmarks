@@ -3,6 +3,9 @@ publish: true
 slug: inserter-clocking-methods
 title: Inserter Clocking Methods
 topic: inserters
+published_date: 2025-05-28
+platform: "windows-x86_64"
+authors: [abucnasty]
 ---
 
 ## Overview

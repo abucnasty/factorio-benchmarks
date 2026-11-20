@@ -3,20 +3,14 @@ publish: true
 slug: 2026-09-07-chunk-aligned-space-platforms
 title: Chunk Aligned Space Platforms
 topic: space
-date: 2026-09-07
+published_date: 2026-09-11
+factorioVersion: "2.1.17"
+platform: "linux-x86_64"
+cpu: "Ryzen 9800X3D"
+authors: [abucnasty, tappi]
 ---
 
 # Space Platform Chunk Alignment
-
-**Platform:** linux-x86_64
-
-**Factorio Version:** 2.1.17
-
-**Date:** 2026-09-08
-
-**CPU:** Ryzen 9800X3D
-
-**Coauthor:** tappi
 
 ## The Question
 Does chunk alignment of a space platform matter for space platform update time?
