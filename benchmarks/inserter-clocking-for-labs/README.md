@@ -4,7 +4,8 @@ slug: inserter-clocking-for-labs
 title: Inserter Clocking For Labs
 topic: inserters
 published_date: 2025-07-02
-platform: "windows-x86_64"
+factorioVersion: ["2.0.55"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 

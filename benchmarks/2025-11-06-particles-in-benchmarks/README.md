@@ -4,8 +4,8 @@ slug: particles-in-benchmarks
 title: Particles in Benchmarks
 topic: engine
 published_date: 2025-11-06
-factorioVersion: "2.0.72"
-platform: "windows-x86_64"
+factorioVersion: ["2.0.72"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 chart:
   scenarios:

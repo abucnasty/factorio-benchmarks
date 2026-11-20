@@ -4,8 +4,8 @@ slug: 44k-inserter-clocks
 title: 44k Inserter Clocks
 topic: inserters
 published_date: 2025-07-14
-factorioVersion: "2.0.55"
-platform: "windows-x86_64"
+factorioVersion: ["2.0.55"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 

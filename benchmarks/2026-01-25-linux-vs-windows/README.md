@@ -4,7 +4,8 @@ slug: 2026-01-25-linux-vs-windows
 title: Linux vs Windows Performance
 topic: engine
 published_date: 2026-01-25
-platform: "windows-x86_64, linux-x86_64"
+factorioVersion: ["2.0.73"]
+platform: ["windows-x86_64", "linux-x86_64"]
 authors: [abucnasty]
 featured: 1
 chart:

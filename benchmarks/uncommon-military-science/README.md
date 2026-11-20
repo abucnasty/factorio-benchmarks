@@ -4,7 +4,8 @@ slug: uncommon-military-science
 title: Uncommon Military Science
 topic: science
 published_date: 2025-05-27
-platform: "windows-x86_64"
+factorioVersion: ["2.0.47"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 

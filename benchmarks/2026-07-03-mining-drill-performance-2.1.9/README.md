@@ -4,8 +4,8 @@ slug: 2026-07-03-mining-drill-performance-2-1-9
 title: Mining Drill Performance Improvements in 2.1
 topic: mining
 published_date: 2026-07-03
-factorioVersion: "2.1.9"
-platform: "linux-x86_64"
+factorioVersion: ["2.1.9"]
+platform: ["linux-x86_64"]
 cpu: "Ryzen 9800X3D"
 authors: [abucnasty]
 ---

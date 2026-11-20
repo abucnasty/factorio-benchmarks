@@ -4,9 +4,9 @@ slug: 2026-03-26-silo-crafting-speed
 title: Silo Crafting Speed
 topic: science
 published_date: 2026-03-26
-factorioVersion: "2.0.76"
-platform: "linux-x86_64"
-authors: [abucnasty]
+factorioVersion: ["2.0.76"]
+platform: ["linux-x86_64"]
+authors: [abucnasty, Konage]
 chart:
   scenarios:
     - { name: Q3 baseline, csv: results/silo_q3_verbose_metrics.csv }
@@ -19,8 +19,6 @@ chart:
 ---
 
 # Rocket Silo Crafting Speed
-
-Coauthored with Konage
 
 ## The Question
 Does crafting speed have an impact to rocket silos. Is there any benefit to overbeaconing rocket silos.

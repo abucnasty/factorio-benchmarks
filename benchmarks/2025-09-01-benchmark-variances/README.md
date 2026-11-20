@@ -4,7 +4,8 @@ slug: benchmark-variances
 title: Benchmark Variances
 topic: engine
 published_date: 2025-09-02
-platform: "windows-x86_64"
+factorioVersion: ["2.0.64"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 

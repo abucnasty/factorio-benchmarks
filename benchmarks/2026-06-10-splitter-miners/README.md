@@ -4,9 +4,9 @@ slug: 2026-06-10-splitter-miners
 title: Splitter Miners
 topic: mining
 published_date: 2026-06-11
-factorioVersion: "2.0.77"
-platform: "linux-x86_64"
-authors: [abucnasty]
+factorioVersion: ["2.0.77"]
+platform: ["linux-x86_64"]
+authors: [abucnasty, tappi]
 ---
 
 # Factorio Benchmark Results

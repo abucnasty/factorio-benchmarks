@@ -4,8 +4,8 @@ slug: vehicle-fuel
 title: Cars / Tanks Equipment Grid and Fuel Impact
 topic: vehicles
 published_date: 2025-11-03
-factorioVersion: "2.0.72"
-platform: "windows-x86_64"
+factorioVersion: ["2.0.72"]
+platform: ["windows-x86_64"]
 authors: [abucnasty]
 ---
 
